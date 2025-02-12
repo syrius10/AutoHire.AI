@@ -8,6 +8,7 @@ import matchRoutes from "../routes/matching.routes.js";
 import evaluationRoutes from "../routes/evaluation.routes.js";
 import interviewRoutes from "../routes/interview.routes.js";
 import analyticsRoutes from "../routes/analytics.routes.js";
+import recommendationRoutes from "../routes/recommendation.routes.js";
 
 const app = express();
 app.use(cors());
@@ -25,6 +26,8 @@ app.use("/api/evaluate", evaluationRoutes);
 app.use("/api/interviews", interviewRoutes);
 
 app.use("/api/analytics", analyticsRoutes);
+
+app.use("/api/recommendations", recommendationRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
