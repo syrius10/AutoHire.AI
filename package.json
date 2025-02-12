@@ -15,5 +15,8 @@
     "jsonwebtoken": "^9.0.2",
     "peerjs": "^1.5.4",
     "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "cypress": "^14.0.2"
   }
 }

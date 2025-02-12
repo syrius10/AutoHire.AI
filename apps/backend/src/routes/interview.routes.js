@@ -1,5 +1,5 @@
 import express from "express";
-import { pool } from "../auth/db";
+import { pool } from "../auth/db.js";
 
 const router = express.Router();
 
@@ -22,7 +22,7 @@ router.post("/schedule", async (req, res) => {
 // ✅ Fetch scheduled interviews
 router.get("/", async (req, res) => {
     try {
-        const result = await.pool.query("SELECT * FROM interviews");
+        const result = await pool.query("SELECT * FROM interviews");
         res.json(result.rows);
     } catch (error) {
         res.status(500).json({ error: error.message });

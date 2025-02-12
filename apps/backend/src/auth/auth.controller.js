@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { pool } from '../db.js';
+import { pool } from '../auth/db.js';
 
 const SECRET_KEY = process.env.JWT_SECRET || 'default_secret';
 
