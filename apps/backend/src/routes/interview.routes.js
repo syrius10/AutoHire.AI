@@ -1,7 +1,11 @@
 import express from "express";
+import axios from "axios";
+import multer from "multer";
 import { pool } from "../auth/db.js";
 
 const router = express.Router();
+const upload = multer({ dest: "uploads/" });
+const AI_SERVICE_URL = "http://localhost:5004/analyze-interview";
 
 // ✅ Schedule an interview
 router.post("/schedule", async (req, res) => {
@@ -24,6 +28,22 @@ router.get("/", async (req, res) => {
     try {
         const result = await pool.query("SELECT * FROM interviews");
         res.json(result.rows);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// ✅ AI Interview Analysis Route (New Feature)
+router.post("/analyze", upload.single("audio"), async (req, res) => {
+    try {
+        const formData = new FormData();
+        formData.append("audio", req.file.buffer, req.file.originalname);
+
+        const response = await axios.post(AI_SERVICE_URL, formData, {
+            headers: { "Content-Type": "multipart/form-data"}
+        });
+
+        res.json(response.data);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

@@ -9,3 +9,10 @@ export const scheduleInterview = async (data) => {
 export const fetchInterviews = async () => {
     return axios.get(API_URL);
 };
+
+export const analyzeInterview = async(file) => {
+    const formData = new FormData();
+    formData.append("audio", file);
+    const response = await axios.post(`${API_URL}/analyze`, formData);
+    return response.data;
+};
