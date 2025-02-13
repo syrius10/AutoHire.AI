@@ -10,9 +10,13 @@
     "dev": "node src/auth/server.js"
   },
   "dependencies": {
+    "@microsoft/microsoft-graph-client": "^3.0.7",
     "axios": "^1.7.9",
     "cors": "^2.8.5",
     "express": "^4.21.2",
+    "github-api": "^3.4.0",
+    "googleapis": "^144.0.0",
+    "linkedin-api": "^0.0.1",
     "multer": "1.4.5-lts.1",
     "pg": "^8.13.2"
   },
