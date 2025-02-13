@@ -23,4 +23,19 @@ router.get("/applications-count", async (req, res) => {
     }
 });
 
+// ✅ Get Most In-Demand Skills
+router.get("/top-skills", async(req, res) => {
+    try {
+        const result = await pool.query(`
+            SELECT skill, COUNT(*) as count
+            FROM candidate_skills
+            GROUP BY skill
+            ORDER BY count DESC LIMIT 5        
+        `);
+        res.json(result.rows);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 export default router;

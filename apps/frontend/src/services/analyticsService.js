@@ -8,6 +8,11 @@ export const getJobCount = async () => {
 };
 
 export const getApplicationCount = async () => {
-    const response = await.axios.get(`${API_URL}/applications-count`);
+    const response = await axios.get(`${API_URL}/applications-count`);
+    return response.data;
+};
+
+export const getTopSkills = async () => {
+    const response = await axios.get(`${API_URL}/top-skills`);
     return response.data;
 };
