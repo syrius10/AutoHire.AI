@@ -1,7 +1,7 @@
 import express from "express";
 import axios from "axios";
 import multer from "multer";
-import { pool } from "../auth/db.js";
+import { pool } from "../db.js";
 
 const router = express.Router();
 const upload = multer({ dest: "uploads/" });
