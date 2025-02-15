@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/profile"; // Adjust if backend runs on a different port
+const API_URL = "http://localhost:5001/api/profile"; // Adjust if backend runs on a different port
 
 export const enrichProfile = async (resumeFile) => {
   const formData = new FormData();
