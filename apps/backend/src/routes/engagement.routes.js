@@ -9,6 +9,7 @@ const TWILIO_SID = process.env.TWILIO_SID;
 const TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN;
 const TWILIO_PHONE = process.env.TWILIO_PHONE;
 const client = twilio(TWILIO_SID, TWILIO_AUTH_TOKEN);
+const jobEngagement = {};   // Mock engagement storage
 
 // ✅ AI Chatbot Response
 router.get("/chat", async (req, res) => {
@@ -53,6 +54,17 @@ router.post("/send-email", async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
+});
+
+// ✅ Implement Engagement Tracking API
+router.post("/track", (req, res) => {
+    const { jobId, action } = req.body;
+    if (!jobEngagement[jobId]) jobEngagement[jobId] = { views: 0, applies: 0 };
+
+    if (action === "view") jobEngagement[jobId].views += 1;
+    if (action === "apply") jobEngagement[jobId].applies += 1;
+
+    res.json({ success: true, data: jobEngagement[jobId] });
 });
 
 export default router;
