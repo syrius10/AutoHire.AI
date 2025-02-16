@@ -8,10 +8,13 @@
     ]
   },
   "dependencies": {
+    "@grpc/grpc-js": "^1.12.6",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "fabric-ca-client": "^2.2.20",
+    "fabric-network": "^2.2.20",
     "jsonwebtoken": "^9.0.2",
     "peerjs": "^1.5.4",
     "socket.io": "^4.8.1"
