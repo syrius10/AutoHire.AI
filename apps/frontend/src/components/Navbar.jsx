@@ -6,6 +6,11 @@ const Navbar = () => {
 
   return (
     <nav className="bg-blue-600 p-4 text-white flex justify-between">
+      <Link to="/">Home</Link>
+      <Link to="/job-recommendations">Job Recommendations</Link>
+      <Link to="/analytics">Analytics</Link>
+      <Link to="/integrations">Integrations</Link>
+      <Link to="/interview-analysis">AI Interview Insights</Link>
       <Link to="/" className="text-lg font-bold">AutoHire.AI</Link>
       <button className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
         ☰
