@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import { Server } from "socket.io"; // ✅ Import Socket.IO
 import http from "http"; // ✅ Import HTTP module
-import authRoutes from "./src/auth/auth.routes.js";
+import userAuthRoutes from "./src/auth/userAuth.routes.js";
 import jobRoutes from "./src/routes/jobs.routes.js";
 import matchRoutes from "./src/routes/matching.routes.js";
 import evaluationRoutes from "./src/routes/evaluation.routes.js";
@@ -12,13 +12,24 @@ import recommendationRoutes from "./src/routes/recommendation.routes.js";
 import integrationsRoutes from "./src/routes/integrations.routes.js";
 import engagementRoutes from "./src/routes/engagement.routes.js";
 import { cacheMiddleware } from "./src/middleware/cache.js";
+import apiAuthRoutes from "./src/routes/apiAuthAuth.routes.js"; 
+import autoScreeningRoutes from "./src/routes/autoScreening.routes.js";
+import interviewSchedulerRoutes from "./src/routes/interviewScheduler.routes.js";
+import backgroundCheckRoutes from "./src/routes/backgroundCheck.routes.js";
+import apiRoutes from "./src/routes/api.routes.js";
+import paymentRoutes from "./src/routes/payment.routes.js";
+import globalizationRoutes from "./src/routes/globalization.routes.js";
+import videoInterviewAnalysisRoutes from "./src/routes/videoInterviewAnalysis.routes.js";
+import AIJobDescriptionRoutes from "./src/routes/aiJobDescription.routes.js";
+import autoHireMobileRoutes from "./src/routes/autoHireMobile.routes.js";
+import marketplaceRoutes from "./routes/marketplace.routes.js";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 // ✅ Register API routes BEFORE starting the server
-app.use('/api/auth', authRoutes);
+app.use('/auth', userAuthRoutes);
 
 app.use("/api/jobs", jobRoutes);
 
@@ -39,6 +50,30 @@ app.use("/api/engagement", engagementRoutes);
 app.use("/api/jobs", cacheMiddleware);
 
 app.use("/api/analytics", cacheMiddleware);
+
+app.use("/api/auth", apiAuthRoutes);
+
+app.use("/api/auto-screening", autoScreeningRoutes);
+
+app.use("/api/interview-scheduler", interviewSchedulerRoutes);
+
+app.use("/api/background-check", backgroundCheckRoutes);
+
+app.use("/api/v1", apiRoutes);
+
+app.use("/api/payments", paymentRoutes);
+
+app.use("/api/globalization", globalizationRoutes);
+
+app.use("/api/video-interview", videoInterviewAnalysisRoutes);
+
+app.use("/api/ai-job-description", AIJobDescriptionRoutes);
+
+app.use("/api/marketplace", marketplaceRoutes);
+
+app.use("/api/mobile", autoHireMobileRoutes);
+
+
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

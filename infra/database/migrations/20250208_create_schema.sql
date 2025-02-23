@@ -29,3 +29,11 @@ CREATE TABLE interviews (
     status VARCHAR(50) CHECK (status IN ('scheduled', 'completed', 'canceled')),
     created_at TIMESTAMP DEFAULT NOW()
 );
+CREATE TABLE api_keys (
+    id SERIAL PRIMARY KEY,
+    key TEXT UNIQUE NOT NULL,
+    user_id INTEGER REFERENCES users(id),
+    plan VARCHAR(50) DEFAULT 'free',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
