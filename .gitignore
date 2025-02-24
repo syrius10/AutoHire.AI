@@ -1,5 +1,14 @@
-apps/ai-services/deepface-env/
-apps/ai-services/deepface-env/
-apps/ai-services/deepface/
-apps/ai-services/deepface-env/
-apps/ai-services/deepface/
+# Ignore DeepFace (adjust if needed)
+deepface/
+deepface/*
+
+# Ignore .env files
+.env
+.env.local
+.env.*.local
+
+# Ignore unnecessary dependencies & system files
+node_modules/
+dist/
+*.log
+

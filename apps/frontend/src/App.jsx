@@ -24,6 +24,7 @@ const AIJobDescription = lazy(() => import("./pages/AIJobDescription"));
 const Marketplace = lazy(() => import("./pages/Marketplace"));
 const APIManagement = lazy(() => import("./pages/APIManagement"));
 const AutoHireMobile = lazy(() => import("./pages/AutoHireMobile"));
+const WorkforceDashboard = lazy(() => import("./pages/WorkforceDashboard"));  // ✅ New Workforce Page
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
           <Route path="/ai-job-description" element={<AIJobDescription />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/api-management" element={<APIManagement />} />
+          <Route path="/workforce" element={<WorkforceDashboard />} /> {/* ✅ New Workforce Route */}
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

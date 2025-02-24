@@ -23,6 +23,7 @@ import videoInterviewAnalysisRoutes from "./src/routes/videoInterviewAnalysis.ro
 import AIJobDescriptionRoutes from "./src/routes/aiJobDescription.routes.js";
 import autoHireMobileRoutes from "./src/routes/autoHireMobile.routes.js";
 import marketplaceRoutes from "./routes/marketplace.routes.js";
+import workforceRoutes from "./src/routes/workforce.routes.js";  // ✅ Added Workforce Routes
 
 const app = express();
 app.use(cors());
@@ -73,6 +74,7 @@ app.use("/api/marketplace", marketplaceRoutes);
 
 app.use("/api/mobile", autoHireMobileRoutes);
 
+app.use("/api/workforce", workforceRoutes);  // ✅ New Workforce Planning API
 
 
 // ✅ Create HTTP server & WebSocket server
