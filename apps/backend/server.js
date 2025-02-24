@@ -31,6 +31,9 @@ import predictiveTalentRoutes from "./src/routes/predictiveTalent.routes.js";
 import efficiencyPredictorRoutes from "./src/routes/efficiencyPredictor.routes.js";
 import successionPlanningRoutes from "./src/routes/successionPlanning.routes.js";
 import turnoverPredictorRoutes from "./src/routes/turnoverPredictor.routes.js";
+import futureSkillTrendsRoutes from "./src/routes/futureSkillTrends.routes.js";
+import adaptiveWorkforceRoutes from "./src/routes/adaptiveWorkforce.routes.js";
+import reskillingPathwaysRoutes from "./src/routes/reskillingPathways.routes.js";
 
 const app = express();
 app.use(cors());
@@ -96,6 +99,12 @@ app.use("/api/efficiency", efficiencyPredictorRoutes);
 app.use("/api/succession", successionPlanningRoutes);
 
 app.use("/api/turnover", turnoverPredictorRoutes);
+
+app.use("/api/future-skills", futureSkillTrendsRoutes);
+
+app.use("/api/adaptive-workforce", adaptiveWorkforceRoutes);
+
+app.use("/api/reskilling-training", reskillingPathwaysRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

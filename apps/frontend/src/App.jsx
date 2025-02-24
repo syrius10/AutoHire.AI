@@ -32,7 +32,9 @@ const TalentDemandDashboard = lazy(() => import("./pages/TalentDemandDashboard")
 const EfficiencyPredictorDashboard = lazy(() => import("./pages/EfficiencyPredictorDashboard"));
 const SuccessionPlanningDashboard = lazy(() => import("./pages/SuccessionPlanningDashboard"));
 const TurnoverPredictorDashboard = lazy(() => import("./pages/TurnoverPredictorDashboard"));
-
+const FutureSkillTrendsDashboard = lazy(() => import("./pages/FutureSkillTrendsDashboard"));
+const AdaptiveWorkforceDashboard = lazy(() => import("./pages/AdaptiveWorkforceDashboard"));
+const ReskillingPathwaysDashboard = lazy(() => import("./pages/ReskillingPathwaysDashboard"));
 
 function App() {
   return (
@@ -77,6 +79,10 @@ function App() {
           <Route path="/efficiency-predictor" element={<EfficiencyPredictorDashboard />} />
           <Route path="/succession-planning" element={<SuccessionPlanningDashboard />} />
           <Route path="/turnover-predictor" element={<TurnoverPredictorDashboard />} />
+          <Route path="/future-skills" element={<FutureSkillTrendsDashboard />} />
+          <Route path="/workforce-adaptability" element={<AdaptiveWorkforceDashboard />} />
+          <Route path="/reskilling-pathways" element={<ReskillingPathwaysDashboard />} />
+
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
