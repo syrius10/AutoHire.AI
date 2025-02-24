@@ -34,6 +34,10 @@ import turnoverPredictorRoutes from "./src/routes/turnoverPredictor.routes.js";
 import futureSkillTrendsRoutes from "./src/routes/futureSkillTrends.routes.js";
 import adaptiveWorkforceRoutes from "./src/routes/adaptiveWorkforce.routes.js";
 import reskillingPathwaysRoutes from "./src/routes/reskillingPathways.routes.js";
+import enterprizeWorkforceCostRoutes from "./src/routes/enterpriseWorkforceCost.routes.js";
+import talentMobilityRoutes from "./src/routes/talentMobility.routes.js";
+import enterprizeRecruitmentRoutes from "./src/routes/enterpriseRecruitment.routes.js";
+import corporateTurnoverRiskRoutes from "./src/routes/corporateTurnoverRisk.routes.js";
 
 const app = express();
 app.use(cors());
@@ -105,6 +109,14 @@ app.use("/api/future-skills", futureSkillTrendsRoutes);
 app.use("/api/adaptive-workforce", adaptiveWorkforceRoutes);
 
 app.use("/api/reskilling-training", reskillingPathwaysRoutes);
+
+app.use("/api/enterprize-workforce-cost", enterprizeWorkforceCostRoutes);
+
+app.use("/api/talent-mobility", talentMobilityRoutes);
+
+app.use("/api/enterprise-recruitment", enterpriseRecruitmentRoutes);
+
+app.use("/api/corporate-turnover-risk", corporateTurnoverRiskRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

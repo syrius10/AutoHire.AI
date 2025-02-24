@@ -35,6 +35,10 @@ const TurnoverPredictorDashboard = lazy(() => import("./pages/TurnoverPredictorD
 const FutureSkillTrendsDashboard = lazy(() => import("./pages/FutureSkillTrendsDashboard"));
 const AdaptiveWorkforceDashboard = lazy(() => import("./pages/AdaptiveWorkforceDashboard"));
 const ReskillingPathwaysDashboard = lazy(() => import("./pages/ReskillingPathwaysDashboard"));
+import EnterpriseWorkforceCostDashboard from "./pages/EnterpriseWorkforceCostDashboard";
+import TalentMobilityDashboard from "./pages/TalentMobilityDashboard";
+import EnterpriseRecruitmentDashboard from "./pages/EnterpriseRecruitmentDashboard";
+import CorporateTurnoverRiskDashboard from "./pages/CorporateTurnoverRiskDashboard";
 
 function App() {
   return (
@@ -82,6 +86,10 @@ function App() {
           <Route path="/future-skills" element={<FutureSkillTrendsDashboard />} />
           <Route path="/workforce-adaptability" element={<AdaptiveWorkforceDashboard />} />
           <Route path="/reskilling-pathways" element={<ReskillingPathwaysDashboard />} />
+          <Route path="/enterprize-workforce-cost" element={<EnterpriseWorkforceCostDashboard />} />
+          <Route path="/talent-mobility" element={<TalentMobilityDashboard />} />
+          <Route path="/enterprise-recruitment" element={<EnterpriseRecruitmentDashboard />} />
+          <Route path="/corporate-turnover-risk" element={<CorporateTurnoverRiskDashboard />} />
 
 
           {/* Mobile App Feature */}
