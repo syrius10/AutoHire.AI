@@ -22,8 +22,11 @@ import globalizationRoutes from "./src/routes/globalization.routes.js";
 import videoInterviewAnalysisRoutes from "./src/routes/videoInterviewAnalysis.routes.js";
 import AIJobDescriptionRoutes from "./src/routes/aiJobDescription.routes.js";
 import autoHireMobileRoutes from "./src/routes/autoHireMobile.routes.js";
-import marketplaceRoutes from "./routes/marketplace.routes.js";
+import marketplaceRoutes from "./src//routes/marketplace.routes.js";
 import workforceRoutes from "./src/routes/workforce.routes.js";  // ✅ Added Workforce Routes
+import workforceInsightsRoutes from "./src/routes/workforceInsights.routes.js";
+import workforceCostRoutes from "./src/routes/workforceCost.routes.js";
+import efficiencyAnalysisRoutes from "./src/routes/efficiencyAnalysis.routes.js";
 
 const app = express();
 app.use(cors());
@@ -75,6 +78,12 @@ app.use("/api/marketplace", marketplaceRoutes);
 app.use("/api/mobile", autoHireMobileRoutes);
 
 app.use("/api/workforce", workforceRoutes);  // ✅ New Workforce Planning API
+
+app.use("/api/workforce-insights", workforceInsightsRoutes);
+
+app.use("/api/workforce-cost", workforceCostRoutes);
+
+app.use("/api/efficiency-analysis", efficiencyAnalysisRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

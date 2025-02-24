@@ -25,6 +25,9 @@ const Marketplace = lazy(() => import("./pages/Marketplace"));
 const APIManagement = lazy(() => import("./pages/APIManagement"));
 const AutoHireMobile = lazy(() => import("./pages/AutoHireMobile"));
 const WorkforceDashboard = lazy(() => import("./pages/WorkforceDashboard"));  // ✅ New Workforce Page
+const WorkforceIntelligenceDashboard = lazy(() => import("./pages/WorkforceIntelligenceDashboard")); // ✅ New Workforce Intelligence Page
+const WorkforceCostDashboard = lazy(() => import("./pages/WorkforceCostDashboard"));
+const EfficiencyTrackingDashboard = lazy(() => import("./pages/EfficiencyTrackingDashboard"));
 
 function App() {
   return (
@@ -62,6 +65,9 @@ function App() {
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/api-management" element={<APIManagement />} />
           <Route path="/workforce" element={<WorkforceDashboard />} /> {/* ✅ New Workforce Route */}
+          <Route path="/workforce-intelligence" element={<WorkforceIntelligenceDashboard />} />  {/* ✅ New Workforce Intelligence Route */}
+          <Route path="/workforce-cost" element={<WorkforceCostDashboard />} />
+          <Route path="/efficiency-tracking" element={<EfficiencyTrackingDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
