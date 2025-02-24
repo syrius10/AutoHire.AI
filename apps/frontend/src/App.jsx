@@ -28,6 +28,11 @@ const WorkforceDashboard = lazy(() => import("./pages/WorkforceDashboard"));  //
 const WorkforceIntelligenceDashboard = lazy(() => import("./pages/WorkforceIntelligenceDashboard")); // ✅ New Workforce Intelligence Page
 const WorkforceCostDashboard = lazy(() => import("./pages/WorkforceCostDashboard"));
 const EfficiencyTrackingDashboard = lazy(() => import("./pages/EfficiencyTrackingDashboard"));
+const TalentDemandDashboard = lazy(() => import("./pages/TalentDemandDashboard"));
+const EfficiencyPredictorDashboard = lazy(() => import("./pages/EfficiencyPredictorDashboard"));
+const SuccessionPlanningDashboard = lazy(() => import("./pages/SuccessionPlanningDashboard"));
+const TurnoverPredictorDashboard = lazy(() => import("./pages/TurnoverPredictorDashboard"));
+
 
 function App() {
   return (
@@ -68,6 +73,10 @@ function App() {
           <Route path="/workforce-intelligence" element={<WorkforceIntelligenceDashboard />} />  {/* ✅ New Workforce Intelligence Route */}
           <Route path="/workforce-cost" element={<WorkforceCostDashboard />} />
           <Route path="/efficiency-tracking" element={<EfficiencyTrackingDashboard />} />
+          <Route path="/talent-demand" element={<TalentDemandDashboard />} />
+          <Route path="/efficiency-predictor" element={<EfficiencyPredictorDashboard />} />
+          <Route path="/succession-planning" element={<SuccessionPlanningDashboard />} />
+          <Route path="/turnover-predictor" element={<TurnoverPredictorDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
