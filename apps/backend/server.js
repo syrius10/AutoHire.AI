@@ -62,6 +62,10 @@ import smartContractRoutes from "./src/routes/smartContract.routes.js";
 import fraudDetectionRoutes from "./src/routes/fraudDetection.routes.js";
 import escrowPaymentRoutes from "./src/routes/escrowPayment.routes.js";
 import disputeResolutionRoutes from "./src/routes/disputeResolution.routes.js";
+import dynamicPricingRoutes from "./src/routes/dynamicPricing.routes.js";
+import freelanceMarketTrendsRoutes from "./src/routes/freelanceMarketTrends.routes.js";
+import competitionAnalysisRoutes from "./src/routes/competitionAnalysis.routes.js";
+import earningsForecastRoutes from "./src/routes/earningsForecast.routes.js";
 
 
 
@@ -191,6 +195,15 @@ app.use("/api/fraud-detection", fraudDetectionRoutes);
 app.use("/api/escrow-payment", escrowPaymentRoutes);
 
 app.use("/api/dispute-resolution", disputeResolutionRoutes);
+
+app.use("/api/dynamic-pricing", dynamicPricingRoutes);
+
+app.use("/api/freelance-trends", freelanceMarketTrendsRoutes);
+
+app.use("/api/competition-analysis", competitionAnalysisRoutes);
+
+app.use("/api/earnings-forecast", earningsForecastRoutes);
+
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

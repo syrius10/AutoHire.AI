@@ -63,6 +63,10 @@ import SmartContractDashboard from "./pages/SmartContractDashboard";
 import FraudDetectionDashboard from "./pages/FraudDetectionDashboard";
 import EscrowPaymentDashboard from "./pages/EscrowPaymentDashboard";
 import DisputeResolutionDashboard from "./pages/DisputeResolutionDashboard";
+import DynamicPricingDashboard from "./pages/DynamicPricingDashboard";
+import FreelanceMarketTrendsDashboard from "./pages/FreelanceMarketTrendsDashboard";
+import CompetitionAnalysisDashboard from "./pages/CompetitionAnalysisDashboard";
+import EarningsForecastDashboard from "./pages/EarningsForecastDashboard";
 
 
 function App() {
@@ -147,6 +151,12 @@ function App() {
           <Route path="/fraud-detection" element={<FraudDetectionDashboard />} />
           <Route path="/escrow-payments" element={<EscrowPaymentDashboard />} />
           <Route path="/dispute-resolution" element={<DisputeResolutionDashboard />} />
+
+          {/* 🔹 Freelance Pricing & Market Intelligence */}
+          <Route path="/dynamic-pricing" element={<DynamicPricingDashboard />} />
+          <Route path="/freelance-market-trends" element={<FreelanceMarketTrendsDashboard />} />
+          <Route path="/competition-analysis" element={<CompetitionAnalysisDashboard />} />
+          <Route path="/earnings-forecast" element={<EarningsForecastDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
