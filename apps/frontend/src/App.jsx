@@ -55,6 +55,11 @@ import GlobalTalentDashboard from "./pages/GlobalTalentDashboard";
 import MultilingualRecruitmentDashboard from "./pages/MultilingualRecruitmentDashboard";
 import LegalComplianceDashboard from "./pages/LegalComplianceDashboard";
 import AutomatedVisaScreeningDashboard from "./pages/AutomatedVisaScreeningDashboard";
+import FreelanceTalentMatchingDashboard from "./pages/FreelanceTalentMatchingDashboard";
+import GigWorkDemandDashboard from "./pages/GigWorkDemandDashboard";
+import FreelancerSuccessPredictionDashboard from "./pages/FreelancerSuccessPredictionDashboard";
+import ContractRiskAssessmentDashboard from "./pages/ContractRiskAssessmentDashboard";
+
 
 function App() {
   return (
@@ -126,6 +131,12 @@ function App() {
           <Route path="/multilingual-recruitment" element={<MultilingualRecruitmentDashboard />} />
           <Route path="/legal-compliance" element={<LegalComplianceDashboard />} />
           <Route path="/visa-screening" element={<AutomatedVisaScreeningDashboard />} />
+
+          {/* 📍 Freelance & Gig Hiring Dashboards */}
+          <Route path="/freelance-matching" element={<FreelanceTalentMatchingDashboard />} />
+          <Route path="/gig-demand" element={<GigWorkDemandDashboard />} />
+          <Route path="/freelancer-success" element={<FreelancerSuccessPredictionDashboard />} />
+          <Route path="/contract-risk" element={<ContractRiskAssessmentDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

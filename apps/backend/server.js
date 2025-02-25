@@ -54,6 +54,11 @@ import globalTalentRoutes from "./src/routes/globalTalent.routes.js";
 import multilingualRecruitmentRoutes from "./src/routes/multilingualRecruitment.routes.js";
 import legalComplianceRoutes from "./src/routes/legalCompliance.routes.js";
 import automatedVisaScreeningRoutes from "./src/routes/automatedVisaScreening.routes.js";
+import freelanceTalentMatchingRoutes from "./src/routes/freelanceTalentMatching.routes.js";
+import gigWorkDemandRoutes from "./src/routes/gigWorkDemand.routes.js";
+import freelancerSuccessPredictionRoutes from "./src/routes/freelancerSuccessPrediction.routes.js";
+import contractRiskAssessmentRoutes from "./src/routes/contractRiskAssessment.routes.js";
+
 
 
 const app = express();
@@ -166,6 +171,14 @@ app.use("/api/multilingual-recruitment", multilingualRecruitmentRoutes);
 app.use("/api/legal-compliance", legalComplianceRoutes);
 
 app.use("/api/visa-screening", automatedVisaScreeningRoutes);
+
+app.use("/api/freelance-talent-matching", freelanceTalentMatchingRoutes);
+
+app.use("/api/gig-work-demand", gigWorkDemandRoutes);
+
+app.use("/api/freelancer-success", freelancerSuccessPredictionRoutes);
+
+app.use("/api/contract-risk", contractRiskAssessmentRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
