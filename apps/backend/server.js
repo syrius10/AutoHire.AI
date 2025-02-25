@@ -42,6 +42,10 @@ import employeeEngagementRoutes from "./src/routes/employeeEngagement.routes.js"
 import burnoutRiskRoutes from "./src/routes/burnoutRisk.routes.js";
 import wellBeingRecommendationRoutes from "./src/routes/wellBeingRecommendation.routes.js";
 import proactiveRetentionRoutes from "./src/routes/proactiveRetention.routes.js";
+import executiveTalentRoutes from "./src/routes/executiveTalent.routes.js";
+import leadershipSuccessionRoutes from "./src/routes/leadershipSuccession.routes.js";
+import executivePerformanceRoutes from "./src/routes/executivePerformance.routes.js";
+import highPotentialLeadersRoutes from "./src/routes/highPotentialLeaders.routes.js";
 
 
 const app = express();
@@ -130,6 +134,14 @@ app.use("/api/burnout", burnoutRiskRoutes);
 app.use("/api/wellbeing", wellBeingRecommendationRoutes);
 
 app.use("/api/retention", proactiveRetentionRoutes);
+
+app.use("/api/executive-talent", executiveTalentRoutes);
+
+app.use("/api/leadership-succession", leadershipSuccessionRoutes);
+
+app.use("/api/executive-performance", executivePerformanceRoutes);
+
+app.use("/api/high-potential-leaders", highPotentialLeadersRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

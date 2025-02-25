@@ -43,6 +43,10 @@ import EmployeeEngagementDashboard from "./pages/EmployeeEngagementDashboard";
 import BurnoutRiskDashboard from "./pages/BurnoutRiskDashboard";
 import WellBeingDashboard from "./pages/WellBeingDashboard";
 import ProactiveRetentionDashboard from "./pages/ProactiveRetentionDashboard";
+import ExecutiveTalentDashboard from "./pages/ExecutiveTalentDashboard";
+import LeadershipSuccessionDashboard from "./pages/LeadershipSuccessionDashboard";
+import ExecutivePerformanceDashboard from "./pages/ExecutivePerformanceDashboard";
+import HighPotentialLeadersDashboard from "./pages/HighPotentialLeadersDashboard";
 
 function App() {
   return (
@@ -98,6 +102,10 @@ function App() {
           <Route path="/burnout-risk" element={<BurnoutRiskDashboard />} />
           <Route path="/wellbeing" element={<WellBeingDashboard />} />
           <Route path="/retention-risk" element={<ProactiveRetentionDashboard />} />
+          <Route path="/executive-talent" element={<ExecutiveTalentDashboard />} />
+          <Route path="/leadership-succession" element={<LeadershipSuccessionDashboard />} />
+          <Route path="/executive-performance" element={<ExecutivePerformanceDashboard />} />
+          <Route path="/high-potential-leaders" element={<HighPotentialLeadersDashboard />} />
 
 
           {/* Mobile App Feature */}
