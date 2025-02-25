@@ -59,6 +59,10 @@ import FreelanceTalentMatchingDashboard from "./pages/FreelanceTalentMatchingDas
 import GigWorkDemandDashboard from "./pages/GigWorkDemandDashboard";
 import FreelancerSuccessPredictionDashboard from "./pages/FreelancerSuccessPredictionDashboard";
 import ContractRiskAssessmentDashboard from "./pages/ContractRiskAssessmentDashboard";
+import SmartContractDashboard from "./pages/SmartContractDashboard";
+import FraudDetectionDashboard from "./pages/FraudDetectionDashboard";
+import EscrowPaymentDashboard from "./pages/EscrowPaymentDashboard";
+import DisputeResolutionDashboard from "./pages/DisputeResolutionDashboard";
 
 
 function App() {
@@ -137,6 +141,12 @@ function App() {
           <Route path="/gig-demand" element={<GigWorkDemandDashboard />} />
           <Route path="/freelancer-success" element={<FreelancerSuccessPredictionDashboard />} />
           <Route path="/contract-risk" element={<ContractRiskAssessmentDashboard />} />
+
+          {/* Freelance Payment & Security Dashboards */}
+          <Route path="/smart-contracts" element={<SmartContractDashboard />} />
+          <Route path="/fraud-detection" element={<FraudDetectionDashboard />} />
+          <Route path="/escrow-payments" element={<EscrowPaymentDashboard />} />
+          <Route path="/dispute-resolution" element={<DisputeResolutionDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

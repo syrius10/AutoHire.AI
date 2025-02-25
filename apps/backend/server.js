@@ -58,6 +58,10 @@ import freelanceTalentMatchingRoutes from "./src/routes/freelanceTalentMatching.
 import gigWorkDemandRoutes from "./src/routes/gigWorkDemand.routes.js";
 import freelancerSuccessPredictionRoutes from "./src/routes/freelancerSuccessPrediction.routes.js";
 import contractRiskAssessmentRoutes from "./src/routes/contractRiskAssessment.routes.js";
+import smartContractRoutes from "./src/routes/smartContract.routes.js";
+import fraudDetectionRoutes from "./src/routes/fraudDetection.routes.js";
+import escrowPaymentRoutes from "./src/routes/escrowPayment.routes.js";
+import disputeResolutionRoutes from "./src/routes/disputeResolution.routes.js";
 
 
 
@@ -179,6 +183,14 @@ app.use("/api/gig-work-demand", gigWorkDemandRoutes);
 app.use("/api/freelancer-success", freelancerSuccessPredictionRoutes);
 
 app.use("/api/contract-risk", contractRiskAssessmentRoutes);
+
+app.use("/api/smart-contract", smartContractRoutes);
+
+app.use("/api/fraud-detection", fraudDetectionRoutes);
+
+app.use("/api/escrow-payment", escrowPaymentRoutes);
+
+app.use("/api/dispute-resolution", disputeResolutionRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
