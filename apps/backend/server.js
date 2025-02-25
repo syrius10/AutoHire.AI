@@ -46,6 +46,14 @@ import executiveTalentRoutes from "./src/routes/executiveTalent.routes.js";
 import leadershipSuccessionRoutes from "./src/routes/leadershipSuccession.routes.js";
 import executivePerformanceRoutes from "./src/routes/executivePerformance.routes.js";
 import highPotentialLeadersRoutes from "./src/routes/highPotentialLeaders.routes.js";
+import workforceIntegrationRoutes from "./src/routes/workforceIntegration.routes.js";
+import restructuringImpactRoutes from "./src/routes/restructuringImpact.routes.js";
+import postAcquisitionRetentionRoutes from "./src/routes/postAcquisitionRetention.routes.js";
+import enterpriseSkillsGapRoutes from "./src/routes/enterpriseSkillsGap.routes.js";
+import globalTalentRoutes from "./src/routes/globalTalent.routes.js";
+import multilingualRecruitmentRoutes from "./src/routes/multilingualRecruitment.routes.js";
+import legalComplianceRoutes from "./src/routes/legalCompliance.routes.js";
+import automatedVisaScreeningRoutes from "./src/routes/automatedVisaScreening.routes.js";
 
 
 const app = express();
@@ -142,6 +150,22 @@ app.use("/api/leadership-succession", leadershipSuccessionRoutes);
 app.use("/api/executive-performance", executivePerformanceRoutes);
 
 app.use("/api/high-potential-leaders", highPotentialLeadersRoutes);
+
+app.use("/api/workforce-integration", workforceIntegrationRoutes);
+
+app.use("/api/restructuring-impact", restructuringImpactRoutes);
+
+app.use("/api/post-acquisition-retention", postAcquisitionRetentionRoutes);
+
+app.use("/api/enterprise-skills-gap", enterpriseSkillsGapRoutes);
+
+app.use("/api/global-talent", globalTalentRoutes);
+
+app.use("/api/multilingual-recruitment", multilingualRecruitmentRoutes);
+
+app.use("/api/legal-compliance", legalComplianceRoutes);
+
+app.use("/api/visa-screening", automatedVisaScreeningRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

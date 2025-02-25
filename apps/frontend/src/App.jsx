@@ -47,6 +47,14 @@ import ExecutiveTalentDashboard from "./pages/ExecutiveTalentDashboard";
 import LeadershipSuccessionDashboard from "./pages/LeadershipSuccessionDashboard";
 import ExecutivePerformanceDashboard from "./pages/ExecutivePerformanceDashboard";
 import HighPotentialLeadersDashboard from "./pages/HighPotentialLeadersDashboard";
+import WorkforceIntegrationDashboard from "./pages/WorkforceIntegrationDashboard";
+import RestructuringImpactDashboard from "./pages/RestructuringImpactDashboard";
+import PostAcquisitionRetentionDashboard from "./pages/PostAcquisitionRetentionDashboard";
+import EnterpriseSkillsGapDashboard from "./pages/EnterpriseSkillsGapDashboard";
+import GlobalTalentDashboard from "./pages/GlobalTalentDashboard";
+import MultilingualRecruitmentDashboard from "./pages/MultilingualRecruitmentDashboard";
+import LegalComplianceDashboard from "./pages/LegalComplianceDashboard";
+import AutomatedVisaScreeningDashboard from "./pages/AutomatedVisaScreeningDashboard";
 
 function App() {
   return (
@@ -107,6 +115,17 @@ function App() {
           <Route path="/executive-performance" element={<ExecutivePerformanceDashboard />} />
           <Route path="/high-potential-leaders" element={<HighPotentialLeadersDashboard />} />
 
+          {/* 🔹 New M&A Planning Dashboards */}
+          <Route path="/workforce-integration" element={<WorkforceIntegrationDashboard />} />
+          <Route path="/restructuring-impact" element={<RestructuringImpactDashboard />} />
+          <Route path="/post-acquisition-retention" element={<PostAcquisitionRetentionDashboard />} />
+          <Route path="/enterprise-skills-gap" element={<EnterpriseSkillsGapDashboard />} />
+
+          {/* 🌍 Global Hiring & Compliance */}
+          <Route path="/global-talent" element={<GlobalTalentDashboard />} />
+          <Route path="/multilingual-recruitment" element={<MultilingualRecruitmentDashboard />} />
+          <Route path="/legal-compliance" element={<LegalComplianceDashboard />} />
+          <Route path="/visa-screening" element={<AutomatedVisaScreeningDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
