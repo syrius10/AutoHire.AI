@@ -70,7 +70,10 @@ import freelancerReputationRoutes from "./src/routes/freelancerReputation.routes
 import reviewValidationRoutes from "./src/routes/reviewValidation.routes.js";
 import fraudulentProfileDetectionRoutes from "./src/routes/fraudulentProfileDetection.routes.js";
 import clientTrustScoreRoutes from "./src/routes/clientTrustScore.routes.js";
-
+import freelanceNetworkRoutes from "./src/routes/freelanceNetwork.routes.js";
+import projectRecommendationRoutes from "./src/routes/projectRecommendation.routes.js";
+import smartEscrowRoutes from "./src/routes/smartEscrow.routes.js";
+import trustScoreRoutes from "./src/routes/trustScore.routes.js";
 
 const app = express();
 app.use(cors());
@@ -215,6 +218,13 @@ app.use("/api/fraudulent-profile-detection", fraudulentProfileDetectionRoutes);
 
 app.use("/api/client-trust-score", clientTrustScoreRoutes);
 
+app.use("/api/freelance-network", freelanceNetworkRoutes);
+
+app.use("/api/project-recommendation", projectRecommendationRoutes);
+
+app.use("/api/smart-escrow", smartEscrowRoutes);
+
+app.use("/api/trust-score", trustScoreRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

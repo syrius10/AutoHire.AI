@@ -71,6 +71,10 @@ import FreelancerReputationDashboard from "./pages/FreelancerReputationDashboard
 import ReviewValidationDashboard from "./pages/ReviewValidationDashboard";
 import FraudulentProfileDetectionDashboard from "./pages/FraudulentProfileDetectionDashboard";
 import ClientTrustScoreDashboard from "./pages/ClientTrustScoreDashboard";
+import FreelanceNetworkDashboard from "./pages/FreelanceNetworkDashboard";
+import ProjectRecommendationDashboard from "./pages/ProjectRecommendationDashboard";
+import SmartEscrowDashboard from "./pages/SmartEscrowDashboard";
+import TrustScoreDashboard from "./pages/TrustScoreDashboard";
 
 
 function App() {
@@ -167,6 +171,12 @@ function App() {
           <Route path="/review-validation" element={<ReviewValidationDashboard />} />
           <Route path="/fraudulent-profile-detection" element={<FraudulentProfileDetectionDashboard />} />
           <Route path="/client-trust-score" element={<ClientTrustScoreDashboard />} />
+
+          {/* 🏆 AI-Powered Freelance Network */}
+          <Route path="/freelance-network" element={<FreelanceNetworkDashboard />} />
+          <Route path="/project-recommendation" element={<ProjectRecommendationDashboard />} />
+          <Route path="/smart-escrow" element={<SmartEscrowDashboard />} />
+          <Route path="/trust-score" element={<TrustScoreDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
