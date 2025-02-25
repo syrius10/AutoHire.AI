@@ -36,8 +36,13 @@ import adaptiveWorkforceRoutes from "./src/routes/adaptiveWorkforce.routes.js";
 import reskillingPathwaysRoutes from "./src/routes/reskillingPathways.routes.js";
 import enterprizeWorkforceCostRoutes from "./src/routes/enterpriseWorkforceCost.routes.js";
 import talentMobilityRoutes from "./src/routes/talentMobility.routes.js";
-import enterprizeRecruitmentRoutes from "./src/routes/enterpriseRecruitment.routes.js";
+import enterpriseRecruitmentRoutes from "./src/routes/enterpriseRecruitment.routes.js";
 import corporateTurnoverRiskRoutes from "./src/routes/corporateTurnoverRisk.routes.js";
+import employeeEngagementRoutes from "./src/routes/employeeEngagement.routes.js";
+import burnoutRiskRoutes from "./src/routes/burnoutRisk.routes.js";
+import wellBeingRecommendationRoutes from "./src/routes/wellBeingRecommendation.routes.js";
+import proactiveRetentionRoutes from "./src/routes/proactiveRetention.routes.js";
+
 
 const app = express();
 app.use(cors());
@@ -118,6 +123,13 @@ app.use("/api/enterprise-recruitment", enterpriseRecruitmentRoutes);
 
 app.use("/api/corporate-turnover-risk", corporateTurnoverRiskRoutes);
 
+app.use("/api/employee-engagement", employeeEngagementRoutes);
+
+app.use("/api/burnout", burnoutRiskRoutes);
+
+app.use("/api/wellbeing", wellBeingRecommendationRoutes);
+
+app.use("/api/retention", proactiveRetentionRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

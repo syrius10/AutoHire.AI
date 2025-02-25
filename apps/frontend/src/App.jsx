@@ -39,6 +39,10 @@ import EnterpriseWorkforceCostDashboard from "./pages/EnterpriseWorkforceCostDas
 import TalentMobilityDashboard from "./pages/TalentMobilityDashboard";
 import EnterpriseRecruitmentDashboard from "./pages/EnterpriseRecruitmentDashboard";
 import CorporateTurnoverRiskDashboard from "./pages/CorporateTurnoverRiskDashboard";
+import EmployeeEngagementDashboard from "./pages/EmployeeEngagementDashboard";
+import BurnoutRiskDashboard from "./pages/BurnoutRiskDashboard";
+import WellBeingDashboard from "./pages/WellBeingDashboard";
+import ProactiveRetentionDashboard from "./pages/ProactiveRetentionDashboard";
 
 function App() {
   return (
@@ -90,6 +94,10 @@ function App() {
           <Route path="/talent-mobility" element={<TalentMobilityDashboard />} />
           <Route path="/enterprise-recruitment" element={<EnterpriseRecruitmentDashboard />} />
           <Route path="/corporate-turnover-risk" element={<CorporateTurnoverRiskDashboard />} />
+          <Route path="/employee-engagement" element={<EmployeeEngagementDashboard />} />
+          <Route path="/burnout-risk" element={<BurnoutRiskDashboard />} />
+          <Route path="/wellbeing" element={<WellBeingDashboard />} />
+          <Route path="/retention-risk" element={<ProactiveRetentionDashboard />} />
 
 
           {/* Mobile App Feature */}
