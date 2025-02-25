@@ -67,6 +67,10 @@ import DynamicPricingDashboard from "./pages/DynamicPricingDashboard";
 import FreelanceMarketTrendsDashboard from "./pages/FreelanceMarketTrendsDashboard";
 import CompetitionAnalysisDashboard from "./pages/CompetitionAnalysisDashboard";
 import EarningsForecastDashboard from "./pages/EarningsForecastDashboard";
+import FreelancerReputationDashboard from "./pages/FreelancerReputationDashboard";
+import ReviewValidationDashboard from "./pages/ReviewValidationDashboard";
+import FraudulentProfileDetectionDashboard from "./pages/FraudulentProfileDetectionDashboard";
+import ClientTrustScoreDashboard from "./pages/ClientTrustScoreDashboard";
 
 
 function App() {
@@ -157,6 +161,12 @@ function App() {
           <Route path="/freelance-market-trends" element={<FreelanceMarketTrendsDashboard />} />
           <Route path="/competition-analysis" element={<CompetitionAnalysisDashboard />} />
           <Route path="/earnings-forecast" element={<EarningsForecastDashboard />} />
+
+          {/* ✅ Sprint 44 - Freelance Reputation & Trust Dashboards */}
+          <Route path="/freelancer-reputation" element={<FreelancerReputationDashboard />} />
+          <Route path="/review-validation" element={<ReviewValidationDashboard />} />
+          <Route path="/fraudulent-profile-detection" element={<FraudulentProfileDetectionDashboard />} />
+          <Route path="/client-trust-score" element={<ClientTrustScoreDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

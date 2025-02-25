@@ -66,7 +66,10 @@ import dynamicPricingRoutes from "./src/routes/dynamicPricing.routes.js";
 import freelanceMarketTrendsRoutes from "./src/routes/freelanceMarketTrends.routes.js";
 import competitionAnalysisRoutes from "./src/routes/competitionAnalysis.routes.js";
 import earningsForecastRoutes from "./src/routes/earningsForecast.routes.js";
-
+import freelancerReputationRoutes from "./src/routes/freelancerReputation.routes.js";
+import reviewValidationRoutes from "./src/routes/reviewValidation.routes.js";
+import fraudulentProfileDetectionRoutes from "./src/routes/fraudulentProfileDetection.routes.js";
+import clientTrustScoreRoutes from "./src/routes/clientTrustScore.routes.js";
 
 
 const app = express();
@@ -203,6 +206,14 @@ app.use("/api/freelance-trends", freelanceMarketTrendsRoutes);
 app.use("/api/competition-analysis", competitionAnalysisRoutes);
 
 app.use("/api/earnings-forecast", earningsForecastRoutes);
+
+app.use("/api/freelancer-reputation", freelancerReputationRoutes);
+
+app.use("/api/review-validation", reviewValidationRoutes);
+
+app.use("/api/fraudulent-profile-detection", fraudulentProfileDetectionRoutes);
+
+app.use("/api/client-trust-score", clientTrustScoreRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
