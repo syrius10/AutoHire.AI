@@ -75,11 +75,15 @@ import FreelanceNetworkDashboard from "./pages/FreelanceNetworkDashboard";
 import ProjectRecommendationDashboard from "./pages/ProjectRecommendationDashboard";
 import SmartEscrowDashboard from "./pages/SmartEscrowDashboard";
 import TrustScoreDashboard from "./pages/TrustScoreDashboard";
-{/* Sprint 46 ✅ AI-Powered Career Coaching */}
+{/* Sprint 46 AI-Powered Career Coaching */}
 import CareerPathDashboard from "./pages/CareerPathDashboard";
 import PersonalizedLearningDashboard from "./pages/PersonalizedLearningDashboard";
 import SmartReskillingDashboard from "./pages/SmartReskillingDashboard";
 import SkillGapEnhancementDashboard from "./pages/SkillGapEnhancementDashboard";
+{/* Sprint 47 AI-Driven Job Market Intelligence */}
+import JobMarketTrendsDashboard from "./pages/JobMarketTrendsDashboard";
+import SalaryBenchmarkingDashboard from "./pages/SalaryBenchmarkingDashboard";
+import IndustryDemandPredictionDashboard from "./pages/IndustryDemandPredictionDashboard";
 
 
 function App() {
@@ -177,7 +181,7 @@ function App() {
           <Route path="/fraudulent-profile-detection" element={<FraudulentProfileDetectionDashboard />} />
           <Route path="/client-trust-score" element={<ClientTrustScoreDashboard />} />
 
-          {/* 🏆 AI-Powered Freelance Network */}
+          {/* 🏆 Sprint 45 - AI-Powered Freelance Network */}
           <Route path="/freelance-network" element={<FreelanceNetworkDashboard />} />
           <Route path="/project-recommendation" element={<ProjectRecommendationDashboard />} />
           <Route path="/smart-escrow" element={<SmartEscrowDashboard />} />
@@ -188,6 +192,11 @@ function App() {
           <Route path="/personalized-learning" element={<PersonalizedLearningDashboard />} />
           <Route path="/smart-reskilling" element={<SmartReskillingDashboard />} />
           <Route path="/skill-gap-enhancement" element={<SkillGapEnhancementDashboard />} />
+
+          {/* Sprint 47 AI-Driven Job Market Intelligence */}
+          <Route path="/job-market-trends" element={<JobMarketTrendsDashboard />} />
+          <Route path="/salary-benchmarking" element={<SalaryBenchmarkingDashboard />} />
+          <Route path="/industry-demand-prediction" element={<IndustryDemandPredictionDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
