@@ -74,6 +74,11 @@ import freelanceNetworkRoutes from "./src/routes/freelanceNetwork.routes.js";
 import projectRecommendationRoutes from "./src/routes/projectRecommendation.routes.js";
 import smartEscrowRoutes from "./src/routes/smartEscrow.routes.js";
 import trustScoreRoutes from "./src/routes/trustScore.routes.js";
+// // SPRINT 46 ✅ AI-Powered Career Coaching & Upskilling
+import careerPathRoutes from "./routes/careerPath.routes.js";
+import personalizedLearningRoutes from "./routes/personalizedLearning.routes.js";
+import smartReskillingRoutes from "./routes/smartReskilling.routes.js";
+import skillGapEnhancementRoutes from "./routes/skillGapEnhancement.routes.js";
 
 const app = express();
 app.use(cors());
@@ -225,6 +230,16 @@ app.use("/api/project-recommendation", projectRecommendationRoutes);
 app.use("/api/smart-escrow", smartEscrowRoutes);
 
 app.use("/api/trust-score", trustScoreRoutes);
+
+// // SPRINT 46 ✅ AI-Powered Career Coaching & Upskilling
+
+app.use("/api/career-path", careerPathRoutes);
+
+app.use("/api/personalized-learning", personalizedLearningRoutes);
+
+app.use("/api/smart-reskilling", smartReskillingRoutes);
+
+app.use("/api/skill-gap-enhancement", skillGapEnhancementRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

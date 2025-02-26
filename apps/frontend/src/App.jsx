@@ -75,6 +75,11 @@ import FreelanceNetworkDashboard from "./pages/FreelanceNetworkDashboard";
 import ProjectRecommendationDashboard from "./pages/ProjectRecommendationDashboard";
 import SmartEscrowDashboard from "./pages/SmartEscrowDashboard";
 import TrustScoreDashboard from "./pages/TrustScoreDashboard";
+{/* Sprint 46 ✅ AI-Powered Career Coaching */}
+import CareerPathDashboard from "./pages/CareerPathDashboard";
+import PersonalizedLearningDashboard from "./pages/PersonalizedLearningDashboard";
+import SmartReskillingDashboard from "./pages/SmartReskillingDashboard";
+import SkillGapEnhancementDashboard from "./pages/SkillGapEnhancementDashboard";
 
 
 function App() {
@@ -177,6 +182,12 @@ function App() {
           <Route path="/project-recommendation" element={<ProjectRecommendationDashboard />} />
           <Route path="/smart-escrow" element={<SmartEscrowDashboard />} />
           <Route path="/trust-score" element={<TrustScoreDashboard />} />
+
+          {/* Sprint 46 ✅ AI-Powered Career Coaching */}
+          <Route path="/career-path" element={<CareerPathDashboard />} />
+          <Route path="/personalized-learning" element={<PersonalizedLearningDashboard />} />
+          <Route path="/smart-reskilling" element={<SmartReskillingDashboard />} />
+          <Route path="/skill-gap-enhancement" element={<SkillGapEnhancementDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
