@@ -14,7 +14,6 @@ import engagementRoutes from "./src/routes/engagement.routes.js";
 import { cacheMiddleware } from "./src/middleware/cache.js";
 import apiAuthRoutes from "./src/routes/apiAuthAuth.routes.js"; 
 import autoScreeningRoutes from "./src/routes/autoScreening.routes.js";
-import interviewSchedulerRoutes from "./src/routes/interviewScheduler.routes.js";
 import backgroundCheckRoutes from "./src/routes/backgroundCheck.routes.js";
 import apiRoutes from "./src/routes/api.routes.js";
 import paymentRoutes from "./src/routes/payment.routes.js";
@@ -83,6 +82,10 @@ import skillGapEnhancementRoutes from "./routes/skillGapEnhancement.routes.js";
 import jobMarketTrendsRoutes from "./routes/jobMarketTrends.routes.js";
 import salaryBenchmarkingRoutes from "./routes/salaryBenchmarking.routes.js";
 import industryDemandPredictionRoutes from "./routes/industryDemandPrediction.routes.js";
+// // Sprint 48 AI-Powered Hiring Agents API Routes
+import autonomousRecruiterRoutes from "./routes/autonomousRecruiter.routes.js";
+import employerCandidateRoutes from "./routes/employerCandidate.routes.js";
+import interviewSchedulerRoutes from "./src/routes/interviewScheduler.routes.js";
 
 const app = express();
 app.use(cors());
@@ -114,8 +117,6 @@ app.use("/api/analytics", cacheMiddleware);
 app.use("/api/auth", apiAuthRoutes);
 
 app.use("/api/auto-screening", autoScreeningRoutes);
-
-app.use("/api/interview-scheduler", interviewSchedulerRoutes);
 
 app.use("/api/background-check", backgroundCheckRoutes);
 
@@ -252,6 +253,13 @@ app.use("/api/job-market-trends", jobMarketTrendsRoutes);
 app.use("/api/salary-benchmarking", salaryBenchmarkingRoutes);
 
 app.use("/api/industry-demand-prediction", industryDemandPredictionRoutes);
+
+// // Sprint 48 AI-Powered Hiring Agents API Routes
+app.use("/api/autonomous-recruiter", autonomousRecruiterRoutes);
+
+app.use("/api/employer-candidate", employerCandidateRoutes);
+
+app.use("/api/interview-scheduler", interviewSchedulerRoutes);  // Unified interview scheduling
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

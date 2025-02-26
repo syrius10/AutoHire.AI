@@ -1,17 +1,38 @@
 import express from "express";
-import { scheduleInterview } from "../services/interviewSchedulerService";
+import { scheduleInterview } from "../services/interviewSchedulerService.js";
 
 const router = express.Router();
 
 /**
- * Schedule an interview
+ * @route POST /api/interview-scheduler/schedule
+ * @desc AI-powered interview scheduling assistant
  */
 router.post("/schedule", async (req, res) => {
-    const { candidateEmail, recruiterEmail, timeSlot } = req.body;
-    if (!candidateEmail || !recruiterEmail || !timeSlot) return res.status(400).json({ error: "Missing required fields" });
+  try {
+    // Extract fields
+    const { candidateEmail, recruiterEmail, timeSlot, candidateName, jobRole } = req.body;
 
-    const result = await scheduleInterview(candidateEmail, recruiterEmail, timeSlot);
-    res.json(result);
+    // Validate input
+    if (!candidateEmail || !recruiterEmail || !timeSlot) {
+      if (!candidateName || !jobRole) {
+        return res.status(400).json({ error: "Missing required fields" });
+      }
+    }
+
+    // Call scheduling service
+    const confirmation = await scheduleInterview({ 
+      candidateEmail, 
+      recruiterEmail, 
+      timeSlot, 
+      candidateName, 
+      jobRole 
+    });
+
+    res.json(confirmation);
+  } catch (error) {
+    console.error("Error in AI interview scheduling:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 export default router;

@@ -84,6 +84,10 @@ import SkillGapEnhancementDashboard from "./pages/SkillGapEnhancementDashboard";
 import JobMarketTrendsDashboard from "./pages/JobMarketTrendsDashboard";
 import SalaryBenchmarkingDashboard from "./pages/SalaryBenchmarkingDashboard";
 import IndustryDemandPredictionDashboard from "./pages/IndustryDemandPredictionDashboard";
+{/* Sprint 48 AI-Powered Autonomous Hiring Agents */}
+import AutonomousRecruiterDashboard from "./pages/AutonomousRecruiterDashboard";
+import EmployerCandidateDashboard from "./pages/EmployerCandidateDashboard";
+import InterviewSchedulerDashboard from "./pages/InterviewSchedulerDashboard";
 
 
 function App() {
@@ -197,6 +201,11 @@ function App() {
           <Route path="/job-market-trends" element={<JobMarketTrendsDashboard />} />
           <Route path="/salary-benchmarking" element={<SalaryBenchmarkingDashboard />} />
           <Route path="/industry-demand-prediction" element={<IndustryDemandPredictionDashboard />} />
+
+          {/* Sprint 48 AI-Powered Autonomous Hiring Agents */}
+          <Route path="/ai-hiring/autonomous-recruiter" element={<AutonomousRecruiterDashboard />} />
+          <Route path="/ai-hiring/employer-candidate" element={<EmployerCandidateDashboard />} />
+          <Route path="/ai-hiring/interview-scheduler" element={<InterviewSchedulerDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
