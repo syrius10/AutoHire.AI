@@ -88,7 +88,11 @@ import IndustryDemandPredictionDashboard from "./pages/IndustryDemandPredictionD
 import AutonomousRecruiterDashboard from "./pages/AutonomousRecruiterDashboard";
 import EmployerCandidateDashboard from "./pages/EmployerCandidateDashboard";
 import InterviewSchedulerDashboard from "./pages/InterviewSchedulerDashboard";
-
+{/* Sprint 49 Generative AI for Resume & Portfolio Optimization */}
+import ResumeEnhancementDashboard from "./pages/ResumeEnhancementDashboard";
+import PortfolioGeneratorDashboard from "./pages/PortfolioGeneratorDashboard";
+import CoverLetterDashboard from "./pages/CoverLetterDashboard";
+import ApplicationAutomationDashboard from "./pages/ApplicationAutomationDashboard";
 
 function App() {
   return (
@@ -206,6 +210,12 @@ function App() {
           <Route path="/ai-hiring/autonomous-recruiter" element={<AutonomousRecruiterDashboard />} />
           <Route path="/ai-hiring/employer-candidate" element={<EmployerCandidateDashboard />} />
           <Route path="/ai-hiring/interview-scheduler" element={<InterviewSchedulerDashboard />} />
+
+          {/* Sprint 49 Generative AI for Resume & Portfolio Optimization */}
+          <Route path="/resume-enhancement" element={<ResumeEnhancementDashboard />} />
+          <Route path="/portfolio-generator" element={<PortfolioGeneratorDashboard />} />
+          <Route path="/cover-letter" element={<CoverLetterDashboard />} />
+          <Route path="/application-automation" element={<ApplicationAutomationDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

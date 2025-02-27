@@ -86,10 +86,19 @@ import industryDemandPredictionRoutes from "./routes/industryDemandPrediction.ro
 import autonomousRecruiterRoutes from "./routes/autonomousRecruiter.routes.js";
 import employerCandidateRoutes from "./routes/employerCandidate.routes.js";
 import interviewSchedulerRoutes from "./src/routes/interviewScheduler.routes.js";
+// // Sprint 49 AI-powered Resume & Application Automation
+import resumeEnhancementRoutes from "./routes/resumeEnhancement.routes.js";
+import portfolioGeneratorRoutes from "./routes/portfolioGenerator.routes.js";
+import coverLetterRoutes from "./routes/coverLetter.routes.js";
+import applicationAutomationRoutes from "./routes/applicationAutomation.routes.js";
+
 
 const app = express();
+const PORT = 5001; // Change to match your backend port
+
 app.use(cors());
 app.use(express.json());
+
 
 // ✅ Register API routes BEFORE starting the server
 app.use('/auth', userAuthRoutes);
@@ -261,6 +270,15 @@ app.use("/api/employer-candidate", employerCandidateRoutes);
 
 app.use("/api/interview-scheduler", interviewSchedulerRoutes);  // Unified interview scheduling
 
+// // Sprint 49 AI-powered Resume & Application Automation
+app.use("/api/resume-enhancement", resumeEnhancementRoutes);
+
+app.use("/api/portfolio-generator", portfolioGeneratorRoutes);
+
+app.use("/api/cover-letter", coverLetterRoutes);
+
+app.use("/api/application-automation", applicationAutomationRoutes);
+
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
 const io = new Server(server, {
@@ -279,6 +297,7 @@ io.on("connection", (socket) => {
     socket.on("disconnect", () => console.log("User disconnected"));
 });
 
-// ✅ Start the server (REPLACES `app.listen`)
-const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Start server
+app.listen(PORT, () => {
+    console.log(`✅ Backend is running on port ${PORT}`);
+});
