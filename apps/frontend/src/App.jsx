@@ -101,6 +101,10 @@ import FreelancerFinanceDashboard from "./pages/FreelancerFinanceDashboard";
 import EnterpriseWorkforceDashboard from "./pages/EnterpriseWorkforceDashboard";
 import WorkforceForecastingDashboard from "./pages/WorkforceForecastingDashboard";
 import TalentRedistributionDashboard from "./pages/TalentRedistributionDashboard";
+{/* Sprint 52 AI-Driven Internal Talent Mobility */}
+import InternalJobRotationDashboard from "./pages/InternalJobRotationDashboard";
+import SuccessionPlanningDashboard from "./pages/SuccessionPlanningDashboard";
+import SkillTransitionDashboard from "./pages/SkillTransitionDashboard";
 
 function App() {
   return (
@@ -143,7 +147,6 @@ function App() {
           <Route path="/efficiency-tracking" element={<EfficiencyTrackingDashboard />} />
           <Route path="/talent-demand" element={<TalentDemandDashboard />} />
           <Route path="/efficiency-predictor" element={<EfficiencyPredictorDashboard />} />
-          <Route path="/succession-planning" element={<SuccessionPlanningDashboard />} />
           <Route path="/turnover-predictor" element={<TurnoverPredictorDashboard />} />
           <Route path="/future-skills" element={<FutureSkillTrendsDashboard />} />
           <Route path="/workforce-adaptability" element={<AdaptiveWorkforceDashboard />} />
@@ -234,6 +237,11 @@ function App() {
           <Route path="/enterprise-workforce" element={<EnterpriseWorkforceDashboard />} />
           <Route path="/workforce-forecasting" element={<WorkforceForecastingDashboard />} />
           <Route path="/talent-redistribution" element={<TalentRedistributionDashboard />} />
+
+          {/* Sprint 52 AI-Driven Internal Talent Mobility */}
+          <Route path="/internal-job-rotation" element={<InternalJobRotationDashboard />} />
+          <Route path="/succession-planning" element={<SuccessionPlanningDashboard />} />
+          <Route path="/skill-transition" element={<SkillTransitionDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

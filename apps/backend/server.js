@@ -28,7 +28,6 @@ import workforceCostRoutes from "./src/routes/workforceCost.routes.js";
 import efficiencyAnalysisRoutes from "./src/routes/efficiencyAnalysis.routes.js";
 import predictiveTalentRoutes from "./src/routes/predictiveTalent.routes.js";
 import efficiencyPredictorRoutes from "./src/routes/efficiencyPredictor.routes.js";
-import successionPlanningRoutes from "./src/routes/successionPlanning.routes.js";
 import turnoverPredictorRoutes from "./src/routes/turnoverPredictor.routes.js";
 import futureSkillTrendsRoutes from "./src/routes/futureSkillTrends.routes.js";
 import adaptiveWorkforceRoutes from "./src/routes/adaptiveWorkforce.routes.js";
@@ -99,6 +98,10 @@ import freelancerFinanceRoutes from "./routes/freelancerFinance.routes.js";
 import enterpriseWorkforceRoutes from "./routes/enterpriseWorkforce.routes.js";
 import workforceForecastingRoutes from "./routes/workforceForecasting.routes.js";
 import talentRedistributionRoutes from "./routes/talentRedistribution.routes.js";
+// // Sprint 52 AI-Powered Internal Talent Mobility Routes
+import internalJobRotationRoutes from "./routes/internalJobRotation.routes.js";
+import successionPlanningRoutes from "./src/routes/successionPlanning.routes.js";
+import skillTransitionRoutes from "./routes/skillTransition.routes.js";
 
 
 const app = express();
@@ -300,6 +303,13 @@ app.use("/api/enterprise-workforce", enterpriseWorkforceRoutes);
 app.use("/api/workforce-forecasting", workforceForecastingRoutes);
 
 app.use("/api/talent-redistribution", talentRedistributionRoutes);
+
+// // Sprint 52 AI-Powered Internal Talent Mobility Routes
+app.use("/api/internal-job-rotation", internalJobRotationRoutes);
+
+app.use("/api/succession-planning", successionPlanningRoutes);
+
+app.use("/api/skill-transition", skillTransitionRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

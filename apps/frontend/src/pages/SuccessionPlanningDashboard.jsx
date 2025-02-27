@@ -1,25 +1,59 @@
-import { useEffect, useState } from "react";
-import { fetchSuccessionPlan } from "../services/successionPlanningService";
+import { useState } from "react";
+import { fetchPromotionReadiness } from "../services/successionPlanningService";
 
-// Displays AI-driven leadership planning insights.
+export default function SuccessionPlanningDashboard() {
+  const [formData, setFormData] = useState({
+    experience: "",
+    courses: "",
+    promotions: "",
+    performance: "",
+  });
 
-const SuccessionPlanningDashboard = () => {
-  const [plan, setPlan] = useState(null);
+  const [prediction, setPrediction] = useState("");
 
-  useEffect(() => {
-    fetchSuccessionPlan().then(setPlan);
-  }, []);
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { experience, courses, promotions, performance } = formData;
+
+    const result = await fetchPromotionReadiness(
+      Number(experience),
+      Number(courses),
+      Number(promotions),
+      Number(performance)
+    );
+
+    setPrediction(result);
+  };
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold">🏆 Leadership Succession Plan</h2>
-      {plan ? (
-        <p className="mt-4">Recommended Successor: {plan.successor}</p>
-      ) : (
-        <p>Loading succession insights...</p>
+    <div className="container">
+      <h1>Succession Planning Dashboard</h1>
+      <form onSubmit={handleSubmit}>
+        <label>Years of Experience:</label>
+        <input type="number" name="experience" value={formData.experience} onChange={handleChange} required />
+
+        <label>Leadership Courses Completed:</label>
+        <input type="number" name="courses" value={formData.courses} onChange={handleChange} required />
+
+        <label>Number of Promotions:</label>
+        <input type="number" name="promotions" value={formData.promotions} onChange={handleChange} required />
+
+        <label>Performance Score (0-100):</label>
+        <input type="number" name="performance" value={formData.performance} onChange={handleChange} required />
+
+        <button type="submit">Check Promotion Readiness</button>
+      </form>
+
+      {prediction && (
+        <div className="result">
+          <h3>AI Prediction:</h3>
+          <p>{prediction}</p>
+        </div>
       )}
     </div>
   );
-};
-
-export default SuccessionPlanningDashboard;
+}
