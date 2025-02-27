@@ -40,7 +40,6 @@ import TalentMobilityDashboard from "./pages/TalentMobilityDashboard";
 import EnterpriseRecruitmentDashboard from "./pages/EnterpriseRecruitmentDashboard";
 import CorporateTurnoverRiskDashboard from "./pages/CorporateTurnoverRiskDashboard";
 import BurnoutRiskDashboard from "./pages/BurnoutRiskDashboard";
-import WellBeingDashboard from "./pages/WellBeingDashboard";
 import ProactiveRetentionDashboard from "./pages/ProactiveRetentionDashboard";
 import ExecutiveTalentDashboard from "./pages/ExecutiveTalentDashboard";
 import LeadershipSuccessionDashboard from "./pages/LeadershipSuccessionDashboard";
@@ -109,6 +108,10 @@ import EmployeeOnboardingDashboard from "./pages/EmployeeOnboardingDashboard";
 import HRChatbotDashboard from "./pages/HRChatbotDashboard";
 import PerformanceReviewDashboard from "./pages/PerformanceReviewDashboard";
 import EmployeeEngagementDashboard from "./pages/EmployeeEngagementDashboard";
+{/* Sprint 54 AI-Powered Workforce Well-Being & Retention */}
+import WellBeingDashboard from "./pages/WellBeingDashboard";
+import MentalHealthAssistantDashboard from "./pages/MentalHealthAssistantDashboard";
+import TeamPerformanceDashboard from "./pages/TeamPerformanceDashboard";
 
 function App() {
   return (
@@ -251,6 +254,11 @@ function App() {
           <Route path="/hr-chatbot" element={<HRChatbotDashboard />} />
           <Route path="/performance-review" element={<PerformanceReviewDashboard />} />
           <Route path="/employee-engagement" element={<EmployeeEngagementDashboard />} />
+
+          {/* Sprint 54 AI-Powered Workforce Well-Being & Retention */}
+          <Route path="/well-being" element={<WellBeingDashboard />} />
+          <Route path="/mental-health" element={<MentalHealthAssistantDashboard />} />
+          <Route path="/team-performance" element={<TeamPerformanceDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
