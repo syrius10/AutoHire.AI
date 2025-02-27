@@ -93,6 +93,10 @@ import ResumeEnhancementDashboard from "./pages/ResumeEnhancementDashboard";
 import PortfolioGeneratorDashboard from "./pages/PortfolioGeneratorDashboard";
 import CoverLetterDashboard from "./pages/CoverLetterDashboard";
 import ApplicationAutomationDashboard from "./pages/ApplicationAutomationDashboard";
+{/* Sprint 50 AI-Powered Gig Economy Automation */}
+import FreelancerCareerDashboard from "./pages/FreelancerCareerDashboard";
+import GigMatchingDashboard from "./pages/GigMatchingDashboard";
+import FreelancerFinanceDashboard from "./pages/FreelancerFinanceDashboard";
 
 function App() {
   return (
@@ -216,6 +220,11 @@ function App() {
           <Route path="/portfolio-generator" element={<PortfolioGeneratorDashboard />} />
           <Route path="/cover-letter" element={<CoverLetterDashboard />} />
           <Route path="/application-automation" element={<ApplicationAutomationDashboard />} />
+
+          {/* Sprint 50 AI-Powered Gig Economy Automation */}
+          <Route path="/freelancer-career" element={<FreelancerCareerDashboard />} />
+          <Route path="/gig-matching" element={<GigMatchingDashboard />} />
+          <Route path="/freelancer-finance" element={<FreelancerFinanceDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

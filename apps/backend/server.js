@@ -91,6 +91,10 @@ import resumeEnhancementRoutes from "./routes/resumeEnhancement.routes.js";
 import portfolioGeneratorRoutes from "./routes/portfolioGenerator.routes.js";
 import coverLetterRoutes from "./routes/coverLetter.routes.js";
 import applicationAutomationRoutes from "./routes/applicationAutomation.routes.js";
+// // Sprint 50 AI-Powered Gig Economy Automation
+import freelancerCareerRoutes from "./routes/freelancerCareer.routes.js";
+import gigMatchingRoutes from "./routes/gigMatching.routes.js";
+import freelancerFinanceRoutes from "./routes/freelancerFinance.routes.js";
 
 
 const app = express();
@@ -278,6 +282,13 @@ app.use("/api/portfolio-generator", portfolioGeneratorRoutes);
 app.use("/api/cover-letter", coverLetterRoutes);
 
 app.use("/api/application-automation", applicationAutomationRoutes);
+
+// // Sprint 50 AI-Powered Gig Economy Automation
+app.use("/api/freelancer-career", freelancerCareerRoutes);
+
+app.use("/api/gig-matching", gigMatchingRoutes);
+
+app.use("/api/freelancer-finance", freelancerFinanceRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
