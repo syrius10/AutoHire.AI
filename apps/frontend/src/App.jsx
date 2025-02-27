@@ -116,6 +116,10 @@ import TeamPerformanceDashboard from "./pages/TeamPerformanceDashboard";
 import HRAutomationDashboard from "./pages/HRAutomationDashboard";
 import RegulatoryComplianceDashboard from "./pages/RegulatoryComplianceDashboard";
 import EthicsGovernanceDashboard from "./pages/EthicsGovernanceDashboard";
+{/* Sprint 56 AI-Powered Global Hiring & Relocation */}
+import GlobalHiringDashboard from "./pages/GlobalHiringDashboard";
+import WorkVisaAutomationDashboard from "./pages/WorkVisaAutomationDashboard";
+import MultiCountrySalaryDashboard from "./pages/MultiCountrySalaryDashboard";
 
 function App() {
   return (
@@ -268,6 +272,11 @@ function App() {
           <Route path="/hr-automation" element={<HRAutomationDashboard />} />
           <Route path="/regulatory-compliance" element={<RegulatoryComplianceDashboard />} />
           <Route path="/ethics-governance" element={<EthicsGovernanceDashboard />} />
+
+          {/* Sprint 56 AI-Powered Global Hiring & Relocation */}
+          <Route path="/global-hiring" element={<GlobalHiringDashboard />} />
+          <Route path="/work-visa-automation" element={<WorkVisaAutomationDashboard />} />
+          <Route path="/multi-country-salary" element={<MultiCountrySalaryDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

@@ -114,6 +114,10 @@ import teamPerformanceRoutes from "./routes/teamPerformance.routes.js";
 import hrAutomationRoutes from "./routes/hrAutomation.routes.js";
 import regulatoryComplianceRoutes from "./routes/regulatoryCompliance.routes.js";
 import ethicsGovernanceRoutes from "./routes/ethicsGovernance.routes.js";
+// // Sprint 56  Register AI-powered Global Hiring & Relocation APIs
+import globalHiringRoutes from "./routes/globalHiring.routes.js";
+import workVisaAutomationRoutes from "./routes/workVisaAutomation.routes.js";
+import multiCountrySalaryRoutes from "./routes/multiCountrySalary.routes.js";
 
 
 const app = express();
@@ -343,6 +347,13 @@ app.use("/api/hr-automation", hrAutomationRoutes);
 app.use("/api/regulatory-compliance", regulatoryComplianceRoutes);
 
 app.use("/api/ethics-governance", ethicsGovernanceRoutes);
+
+// // Sprint 56  Register AI-powered Global Hiring & Relocation APIs
+app.use("/api/global-hiring", globalHiringRoutes);
+
+app.use("/api/work-visa", workVisaAutomationRoutes);
+
+app.use("/api/multi-country-salary", multiCountrySalaryRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
