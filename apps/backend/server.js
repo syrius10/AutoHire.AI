@@ -95,6 +95,10 @@ import applicationAutomationRoutes from "./routes/applicationAutomation.routes.j
 import freelancerCareerRoutes from "./routes/freelancerCareer.routes.js";
 import gigMatchingRoutes from "./routes/gigMatching.routes.js";
 import freelancerFinanceRoutes from "./routes/freelancerFinance.routes.js";
+// // Sprint 51 Workforce Planning APIs
+import enterpriseWorkforceRoutes from "./routes/enterpriseWorkforce.routes.js";
+import workforceForecastingRoutes from "./routes/workforceForecasting.routes.js";
+import talentRedistributionRoutes from "./routes/talentRedistribution.routes.js";
 
 
 const app = express();
@@ -289,6 +293,13 @@ app.use("/api/freelancer-career", freelancerCareerRoutes);
 app.use("/api/gig-matching", gigMatchingRoutes);
 
 app.use("/api/freelancer-finance", freelancerFinanceRoutes);
+
+// // Sprint 51 Workforce Planning APIs
+app.use("/api/enterprise-workforce", enterpriseWorkforceRoutes);
+
+app.use("/api/workforce-forecasting", workforceForecastingRoutes);
+
+app.use("/api/talent-redistribution", talentRedistributionRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

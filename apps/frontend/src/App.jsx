@@ -97,6 +97,10 @@ import ApplicationAutomationDashboard from "./pages/ApplicationAutomationDashboa
 import FreelancerCareerDashboard from "./pages/FreelancerCareerDashboard";
 import GigMatchingDashboard from "./pages/GigMatchingDashboard";
 import FreelancerFinanceDashboard from "./pages/FreelancerFinanceDashboard";
+{/* Sprint 51 AI-Powered Enterprise Workforce Planning */}
+import EnterpriseWorkforceDashboard from "./pages/EnterpriseWorkforceDashboard";
+import WorkforceForecastingDashboard from "./pages/WorkforceForecastingDashboard";
+import TalentRedistributionDashboard from "./pages/TalentRedistributionDashboard";
 
 function App() {
   return (
@@ -225,6 +229,11 @@ function App() {
           <Route path="/freelancer-career" element={<FreelancerCareerDashboard />} />
           <Route path="/gig-matching" element={<GigMatchingDashboard />} />
           <Route path="/freelancer-finance" element={<FreelancerFinanceDashboard />} />
+
+          {/* Sprint 51 AI-Powered Enterprise Workforce Planning */}
+          <Route path="/enterprise-workforce" element={<EnterpriseWorkforceDashboard />} />
+          <Route path="/workforce-forecasting" element={<WorkforceForecastingDashboard />} />
+          <Route path="/talent-redistribution" element={<TalentRedistributionDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
