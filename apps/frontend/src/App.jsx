@@ -39,7 +39,6 @@ import EnterpriseWorkforceCostDashboard from "./pages/EnterpriseWorkforceCostDas
 import TalentMobilityDashboard from "./pages/TalentMobilityDashboard";
 import EnterpriseRecruitmentDashboard from "./pages/EnterpriseRecruitmentDashboard";
 import CorporateTurnoverRiskDashboard from "./pages/CorporateTurnoverRiskDashboard";
-import EmployeeEngagementDashboard from "./pages/EmployeeEngagementDashboard";
 import BurnoutRiskDashboard from "./pages/BurnoutRiskDashboard";
 import WellBeingDashboard from "./pages/WellBeingDashboard";
 import ProactiveRetentionDashboard from "./pages/ProactiveRetentionDashboard";
@@ -105,6 +104,11 @@ import TalentRedistributionDashboard from "./pages/TalentRedistributionDashboard
 import InternalJobRotationDashboard from "./pages/InternalJobRotationDashboard";
 import SuccessionPlanningDashboard from "./pages/SuccessionPlanningDashboard";
 import SkillTransitionDashboard from "./pages/SkillTransitionDashboard";
+{/* Sprint 53 AI-Powered Employee Lifecycle Automation */}
+import EmployeeOnboardingDashboard from "./pages/EmployeeOnboardingDashboard";
+import HRChatbotDashboard from "./pages/HRChatbotDashboard";
+import PerformanceReviewDashboard from "./pages/PerformanceReviewDashboard";
+import EmployeeEngagementDashboard from "./pages/EmployeeEngagementDashboard";
 
 function App() {
   return (
@@ -155,7 +159,6 @@ function App() {
           <Route path="/talent-mobility" element={<TalentMobilityDashboard />} />
           <Route path="/enterprise-recruitment" element={<EnterpriseRecruitmentDashboard />} />
           <Route path="/corporate-turnover-risk" element={<CorporateTurnoverRiskDashboard />} />
-          <Route path="/employee-engagement" element={<EmployeeEngagementDashboard />} />
           <Route path="/burnout-risk" element={<BurnoutRiskDashboard />} />
           <Route path="/wellbeing" element={<WellBeingDashboard />} />
           <Route path="/retention-risk" element={<ProactiveRetentionDashboard />} />
@@ -242,6 +245,12 @@ function App() {
           <Route path="/internal-job-rotation" element={<InternalJobRotationDashboard />} />
           <Route path="/succession-planning" element={<SuccessionPlanningDashboard />} />
           <Route path="/skill-transition" element={<SkillTransitionDashboard />} />
+
+          {/* Sprint 53 AI-Powered Employee Lifecycle Automation */}
+          <Route path="/employee-onboarding" element={<EmployeeOnboardingDashboard />} />
+          <Route path="/hr-chatbot" element={<HRChatbotDashboard />} />
+          <Route path="/performance-review" element={<PerformanceReviewDashboard />} />
+          <Route path="/employee-engagement" element={<EmployeeEngagementDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

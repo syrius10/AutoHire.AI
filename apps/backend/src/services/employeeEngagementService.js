@@ -1,14 +1,20 @@
 import axios from "axios";
 
 /**
- * Calls the AI service to analyze employee sentiment and engagement
+ * Calls AI engagement analysis API.
  */
-export const analyzeEmployeeEngagement = async (data) => {
+export const analyzeEngagement = async (feedback, workload, teamSatisfaction, careerGrowth) => {
   try {
-    const response = await axios.post("http://localhost:5035/predict_engagement", data);
+    const response = await axios.post("http://localhost:5073/predict_engagement", {
+      feedback,
+      workload_score: workload,
+      team_satisfaction: teamSatisfaction,
+      career_growth: careerGrowth,
+    });
+    
     return response.data;
   } catch (error) {
     console.error("Error analyzing employee engagement:", error);
-    return { engagementScore: "Unknown" };
+    throw new Error("Engagement analysis failed.");
   }
 };

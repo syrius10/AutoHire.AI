@@ -36,7 +36,6 @@ import enterprizeWorkforceCostRoutes from "./src/routes/enterpriseWorkforceCost.
 import talentMobilityRoutes from "./src/routes/talentMobility.routes.js";
 import enterpriseRecruitmentRoutes from "./src/routes/enterpriseRecruitment.routes.js";
 import corporateTurnoverRiskRoutes from "./src/routes/corporateTurnoverRisk.routes.js";
-import employeeEngagementRoutes from "./src/routes/employeeEngagement.routes.js";
 import burnoutRiskRoutes from "./src/routes/burnoutRisk.routes.js";
 import wellBeingRecommendationRoutes from "./src/routes/wellBeingRecommendation.routes.js";
 import proactiveRetentionRoutes from "./src/routes/proactiveRetention.routes.js";
@@ -102,6 +101,12 @@ import talentRedistributionRoutes from "./routes/talentRedistribution.routes.js"
 import internalJobRotationRoutes from "./routes/internalJobRotation.routes.js";
 import successionPlanningRoutes from "./src/routes/successionPlanning.routes.js";
 import skillTransitionRoutes from "./routes/skillTransition.routes.js";
+// // Sprint 53 AI-Powered Employee Lifecycle Automation
+import employeeOnboardingRoutes from "./routes/employeeOnboarding.routes.js";
+import hrChatbotRoutes from "./routes/hrChatbot.routes.js";
+import performanceReviewRoutes from "./routes/performanceReview.routes.js";
+import employeeEngagementRoutes from "./src/routes/employeeEngagement.routes.js";
+
 
 
 const app = express();
@@ -183,8 +188,6 @@ app.use("/api/talent-mobility", talentMobilityRoutes);
 app.use("/api/enterprise-recruitment", enterpriseRecruitmentRoutes);
 
 app.use("/api/corporate-turnover-risk", corporateTurnoverRiskRoutes);
-
-app.use("/api/employee-engagement", employeeEngagementRoutes);
 
 app.use("/api/burnout", burnoutRiskRoutes);
 
@@ -310,6 +313,15 @@ app.use("/api/internal-job-rotation", internalJobRotationRoutes);
 app.use("/api/succession-planning", successionPlanningRoutes);
 
 app.use("/api/skill-transition", skillTransitionRoutes);
+
+// // Sprint 53 AI-Powered Employee Lifecycle Automation
+app.use("/api/employee-onboarding", employeeOnboardingRoutes);
+
+app.use("/api/hr-chatbot", hrChatbotRoutes);
+
+app.use("/api/performance-review", performanceReviewRoutes);
+
+app.use("/api/employee-engagement", employeeEngagementRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
