@@ -112,6 +112,10 @@ import EmployeeEngagementDashboard from "./pages/EmployeeEngagementDashboard";
 import WellBeingDashboard from "./pages/WellBeingDashboard";
 import MentalHealthAssistantDashboard from "./pages/MentalHealthAssistantDashboard";
 import TeamPerformanceDashboard from "./pages/TeamPerformanceDashboard";
+{/* Sprint 55 AI-Powered Fully Automated HR System */}
+import HRAutomationDashboard from "./pages/HRAutomationDashboard";
+import RegulatoryComplianceDashboard from "./pages/RegulatoryComplianceDashboard";
+import EthicsGovernanceDashboard from "./pages/EthicsGovernanceDashboard";
 
 function App() {
   return (
@@ -259,6 +263,11 @@ function App() {
           <Route path="/well-being" element={<WellBeingDashboard />} />
           <Route path="/mental-health" element={<MentalHealthAssistantDashboard />} />
           <Route path="/team-performance" element={<TeamPerformanceDashboard />} />
+
+          {/* Sprint 55 AI-Powered Fully Automated HR System */}
+          <Route path="/hr-automation" element={<HRAutomationDashboard />} />
+          <Route path="/regulatory-compliance" element={<RegulatoryComplianceDashboard />} />
+          <Route path="/ethics-governance" element={<EthicsGovernanceDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

@@ -110,6 +110,10 @@ import employeeEngagementRoutes from "./src/routes/employeeEngagement.routes.js"
 import wellBeingRoutes from "./routes/wellBeing.routes.js";
 import mentalHealthAssistantRoutes from "./routes/mentalHealthAssistant.routes.js";
 import teamPerformanceRoutes from "./routes/teamPerformance.routes.js";
+// // Sprint 55 AI-Powered HR Automation Routes
+import hrAutomationRoutes from "./routes/hrAutomation.routes.js";
+import regulatoryComplianceRoutes from "./routes/regulatoryCompliance.routes.js";
+import ethicsGovernanceRoutes from "./routes/ethicsGovernance.routes.js";
 
 
 const app = express();
@@ -332,6 +336,13 @@ app.use("/api/well-being", wellBeingRoutes);
 app.use("/api/mental-health", mentalHealthAssistantRoutes);
 
 app.use("/api/team-performance", teamPerformanceRoutes);
+
+// // Sprint 55 AI-Powered HR Automation Routes
+app.use("/api/hr-automation", hrAutomationRoutes);
+
+app.use("/api/regulatory-compliance", regulatoryComplianceRoutes);
+
+app.use("/api/ethics-governance", ethicsGovernanceRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
