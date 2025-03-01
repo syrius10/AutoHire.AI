@@ -120,6 +120,10 @@ import EthicsGovernanceDashboard from "./pages/EthicsGovernanceDashboard";
 import GlobalHiringDashboard from "./pages/GlobalHiringDashboard";
 import WorkVisaAutomationDashboard from "./pages/WorkVisaAutomationDashboard";
 import MultiCountrySalaryDashboard from "./pages/MultiCountrySalaryDashboard";
+{/* Sprint 57 AI-Driven Workforce Sustainability & DEI */}
+import DEIAnalyticsDashboard from "./pages/DEIAnalyticsDashboard";
+import SustainableWorkforceDashboard from "./pages/SustainableWorkforceDashboard";
+import EthicalHiringDashboard from "./pages/EthicalHiringDashboard";
 
 function App() {
   return (
@@ -277,6 +281,11 @@ function App() {
           <Route path="/global-hiring" element={<GlobalHiringDashboard />} />
           <Route path="/work-visa-automation" element={<WorkVisaAutomationDashboard />} />
           <Route path="/multi-country-salary" element={<MultiCountrySalaryDashboard />} />
+
+          {/* Sprint 57 AI-Driven Workforce Sustainability & DEI */}
+          <Route path="/dei-analytics" element={<DEIAnalyticsDashboard />} />
+          <Route path="/sustainable-workforce" element={<SustainableWorkforceDashboard />} />
+          <Route path="/ethical-hiring" element={<EthicalHiringDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

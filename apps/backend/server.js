@@ -118,6 +118,10 @@ import ethicsGovernanceRoutes from "./routes/ethicsGovernance.routes.js";
 import globalHiringRoutes from "./routes/globalHiring.routes.js";
 import workVisaAutomationRoutes from "./routes/workVisaAutomation.routes.js";
 import multiCountrySalaryRoutes from "./routes/multiCountrySalary.routes.js";
+// // Sprint 57 Workforce Sustainability & DEI Routes
+import deiAnalyticsRoutes from "./routes/deiAnalytics.routes.js";
+import sustainableWorkforceRoutes from "./routes/sustainableWorkforce.routes.js";
+import ethicalHiringRoutes from "./routes/ethicalHiring.routes.js";
 
 
 const app = express();
@@ -354,6 +358,13 @@ app.use("/api/global-hiring", globalHiringRoutes);
 app.use("/api/work-visa", workVisaAutomationRoutes);
 
 app.use("/api/multi-country-salary", multiCountrySalaryRoutes);
+
+// // Sprint 57 Workforce Sustainability & DEI Routes
+app.use("/api/dei-analytics", deiAnalyticsRoutes);
+
+app.use("/api/sustainable-workforce", sustainableWorkforceRoutes);
+
+app.use("/api/ethical-hiring", ethicalHiringRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
