@@ -153,6 +153,10 @@ import RealTimeFeedbackDashboard from "./pages/RealTimeFeedbackDashboard";
 import HRProcessAutomationDashboard from "./pages/HRProcessAutomationDashboard";
 import PerformancePredictionDashboard from "./pages/PerformancePredictionDashboard";
 import WorkflowAutomationDashboard from "./pages/WorkflowAutomationDashboard";
+{/* Sprint 65 AI-Powered Employee Digital Twin Technology Dashboards */}
+import EmployeeDigitalTwinDashboard from "./pages/EmployeeDigitalTwinDashboard";
+import WorkloadBalancingDashboard from "./pages/WorkloadBalancingDashboard";
+import LeadershipDecisionDashboard from "./pages/LeadershipDecisionDashboard";
 
 function App() {
   return (
@@ -351,6 +355,11 @@ function App() {
           <Route path="/hr-automation" element={<HRProcessAutomationDashboard />} />
           <Route path="/performance-prediction" element={<PerformancePredictionDashboard />} />
           <Route path="/workflow-automation" element={<WorkflowAutomationDashboard />} />
+
+          {/* Sprint 65 AI-Powered Employee Digital Twin Technology Dashboards */}
+          <Route path="/employee-digital-twin" element={<EmployeeDigitalTwinDashboard />} />
+          <Route path="/workload-balancing" element={<WorkloadBalancingDashboard />} />
+          <Route path="/leadership-decision" element={<LeadershipDecisionDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

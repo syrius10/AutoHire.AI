@@ -151,6 +151,10 @@ import realTimeFeedbackRoutes from "./routes/realTimeFeedback.routes.js";
 import hrProcessAutomationRoutes from "./routes/hrProcessAutomation.routes.js";
 import performancePredictionRoutes from "./routes/performancePrediction.routes.js";
 import workflowAutomationRoutes from "./routes/workflowAutomation.routes.js";
+// // Sprint 65 Register AI-powered Employee Digital Twin API Routes
+import employeeDigitalTwinRoutes from "./routes/employeeDigitalTwin.routes.js";
+import workloadBalancingRoutes from "./routes/workloadBalancing.routes.js";
+import leadershipDecisionRoutes from "./routes/leadershipDecision.routes.js";
 
 
 const app = express();
@@ -446,6 +450,13 @@ app.use("/api/hr-process-automation", hrProcessAutomationRoutes);
 app.use("/api/performance-prediction", performancePredictionRoutes);
 
 app.use("/api/workflow-automation", workflowAutomationRoutes);
+
+// // Sprint 65 Register AI-powered Employee Digital Twin API Routes
+app.use("/api/employee-digital-twin", employeeDigitalTwinRoutes);
+
+app.use("/api/workload-balancing", workloadBalancingRoutes);
+
+app.use("/api/leadership-decision", leadershipDecisionRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
