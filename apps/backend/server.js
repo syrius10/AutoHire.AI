@@ -135,6 +135,10 @@ import predictiveWorkforceRoutes from "./routes/predictiveWorkforce.routes.js";
 import autonomousHRAssistantRoutes from "./routes/autonomousHRAssistant.routes.js";
 import aiJobSeekerRoutes from "./routes/aiJobSeeker.routes.js";
 import globalWorkforceOrchestratorRoutes from "./routes/globalWorkforceOrchestrator.routes.js";
+// //  Sprint 61 Register AI-Powered Workforce Team API Routes
+import autonomousTeamRoutes from "./routes/autonomousTeam.routes.js";
+import taskDelegationRoutes from "./routes/taskDelegation.routes.js";
+import collaborationTrackingRoutes from "./routes/collaborationTracking.routes.js";
 
 
 const app = express();
@@ -402,6 +406,14 @@ app.use("/api/hr-assistant", autonomousHRAssistantRoutes);
 app.use("/api/ai-job-seeker", aiJobSeekerRoutes);
 
 app.use("/api/global-workforce", globalWorkforceOrchestratorRoutes);
+
+// //  Sprint 61 Register AI-Powered Workforce Team API Routesapp.
+app.use("/api/autonomous-team", autonomousTeamRoutes);
+
+app.use("/api/task-delegation", taskDelegationRoutes);
+
+app.use("/api/collaboration-tracking", collaborationTrackingRoutes);
+
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

@@ -137,6 +137,10 @@ import PredictiveWorkforceDashboard from "./pages/PredictiveWorkforceDashboard";
 import AutonomousHRAssistantDashboard from "./pages/AutonomousHRAssistantDashboard";
 import AIJobSeekerDashboard from "./pages/AIJobSeekerDashboard";
 import GlobalWorkforceOrchestratorDashboard from "./pages/GlobalWorkforceOrchestratorDashboard";
+{/* Sprint 61 AI-Powered Autonomous Work Teams */}
+import AutonomousTeamDashboard from "./pages/AutonomousTeamDashboard";
+import TaskDelegationDashboard from "./pages/TaskDelegationDashboard";
+import CollaborationTrackingDashboard from "./pages/CollaborationTrackingDashboard";
 
 function App() {
   return (
@@ -315,6 +319,11 @@ function App() {
           <Route path="/hr-assistant" element={<AutonomousHRAssistantDashboard />} />
           <Route path="/ai-job-seeker" element={<AIJobSeekerDashboard />} />
           <Route path="/global-workforce" element={<GlobalWorkforceOrchestratorDashboard />} />
+
+          {/* Sprint 61 AI-Powered Autonomous Work Teams */}
+          <Route path="/autonomous-teams" element={<AutonomousTeamDashboard />} />
+          <Route path="/task-delegation" element={<TaskDelegationDashboard />} />
+          <Route path="/collaboration-tracking" element={<CollaborationTrackingDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
