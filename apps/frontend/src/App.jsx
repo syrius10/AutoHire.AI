@@ -141,6 +141,10 @@ import GlobalWorkforceOrchestratorDashboard from "./pages/GlobalWorkforceOrchest
 import AutonomousTeamDashboard from "./pages/AutonomousTeamDashboard";
 import TaskDelegationDashboard from "./pages/TaskDelegationDashboard";
 import CollaborationTrackingDashboard from "./pages/CollaborationTrackingDashboard";
+{/* Sprint 62 AI-Powered Dynamic Job Roles */}
+import DynamicRoleDashboard from "./pages/DynamicRoleDashboard";
+import RoleTransitionDashboard from "./pages/RoleTransitionDashboard";
+import AdaptiveReskillingDashboard from "./pages/AdaptiveReskillingDashboard";
 
 function App() {
   return (
@@ -324,6 +328,11 @@ function App() {
           <Route path="/autonomous-teams" element={<AutonomousTeamDashboard />} />
           <Route path="/task-delegation" element={<TaskDelegationDashboard />} />
           <Route path="/collaboration-tracking" element={<CollaborationTrackingDashboard />} />
+
+          {/* Sprint 62 AI-Powered Dynamic Job Roles */}
+          <Route path="/dynamic-role" element={<DynamicRoleDashboard />} />
+          <Route path="/role-transition" element={<RoleTransitionDashboard />} />
+          <Route path="/adaptive-reskilling" element={<AdaptiveReskillingDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

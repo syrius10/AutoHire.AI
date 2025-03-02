@@ -139,6 +139,10 @@ import globalWorkforceOrchestratorRoutes from "./routes/globalWorkforceOrchestra
 import autonomousTeamRoutes from "./routes/autonomousTeam.routes.js";
 import taskDelegationRoutes from "./routes/taskDelegation.routes.js";
 import collaborationTrackingRoutes from "./routes/collaborationTracking.routes.js";
+// // Sprint 62 AI-powered dynamic job role routes
+import dynamicRoleRoutes from "./routes/dynamicRole.routes.js";
+import roleTransitionRoutes from "./routes/roleTransition.routes.js";
+import adaptiveReskillingRoutes from "./routes/adaptiveReskilling.routes.js";
 
 
 const app = express();
@@ -413,6 +417,13 @@ app.use("/api/autonomous-team", autonomousTeamRoutes);
 app.use("/api/task-delegation", taskDelegationRoutes);
 
 app.use("/api/collaboration-tracking", collaborationTrackingRoutes);
+
+// // Sprint 62 AI-powered dynamic job role routes
+app.use("/api/dynamic-role", dynamicRoleRoutes);
+
+app.use("/api/role-transition", roleTransitionRoutes);
+
+app.use("/api/adaptive-reskilling", adaptiveReskillingRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
