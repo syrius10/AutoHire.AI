@@ -149,6 +149,10 @@ import AdaptiveReskillingDashboard from "./pages/AdaptiveReskillingDashboard";
 import CollaborationAssistantDashboard from "./pages/CollaborationAssistantDashboard";
 import MeetingAutomationDashboard from "./pages/MeetingAutomationDashboard";
 import RealTimeFeedbackDashboard from "./pages/RealTimeFeedbackDashboard";
+{/* Sprint 64 AI-Powered Workplace Automation Dashboards */}
+import HRProcessAutomationDashboard from "./pages/HRProcessAutomationDashboard";
+import PerformancePredictionDashboard from "./pages/PerformancePredictionDashboard";
+import WorkflowAutomationDashboard from "./pages/WorkflowAutomationDashboard";
 
 function App() {
   return (
@@ -342,6 +346,11 @@ function App() {
           <Route path="/collaboration-assistant" element={<CollaborationAssistantDashboard />} />
           <Route path="/meeting-automation" element={<MeetingAutomationDashboard />} />
           <Route path="/real-time-feedback" element={<RealTimeFeedbackDashboard />} />
+
+          {/* Sprint 64 AI-Powered Workplace Automation Dashboards */}
+          <Route path="/hr-automation" element={<HRProcessAutomationDashboard />} />
+          <Route path="/performance-prediction" element={<PerformancePredictionDashboard />} />
+          <Route path="/workflow-automation" element={<WorkflowAutomationDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

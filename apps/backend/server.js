@@ -147,6 +147,10 @@ import adaptiveReskillingRoutes from "./routes/adaptiveReskilling.routes.js";
 import collaborationAssistantRoutes from "./routes/collaborationAssistant.routes.js";
 import meetingAutomationRoutes from "./routes/meetingAutomation.routes.js";
 import realTimeFeedbackRoutes from "./routes/realTimeFeedback.routes.js";
+// // Sprint 64 AI-Powered Workplace Automation Routes
+import hrProcessAutomationRoutes from "./routes/hrProcessAutomation.routes.js";
+import performancePredictionRoutes from "./routes/performancePrediction.routes.js";
+import workflowAutomationRoutes from "./routes/workflowAutomation.routes.js";
 
 
 const app = express();
@@ -435,6 +439,13 @@ app.use("/api/collaboration-assistant", collaborationAssistantRoutes);
 app.use("/api/meeting-automation", meetingAutomationRoutes);
 
 app.use("/api/real-time-feedback", realTimeFeedbackRoutes);
+
+// // Sprint 64 AI-Powered Workplace Automation Routes
+app.use("/api/hr-process-automation", hrProcessAutomationRoutes);
+
+app.use("/api/performance-prediction", performancePredictionRoutes);
+
+app.use("/api/workflow-automation", workflowAutomationRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
