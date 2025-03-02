@@ -1,21 +1,14 @@
 import axios from "axios";
 
-// AI-driven role optimization
-
 /**
- * Calls AI model to optimize employee job roles.
+ * Calls AI model for job role optimization.
  */
-export const optimizeRole = async (performance, experience, skillLevel, adaptability) => {
+export const optimizeJobRole = async (data) => {
   try {
-    const response = await axios.post("http://localhost:5099/role-optimization", {
-      performance,
-      experience,
-      skillLevel,
-      adaptability,
-    });
-    return response.data.optimizedRole;
+    const response = await axios.post("http://localhost:5103/role-optimization", data);
+    return response.data;
   } catch (error) {
-    console.error("Error in role optimization:", error);
-    throw new Error("Role optimization failed.");
+    console.error("Error optimizing job role:", error);
+    throw new Error("Job role optimization failed.");
   }
 };

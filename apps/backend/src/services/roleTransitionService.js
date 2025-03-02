@@ -1,21 +1,14 @@
 import axios from "axios";
 
-// AI-powered role transitions
-
 /**
- * Calls AI model to suggest job role transitions.
+ * Calls AI model for job role transition recommendations.
  */
-export const suggestRoleTransition = async (roleLevel, skillMatch, jobDemand, growthPotential) => {
+export const getRoleTransitionRecommendations = async (data) => {
   try {
-    const response = await axios.post("http://localhost:5100/role-transition", {
-      roleLevel,
-      skillMatch,
-      jobDemand,
-      growthPotential,
-    });
-    return response.data.transitionSuggestion;
+    const response = await axios.post("http://localhost:5104/role-transition", data);
+    return response.data;
   } catch (error) {
-    console.error("Error in role transition suggestion:", error);
+    console.error("Error getting role transition recommendations:", error);
     throw new Error("Role transition recommendation failed.");
   }
 };

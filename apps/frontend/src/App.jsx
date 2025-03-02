@@ -145,6 +145,10 @@ import CollaborationTrackingDashboard from "./pages/CollaborationTrackingDashboa
 import DynamicRoleDashboard from "./pages/DynamicRoleDashboard";
 import RoleTransitionDashboard from "./pages/RoleTransitionDashboard";
 import AdaptiveReskillingDashboard from "./pages/AdaptiveReskillingDashboard";
+{/* Sprint 63 AI-Powered Collaboration & Meeting Automation */}
+import CollaborationAssistantDashboard from "./pages/CollaborationAssistantDashboard";
+import MeetingAutomationDashboard from "./pages/MeetingAutomationDashboard";
+import RealTimeFeedbackDashboard from "./pages/RealTimeFeedbackDashboard";
 
 function App() {
   return (
@@ -333,6 +337,11 @@ function App() {
           <Route path="/dynamic-role" element={<DynamicRoleDashboard />} />
           <Route path="/role-transition" element={<RoleTransitionDashboard />} />
           <Route path="/adaptive-reskilling" element={<AdaptiveReskillingDashboard />} />
+
+          {/* Sprint 63 AI-Powered Collaboration & Meeting Automation */}
+          <Route path="/collaboration-assistant" element={<CollaborationAssistantDashboard />} />
+          <Route path="/meeting-automation" element={<MeetingAutomationDashboard />} />
+          <Route path="/real-time-feedback" element={<RealTimeFeedbackDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

@@ -1,26 +1,45 @@
 import express from "express";
-import { optimizeRole } from "../services/dynamicRoleService.js";
-
-// AI-driven role optimization
+import { optimizeJobRole } from "../services/dynamicRoleService.js";
 
 const router = express.Router();
 
 /**
  * @route POST /api/dynamic-role/optimize
- * @desc AI-driven role optimization for employees
+ * @desc AI-powered job role optimization
  */
 router.post("/optimize", async (req, res) => {
   try {
-    const { performance, experience, skillLevel, adaptability } = req.body;
+    const {
+      employeeId,
+      skills,
+      performanceData,
+      performance,
+      experience,
+      skillLevel,
+      adaptability
+    } = req.body;
 
-    if (!performance || !experience || !skillLevel || !adaptability) {
-      return res.status(400).json({ error: "Missing required fields" });
+    // Ensure at least one set of parameters is provided
+    if (
+      !(employeeId && skills && performanceData) &&
+      !(performance && experience && skillLevel && adaptability)
+    ) {
+      return res.status(400).json({ error: "Missing required fields for role optimization" });
     }
 
-    const optimizedRole = await optimizeRole(performance, experience, skillLevel, adaptability);
-    res.json({ optimizedRole });
+    const roleSuggestion = await optimizeJobRole({
+      employeeId,
+      skills,
+      performanceData,
+      performance,
+      experience,
+      skillLevel,
+      adaptability
+    });
+
+    res.json(roleSuggestion);
   } catch (error) {
-    console.error("Error in dynamic role optimization:", error);
+    console.error("Error optimizing job role:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });

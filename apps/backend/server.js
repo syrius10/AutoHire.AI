@@ -143,6 +143,10 @@ import collaborationTrackingRoutes from "./routes/collaborationTracking.routes.j
 import dynamicRoleRoutes from "./routes/dynamicRole.routes.js";
 import roleTransitionRoutes from "./routes/roleTransition.routes.js";
 import adaptiveReskillingRoutes from "./routes/adaptiveReskilling.routes.js";
+// // Server 63 AI-Powered Workforce Collaboration API Routes
+import collaborationAssistantRoutes from "./routes/collaborationAssistant.routes.js";
+import meetingAutomationRoutes from "./routes/meetingAutomation.routes.js";
+import realTimeFeedbackRoutes from "./routes/realTimeFeedback.routes.js";
 
 
 const app = express();
@@ -424,6 +428,13 @@ app.use("/api/dynamic-role", dynamicRoleRoutes);
 app.use("/api/role-transition", roleTransitionRoutes);
 
 app.use("/api/adaptive-reskilling", adaptiveReskillingRoutes);
+
+// // Server 63 AI-Powered Workforce Collaboration API Routes
+app.use("/api/collaboration-assistant", collaborationAssistantRoutes);
+
+app.use("/api/meeting-automation", meetingAutomationRoutes);
+
+app.use("/api/real-time-feedback", realTimeFeedbackRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
