@@ -132,6 +132,11 @@ import FreelancerFinanceDashboard from "./pages/FreelancerFinanceDashboard";
 import LeadershipTrainingDashboard from "./pages/LeadershipTrainingDashboard";
 import AIMentorshipCoachDashboard from "./pages/AIMentorshipCoachDashboard";
 import StrategicLeadershipDashboard from "./pages/StrategicLeadershipDashboard";
+{/* Sprint 60 The Future of AI Workforce Automation */}
+import PredictiveWorkforceDashboard from "./pages/PredictiveWorkforceDashboard";
+import AutonomousHRAssistantDashboard from "./pages/AutonomousHRAssistantDashboard";
+import AIJobSeekerDashboard from "./pages/AIJobSeekerDashboard";
+import GlobalWorkforceOrchestratorDashboard from "./pages/GlobalWorkforceOrchestratorDashboard";
 
 function App() {
   return (
@@ -304,6 +309,12 @@ function App() {
           <Route path="/leadership-training" element={<LeadershipTrainingDashboard />} />
           <Route path="/mentorship-coach" element={<AIMentorshipCoachDashboard />} />
           <Route path="/strategic-leadership" element={<StrategicLeadershipDashboard />} />
+
+          {/* Sprint 60 The Future of AI Workforce Automation */}
+          <Route path="/predictive-workforce" element={<PredictiveWorkforceDashboard />} />
+          <Route path="/hr-assistant" element={<AutonomousHRAssistantDashboard />} />
+          <Route path="/ai-job-seeker" element={<AIJobSeekerDashboard />} />
+          <Route path="/global-workforce" element={<GlobalWorkforceOrchestratorDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

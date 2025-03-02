@@ -130,6 +130,11 @@ import freelancerFinanceRoutes from "./routes/freelancerFinance.routes.js";
 import leadershipTrainingRoutes from "./routes/leadershipTraining.routes.js";
 import aiMentorshipCoachRoutes from "./routes/aiMentorshipCoach.routes.js";
 import strategicLeadershipRoutes from "./routes/strategicLeadership.routes.js";
+// // Sprint 60 AI-Powered Workforce Planning Automation
+import predictiveWorkforceRoutes from "./routes/predictiveWorkforce.routes.js";
+import autonomousHRAssistantRoutes from "./routes/autonomousHRAssistant.routes.js";
+import aiJobSeekerRoutes from "./routes/aiJobSeeker.routes.js";
+import globalWorkforceOrchestratorRoutes from "./routes/globalWorkforceOrchestrator.routes.js";
 
 
 const app = express();
@@ -388,6 +393,15 @@ app.use("/api/leadership-training", leadershipTrainingRoutes);
 app.use("/api/mentorship-coach", aiMentorshipCoachRoutes);
 
 app.use("/api/strategic-leadership", strategicLeadershipRoutes);
+
+// // Sprint 60 AI-Powered Workforce Planning Automation
+app.use("/api/predictive-workforce", predictiveWorkforceRoutes);
+
+app.use("/api/hr-assistant", autonomousHRAssistantRoutes);
+
+app.use("/api/ai-job-seeker", aiJobSeekerRoutes);
+
+app.use("/api/global-workforce", globalWorkforceOrchestratorRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
