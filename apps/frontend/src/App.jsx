@@ -94,7 +94,6 @@ import ApplicationAutomationDashboard from "./pages/ApplicationAutomationDashboa
 {/* Sprint 50 AI-Powered Gig Economy Automation */}
 import FreelancerCareerDashboard from "./pages/FreelancerCareerDashboard";
 import GigMatchingDashboard from "./pages/GigMatchingDashboard";
-import FreelancerFinanceDashboard from "./pages/FreelancerFinanceDashboard";
 {/* Sprint 51 AI-Powered Enterprise Workforce Planning */}
 import EnterpriseWorkforceDashboard from "./pages/EnterpriseWorkforceDashboard";
 import WorkforceForecastingDashboard from "./pages/WorkforceForecastingDashboard";
@@ -124,6 +123,11 @@ import MultiCountrySalaryDashboard from "./pages/MultiCountrySalaryDashboard";
 import DEIAnalyticsDashboard from "./pages/DEIAnalyticsDashboard";
 import SustainableWorkforceDashboard from "./pages/SustainableWorkforceDashboard";
 import EthicalHiringDashboard from "./pages/EthicalHiringDashboard";
+{/* Sprint 58 Gig Economy 2.0 */}
+import GigMarketplaceDashboard from "./pages/GigMarketplaceDashboard";
+import BlockchainContractsDashboard from "./pages/BlockchainContractsDashboard";
+import GigPaymentsDashboard from "./pages/GigPaymentsDashboard";
+import FreelancerFinanceDashboard from "./pages/FreelancerFinanceDashboard";
 
 function App() {
   return (
@@ -249,7 +253,6 @@ function App() {
           {/* Sprint 50 AI-Powered Gig Economy Automation */}
           <Route path="/freelancer-career" element={<FreelancerCareerDashboard />} />
           <Route path="/gig-matching" element={<GigMatchingDashboard />} />
-          <Route path="/freelancer-finance" element={<FreelancerFinanceDashboard />} />
 
           {/* Sprint 51 AI-Powered Enterprise Workforce Planning */}
           <Route path="/enterprise-workforce" element={<EnterpriseWorkforceDashboard />} />
@@ -286,6 +289,12 @@ function App() {
           <Route path="/dei-analytics" element={<DEIAnalyticsDashboard />} />
           <Route path="/sustainable-workforce" element={<SustainableWorkforceDashboard />} />
           <Route path="/ethical-hiring" element={<EthicalHiringDashboard />} />
+
+          {/* Sprint 58 Gig Economy 2.0 */}
+          <Route path="/gig-marketplace" element={<GigMarketplaceDashboard />} />
+          <Route path="/blockchain-contracts" element={<BlockchainContractsDashboard />} />
+          <Route path="/gig-payments" element={<GigPaymentsDashboard />} />
+          <Route path="/freelancer-finance" element={<FreelancerFinanceDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

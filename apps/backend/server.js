@@ -92,7 +92,6 @@ import applicationAutomationRoutes from "./routes/applicationAutomation.routes.j
 // // Sprint 50 AI-Powered Gig Economy Automation
 import freelancerCareerRoutes from "./routes/freelancerCareer.routes.js";
 import gigMatchingRoutes from "./routes/gigMatching.routes.js";
-import freelancerFinanceRoutes from "./routes/freelancerFinance.routes.js";
 // // Sprint 51 Workforce Planning APIs
 import enterpriseWorkforceRoutes from "./routes/enterpriseWorkforce.routes.js";
 import workforceForecastingRoutes from "./routes/workforceForecasting.routes.js";
@@ -122,6 +121,11 @@ import multiCountrySalaryRoutes from "./routes/multiCountrySalary.routes.js";
 import deiAnalyticsRoutes from "./routes/deiAnalytics.routes.js";
 import sustainableWorkforceRoutes from "./routes/sustainableWorkforce.routes.js";
 import ethicalHiringRoutes from "./routes/ethicalHiring.routes.js";
+// // Sprint 58 Gig Economy 2.0
+import gigMarketplaceRoutes from "./routes/gigMarketplace.routes.js";
+import blockchainContractsRoutes from "./routes/blockchainContracts.routes.js";
+import gigPaymentsRoutes from "./routes/gigPayments.routes.js";
+import freelancerFinanceRoutes from "./routes/freelancerFinance.routes.js";
 
 
 const app = express();
@@ -313,7 +317,6 @@ app.use("/api/freelancer-career", freelancerCareerRoutes);
 
 app.use("/api/gig-matching", gigMatchingRoutes);
 
-app.use("/api/freelancer-finance", freelancerFinanceRoutes);
 
 // // Sprint 51 Workforce Planning APIs
 app.use("/api/enterprise-workforce", enterpriseWorkforceRoutes);
@@ -365,6 +368,12 @@ app.use("/api/dei-analytics", deiAnalyticsRoutes);
 app.use("/api/sustainable-workforce", sustainableWorkforceRoutes);
 
 app.use("/api/ethical-hiring", ethicalHiringRoutes);
+
+// // Sprint 58 Gig Economy 2.0
+app.use("/api/gig-marketplace", gigMarketplaceRoutes);
+app.use("/api/blockchain-contracts", blockchainContractsRoutes);
+app.use("/api/gig-payments", gigPaymentsRoutes);
+app.use("/api/freelancer-finance", freelancerFinanceRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
