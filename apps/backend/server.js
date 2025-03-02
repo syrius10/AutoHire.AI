@@ -126,6 +126,10 @@ import gigMarketplaceRoutes from "./routes/gigMarketplace.routes.js";
 import blockchainContractsRoutes from "./routes/blockchainContracts.routes.js";
 import gigPaymentsRoutes from "./routes/gigPayments.routes.js";
 import freelancerFinanceRoutes from "./routes/freelancerFinance.routes.js";
+// // Sprint 59 Register Leadership Development API Routes
+import leadershipTrainingRoutes from "./routes/leadershipTraining.routes.js";
+import aiMentorshipCoachRoutes from "./routes/aiMentorshipCoach.routes.js";
+import strategicLeadershipRoutes from "./routes/strategicLeadership.routes.js";
 
 
 const app = express();
@@ -371,9 +375,19 @@ app.use("/api/ethical-hiring", ethicalHiringRoutes);
 
 // // Sprint 58 Gig Economy 2.0
 app.use("/api/gig-marketplace", gigMarketplaceRoutes);
+
 app.use("/api/blockchain-contracts", blockchainContractsRoutes);
+
 app.use("/api/gig-payments", gigPaymentsRoutes);
+
 app.use("/api/freelancer-finance", freelancerFinanceRoutes);
+
+// // Sprint 59 Register Leadership Development API Routes
+app.use("/api/leadership-training", leadershipTrainingRoutes);
+
+app.use("/api/mentorship-coach", aiMentorshipCoachRoutes);
+
+app.use("/api/strategic-leadership", strategicLeadershipRoutes);
 
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);

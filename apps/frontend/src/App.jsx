@@ -128,6 +128,10 @@ import GigMarketplaceDashboard from "./pages/GigMarketplaceDashboard";
 import BlockchainContractsDashboard from "./pages/BlockchainContractsDashboard";
 import GigPaymentsDashboard from "./pages/GigPaymentsDashboard";
 import FreelancerFinanceDashboard from "./pages/FreelancerFinanceDashboard";
+{/* Sprint 59 AI-Powered Leadership Development Dashboards */}
+import LeadershipTrainingDashboard from "./pages/LeadershipTrainingDashboard";
+import AIMentorshipCoachDashboard from "./pages/AIMentorshipCoachDashboard";
+import StrategicLeadershipDashboard from "./pages/StrategicLeadershipDashboard";
 
 function App() {
   return (
@@ -295,6 +299,11 @@ function App() {
           <Route path="/blockchain-contracts" element={<BlockchainContractsDashboard />} />
           <Route path="/gig-payments" element={<GigPaymentsDashboard />} />
           <Route path="/freelancer-finance" element={<FreelancerFinanceDashboard />} />
+
+          {/* Sprint 59 AI-Powered Leadership Development Dashboards */}
+          <Route path="/leadership-training" element={<LeadershipTrainingDashboard />} />
+          <Route path="/mentorship-coach" element={<AIMentorshipCoachDashboard />} />
+          <Route path="/strategic-leadership" element={<StrategicLeadershipDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
