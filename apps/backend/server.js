@@ -155,6 +155,10 @@ import workflowAutomationRoutes from "./routes/workflowAutomation.routes.js";
 import employeeDigitalTwinRoutes from "./routes/employeeDigitalTwin.routes.js";
 import workloadBalancingRoutes from "./routes/workloadBalancing.routes.js";
 import leadershipDecisionRoutes from "./routes/leadershipDecision.routes.js";
+// // Sprint 66 AI-Powered Emotion & Sentiment-Driven Workplaces
+import emotionAwareHRPolicyRoutes from "./routes/emotionAwareHRPolicy.routes.js";
+import teamMoodOptimizationRoutes from "./routes/teamMoodOptimization.routes.js";
+import realTimeWellnessRoutes from "./routes/realTimeWellness.routes.js";
 
 
 const app = express();
@@ -457,6 +461,13 @@ app.use("/api/employee-digital-twin", employeeDigitalTwinRoutes);
 app.use("/api/workload-balancing", workloadBalancingRoutes);
 
 app.use("/api/leadership-decision", leadershipDecisionRoutes);
+
+// // Sprint 66 AI-Powered Emotion & Sentiment-Driven Workplaces
+app.use("/api/emotion-aware-hr", emotionAwareHRPolicyRoutes);
+
+app.use("/api/team-mood", teamMoodOptimizationRoutes);
+
+app.use("/api/wellness", realTimeWellnessRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

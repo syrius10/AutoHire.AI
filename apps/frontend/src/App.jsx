@@ -157,6 +157,10 @@ import WorkflowAutomationDashboard from "./pages/WorkflowAutomationDashboard";
 import EmployeeDigitalTwinDashboard from "./pages/EmployeeDigitalTwinDashboard";
 import WorkloadBalancingDashboard from "./pages/WorkloadBalancingDashboard";
 import LeadershipDecisionDashboard from "./pages/LeadershipDecisionDashboard";
+{/* Sprint 66 AI-Powered Emotion & Sentiment-Driven Workplaces */}
+import EmotionAwareHRPolicyDashboard from "./pages/EmotionAwareHRPolicyDashboard";
+import TeamMoodOptimizationDashboard from "./pages/TeamMoodOptimizationDashboard";
+import RealTimeWellnessDashboard from "./pages/RealTimeWellnessDashboard";
 
 function App() {
   return (
@@ -360,6 +364,11 @@ function App() {
           <Route path="/employee-digital-twin" element={<EmployeeDigitalTwinDashboard />} />
           <Route path="/workload-balancing" element={<WorkloadBalancingDashboard />} />
           <Route path="/leadership-decision" element={<LeadershipDecisionDashboard />} />
+
+          {/* Sprint 66 AI-Powered Emotion & Sentiment-Driven Workplaces */}
+          <Route path="/emotion-aware-hr" element={<EmotionAwareHRPolicyDashboard />} />
+          <Route path="/team-mood" element={<TeamMoodOptimizationDashboard />} />
+          <Route path="/wellness-tracking" element={<RealTimeWellnessDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
