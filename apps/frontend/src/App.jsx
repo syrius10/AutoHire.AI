@@ -167,6 +167,10 @@ import AIComplianceMonitorDashboard from "./pages/AIComplianceMonitorDashboard";
 {/* Sprint 68 AI-Powered Work Contracts & Smart Legal Automation */}
 import SmartWorkContractsDashboard from "./pages/SmartWorkContractsDashboard";
 import ContractPerformanceDashboard from "./pages/ContractPerformanceDashboard";
+{/* Sprint 69 AI-Powered Global AI Workforce Governance */}
+import AIWorkforcePolicyDashboard from "./pages/AIWorkforcePolicyDashboard";
+import LaborLawComplianceDashboard from "./pages/LaborLawComplianceDashboard";
+import RegulatoryRiskDashboard from "./pages/RegulatoryRiskDashboard";
 
 function App() {
   return (
@@ -383,6 +387,11 @@ function App() {
           {/* Sprint 68 AI-Powered Work Contracts & Smart Legal Automation */}
           <Route path="/smart-contracts" element={<SmartWorkContractsDashboard />} />
           <Route path="/contract-performance" element={<ContractPerformanceDashboard />} />
+
+          {/* Sprint 69 AI-Powered Global AI Workforce Governance */}
+          <Route path="/workforce-policy" element={<AIWorkforcePolicyDashboard />} />
+          <Route path="/labor-law-compliance" element={<LaborLawComplianceDashboard />} />
+          <Route path="/regulatory-risk" element={<RegulatoryRiskDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

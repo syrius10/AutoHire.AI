@@ -165,7 +165,10 @@ import aiComplianceMonitorRoutes from "./routes/aiComplianceMonitor.routes.js";
 // // Sprint 68 AI-powered Smart Legal Automation API routes
 import smartWorkContractsRoutes from "./routes/smartWorkContracts.routes.js";
 import contractPerformanceRoutes from "./routes/contractPerformance.routes.js";
-
+// // Sprint 69 AI-Powered Global AI Workforce Governance
+import aiWorkforcePolicyRoutes from "./routes/aiWorkforcePolicy.routes.js";
+import laborLawComplianceRoutes from "./routes/laborLawCompliance.routes.js";
+import regulatoryRiskRoutes from "./routes/regulatoryRisk.routes.js";
 
 const app = express();
 const PORT = 5001; // Change to match your backend port
@@ -484,6 +487,13 @@ app.use("/api/ai-compliance-monitor", aiComplianceMonitorRoutes);
 app.use("/api/smart-contracts", smartWorkContractsRoutes);
 
 app.use("/api/contract-performance", contractPerformanceRoutes);
+
+// // Sprint 69 AI-Powered Global AI Workforce Governance
+app.use("/api/workforce-policy", aiWorkforcePolicyRoutes);
+
+app.use("/api/labor-law-compliance", laborLawComplianceRoutes);
+
+app.use("/api/regulatory-risk", regulatoryRiskRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
