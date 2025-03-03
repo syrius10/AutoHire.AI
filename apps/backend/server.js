@@ -169,6 +169,10 @@ import contractPerformanceRoutes from "./routes/contractPerformance.routes.js";
 import aiWorkforcePolicyRoutes from "./routes/aiWorkforcePolicy.routes.js";
 import laborLawComplianceRoutes from "./routes/laborLawCompliance.routes.js";
 import regulatoryRiskRoutes from "./routes/regulatoryRisk.routes.js";
+// // Sprint 70 AI-Powered Job Market Predictive Intelligence
+import economicWorkforceRoutes from "./routes/economicWorkforce.routes.js";
+import globalHiringTrendsRoutes from "./routes/globalHiringTrends.routes.js";
+import economicForecastRoutes from "./routes/economicForecast.routes.js";
 
 const app = express();
 const PORT = 5001; // Change to match your backend port
@@ -494,6 +498,13 @@ app.use("/api/workforce-policy", aiWorkforcePolicyRoutes);
 app.use("/api/labor-law-compliance", laborLawComplianceRoutes);
 
 app.use("/api/regulatory-risk", regulatoryRiskRoutes);
+
+// // Sprint 70 AI-Powered Job Market Predictive Intelligence
+app.use("/api/economic-workforce", economicWorkforceRoutes);
+
+app.use("/api/global-hiring-trends", globalHiringTrendsRoutes);
+
+app.use("/api/economic-forecast", economicForecastRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

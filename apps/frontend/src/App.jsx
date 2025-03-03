@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -171,6 +172,10 @@ import ContractPerformanceDashboard from "./pages/ContractPerformanceDashboard";
 import AIWorkforcePolicyDashboard from "./pages/AIWorkforcePolicyDashboard";
 import LaborLawComplianceDashboard from "./pages/LaborLawComplianceDashboard";
 import RegulatoryRiskDashboard from "./pages/RegulatoryRiskDashboard";
+{/* Sprint 70 AI-Powered Job Market Predictive Intelligence */}
+import EconomicWorkforceDashboard from "./pages/EconomicWorkforceDashboard";
+import GlobalHiringTrendsDashboard from "./pages/GlobalHiringTrendsDashboard";
+import EconomicForecastDashboard from "./pages/EconomicForecastDashboard";
 
 function App() {
   return (
@@ -392,6 +397,11 @@ function App() {
           <Route path="/workforce-policy" element={<AIWorkforcePolicyDashboard />} />
           <Route path="/labor-law-compliance" element={<LaborLawComplianceDashboard />} />
           <Route path="/regulatory-risk" element={<RegulatoryRiskDashboard />} />
+
+          {/* Sprint 70 AI-Powered Job Market Predictive Intelligence */}
+          <Route path="/economic-workforce" element={<EconomicWorkforceDashboard />} />
+          <Route path="/global-hiring-trends" element={<GlobalHiringTrendsDashboard />} />
+          <Route path="/economic-forecast" element={<EconomicForecastDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
