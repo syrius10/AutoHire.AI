@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
 
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -181,6 +182,10 @@ import MetaverseWorkspacesDashboard from "./pages/MetaverseWorkspacesDashboard";
 import VRJobInterviewsDashboard from "./pages/VRJobInterviewsDashboard";
 import HolographicMeetingsDashboard from "./pages/HolographicMeetingsDashboard";
 import AIWorkAssistantDashboard from "./pages/AIWorkAssistantDashboard";
+{/* Sprint 72 AI-Powered Decentralized Autonomous Organizations (DAOs) */}
+import DecentralizedCompanyDashboard from "./pages/DecentralizedCompanyDashboard";
+import TokenizedWorkDashboard from "./pages/TokenizedWorkDashboard";
+import SmartVotingDashboard from "./pages/SmartVotingDashboard";
 
 function App() {
   return (
@@ -413,6 +418,11 @@ function App() {
           <Route path="/vr-job-interviews" element={<VRJobInterviewsDashboard />} />
           <Route path="/holographic-meetings" element={<HolographicMeetingsDashboard />} />
           <Route path="/ai-work-assistant" element={<AIWorkAssistantDashboard />} />
+
+          {/* Sprint 72 AI-Powered Decentralized Autonomous Organizations (DAOs) */}
+          <Route path="/dao/decentralized-company" element={<DecentralizedCompanyDashboard />} />
+          <Route path="/dao/tokenized-work" element={<TokenizedWorkDashboard />} />
+          <Route path="/dao/smart-voting" element={<SmartVotingDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

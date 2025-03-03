@@ -178,6 +178,10 @@ import metaverseWorkspacesRoutes from "./routes/metaverseWorkspaces.routes.js";
 import vrJobInterviewsRoutes from "./routes/vrJobInterviews.routes.js";
 import holographicMeetingsRoutes from "./routes/holographicMeetings.routes.js";
 import aiWorkAssistantRoutes from "./routes/aiWorkAssistant.routes.js";
+// // Sprint 72 AI-powered DAOs & Decentralized Workforces
+import decentralizedCompanyRoutes from "./routes/decentralizedCompany.routes.js";
+import tokenizedWorkRoutes from "./routes/tokenizedWork.routes.js";
+import smartVotingRoutes from "./routes/smartVoting.routes.js";
 
 
 const app = express();
@@ -520,6 +524,13 @@ app.use("/api/vr-job-interviews", vrJobInterviewsRoutes);
 app.use("/api/holographic-meetings", holographicMeetingsRoutes);
 
 app.use("/api/ai-work-assistant", aiWorkAssistantRoutes);
+
+// // Sprint 72 AI-powered DAOs & Decentralized Workforces
+app.use("/api/decentralized-company", decentralizedCompanyRoutes);
+
+app.use("/api/tokenized-work", tokenizedWorkRoutes);
+
+app.use("/api/smart-voting", smartVotingRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
