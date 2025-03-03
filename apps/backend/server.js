@@ -173,6 +173,12 @@ import regulatoryRiskRoutes from "./routes/regulatoryRisk.routes.js";
 import economicWorkforceRoutes from "./routes/economicWorkforce.routes.js";
 import globalHiringTrendsRoutes from "./routes/globalHiringTrends.routes.js";
 import economicForecastRoutes from "./routes/economicForecast.routes.js";
+// // Sprint 71 AI-Powered Virtual Workspaces
+import metaverseWorkspacesRoutes from "./routes/metaverseWorkspaces.routes.js";
+import vrJobInterviewsRoutes from "./routes/vrJobInterviews.routes.js";
+import holographicMeetingsRoutes from "./routes/holographicMeetings.routes.js";
+import aiWorkAssistantRoutes from "./routes/aiWorkAssistant.routes.js";
+
 
 const app = express();
 const PORT = 5001; // Change to match your backend port
@@ -505,6 +511,15 @@ app.use("/api/economic-workforce", economicWorkforceRoutes);
 app.use("/api/global-hiring-trends", globalHiringTrendsRoutes);
 
 app.use("/api/economic-forecast", economicForecastRoutes);
+
+// // Sprint 71 AI-Powered Virtual Workspaces
+app.use("/api/metaverse-workspaces", metaverseWorkspacesRoutes);
+
+app.use("/api/vr-job-interviews", vrJobInterviewsRoutes);
+
+app.use("/api/holographic-meetings", holographicMeetingsRoutes);
+
+app.use("/api/ai-work-assistant", aiWorkAssistantRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

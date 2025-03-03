@@ -176,6 +176,11 @@ import RegulatoryRiskDashboard from "./pages/RegulatoryRiskDashboard";
 import EconomicWorkforceDashboard from "./pages/EconomicWorkforceDashboard";
 import GlobalHiringTrendsDashboard from "./pages/GlobalHiringTrendsDashboard";
 import EconomicForecastDashboard from "./pages/EconomicForecastDashboard";
+{/* Sprint 71 AI-Powered Virtual Workforce */}
+import MetaverseWorkspacesDashboard from "./pages/MetaverseWorkspacesDashboard";
+import VRJobInterviewsDashboard from "./pages/VRJobInterviewsDashboard";
+import HolographicMeetingsDashboard from "./pages/HolographicMeetingsDashboard";
+import AIWorkAssistantDashboard from "./pages/AIWorkAssistantDashboard";
 
 function App() {
   return (
@@ -402,6 +407,12 @@ function App() {
           <Route path="/economic-workforce" element={<EconomicWorkforceDashboard />} />
           <Route path="/global-hiring-trends" element={<GlobalHiringTrendsDashboard />} />
           <Route path="/economic-forecast" element={<EconomicForecastDashboard />} />
+
+          {/* Sprint 71 AI-Powered Virtual Workforce */}
+          <Route path="/metaverse-workspaces" element={<MetaverseWorkspacesDashboard />} />
+          <Route path="/vr-job-interviews" element={<VRJobInterviewsDashboard />} />
+          <Route path="/holographic-meetings" element={<HolographicMeetingsDashboard />} />
+          <Route path="/ai-work-assistant" element={<AIWorkAssistantDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
