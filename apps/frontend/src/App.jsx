@@ -164,6 +164,9 @@ import RealTimeWellnessDashboard from "./pages/RealTimeWellnessDashboard";
 {/* Sprint 67 AI-Powered Ethical & Bias-Free AI Workforces */}
 import BiasEliminationDashboard from "./pages/BiasEliminationDashboard";
 import AIComplianceMonitorDashboard from "./pages/AIComplianceMonitorDashboard";
+{/* Sprint 68 AI-Powered Work Contracts & Smart Legal Automation */}
+import SmartWorkContractsDashboard from "./pages/SmartWorkContractsDashboard";
+import ContractPerformanceDashboard from "./pages/ContractPerformanceDashboard";
 
 function App() {
   return (
@@ -376,6 +379,10 @@ function App() {
           {/* Sprint 67 AI-Powered Ethical & Bias-Free AI Workforces */}
           <Route path="/bias-elimination" element={<BiasEliminationDashboard />} />
           <Route path="/ai-compliance-monitor" element={<AIComplianceMonitorDashboard />} />
+
+          {/* Sprint 68 AI-Powered Work Contracts & Smart Legal Automation */}
+          <Route path="/smart-contracts" element={<SmartWorkContractsDashboard />} />
+          <Route path="/contract-performance" element={<ContractPerformanceDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

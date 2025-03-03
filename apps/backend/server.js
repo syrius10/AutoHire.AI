@@ -162,6 +162,9 @@ import realTimeWellnessRoutes from "./routes/realTimeWellness.routes.js";
 // // Sprint 67 AI-Powered Ethical & Bias-Free AI Workforces
 import biasEliminationRoutes from "./routes/biasElimination.routes.js";
 import aiComplianceMonitorRoutes from "./routes/aiComplianceMonitor.routes.js";
+// // Sprint 68 AI-powered Smart Legal Automation API routes
+import smartWorkContractsRoutes from "./routes/smartWorkContracts.routes.js";
+import contractPerformanceRoutes from "./routes/contractPerformance.routes.js";
 
 
 const app = express();
@@ -476,6 +479,11 @@ app.use("/api/wellness", realTimeWellnessRoutes);
 app.use("/api/bias-elimination", biasEliminationRoutes);
 
 app.use("/api/ai-compliance-monitor", aiComplianceMonitorRoutes);
+
+// // Sprint 68 AI-powered Smart Legal Automation API routes
+app.use("/api/smart-contracts", smartWorkContractsRoutes);
+
+app.use("/api/contract-performance", contractPerformanceRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

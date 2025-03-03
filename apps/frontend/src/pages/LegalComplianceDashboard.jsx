@@ -1,36 +1,46 @@
-import React, { useState } from "react";
-import { fetchComplianceReport } from "../services/legalComplianceService";
+import { useState } from "react";
+import { fetchLegalCompliance } from "../services/legalComplianceService";
 
-// Ensures compliance with global employment laws
+export default function LegalComplianceDashboard() {
+  const [formData, setFormData] = useState({
+    country: "",
+    terms: "",
+    contractLength: 12,
+    complianceScore: 80,
+    pastDisputes: 0,
+  });
 
-const LegalComplianceDashboard = () => {
-  const [country, setCountry] = useState("");
-  const [employmentTerms, setEmploymentTerms] = useState("");
-  const [complianceStatus, setComplianceStatus] = useState("");
+  const [complianceResult, setComplianceResult] = useState(null);
 
-  const handleCheckCompliance = async () => {
-    const data = await fetchComplianceReport(country, employmentTerms);
-    setComplianceStatus(data.compliance_status);
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const result = await fetchLegalCompliance(formData);
+    setComplianceResult(result);
   };
 
   return (
-    <div>
-      <h2>Legal Compliance Check</h2>
-      <input
-        type="text"
-        placeholder="Enter Country"
-        value={country}
-        onChange={(e) => setCountry(e.target.value)}
-      />
-      <textarea
-        placeholder="Enter employment terms..."
-        value={employmentTerms}
-        onChange={(e) => setEmploymentTerms(e.target.value)}
-      />
-      <button onClick={handleCheckCompliance}>Check Compliance</button>
-      <p><strong>Status:</strong> {complianceStatus}</p>
+    <div className="p-6">
+      <h2 className="text-2xl font-bold">⚖️ AI-Powered Legal Compliance Check</h2>
+      <form className="mt-4 space-y-3" onSubmit={handleSubmit}>
+        <input type="text" name="country" placeholder="Country" value={formData.country} onChange={handleChange} className="border p-2 w-full"/>
+        <textarea name="terms" placeholder="Contract Terms" value={formData.terms} onChange={handleChange} className="border p-2 w-full"/>
+        <input type="number" name="contractLength" placeholder="Contract Length (months)" value={formData.contractLength} onChange={handleChange} className="border p-2 w-full"/>
+        <input type="number" name="complianceScore" placeholder="Compliance Score (1-100)" value={formData.complianceScore} onChange={handleChange} className="border p-2 w-full"/>
+        <input type="number" name="pastDisputes" placeholder="Past Disputes" value={formData.pastDisputes} onChange={handleChange} className="border p-2 w-full"/>
+        <button type="submit" className="bg-blue-500 text-white p-2 rounded">Check Compliance</button>
+      </form>
+
+      {complianceResult && (
+        <div className="mt-4 border p-4 rounded">
+          <p><strong>Country:</strong> {complianceResult.country}</p>
+          <p><strong>Compliance Status:</strong> {complianceResult.compliance_status}</p>
+          <p><strong>Risk Assessment:</strong> {complianceResult.risk_assessment}</p>
+        </div>
+      )}
     </div>
   );
-};
-
-export default LegalComplianceDashboard;
+}
