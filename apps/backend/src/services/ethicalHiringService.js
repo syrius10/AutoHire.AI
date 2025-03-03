@@ -1,16 +1,33 @@
 import axios from "axios";
 
-// Detects hiring biases & enforces fair recruitment practices
-
 /**
- * Calls AI model to detect hiring bias.
+ * Calls AI model to detect hiring bias and ensure fairness.
  */
-export const detectBias = async (hiringData) => {
+export const evaluateHiringDecision = async (
+  genderBias,
+  ageBias,
+  ethnicBias,
+  disabilityInclusionScore,
+  experience,
+  skillMatch,
+  educationLevel,
+  biasHistory
+) => {
   try {
-    const response = await axios.post("http://localhost:5084/detect_bias", hiringData);
+    const response = await axios.post("http://localhost:5084/detect_bias", {
+      gender_bias: genderBias,
+      age_bias: ageBias,
+      ethnic_bias: ethnicBias,
+      disability_inclusion_score: disabilityInclusionScore,
+      experience,
+      skill_match: skillMatch,
+      education_level: educationLevel,
+      bias_history: biasHistory,
+    });
+
     return response.data;
   } catch (error) {
     console.error("Error detecting hiring bias:", error);
-    throw new Error("Failed to detect hiring bias.");
+    throw new Error("Ethical hiring evaluation failed.");
   }
 };

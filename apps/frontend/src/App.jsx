@@ -161,6 +161,9 @@ import LeadershipDecisionDashboard from "./pages/LeadershipDecisionDashboard";
 import EmotionAwareHRPolicyDashboard from "./pages/EmotionAwareHRPolicyDashboard";
 import TeamMoodOptimizationDashboard from "./pages/TeamMoodOptimizationDashboard";
 import RealTimeWellnessDashboard from "./pages/RealTimeWellnessDashboard";
+{/* Sprint 67 AI-Powered Ethical & Bias-Free AI Workforces */}
+import BiasEliminationDashboard from "./pages/BiasEliminationDashboard";
+import AIComplianceMonitorDashboard from "./pages/AIComplianceMonitorDashboard";
 
 function App() {
   return (
@@ -369,6 +372,10 @@ function App() {
           <Route path="/emotion-aware-hr" element={<EmotionAwareHRPolicyDashboard />} />
           <Route path="/team-mood" element={<TeamMoodOptimizationDashboard />} />
           <Route path="/wellness-tracking" element={<RealTimeWellnessDashboard />} />
+
+          {/* Sprint 67 AI-Powered Ethical & Bias-Free AI Workforces */}
+          <Route path="/bias-elimination" element={<BiasEliminationDashboard />} />
+          <Route path="/ai-compliance-monitor" element={<AIComplianceMonitorDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

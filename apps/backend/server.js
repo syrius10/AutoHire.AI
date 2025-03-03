@@ -159,6 +159,9 @@ import leadershipDecisionRoutes from "./routes/leadershipDecision.routes.js";
 import emotionAwareHRPolicyRoutes from "./routes/emotionAwareHRPolicy.routes.js";
 import teamMoodOptimizationRoutes from "./routes/teamMoodOptimization.routes.js";
 import realTimeWellnessRoutes from "./routes/realTimeWellness.routes.js";
+// // Sprint 67 AI-Powered Ethical & Bias-Free AI Workforces
+import biasEliminationRoutes from "./routes/biasElimination.routes.js";
+import aiComplianceMonitorRoutes from "./routes/aiComplianceMonitor.routes.js";
 
 
 const app = express();
@@ -468,6 +471,11 @@ app.use("/api/emotion-aware-hr", emotionAwareHRPolicyRoutes);
 app.use("/api/team-mood", teamMoodOptimizationRoutes);
 
 app.use("/api/wellness", realTimeWellnessRoutes);
+
+// // Sprint 67 AI-Powered Ethical & Bias-Free AI Workforces
+app.use("/api/bias-elimination", biasEliminationRoutes);
+
+app.use("/api/ai-compliance-monitor", aiComplianceMonitorRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
