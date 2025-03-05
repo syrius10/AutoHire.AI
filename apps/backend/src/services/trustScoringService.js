@@ -1,23 +1,26 @@
 import { spawn } from "child_process";
 import path from "path";
 
+// Calls AI model to calculate trust scores for freelancers & employers.
+
 /**
- * Calls AI model for task priority assignment & AI vs Human delegation.
+ * Calls AI model to calculate freelancer & employer trust scores.
  */
-export const assignTask = (skillLevel, workload, complexity) => {
+export const calculateTrustScore = (userId, workHistory, ratings, disputeCount) => {
   return new Promise((resolve, reject) => {
     const scriptPath = path.join(
       process.cwd(),
       "apps",
       "ai-services",
-      "taskDelegationAI.py"
+      "trustScoringAI.py"
     );
 
     const pythonProcess = spawn("python3", [
       scriptPath,
-      skillLevel,
-      workload,
-      complexity,
+      userId,
+      JSON.stringify(workHistory),
+      ratings,
+      disputeCount
     ]);
 
     let output = "";

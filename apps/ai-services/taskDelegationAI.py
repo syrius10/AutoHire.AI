@@ -1,8 +1,9 @@
 import joblib
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
+import random
 
-##### AI-powered task delegation & optimization. #####
+##### AI-powered task delegation & optimization #####
 
 # Sample dataset: [Skill Level, Workload, Task Complexity] → Assigned Priority
 data = np.array([
@@ -22,10 +23,27 @@ model.fit(X, y)
 # Save trained model
 joblib.dump(model, "task_delegation_ai.pkl")
 
-def assign_task(skill, workload, complexity):
-    """Determines task priority based on AI predictions."""
-    prediction = model.predict([[skill, workload, complexity]])[0]
-    return "High Priority Task" if prediction == 1 else "Low Priority Task"
 
+class TaskDelegationAI:
+    def __init__(self):
+        self.task_complexity_threshold = 0.6  # Above this, assign to humans, else AI
+
+    def assign_task(self, skill, workload, complexity):
+        """Determines task priority and delegates to AI or Human."""
+        priority = model.predict([[skill, workload, complexity]])[0]
+        assigned_priority = "High Priority Task" if priority == 1 else "Low Priority Task"
+
+        ai_capability = random.uniform(0.3, 1.0)  # AI's ability to handle tasks
+        assigned_to = "AI Agent" if ai_capability >= self.task_complexity_threshold else "Human Freelancer"
+
+        return {
+            "task_priority": assigned_priority,
+            "assigned_to": assigned_to
+        }
+
+
+# ✅ Test Case
 if __name__ == "__main__":
-    print(assign_task(7, 4, 6))  # Example task assignment
+    task_ai = TaskDelegationAI()
+    result = task_ai.assign_task(skill=7, workload=4, complexity=6)
+    print(result)  # Expected: Task priority + AI vs Human decision

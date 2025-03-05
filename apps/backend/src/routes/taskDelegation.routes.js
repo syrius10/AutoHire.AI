@@ -1,25 +1,24 @@
 import express from "express";
 import { assignTask } from "../services/taskDelegationService.js";
 
-// AI-driven task delegation & workload optimization
-
 const router = express.Router();
 
 /**
  * @route POST /api/task-delegation/assign
- * @desc AI-powered task assignment based on workload & skills
+ * @desc AI-driven task priority assignment & delegation
  */
 router.post("/assign", async (req, res) => {
   try {
-    const { skill, workload, complexity } = req.body;
-    if (!skill || !workload || !complexity) {
+    const { skillLevel, workload, complexity } = req.body;
+
+    if (skillLevel === undefined || workload === undefined || complexity === undefined) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const taskPriority = await assignTask(skill, workload, complexity);
-    res.json({ taskPriority });
+    const result = await assignTask(skillLevel, workload, complexity);
+    res.json(result);
   } catch (error) {
-    console.error("Error in task delegation:", error);
+    console.error("Error in AI task delegation:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });

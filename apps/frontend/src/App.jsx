@@ -190,10 +190,13 @@ import SmartVotingDashboard from "./pages/SmartVotingDashboard";
 import Web3WorkforceDashboard from "./pages/Web3WorkforceDashboard";
 import NFTJobCredentialsDashboard from "./pages/NFTJobCredentialsDashboard";
 import BlockchainCredibilityDashboard from "./pages/BlockchainCredibilityDashboard";
-{/* Sprint 73 AI-Powered Digital Nomad Ecosystem */}
+{/* Sprint 74 AI-Powered Digital Nomad Ecosystem */}
 import NomadJobMatchingDashboard from "./pages/NomadJobMatchingDashboard";
 import LocationBasedHiringDashboard from "./pages/LocationBasedHiringDashboard";
 import NomadWorkVisaDashboard from "./pages/NomadWorkVisaDashboard";
+{/* Sprint 75 AI-Powered Autonomous Gig Marketplaces */}
+import GigNegotiationDashboard from "./pages/GigNegotiationDashboard";
+import TrustScoringDashboard from "./pages/TrustScoringDashboard";
 
 function App() {
   return (
@@ -437,10 +440,14 @@ function App() {
           <Route path="/nft-job-credentials" element={<NFTJobCredentialsDashboard />} />
           <Route path="/blockchain-credibility" element={<BlockchainCredibilityDashboard />} />
 
-          {/* Sprint 73 AI-Powered Digital Nomad Ecosystem */}
+          {/* Sprint 74 AI-Powered Digital Nomad Ecosystem */}
           <Route path="/nomad-job-matching" element={<NomadJobMatchingDashboard />} />
           <Route path="/location-based-hiring" element={<LocationBasedHiringDashboard />} />
           <Route path="/nomad-work-visa" element={<NomadWorkVisaDashboard />} />
+
+          {/* Sprint 75 AI-Powered Autonomous Gig Marketplaces */}
+          <Route path="/gig-negotiation" element={<GigNegotiationDashboard />} />
+          <Route path="/trust-scoring" element={<TrustScoringDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

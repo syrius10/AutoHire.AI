@@ -190,6 +190,9 @@ import blockchainCredibilityRoutes from "./routes/blockchainCredibility.routes.j
 import nomadJobMatchingRoutes from "./routes/nomadJobMatching.routes.js";
 import locationBasedHiringRoutes from "./routes/locationBasedHiring.routes.js";
 import nomadWorkVisaRoutes from "./routes/nomadWorkVisa.routes.js";
+// // Sprint 75 Autonomous Gig Marketplace API Routes
+import gigNegotiationRoutes from "./src/routes/gigNegotiation.routes.js";
+import trustScoringRoutes from "./src/routes/trustScoring.routes.js";
 
 
 const app = express();
@@ -553,6 +556,11 @@ app.use("/api/nomad-job-matching", nomadJobMatchingRoutes);
 app.use("/api/location-based-hiring", locationBasedHiringRoutes);
 
 app.use("/api/nomad-work-visa", nomadWorkVisaRoutes);
+
+// // Sprint 75 Autonomous Gig Marketplace API Routes
+app.use("/api/gig-negotiation", gigNegotiationRoutes);
+
+app.use("/api/trust-scoring", trustScoringRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

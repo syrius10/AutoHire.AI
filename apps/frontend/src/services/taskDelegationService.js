@@ -1,16 +1,17 @@
 import axios from "axios";
 
-// Retrieves AI-powered task allocation & optimization insights
-
 /**
- * Fetches AI-generated task delegation insights.
+ * Calls backend API to assign a task and get AI vs Human delegation.
  */
-export const fetchTaskDelegation = async () => {
+export const assignTask = async (skillLevel, workload, complexity) => {
   try {
-    const response = await axios.get("/api/task-delegation/assign");
-    return response.data.tasks;
+    const response = await axios.post(
+      "http://localhost:5001/api/task-delegation/assign",
+      { skillLevel, workload, complexity }
+    );
+    return response.data;
   } catch (error) {
-    console.error("Error fetching task delegation:", error);
-    return [];
+    console.error("Error assigning task:", error);
+    return { error: "Task delegation failed" };
   }
 };

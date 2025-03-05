@@ -1,23 +1,26 @@
 import { spawn } from "child_process";
 import path from "path";
 
+// Calls AI model for negotiating freelancer work terms & payment agreements.
+
 /**
- * Calls AI model for task priority assignment & AI vs Human delegation.
+ * Calls AI model to negotiate freelancer work terms & payment.
  */
-export const assignTask = (skillLevel, workload, complexity) => {
+export const negotiateWorkTerms = (freelancerId, employerId, jobDetails, initialOffer) => {
   return new Promise((resolve, reject) => {
     const scriptPath = path.join(
       process.cwd(),
       "apps",
       "ai-services",
-      "taskDelegationAI.py"
+      "gigNegotiationAI.py"
     );
 
     const pythonProcess = spawn("python3", [
       scriptPath,
-      skillLevel,
-      workload,
-      complexity,
+      freelancerId,
+      employerId,
+      JSON.stringify(jobDetails),
+      initialOffer
     ]);
 
     let output = "";
