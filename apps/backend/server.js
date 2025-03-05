@@ -182,6 +182,10 @@ import aiWorkAssistantRoutes from "./routes/aiWorkAssistant.routes.js";
 import decentralizedCompanyRoutes from "./routes/decentralizedCompany.routes.js";
 import tokenizedWorkRoutes from "./routes/tokenizedWork.routes.js";
 import smartVotingRoutes from "./routes/smartVoting.routes.js";
+// // Sprint 73 AI-Powered Work in the Web3 Ecosystem
+import web3WorkforceRoutes from "./routes/web3Workforce.routes.js";
+import nftJobCredentialsRoutes from "./routes/nftJobCredentials.routes.js";
+import blockchainCredibilityRoutes from "./routes/blockchainCredibility.routes.js";
 
 
 const app = express();
@@ -531,6 +535,13 @@ app.use("/api/decentralized-company", decentralizedCompanyRoutes);
 app.use("/api/tokenized-work", tokenizedWorkRoutes);
 
 app.use("/api/smart-voting", smartVotingRoutes);
+
+// // Sprint 73 AI-Powered Work in the Web3 Ecosystem
+app.use("/api/web3-workforce", web3WorkforceRoutes);
+
+app.use("/api/nft-job-credentials", nftJobCredentialsRoutes);
+
+app.use("/api/blockchain-credibility", blockchainCredibilityRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

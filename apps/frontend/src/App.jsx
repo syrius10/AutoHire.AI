@@ -186,6 +186,10 @@ import AIWorkAssistantDashboard from "./pages/AIWorkAssistantDashboard";
 import DecentralizedCompanyDashboard from "./pages/DecentralizedCompanyDashboard";
 import TokenizedWorkDashboard from "./pages/TokenizedWorkDashboard";
 import SmartVotingDashboard from "./pages/SmartVotingDashboard";
+{/* Sprint 73 AI-Powered Work in the Web3 Ecosystem */}
+import Web3WorkforceDashboard from "./pages/Web3WorkforceDashboard";
+import NFTJobCredentialsDashboard from "./pages/NFTJobCredentialsDashboard";
+import BlockchainCredibilityDashboard from "./pages/BlockchainCredibilityDashboard";
 
 function App() {
   return (
@@ -423,6 +427,11 @@ function App() {
           <Route path="/dao/decentralized-company" element={<DecentralizedCompanyDashboard />} />
           <Route path="/dao/tokenized-work" element={<TokenizedWorkDashboard />} />
           <Route path="/dao/smart-voting" element={<SmartVotingDashboard />} />
+
+          {/* Sprint 73 AI-Powered Work in the Web3 Ecosystem */}
+          <Route path="/web3-workforce" element={<Web3WorkforceDashboard />} />
+          <Route path="/nft-job-credentials" element={<NFTJobCredentialsDashboard />} />
+          <Route path="/blockchain-credibility" element={<BlockchainCredibilityDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
