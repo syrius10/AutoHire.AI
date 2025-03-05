@@ -190,6 +190,10 @@ import SmartVotingDashboard from "./pages/SmartVotingDashboard";
 import Web3WorkforceDashboard from "./pages/Web3WorkforceDashboard";
 import NFTJobCredentialsDashboard from "./pages/NFTJobCredentialsDashboard";
 import BlockchainCredibilityDashboard from "./pages/BlockchainCredibilityDashboard";
+{/* Sprint 73 AI-Powered Digital Nomad Ecosystem */}
+import NomadJobMatchingDashboard from "./pages/NomadJobMatchingDashboard";
+import LocationBasedHiringDashboard from "./pages/LocationBasedHiringDashboard";
+import NomadWorkVisaDashboard from "./pages/NomadWorkVisaDashboard";
 
 function App() {
   return (
@@ -432,6 +436,11 @@ function App() {
           <Route path="/web3-workforce" element={<Web3WorkforceDashboard />} />
           <Route path="/nft-job-credentials" element={<NFTJobCredentialsDashboard />} />
           <Route path="/blockchain-credibility" element={<BlockchainCredibilityDashboard />} />
+
+          {/* Sprint 73 AI-Powered Digital Nomad Ecosystem */}
+          <Route path="/nomad-job-matching" element={<NomadJobMatchingDashboard />} />
+          <Route path="/location-based-hiring" element={<LocationBasedHiringDashboard />} />
+          <Route path="/nomad-work-visa" element={<NomadWorkVisaDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

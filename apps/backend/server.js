@@ -186,6 +186,10 @@ import smartVotingRoutes from "./routes/smartVoting.routes.js";
 import web3WorkforceRoutes from "./routes/web3Workforce.routes.js";
 import nftJobCredentialsRoutes from "./routes/nftJobCredentials.routes.js";
 import blockchainCredibilityRoutes from "./routes/blockchainCredibility.routes.js";
+// // Sprint 74 AI-Powered Digital Nomad Ecosystem
+import nomadJobMatchingRoutes from "./routes/nomadJobMatching.routes.js";
+import locationBasedHiringRoutes from "./routes/locationBasedHiring.routes.js";
+import nomadWorkVisaRoutes from "./routes/nomadWorkVisa.routes.js";
 
 
 const app = express();
@@ -542,6 +546,13 @@ app.use("/api/web3-workforce", web3WorkforceRoutes);
 app.use("/api/nft-job-credentials", nftJobCredentialsRoutes);
 
 app.use("/api/blockchain-credibility", blockchainCredibilityRoutes);
+
+// // Sprint 74 AI-Powered Digital Nomad Ecosystem
+app.use("/api/nomad-job-matching", nomadJobMatchingRoutes);
+
+app.use("/api/location-based-hiring", locationBasedHiringRoutes);
+
+app.use("/api/nomad-work-visa", nomadWorkVisaRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
