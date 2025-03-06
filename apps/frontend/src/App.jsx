@@ -197,6 +197,14 @@ import NomadWorkVisaDashboard from "./pages/NomadWorkVisaDashboard";
 {/* Sprint 75 AI-Powered Autonomous Gig Marketplaces */}
 import GigNegotiationDashboard from "./pages/GigNegotiationDashboard";
 import TrustScoringDashboard from "./pages/TrustScoringDashboard";
+{/* Sprint 76 AI-Powered Virtual Co-Working Spaces */}
+import VirtualCollaborationDashboard from "./pages/VirtualCollaborationDashboard";
+import RemoteTeamManagementDashboard from "./pages/RemoteTeamManagementDashboard";
+import AIWorkCoachDashboard from "./pages/AIWorkCoachDashboard";
+{/* Sprint 77 AI-Powered Work-Life Balance Optimization */}
+import WorkScheduleOptimizerDashboard from "./pages/WorkScheduleOptimizerDashboard.jsx";
+import ProductivityEnergyTrackerDashboard from "./pages/ProductivityEnergyTrackerDashboard.jsx";
+import BurnoutPreventionDashboard from "./pages/BurnoutPreventionDashboard.jsx";
 
 function App() {
   return (
@@ -448,6 +456,16 @@ function App() {
           {/* Sprint 75 AI-Powered Autonomous Gig Marketplaces */}
           <Route path="/gig-negotiation" element={<GigNegotiationDashboard />} />
           <Route path="/trust-scoring" element={<TrustScoringDashboard />} />
+
+          {/* Sprint 76 AI-Powered Virtual Co-Working Spaces */}
+          <Route path="/virtual-collaboration" element={<VirtualCollaborationDashboard />} />
+          <Route path="/remote-team-management" element={<RemoteTeamManagementDashboard />} />
+          <Route path="/ai-work-coach" element={<AIWorkCoachDashboard />} />
+
+          {/* Sprint 77 AI-Powered Work-Life Balance Optimization */}
+          <Route path="/work-schedule-optimizer" element={<WorkScheduleOptimizerDashboard />} />
+          <Route path="/productivity-energy-tracker" element={<ProductivityEnergyTrackerDashboard />} />
+          <Route path="/burnout-prevention" element={<BurnoutPreventionDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

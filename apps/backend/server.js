@@ -193,6 +193,14 @@ import nomadWorkVisaRoutes from "./routes/nomadWorkVisa.routes.js";
 // // Sprint 75 Autonomous Gig Marketplace API Routes
 import gigNegotiationRoutes from "./src/routes/gigNegotiation.routes.js";
 import trustScoringRoutes from "./src/routes/trustScoring.routes.js";
+// // Sprint 76 AI-Powered Virtual Co-Working Spaces
+import virtualCollaborationRoutes from "./routes/virtualCollaboration.routes.js";
+import remoteTeamManagementRoutes from "./routes/remoteTeamManagement.routes.js";
+import aiWorkCoachRoutes from "./routes/aiWorkCoach.routes.js";
+// // Sprint 77 I-Powered Work-Life Balance Optimization
+import workScheduleOptimizerRoutes from "./routes/workScheduleOptimizer.routes.js";
+import productivityEnergyTrackerRoutes from "./routes/productivityEnergyTracker.routes.js";
+import burnoutPreventionRoutes from "./routes/burnoutPrevention.routes.js";
 
 
 const app = express();
@@ -561,6 +569,20 @@ app.use("/api/nomad-work-visa", nomadWorkVisaRoutes);
 app.use("/api/gig-negotiation", gigNegotiationRoutes);
 
 app.use("/api/trust-scoring", trustScoringRoutes);
+
+// // Sprint 76 AI-Powered Virtual Co-Working Spaces
+app.use("/api/virtual-collaboration", virtualCollaborationRoutes);
+
+app.use("/api/remote-team", remoteTeamManagementRoutes);
+
+app.use("/api/work-coach", aiWorkCoachRoutes);
+
+// // Sprint 77 I-Powered Work-Life Balance Optimization
+app.use("/api/work-schedule", workScheduleOptimizerRoutes);
+
+app.use("/api/productivity-energy", productivityEnergyTrackerRoutes);
+
+app.use("/api/burnout-prevention", burnoutPreventionRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
