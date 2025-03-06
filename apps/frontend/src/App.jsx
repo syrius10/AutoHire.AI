@@ -205,6 +205,10 @@ import AIWorkCoachDashboard from "./pages/AIWorkCoachDashboard";
 import WorkScheduleOptimizerDashboard from "./pages/WorkScheduleOptimizerDashboard.jsx";
 import ProductivityEnergyTrackerDashboard from "./pages/ProductivityEnergyTrackerDashboard.jsx";
 import BurnoutPreventionDashboard from "./pages/BurnoutPreventionDashboard.jsx";
+{/* Sprint 77 AI-Powered Work Productivity Tokens */}
+import ProductivityTokensDashboard from "./pages/ProductivityTokensDashboard";
+import MilestonePayoutsDashboard from "./pages/MilestonePayoutsDashboard";
+import DecentralizedFinanceDashboard from "./pages/DecentralizedFinanceDashboard";
 
 function App() {
   return (
@@ -466,6 +470,11 @@ function App() {
           <Route path="/work-schedule-optimizer" element={<WorkScheduleOptimizerDashboard />} />
           <Route path="/productivity-energy-tracker" element={<ProductivityEnergyTrackerDashboard />} />
           <Route path="/burnout-prevention" element={<BurnoutPreventionDashboard />} />
+
+          {/* Sprint 77 AI-Powered Work Productivity Tokens */}
+          <Route path="/productivity-tokens" element={<ProductivityTokensDashboard />} />
+          <Route path="/milestone-payouts" element={<MilestonePayoutsDashboard />} />
+          <Route path="/decentralized-finance" element={<DecentralizedFinanceDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

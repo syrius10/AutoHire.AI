@@ -197,10 +197,14 @@ import trustScoringRoutes from "./src/routes/trustScoring.routes.js";
 import virtualCollaborationRoutes from "./routes/virtualCollaboration.routes.js";
 import remoteTeamManagementRoutes from "./routes/remoteTeamManagement.routes.js";
 import aiWorkCoachRoutes from "./routes/aiWorkCoach.routes.js";
-// // Sprint 77 I-Powered Work-Life Balance Optimization
+// // Sprint 77 AI-Powered Work-Life Balance Optimization
 import workScheduleOptimizerRoutes from "./routes/workScheduleOptimizer.routes.js";
 import productivityEnergyTrackerRoutes from "./routes/productivityEnergyTracker.routes.js";
 import burnoutPreventionRoutes from "./routes/burnoutPrevention.routes.js";
+// // Sprint 78 AI-Powered Work Productivity Tokens
+import productivityTokensRoutes from "./routes/productivityTokens.routes.js";
+import milestonePayoutsRoutes from "./routes/milestonePayouts.routes.js";
+import decentralizedFinanceRoutes from "./routes/decentralizedFinance.routes.js";
 
 
 const app = express();
@@ -583,6 +587,13 @@ app.use("/api/work-schedule", workScheduleOptimizerRoutes);
 app.use("/api/productivity-energy", productivityEnergyTrackerRoutes);
 
 app.use("/api/burnout-prevention", burnoutPreventionRoutes);
+
+// // Sprint 78 AI-Powered Work Productivity Tokens
+app.use("/api/productivity-tokens", productivityTokensRoutes);
+
+app.use("/api/milestone-payouts", milestonePayoutsRoutes);
+
+app.use("/api/decentralized-finance", decentralizedFinanceRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
