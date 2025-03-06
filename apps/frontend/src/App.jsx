@@ -205,10 +205,14 @@ import AIWorkCoachDashboard from "./pages/AIWorkCoachDashboard";
 import WorkScheduleOptimizerDashboard from "./pages/WorkScheduleOptimizerDashboard.jsx";
 import ProductivityEnergyTrackerDashboard from "./pages/ProductivityEnergyTrackerDashboard.jsx";
 import BurnoutPreventionDashboard from "./pages/BurnoutPreventionDashboard.jsx";
-{/* Sprint 77 AI-Powered Work Productivity Tokens */}
+{/* Sprint 78 AI-Powered Work Productivity Tokens */}
 import ProductivityTokensDashboard from "./pages/ProductivityTokensDashboard";
 import MilestonePayoutsDashboard from "./pages/MilestonePayoutsDashboard";
 import DecentralizedFinanceDashboard from "./pages/DecentralizedFinanceDashboard";
+{/* Sprint 79 AI-Powered Gig Worker Financial Planning */}
+import GigSmartPaymentsDashboard from "./pages/GigSmartPaymentsDashboard";
+import FreelancerTaxDashboard from "./pages/FreelancerTaxDashboard";
+import GigFinancialForecastDashboard from "./pages/GigFinancialForecastDashboard";
 
 function App() {
   return (
@@ -471,10 +475,15 @@ function App() {
           <Route path="/productivity-energy-tracker" element={<ProductivityEnergyTrackerDashboard />} />
           <Route path="/burnout-prevention" element={<BurnoutPreventionDashboard />} />
 
-          {/* Sprint 77 AI-Powered Work Productivity Tokens */}
+          {/* Sprint 78 AI-Powered Work Productivity Tokens */}
           <Route path="/productivity-tokens" element={<ProductivityTokensDashboard />} />
           <Route path="/milestone-payouts" element={<MilestonePayoutsDashboard />} />
           <Route path="/decentralized-finance" element={<DecentralizedFinanceDashboard />} />
+
+          {/* Sprint 79 AI-Powered Gig Worker Financial Planning */}
+          <Route path="/gig-smart-payments" element={<GigSmartPaymentsDashboard />} />
+          <Route path="/freelancer-tax" element={<FreelancerTaxDashboard />} />
+          <Route path="/gig-financial-forecast" element={<GigFinancialForecastDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

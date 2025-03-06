@@ -205,6 +205,10 @@ import burnoutPreventionRoutes from "./routes/burnoutPrevention.routes.js";
 import productivityTokensRoutes from "./routes/productivityTokens.routes.js";
 import milestonePayoutsRoutes from "./routes/milestonePayouts.routes.js";
 import decentralizedFinanceRoutes from "./routes/decentralizedFinance.routes.js";
+// // Sprint 79 AI-powered gig worker financial planning
+import gigSmartPaymentsRoutes from "./routes/gigSmartPayments.routes.js";
+import freelancerTaxRoutes from "./routes/freelancerTax.routes.js";
+import gigFinancialForecastRoutes from "./routes/gigFinancialForecast.routes.js";
 
 
 const app = express();
@@ -594,6 +598,13 @@ app.use("/api/productivity-tokens", productivityTokensRoutes);
 app.use("/api/milestone-payouts", milestonePayoutsRoutes);
 
 app.use("/api/decentralized-finance", decentralizedFinanceRoutes);
+
+// // Sprint 79 AI-powered gig worker financial planning
+app.use("/api/gig-smart-payments", gigSmartPaymentsRoutes);
+
+app.use("/api/freelancer-tax", freelancerTaxRoutes);
+
+app.use("/api/gig-financial-forecast", gigFinancialForecastRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
