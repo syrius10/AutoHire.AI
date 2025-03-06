@@ -209,6 +209,11 @@ import decentralizedFinanceRoutes from "./routes/decentralizedFinance.routes.js"
 import gigSmartPaymentsRoutes from "./routes/gigSmartPayments.routes.js";
 import freelancerTaxRoutes from "./routes/freelancerTax.routes.js";
 import gigFinancialForecastRoutes from "./routes/gigFinancialForecast.routes.js";
+// // Sprint 80 AI-powered Global Workforce Decentralization
+import decentralizedWorkforceRoutes from "./routes/decentralizedWorkforce.routes.js";
+import crossBorderContractsRoutes from "./routes/crossBorderContracts.routes.js";
+import globalVisaAutomationRoutes from "./routes/globalVisaAutomation.routes.js";
+import workforcePolicyRoutes from "./routes/workforcePolicy.routes.js";
 
 
 const app = express();
@@ -605,6 +610,15 @@ app.use("/api/gig-smart-payments", gigSmartPaymentsRoutes);
 app.use("/api/freelancer-tax", freelancerTaxRoutes);
 
 app.use("/api/gig-financial-forecast", gigFinancialForecastRoutes);
+
+// // Sprint 80 AI-powered Global Workforce Decentralization
+app.use("/api/decentralized-workforce", decentralizedWorkforceRoutes);
+
+app.use("/api/cross-border-contracts", crossBorderContractsRoutes);
+
+app.use("/api/global-visa-automation", globalVisaAutomationRoutes);
+
+app.use("/api/workforce-policy", workforcePolicyRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

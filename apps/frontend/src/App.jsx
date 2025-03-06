@@ -213,6 +213,11 @@ import DecentralizedFinanceDashboard from "./pages/DecentralizedFinanceDashboard
 import GigSmartPaymentsDashboard from "./pages/GigSmartPaymentsDashboard";
 import FreelancerTaxDashboard from "./pages/FreelancerTaxDashboard";
 import GigFinancialForecastDashboard from "./pages/GigFinancialForecastDashboard";
+{/* Sprint 80 AI-Powered Global Workforce Decentralization */}
+import DecentralizedWorkforceDashboard from "./pages/DecentralizedWorkforceDashboard";
+import CrossBorderContractsDashboard from "./pages/CrossBorderContractsDashboard";
+import GlobalVisaAutomationDashboard from "./pages/GlobalVisaAutomationDashboard";
+import WorkforcePolicyDashboard from "./pages/WorkforcePolicyDashboard";
 
 function App() {
   return (
@@ -484,6 +489,12 @@ function App() {
           <Route path="/gig-smart-payments" element={<GigSmartPaymentsDashboard />} />
           <Route path="/freelancer-tax" element={<FreelancerTaxDashboard />} />
           <Route path="/gig-financial-forecast" element={<GigFinancialForecastDashboard />} />
+
+          {/* Sprint 80 AI-Powered Global Workforce Decentralization */}
+          <Route path="/decentralized-workforce" element={<DecentralizedWorkforceDashboard />} />
+          <Route path="/cross-border-contracts" element={<CrossBorderContractsDashboard />} />
+          <Route path="/global-visa-automation" element={<GlobalVisaAutomationDashboard />} />
+          <Route path="/workforce-policy" element={<WorkforcePolicyDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
