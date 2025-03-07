@@ -229,6 +229,10 @@ import AdaptiveWorkflowDashboard from "./pages/AdaptiveWorkflowDashboard";
 import QuantumWorkforceSimDashboard from "./pages/QuantumWorkforceSimDashboard";
 import QuantumWorkforceForecastDashboard from "./pages/QuantumWorkforceForecastDashboard";
 import QuantumHiringPerformanceDashboard from "./pages/QuantumHiringPerformanceDashboard";
+{/* Sprint 84 AI-Powered Conscious AI Work Models */}
+import ConsciousWorkDashboard from "./pages/ConsciousWorkDashboard";
+import SelfAwareAutomationDashboard from "./pages/SelfAwareAutomationDashboard";
+import EthicalAIWorkforceDashboard from "./pages/EthicalAIWorkforceDashboard";
 
 
 function App() {
@@ -521,6 +525,11 @@ function App() {
           <Route path="/quantum-workforce-sim" element={<QuantumWorkforceSimDashboard />} />
           <Route path="/quantum-workforce-forecast" element={<QuantumWorkforceForecastDashboard />} />
           <Route path="/quantum-hiring-performance" element={<QuantumHiringPerformanceDashboard />} />
+
+          {/* Sprint 84 AI-Powered Conscious AI Work Models */}
+          <Route path="/conscious-ai" element={<ConsciousWorkDashboard />} />
+          <Route path="/self-aware-automation" element={<SelfAwareAutomationDashboard />} />
+          <Route path="/ethical-ai-workforce" element={<EthicalAIWorkforceDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
