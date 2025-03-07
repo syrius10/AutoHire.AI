@@ -218,6 +218,10 @@ import DecentralizedWorkforceDashboard from "./pages/DecentralizedWorkforceDashb
 import CrossBorderContractsDashboard from "./pages/CrossBorderContractsDashboard";
 import GlobalVisaAutomationDashboard from "./pages/GlobalVisaAutomationDashboard";
 import WorkforcePolicyDashboard from "./pages/WorkforcePolicyDashboard";
+{/* Sprint 81 AI-Powered Self-Learning Work Models */}
+import SelfImprovingWorkforceDashboard from "./pages/SelfImprovingWorkforceDashboard";
+import SelfUpgradingSkillsDashboard from "./pages/SelfUpgradingSkillsDashboard";
+import SelfAdaptingCareerDashboard from "./pages/SelfAdaptingCareerDashboard";
 
 function App() {
   return (
@@ -495,6 +499,11 @@ function App() {
           <Route path="/cross-border-contracts" element={<CrossBorderContractsDashboard />} />
           <Route path="/global-visa-automation" element={<GlobalVisaAutomationDashboard />} />
           <Route path="/workforce-policy" element={<WorkforcePolicyDashboard />} />
+
+          {/* Sprint 81 AI-Powered Self-Learning Work Models */}
+          <Route path="/self-improving-workforce" element={<SelfImprovingWorkforceDashboard />} />
+          <Route path="/self-upgrading-skills" element={<SelfUpgradingSkillsDashboard />} />
+          <Route path="/self-adapting-career" element={<SelfAdaptingCareerDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

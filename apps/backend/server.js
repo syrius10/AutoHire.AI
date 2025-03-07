@@ -214,6 +214,10 @@ import decentralizedWorkforceRoutes from "./routes/decentralizedWorkforce.routes
 import crossBorderContractsRoutes from "./routes/crossBorderContracts.routes.js";
 import globalVisaAutomationRoutes from "./routes/globalVisaAutomation.routes.js";
 import workforcePolicyRoutes from "./routes/workforcePolicy.routes.js";
+// // Sprint 81 AI-powered Self-Learning Work Models
+import selfImprovingWorkforceRoutes from "./src/routes/selfImprovingWorkforce.routes.js";
+import selfUpgradingSkillsRoutes from "./src/routes/selfUpgradingSkills.routes.js";
+import selfAdaptingCareerRoutes from "./src/routes/selfAdaptingCareer.routes.js";
 
 
 const app = express();
@@ -619,6 +623,13 @@ app.use("/api/cross-border-contracts", crossBorderContractsRoutes);
 app.use("/api/global-visa-automation", globalVisaAutomationRoutes);
 
 app.use("/api/workforce-policy", workforcePolicyRoutes);
+
+// // Sprint 81 AI-powered Self-Learning Work Models
+app.use("/api/self-improving-workforce", selfImprovingWorkforceRoutes);
+
+app.use("/api/self-upgrading-skills", selfUpgradingSkillsRoutes);
+
+app.use("/api/self-adapting-career", selfAdaptingCareerRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
