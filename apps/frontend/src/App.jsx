@@ -222,6 +222,9 @@ import WorkforcePolicyDashboard from "./pages/WorkforcePolicyDashboard";
 import SelfImprovingWorkforceDashboard from "./pages/SelfImprovingWorkforceDashboard";
 import SelfUpgradingSkillsDashboard from "./pages/SelfUpgradingSkillsDashboard";
 import SelfAdaptingCareerDashboard from "./pages/SelfAdaptingCareerDashboard";
+{/* Sprint 82 AI-Powered Work Efficiency Agents */}
+import RealTimeProductivityDashboard from "./pages/RealTimeProductivityDashboard";
+import AdaptiveWorkflowDashboard from "./pages/AdaptiveWorkflowDashboard";
 
 function App() {
   return (
@@ -504,6 +507,10 @@ function App() {
           <Route path="/self-improving-workforce" element={<SelfImprovingWorkforceDashboard />} />
           <Route path="/self-upgrading-skills" element={<SelfUpgradingSkillsDashboard />} />
           <Route path="/self-adapting-career" element={<SelfAdaptingCareerDashboard />} />
+
+          {/* Sprint 82 AI-Powered Work Efficiency Agents */}
+          <Route path="/real-time-productivity" element={<RealTimeProductivityDashboard />} />
+          <Route path="/adaptive-workflow" element={<AdaptiveWorkflowDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

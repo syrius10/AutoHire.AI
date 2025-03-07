@@ -1,29 +1,32 @@
 import { useEffect, useState } from "react";
-import { fetchAIWorkAssistant } from "../services/aiWorkAssistantService";
-
-// AI-powered virtual work assistants & real-time productivity tracking.
+import { fetchTaskAssignment, fetchTaskSuggestion, fetchMeetingReminder } from "../services/aiWorkAssistantService";
 
 export default function AIWorkAssistantDashboard() {
-  const [assistantData, setAssistantData] = useState(null);
+  const [taskAssignment, setTaskAssignment] = useState("");
+  const [taskSuggestion, setTaskSuggestion] = useState("");
+  const [meetingReminder, setMeetingReminder] = useState("");
 
   useEffect(() => {
-    async function loadData() {
-      const data = await fetchAIWorkAssistant();
-      setAssistantData(data);
+    async function loadAIInsights() {
+      const task = await fetchTaskAssignment("developer");
+      const suggestion = await fetchTaskSuggestion();
+      const reminder = await fetchMeetingReminder();
+
+      setTaskAssignment(task);
+      setTaskSuggestion(suggestion);
+      setMeetingReminder(reminder);
     }
-    loadData();
+    loadAIInsights();
   }, []);
 
   return (
     <div className="p-6">
       <h2 className="text-2xl font-bold">🤖 AI Work Assistant</h2>
-      {assistantData ? (
-        <div className="mt-4 border p-4 rounded">
-          <pre>{JSON.stringify(assistantData, null, 2)}</pre>
-        </div>
-      ) : (
-        <p>Loading AI work assistant insights...</p>
-      )}
+      <div className="mt-4 border p-4 rounded bg-gray-100">
+        <p><strong>Task Assignment:</strong> {taskAssignment}</p>
+        <p><strong>Task Suggestion:</strong> {taskSuggestion}</p>
+        <p><strong>Meeting Reminder:</strong> {meetingReminder}</p>
+      </div>
     </div>
   );
 }

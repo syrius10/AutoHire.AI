@@ -218,6 +218,9 @@ import workforcePolicyRoutes from "./routes/workforcePolicy.routes.js";
 import selfImprovingWorkforceRoutes from "./src/routes/selfImprovingWorkforce.routes.js";
 import selfUpgradingSkillsRoutes from "./src/routes/selfUpgradingSkills.routes.js";
 import selfAdaptingCareerRoutes from "./src/routes/selfAdaptingCareer.routes.js";
+// // Sprint 82 AI-powered Work Efficiency Agents
+import realTimeProductivityRoutes from "./src/routes/realTimeProductivity.routes.js";
+import adaptiveWorkflowRoutes from "./src/routes/adaptiveWorkflow.routes.js";
 
 
 const app = express();
@@ -630,6 +633,11 @@ app.use("/api/self-improving-workforce", selfImprovingWorkforceRoutes);
 app.use("/api/self-upgrading-skills", selfUpgradingSkillsRoutes);
 
 app.use("/api/self-adapting-career", selfAdaptingCareerRoutes);
+
+// // Sprint 82 AI-powered Work Efficiency Agents
+app.use("/api/real-time-productivity", realTimeProductivityRoutes);
+
+app.use("/api/adaptive-workflow", adaptiveWorkflowRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
