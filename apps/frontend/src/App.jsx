@@ -225,6 +225,11 @@ import SelfAdaptingCareerDashboard from "./pages/SelfAdaptingCareerDashboard";
 {/* Sprint 82 AI-Powered Work Efficiency Agents */}
 import RealTimeProductivityDashboard from "./pages/RealTimeProductivityDashboard";
 import AdaptiveWorkflowDashboard from "./pages/AdaptiveWorkflowDashboard";
+{/* Sprint 83 AI-Powered Quantum Workforce Planning */}
+import QuantumWorkforceSimDashboard from "./pages/QuantumWorkforceSimDashboard";
+import QuantumWorkforceForecastDashboard from "./pages/QuantumWorkforceForecastDashboard";
+import QuantumHiringPerformanceDashboard from "./pages/QuantumHiringPerformanceDashboard";
+
 
 function App() {
   return (
@@ -511,6 +516,11 @@ function App() {
           {/* Sprint 82 AI-Powered Work Efficiency Agents */}
           <Route path="/real-time-productivity" element={<RealTimeProductivityDashboard />} />
           <Route path="/adaptive-workflow" element={<AdaptiveWorkflowDashboard />} />
+
+          {/* Sprint 83 AI-Powered Quantum Workforce Planning */}
+          <Route path="/quantum-workforce-sim" element={<QuantumWorkforceSimDashboard />} />
+          <Route path="/quantum-workforce-forecast" element={<QuantumWorkforceForecastDashboard />} />
+          <Route path="/quantum-hiring-performance" element={<QuantumHiringPerformanceDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
