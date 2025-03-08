@@ -237,6 +237,10 @@ import aiOnlyManagementRoutes from "./routes/aiOnlyManagement.routes.js";
 import autonomousGlobalWorkforceRoutes from "./routes/autonomousGlobalWorkforce.routes.js";
 import aiGovernanceRoutes from "./routes/aiGovernance.routes.js";
 import aiLaborRightsRoutes from "./routes/aiLaborRights.routes.js";
+// // Sprint 87 AI-Powered Next-Gen Fully AI-Managed HR Systems
+import aiHRManagementRoutes from "./routes/aiHRManagement.routes.js";
+import aiEmployeeEngagementRoutes from "./routes/aiEmployeeEngagement.routes.js";
+import aiTalentRetentionRoutes from "./routes/aiTalentRetention.routes.js";
 
 
 const app = express();
@@ -682,6 +686,13 @@ app.use("/api/autonomous-global-workforce", autonomousGlobalWorkforceRoutes);
 app.use("/api/ai-governance", aiGovernanceRoutes);
 
 app.use("/api/ai-labor-rights", aiLaborRightsRoutes);
+
+// // Sprint 87 AI-Powered Next-Gen Fully AI-Managed HR Systems
+app.use("/api/ai-hr-management", aiHRManagementRoutes);
+
+app.use("/api/ai-employee-engagement", aiEmployeeEngagementRoutes);
+
+app.use("/api/ai-talent-retention", aiTalentRetentionRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
