@@ -241,6 +241,10 @@ import aiLaborRightsRoutes from "./routes/aiLaborRights.routes.js";
 import aiHRManagementRoutes from "./routes/aiHRManagement.routes.js";
 import aiEmployeeEngagementRoutes from "./routes/aiEmployeeEngagement.routes.js";
 import aiTalentRetentionRoutes from "./routes/aiTalentRetention.routes.js";
+// // Sprint 88 AI-powered hiring and employment APIs
+import aiAutomatedHiringRoutes from "./routes/aiAutomatedHiring.routes.js";
+import aiJobMarketAnalysisRoutes from "./routes/aiJobMarketAnalysis.routes.js";
+import aiEmployerMatchRoutes from "./routes/aiEmployerMatch.routes.js";
 
 
 const app = express();
@@ -693,6 +697,13 @@ app.use("/api/ai-hr-management", aiHRManagementRoutes);
 app.use("/api/ai-employee-engagement", aiEmployeeEngagementRoutes);
 
 app.use("/api/ai-talent-retention", aiTalentRetentionRoutes);
+
+// // Sprint 88 AI-powered hiring and employment APIs
+app.use("/api/ai-automated-hiring", aiAutomatedHiringRoutes);
+
+app.use("/api/ai-job-market-analysis", aiJobMarketAnalysisRoutes);
+
+app.use("/api/ai-employer-match", aiEmployerMatchRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
