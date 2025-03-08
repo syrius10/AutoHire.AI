@@ -249,6 +249,10 @@ import AITalentRetentionDashboard from "./pages/AITalentRetentionDashboard";
 import AIAutomatedHiringDashboard from "./pages/AIAutomatedHiringDashboard";
 import AIJobMarketAnalysisDashboard from "./pages/AIJobMarketAnalysisDashboard";
 import AIEmployerMatchDashboard from "./pages/AIEmployerMatchDashboard";
+{/* Sprint 89 AI-Powered AI Governance */}
+import AIWorkEthicsDashboard from "./pages/AIWorkEthicsDashboard";
+import AILaborGovernanceDashboard from "./pages/AILaborGovernanceDashboard";
+import AIAutonomousPolicyDashboard from "./pages/AIAutonomousPolicyDashboard";
 
 
 function App() {
@@ -566,6 +570,11 @@ function App() {
           <Route path="/ai-automated-hiring" element={<AIAutomatedHiringDashboard />} />
           <Route path="/ai-job-market-analysis" element={<AIJobMarketAnalysisDashboard />} />
           <Route path="/ai-employer-match" element={<AIEmployerMatchDashboard />} />
+
+          {/* Sprint 89 AI-Powered AI Governance */}
+          <Route path="/ai-work-ethics" element={<AIWorkEthicsDashboard />} />
+          <Route path="/ai-labor-governance" element={<AILaborGovernanceDashboard />} />
+          <Route path="/ai-autonomous-policy" element={<AIAutonomousPolicyDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
