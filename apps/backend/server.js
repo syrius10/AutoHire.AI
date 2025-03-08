@@ -233,6 +233,10 @@ import ethicalAIWorkforceRoutes from "./routes/ethicalAIWorkforce.routes.js";
 import zeroManualWorkRoutes from "./routes/zeroManualWork.routes.js";
 import selfManagedAIWorkforceRoutes from "./routes/selfManagedAIWorkforce.routes.js";
 import aiOnlyManagementRoutes from "./routes/aiOnlyManagement.routes.js";
+// // Sprint 86 AI-Powered Fully Autonomous Global AI Workforce
+import autonomousGlobalWorkforceRoutes from "./routes/autonomousGlobalWorkforce.routes.js";
+import aiGovernanceRoutes from "./routes/aiGovernance.routes.js";
+import aiLaborRightsRoutes from "./routes/aiLaborRights.routes.js";
 
 
 const app = express();
@@ -671,6 +675,13 @@ app.use("/api/zero-manual-work", zeroManualWorkRoutes);
 app.use("/api/self-managed-ai", selfManagedAIWorkforceRoutes);
 
 app.use("/api/ai-only-management", aiOnlyManagementRoutes);
+
+// // Sprint 86 AI-Powered Fully Autonomous Global AI Workforce
+app.use("/api/autonomous-global-workforce", autonomousGlobalWorkforceRoutes);
+
+app.use("/api/ai-governance", aiGovernanceRoutes);
+
+app.use("/api/ai-labor-rights", aiLaborRightsRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

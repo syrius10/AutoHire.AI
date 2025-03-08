@@ -237,6 +237,10 @@ import EthicalAIWorkforceDashboard from "./pages/EthicalAIWorkforceDashboard";
 import ZeroManualWorkDashboard from "./pages/ZeroManualWorkDashboard";
 import SelfManagedAIWorkforceDashboard from "./pages/SelfManagedAIWorkforceDashboard";
 import AIOnlyManagementDashboard from "./pages/AIOnlyManagementDashboard";
+{/* Sprint 86 AI-Powered Fully Autonomous Global AI Workforce */}
+import AutonomousGlobalWorkforceDashboard from "./pages/AutonomousGlobalWorkforceDashboard";
+import AIGovernanceDashboard from "./pages/AIGovernanceDashboard";
+import AILaborRightsDashboard from "./pages/AILaborRightsDashboard";
 
 
 function App() {
@@ -539,6 +543,11 @@ function App() {
           <Route path="/zero-manual-work" element={<ZeroManualWorkDashboard />} />
           <Route path="/self-managed-ai" element={<SelfManagedAIWorkforceDashboard />} />
           <Route path="/ai-only-management" element={<AIOnlyManagementDashboard />} />
+
+          {/* Sprint 86 AI-Powered Fully Autonomous Global AI Workforce */}
+          <Route path="/autonomous-global-workforce" element={<AutonomousGlobalWorkforceDashboard />} />
+          <Route path="/ai-governance" element={<AIGovernanceDashboard />} />
+          <Route path="/ai-labor-rights" element={<AILaborRightsDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
