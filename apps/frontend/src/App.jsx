@@ -253,6 +253,10 @@ import AIEmployerMatchDashboard from "./pages/AIEmployerMatchDashboard";
 import AIWorkEthicsDashboard from "./pages/AIWorkEthicsDashboard";
 import AILaborGovernanceDashboard from "./pages/AILaborGovernanceDashboard";
 import AIAutonomousPolicyDashboard from "./pages/AIAutonomousPolicyDashboard";
+{/* Sprint 90 The Ultimate AI Work Evolution */}
+import AISelfEvolvingWorkforceDashboard from "./pages/AISelfEvolvingWorkforceDashboard";
+import AIGlobalEconomyDashboard from "./pages/AIGlobalEconomyDashboard";
+import QuantumHiringDashboard from "./pages/QuantumHiringDashboard";
 
 
 function App() {
@@ -575,6 +579,11 @@ function App() {
           <Route path="/ai-work-ethics" element={<AIWorkEthicsDashboard />} />
           <Route path="/ai-labor-governance" element={<AILaborGovernanceDashboard />} />
           <Route path="/ai-autonomous-policy" element={<AIAutonomousPolicyDashboard />} />
+
+          {/* Sprint 90 The Ultimate AI Work Evolution */}
+          <Route path="/ai-self-evolving-workforce" element={<AISelfEvolvingWorkforceDashboard />} />
+          <Route path="/ai-global-economy" element={<AIGlobalEconomyDashboard />} />
+          <Route path="/quantum-hiring" element={<QuantumHiringDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />

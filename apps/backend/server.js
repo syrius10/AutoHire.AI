@@ -249,6 +249,10 @@ import aiEmployerMatchRoutes from "./routes/aiEmployerMatch.routes.js";
 import aiWorkEthicsRoutes from "./routes/aiWorkEthics.routes.js";
 import aiLaborGovernanceRoutes from "./routes/aiLaborGovernance.routes.js";
 import aiAutonomousPolicyRoutes from "./routes/aiAutonomousPolicy.routes.js";
+// // Sprint 90 The Final Evolution of AI Work Ecosystems
+import aiSelfEvolvingWorkforceRoutes from "./routes/aiSelfEvolvingWorkforce.routes.js";
+import aiGlobalEconomyRoutes from "./routes/aiGlobalEconomy.routes.js";
+import quantumAIDecisionMakingRoutes from "./routes/quantumAIDecisionMaking.routes.js";
 
 
 const app = express();
@@ -715,6 +719,13 @@ app.use("/api/ai-work-ethics", aiWorkEthicsRoutes);
 app.use("/api/ai-labor-governance", aiLaborGovernanceRoutes);
 
 app.use("/api/ai-autonomous-policy", aiAutonomousPolicyRoutes);
+
+// // Sprint 90 The Final Evolution of AI Work Ecosystems
+app.use("/api/ai-workforce", aiSelfEvolvingWorkforceRoutes);
+
+app.use("/api/ai-economy", aiGlobalEconomyRoutes);
+
+app.use("/api/quantum-ai", quantumAIDecisionMakingRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server
