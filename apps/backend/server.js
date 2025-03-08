@@ -229,6 +229,10 @@ import quantumHiringPerformanceRoutes from "./routes/quantumHiringPerformance.ro
 import consciousWorkRoutes from "./routes/consciousWork.routes.js";
 import selfAwareAutomationRoutes from "./routes/selfAwareAutomation.routes.js";
 import ethicalAIWorkforceRoutes from "./routes/ethicalAIWorkforce.routes.js";
+// // Sprint 85 AI-Powered Zero-Manual Work Operations
+import zeroManualWorkRoutes from "./routes/zeroManualWork.routes.js";
+import selfManagedAIWorkforceRoutes from "./routes/selfManagedAIWorkforce.routes.js";
+import aiOnlyManagementRoutes from "./routes/aiOnlyManagement.routes.js";
 
 
 const app = express();
@@ -660,6 +664,13 @@ app.use("/api/conscious-work", consciousWorkRoutes);
 app.use("/api/self-aware-automation", selfAwareAutomationRoutes);
 
 app.use("/api/ethical-ai-workforce", ethicalAIWorkforceRoutes);
+
+// // Sprint 85 AI-Powered Zero-Manual Work Operations
+app.use("/api/zero-manual-work", zeroManualWorkRoutes);
+
+app.use("/api/self-managed-ai", selfManagedAIWorkforceRoutes);
+
+app.use("/api/ai-only-management", aiOnlyManagementRoutes);
 
 
 // ✅ Create HTTP server & WebSocket server

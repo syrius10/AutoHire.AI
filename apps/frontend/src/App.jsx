@@ -233,6 +233,10 @@ import QuantumHiringPerformanceDashboard from "./pages/QuantumHiringPerformanceD
 import ConsciousWorkDashboard from "./pages/ConsciousWorkDashboard";
 import SelfAwareAutomationDashboard from "./pages/SelfAwareAutomationDashboard";
 import EthicalAIWorkforceDashboard from "./pages/EthicalAIWorkforceDashboard";
+{/* Sprint 85 AI-Powered Zero-Manual Work Operations */}
+import ZeroManualWorkDashboard from "./pages/ZeroManualWorkDashboard";
+import SelfManagedAIWorkforceDashboard from "./pages/SelfManagedAIWorkforceDashboard";
+import AIOnlyManagementDashboard from "./pages/AIOnlyManagementDashboard";
 
 
 function App() {
@@ -530,6 +534,11 @@ function App() {
           <Route path="/conscious-ai" element={<ConsciousWorkDashboard />} />
           <Route path="/self-aware-automation" element={<SelfAwareAutomationDashboard />} />
           <Route path="/ethical-ai-workforce" element={<EthicalAIWorkforceDashboard />} />
+
+          {/* Sprint 85 AI-Powered Zero-Manual Work Operations */}
+          <Route path="/zero-manual-work" element={<ZeroManualWorkDashboard />} />
+          <Route path="/self-managed-ai" element={<SelfManagedAIWorkforceDashboard />} />
+          <Route path="/ai-only-management" element={<AIOnlyManagementDashboard />} />
 
           {/* Mobile App Feature */}
           <Route path="/mobile" element={<AutoHireMobile />} />
