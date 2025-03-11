@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Calls AI-powered career planning API for freelancers.
  */
-export const getCareerRecommendation = async (experience, completedGigs, rating) => {
+export const getCareerRecommendation = async (
+  experience,
+  completedGigs,
+  rating,
+) => {
   try {
     const response = await axios.post("http://localhost:5064/career-planning", {
       experience,

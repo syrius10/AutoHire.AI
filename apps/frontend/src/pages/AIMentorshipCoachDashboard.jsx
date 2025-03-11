@@ -16,10 +16,15 @@ export default function AIMentorshipCoachDashboard() {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold">🧑‍🏫 AI Mentorship & Coaching Insights</h2>
+      <h2 className="text-2xl font-bold">
+        🧑‍🏫 AI Mentorship & Coaching Insights
+      </h2>
       {mentorshipData ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Growth Index:</strong> {mentorshipData.mentorshipGrowthIndex}</p>
+          <p>
+            <strong>Growth Index:</strong>{" "}
+            {mentorshipData.mentorshipGrowthIndex}
+          </p>
         </div>
       ) : (
         <p>Loading mentorship insights...</p>

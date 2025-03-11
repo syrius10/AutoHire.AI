@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]
 y = data[:, -1]
 
-model = GradientBoostingRegressor()
+model = GradientBoostingRegressor(random_state=42, learning_rate=0.1)
 model.fit(X, y)
 
 # Save trained model

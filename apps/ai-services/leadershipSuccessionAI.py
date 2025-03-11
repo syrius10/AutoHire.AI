@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]
 y = data[:, -1]
 
-model = LogisticRegression()
+model = LogisticRegression(random_state=42)
 model.fit(X, y)
 
 # Save trained model

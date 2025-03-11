@@ -16,7 +16,11 @@ router.post("/analyze", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const productivityScore = await predictProductivity(communication, workDistribution, feedback);
+    const productivityScore = await predictProductivity(
+      communication,
+      workDistribution,
+      feedback,
+    );
     res.json({ productivityScore });
   } catch (error) {
     console.error("Error in collaboration tracking:", error);

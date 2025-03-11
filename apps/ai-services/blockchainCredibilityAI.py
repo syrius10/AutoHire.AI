@@ -1,5 +1,6 @@
 import joblib
 import numpy as np
+from sklearn.ensemble import RandomForestRegressor
 from flask import Flask, request, jsonify
 
 ##### AI model that predicts freelancer credibility based on blockchain data. #####
@@ -16,8 +17,7 @@ X = data[:, :-1]  # Features: Past Jobs, Rating, Payment Timeliness
 y = data[:, -1]   # Credibility Score
 
 # Train AI model
-from sklearn.ensemble import RandomForestRegressor
-model = RandomForestRegressor()
+model = RandomForestRegressor(random_state=42, min_samples_leaf=2, max_features='auto')
 model.fit(X, y)
 
 # Save trained model

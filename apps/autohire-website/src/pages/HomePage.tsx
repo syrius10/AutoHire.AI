@@ -1,18 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { 
-  BrainCircuit, 
-  Users, 
-  LineChart, 
-  Clock, 
-  CheckCircle, 
-  Award, 
-  Zap, 
-  Shield, 
-  ArrowRight 
-} from 'lucide-react';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+  BrainCircuit,
+  Users,
+  LineChart,
+  Clock,
+  CheckCircle,
+  Award,
+  Zap,
+  Shield,
+  ArrowRight,
+} from "lucide-react";
 
 const HomePage = () => {
   const [heroRef, heroInView] = useInView({
@@ -79,8 +78,8 @@ const HomePage = () => {
                   AI-Powered Recruitment
                 </span>
               </motion.div>
-              <motion.h1 
-                variants={itemVariants} 
+              <motion.h1
+                variants={itemVariants}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
               >
                 <span className="block">Transform Your</span>
@@ -89,11 +88,18 @@ const HomePage = () => {
                 </span>
                 <span className="block">With AI</span>
               </motion.h1>
-              <motion.p variants={itemVariants} className="text-lg text-gray-300 max-w-xl">
-                AutoHire.AI uses advanced artificial intelligence to streamline recruitment, 
-                match the perfect candidates, and eliminate bias from your hiring process.
+              <motion.p
+                variants={itemVariants}
+                className="text-lg text-gray-300 max-w-xl"
+              >
+                AutoHire.AI uses advanced artificial intelligence to streamline
+                recruitment, match the perfect candidates, and eliminate bias
+                from your hiring process.
               </motion.p>
-              <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
+              <motion.div
+                variants={itemVariants}
+                className="flex flex-col sm:flex-row gap-4"
+              >
                 <Link
                   to="/contact"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 shadow-md hover:shadow-lg text-center"
@@ -109,16 +115,16 @@ const HomePage = () => {
               </motion.div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="relative hidden lg:block"
             >
               <div className="relative w-full h-[500px]">
                 <div className="absolute top-0 right-0 w-[90%] h-[90%] bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-lg backdrop-blur-md border border-white/10"></div>
                 <div className="absolute bottom-0 left-0 w-[90%] h-[90%] bg-gradient-to-br from-blue-500/10 to-purple-600/10 rounded-lg backdrop-blur-sm border border-white/10 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                    alt="AI Recruitment Dashboard" 
+                  <img
+                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt="AI Recruitment Dashboard"
                     className="w-full h-full object-cover opacity-60 mix-blend-overlay"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -132,9 +138,9 @@ const HomePage = () => {
 
         {/* Animated Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(20)].map((_) => (
             <motion.div
-              key={i}
+              key={crypto.randomUUID()}
               className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
               initial={{
                 x: Math.random() * window.innerWidth,
@@ -172,7 +178,7 @@ const HomePage = () => {
       >
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700/50 shadow-xl"
             >
@@ -183,7 +189,7 @@ const HomePage = () => {
               <p className="text-gray-400">Reduction in Time-to-Hire</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700/50 shadow-xl"
             >
@@ -194,7 +200,7 @@ const HomePage = () => {
               <p className="text-gray-400">Improved Candidate Quality</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700/50 shadow-xl"
             >
@@ -205,7 +211,7 @@ const HomePage = () => {
               <p className="text-gray-400">Decrease in Recruitment Costs</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700/50 shadow-xl"
             >
@@ -229,20 +235,26 @@ const HomePage = () => {
       >
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.h2 
+            <motion.h2
               variants={itemVariants}
               className="text-3xl md:text-4xl font-bold mb-4"
             >
-              Revolutionize Your Hiring with
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"> AI-Powered Tools</span>
+              Revolutionize Your Hiring with&nbsp;
+              <div>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                  {" "}
+                  AI-Powered Tools
+                </span>
+              </div>
             </motion.h2>
             <motion.p variants={itemVariants} className="text-gray-300">
-              Our platform combines cutting-edge AI technology with intuitive design to transform your recruitment process.
+              Our platform combines cutting-edge AI technology with intuitive
+              design to transform your recruitment process.
             </motion.p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 group"
             >
@@ -251,14 +263,18 @@ const HomePage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">AI-Driven Matching</h3>
               <p className="text-gray-400 mb-4">
-                Our AI analyzes thousands of data points to match candidates with your job requirements with unprecedented accuracy.
+                Our AI analyzes thousands of data points to match candidates
+                with your job requirements with unprecedented accuracy.
               </p>
-              <Link to="/features" className="text-blue-400 hover:text-blue-300 flex items-center gap-1 text-sm">
+              <Link
+                to="/features"
+                className="text-blue-400 hover:text-blue-300 flex items-center gap-1 text-sm"
+              >
                 Learn more <ArrowRight size={14} />
               </Link>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 group"
             >
@@ -267,30 +283,40 @@ const HomePage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Skill Assessment</h3>
               <p className="text-gray-400 mb-4">
-                Automatically evaluate candidate skills with customizable assessments that provide objective insights into capabilities.
+                Automatically evaluate candidate skills with customizable
+                assessments that provide objective insights into capabilities.
               </p>
-              <Link to="/features" className="text-purple-400 hover:text-purple-300 flex items-center gap-1 text-sm">
+              <Link
+                to="/features"
+                className="text-purple-400 hover:text-purple-300 flex items-center gap-1 text-sm"
+              >
                 Learn more <ArrowRight size={14} />
               </Link>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 group"
             >
               <div className="flex items-center justify-center w-14 h-14 bg-green-500/20 text-green-400 rounded-full mb-6 group-hover:bg-green-500/30 transition-all duration-300">
                 <Zap size={28} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Automated Interviews</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Automated Interviews
+              </h3>
               <p className="text-gray-400 mb-4">
-                Conduct and analyze video interviews with AI that identifies key traits, skills, and cultural fit indicators.
+                Conduct and analyze video interviews with AI that identifies key
+                traits, skills, and cultural fit indicators.
               </p>
-              <Link to="/features" className="text-green-400 hover:text-green-300 flex items-center gap-1 text-sm">
+              <Link
+                to="/features"
+                className="text-green-400 hover:text-green-300 flex items-center gap-1 text-sm"
+              >
                 Learn more <ArrowRight size={14} />
               </Link>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700/50 hover:border-pink-500/50 transition-all duration-300 group"
             >
@@ -299,30 +325,40 @@ const HomePage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Advanced Analytics</h3>
               <p className="text-gray-400 mb-4">
-                Gain deep insights into your recruitment process with comprehensive analytics and actionable recommendations.
+                Gain deep insights into your recruitment process with
+                comprehensive analytics and actionable recommendations.
               </p>
-              <Link to="/features" className="text-pink-400 hover:text-pink-300 flex items-center gap-1 text-sm">
+              <Link
+                to="/features"
+                className="text-pink-400 hover:text-pink-300 flex items-center gap-1 text-sm"
+              >
                 Learn more <ArrowRight size={14} />
               </Link>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700/50 hover:border-yellow-500/50 transition-all duration-300 group"
             >
               <div className="flex items-center justify-center w-14 h-14 bg-yellow-500/20 text-yellow-400 rounded-full mb-6 group-hover:bg-yellow-500/30 transition-all duration-300">
                 <Clock size={28} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Time-Saving Automation</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Time-Saving Automation
+              </h3>
               <p className="text-gray-400 mb-4">
-                Automate repetitive tasks like screening, scheduling, and follow-ups to focus on what matters most.
+                Automate repetitive tasks like screening, scheduling, and
+                follow-ups to focus on what matters most.
               </p>
-              <Link to="/features" className="text-yellow-400 hover:text-yellow-300 flex items-center gap-1 text-sm">
+              <Link
+                to="/features"
+                className="text-yellow-400 hover:text-yellow-300 flex items-center gap-1 text-sm"
+              >
                 Learn more <ArrowRight size={14} />
               </Link>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700/50 hover:border-red-500/50 transition-all duration-300 group"
             >
@@ -331,9 +367,13 @@ const HomePage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Bias Elimination</h3>
               <p className="text-gray-400 mb-4">
-                Our AI is designed to identify and eliminate unconscious bias, ensuring a fair and diverse hiring process.
+                Our AI is designed to identify and eliminate unconscious bias,
+                ensuring a fair and diverse hiring process.
               </p>
-              <Link to="/features" className="text-red-400 hover:text-red-300 flex items-center gap-1 text-sm">
+              <Link
+                to="/features"
+                className="text-red-400 hover:text-red-300 flex items-center gap-1 text-sm"
+              >
                 Learn more <ArrowRight size={14} />
               </Link>
             </motion.div>
@@ -351,16 +391,23 @@ const HomePage = () => {
       >
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.h2 
+            <motion.h2
               variants={itemVariants}
               className="text-3xl md:text-4xl font-bold mb-6 text-white"
             >
               Ready to Transform Your Hiring Process?
             </motion.h2>
-            <motion.p variants={itemVariants} className="text-xl text-white/80 mb-8">
-              Join thousands of companies that have revolutionized their recruitment with AutoHire.AI
+            <motion.p
+              variants={itemVariants}
+              className="text-xl text-white/80 mb-8"
+            >
+              Join thousands of companies that have revolutionized their
+              recruitment with AutoHire.AI
             </motion.p>
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
               <Link
                 to="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-md transition-all duration-300 shadow-md hover:shadow-lg text-center"

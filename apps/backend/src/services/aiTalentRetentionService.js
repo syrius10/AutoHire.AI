@@ -5,7 +5,12 @@ import { spawn } from "child_process";
 /**
  * Calls AI model to predict workforce retention probability.
  */
-export const predictRetention = async (workload, satisfaction, careerGrowth, workLifeBalance) => {
+export const predictRetention = async (
+  workload,
+  satisfaction,
+  careerGrowth,
+  workLifeBalance,
+) => {
   return new Promise((resolve, reject) => {
     const process = spawn("python3", [
       "../ai-services/aiTalentRetentionAI.py",

@@ -8,6 +8,9 @@ export const fetchCompanyStatus = async () => {
 };
 
 export const proposeProject = async (project) => {
-  const response = await axios.post("/api/decentralized-company/propose", project);
+  const response = await axios.post(
+    "/api/decentralized-company/propose",
+    project,
+  );
   return response.data;
 };

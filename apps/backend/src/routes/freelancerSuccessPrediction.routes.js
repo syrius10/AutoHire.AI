@@ -6,8 +6,8 @@ import { predictFreelancerSuccess } from "../services/freelancerSuccessPredictio
 const router = express.Router();
 
 router.post("/predict", async (req, res) => {
-    const prediction = await predictFreelancerSuccess(req.body);
-    res.json(prediction);
+  const prediction = await predictFreelancerSuccess(req.body);
+  res.json(prediction);
 });
 
 export default router;

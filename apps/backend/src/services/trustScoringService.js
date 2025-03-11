@@ -6,13 +6,18 @@ import path from "path";
 /**
  * Calls AI model to calculate freelancer & employer trust scores.
  */
-export const calculateTrustScore = (userId, workHistory, ratings, disputeCount) => {
+export const calculateTrustScore = (
+  userId,
+  workHistory,
+  ratings,
+  disputeCount,
+) => {
   return new Promise((resolve, reject) => {
     const scriptPath = path.join(
       process.cwd(),
       "apps",
       "ai-services",
-      "trustScoringAI.py"
+      "trustScoringAI.py",
     );
 
     const pythonProcess = spawn("python3", [
@@ -20,7 +25,7 @@ export const calculateTrustScore = (userId, workHistory, ratings, disputeCount) 
       userId,
       JSON.stringify(workHistory),
       ratings,
-      disputeCount
+      disputeCount,
     ]);
 
     let output = "";

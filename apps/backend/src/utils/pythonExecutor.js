@@ -15,10 +15,14 @@ export const runPythonAIModel = (modelFile, inputData = {}) => {
       process.cwd(),
       "apps",
       "ai-services",
-      "execute_model.py"
+      "execute_model.py",
     );
 
-    const process = spawn("python3", [pythonScript, modelFile, JSON.stringify(inputData)]);
+    const process = spawn("python3", [
+      pythonScript,
+      modelFile,
+      JSON.stringify(inputData),
+    ]);
 
     let result = "";
     let error = "";

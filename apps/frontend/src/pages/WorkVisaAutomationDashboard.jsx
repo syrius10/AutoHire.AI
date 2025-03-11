@@ -22,7 +22,9 @@ export default function WorkVisaAutomationDashboard() {
     <div className="p-6">
       <h2 className="text-2xl font-bold">🛂 Work Visa Automation</h2>
       {visaStatus ? (
-        <pre className="mt-4 border p-4 rounded bg-gray-100">{JSON.stringify(visaStatus, null, 2)}</pre>
+        <pre className="mt-4 border p-4 rounded bg-gray-100">
+          {JSON.stringify(visaStatus, null, 2)}
+        </pre>
       ) : (
         <p>Checking visa eligibility...</p>
       )}

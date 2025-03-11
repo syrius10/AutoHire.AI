@@ -26,8 +26,8 @@ export default function SalaryBenchmarkingDashboard() {
           </tr>
         </thead>
         <tbody>
-          {salaryData.map((job, index) => (
-            <tr key={index}>
+          {salaryData.map((job) => (
+            <tr key={job.id}>
               <td>{job.title}</td>
               <td>{job.industry}</td>
               <td>${job.salary}</td>

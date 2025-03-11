@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { fetchEthicalEvaluation } from "../services/ethicalAIWorkforceService";
 
 // AI-powered ethically responsible workforce automation.
@@ -31,14 +31,21 @@ const EthicalAIWorkforceDashboard = () => {
         className="border p-2 rounded w-full mt-2"
         placeholder="Impact Score (0-100)"
         value={inputData.impactScore}
-        onChange={(e) => setInputData({ ...inputData, impactScore: e.target.value })}
+        onChange={(e) =>
+          setInputData({ ...inputData, impactScore: e.target.value })
+        }
       />
-      <button onClick={handleEvaluate} className="mt-4 px-4 py-2 bg-blue-600 text-white rounded">
+      <button
+        onClick={handleEvaluate}
+        className="mt-4 px-4 py-2 bg-blue-600 text-white rounded"
+      >
         Evaluate AI Ethics
       </button>
       {assessment && (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Ethical Assessment:</strong> {assessment}</p>
+          <p>
+            <strong>Ethical Assessment:</strong> {assessment}
+          </p>
         </div>
       )}
     </div>

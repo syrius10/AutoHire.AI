@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const fetchProductivityTokens = async () => {
   try {
-    const response = await axios.get("http://localhost:5001/api/productivity-tokens/assign");
+    const response = await axios.get(
+      "http://localhost:5001/api/productivity-tokens/assign",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching productivity tokens:", error);

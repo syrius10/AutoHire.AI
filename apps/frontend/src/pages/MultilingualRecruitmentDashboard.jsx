@@ -21,7 +21,9 @@ const MultilingualRecruitmentDashboard = () => {
         onChange={(e) => setJobDescription(e.target.value)}
       />
       <button onClick={handleTranslate}>Translate to French</button>
-      <p><strong>Translated:</strong> {translatedText}</p>
+      <p>
+        <strong>Translated:</strong> {translatedText}
+      </p>
     </div>
   );
 };

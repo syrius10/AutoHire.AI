@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { fetchVisaEligibility } from "../services/automatedVisaScreeningService";
 
-// AI-based visa screening & work eligibility checks
-
 const AutomatedVisaScreeningDashboard = () => {
   const [country, setCountry] = useState("");
   const [hasWorkPermit, setHasWorkPermit] = useState(false);

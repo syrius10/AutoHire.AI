@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]  # Competitor Rate, Experience Level, Demand
 y = data[:, -1]   # Price Competitiveness Score
 
-model = SVR()
+model = SVR(C=1.0, kernel='rbf', gamma='scale')  # Default C=1.0, 'rbf' kernel, 'scale' for gamma
 model.fit(X, y)
 
 # Save trained model

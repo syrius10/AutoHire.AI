@@ -19,7 +19,9 @@ const TeamMoodOptimizationDashboard = () => {
       <h2 className="text-2xl font-bold">😊 Team Mood Optimization</h2>
       {moodOptimization ? (
         <div className="mt-4 border p-4 rounded bg-blue-100">
-          <p><strong>Suggestion:</strong> {moodOptimization.teamMoodOptimization}</p>
+          <p>
+            <strong>Suggestion:</strong> {moodOptimization.teamMoodOptimization}
+          </p>
         </div>
       ) : (
         <p>Loading team mood insights...</p>

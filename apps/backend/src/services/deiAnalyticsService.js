@@ -7,7 +7,10 @@ import axios from "axios";
  */
 export const analyzeDEI = async (deiData) => {
   try {
-    const response = await axios.post("http://localhost:5082/predict_dei", deiData);
+    const response = await axios.post(
+      "http://localhost:5082/predict_dei",
+      deiData,
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching DEI insights:", error);

@@ -13,11 +13,19 @@ router.post("/predict", async (req, res) => {
   try {
     const { workHours, stressLevel, sleepQuality } = req.body;
 
-    if (workHours === undefined || stressLevel === undefined || sleepQuality === undefined) {
+    if (
+      workHours === undefined ||
+      stressLevel === undefined ||
+      sleepQuality === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const burnoutRisk = await predictBurnout(workHours, stressLevel, sleepQuality);
+    const burnoutRisk = await predictBurnout(
+      workHours,
+      stressLevel,
+      sleepQuality,
+    );
     res.json({ burnoutRisk });
   } catch (error) {
     console.error("Error in burnout risk prediction:", error);

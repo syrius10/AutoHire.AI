@@ -16,7 +16,7 @@ X = data[:, :-1]  # Features: Industry Growth Rate, Hiring Budget, Company Size
 y = data[:, -1]   # Target: Hiring Needs (number of new employees)
 
 # Train AI model
-model = RandomForestRegressor()
+model = RandomForestRegressor(min_samples_leaf=2, max_features="auto", random_state=42)
 model.fit(X, y)
 
 # Save trained model

@@ -16,7 +16,11 @@ router.post("/", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const performanceAnalysis = await analyzeTeamPerformance(collaboration, productivity, communication);
+    const performanceAnalysis = await analyzeTeamPerformance(
+      collaboration,
+      productivity,
+      communication,
+    );
     res.json(performanceAnalysis);
   } catch (error) {
     console.error("Error analyzing team performance:", error);

@@ -9,14 +9,24 @@ const router = express.Router();
  */
 router.post("/recommend", async (req, res) => {
   try {
-    const { employeeId, currentRole, careerGoals, roleLevel, skillMatch, jobDemand, growthPotential } = req.body;
+    const {
+      employeeId,
+      currentRole,
+      careerGoals,
+      roleLevel,
+      skillMatch,
+      jobDemand,
+      growthPotential,
+    } = req.body;
 
     // Ensure at least one set of parameters is provided
     if (
       !(employeeId && currentRole && careerGoals) &&
       !(roleLevel && skillMatch && jobDemand && growthPotential)
     ) {
-      return res.status(400).json({ error: "Missing required fields for role transition" });
+      return res
+        .status(400)
+        .json({ error: "Missing required fields for role transition" });
     }
 
     const transitionPlan = await getRoleTransitionRecommendations({
@@ -26,7 +36,7 @@ router.post("/recommend", async (req, res) => {
       roleLevel,
       skillMatch,
       jobDemand,
-      growthPotential
+      growthPotential,
     });
 
     res.json(transitionPlan);

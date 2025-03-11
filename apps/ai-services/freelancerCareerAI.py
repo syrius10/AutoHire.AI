@@ -18,7 +18,7 @@ data = np.array([
 X = data[:, :-1].astype(float)  # Features: Experience Level, Completed Gigs, Client Ratings
 y = data[:, -1]  # Career Recommendation Labels
 
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="auto")
 model.fit(X, y)
 
 # Save trained model

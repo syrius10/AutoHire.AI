@@ -18,7 +18,7 @@ X = data[:, :-1]  # Features: Average Salary, Cost of Living Index, Inflation Ra
 y = data[:, -1]   # Target: Economic Forecast Score
 
 # Train AI model
-model = GradientBoostingRegressor()
+model = GradientBoostingRegressor(random_state=42, learning_rate=0.1)
 model.fit(X, y)
 
 # Save model

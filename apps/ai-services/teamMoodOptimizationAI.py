@@ -25,7 +25,7 @@ X = data[:, :-1]  # Features: Sentiment Score, Engagement Level, Work Satisfacti
 y = data[:, -1]   # Target: Team Collaboration Suggestion (1 = Stable, 0 = Needs Improvement)
 
 # Train AI model
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(learning_rate=0.1, random_state=42)
 model.fit(X, y)
 
 # Save trained model

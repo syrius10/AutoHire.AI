@@ -13,11 +13,19 @@ router.post("/benchmark", async (req, res) => {
   try {
     const { economyScore, industryDemand, experience } = req.body;
 
-    if (economyScore === undefined || industryDemand === undefined || experience === undefined) {
+    if (
+      economyScore === undefined ||
+      industryDemand === undefined ||
+      experience === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const salaryEstimate = await getSalaryBenchmark(economyScore, industryDemand, experience);
+    const salaryEstimate = await getSalaryBenchmark(
+      economyScore,
+      industryDemand,
+      experience,
+    );
     res.json(salaryEstimate);
   } catch (error) {
     console.error("Error fetching salary benchmark:", error);

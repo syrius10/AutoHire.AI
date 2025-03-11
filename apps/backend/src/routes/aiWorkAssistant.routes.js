@@ -1,5 +1,9 @@
 import express from "express";
-import { getTaskAssignment, getTaskSuggestion, getMeetingReminder } from "../services/aiWorkAssistantService.js";
+import {
+  getTaskAssignment,
+  getTaskSuggestion,
+  getMeetingReminder,
+} from "../services/aiWorkAssistantService.js";
 
 const router = express.Router();
 
@@ -11,7 +15,9 @@ router.post("/assign-task", async (req, res) => {
   try {
     const { employeeRole } = req.body;
     if (!employeeRole) {
-      return res.status(400).json({ error: "Missing required field: employeeRole" });
+      return res
+        .status(400)
+        .json({ error: "Missing required field: employeeRole" });
     }
 
     const taskAssignment = await getTaskAssignment(employeeRole);

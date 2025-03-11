@@ -18,7 +18,7 @@ X = data[:, :-1]  # Contract Length, Compliance Score, Past Disputes
 y = data[:, -1]   # Compliance Risk (1 = Low, 0 = High)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="auto")
 model.fit(X, y)
 
 # Save trained model

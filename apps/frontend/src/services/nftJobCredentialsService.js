@@ -4,7 +4,9 @@ import axios from "axios";
 
 export const fetchNFTJobCredentials = async () => {
   try {
-    const response = await axios.get("http://localhost:5001/api/nft-job-credentials/mint");
+    const response = await axios.get(
+      "http://localhost:5001/api/nft-job-credentials/mint",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching NFT job credentials:", error);

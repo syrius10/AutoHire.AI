@@ -4,8 +4,18 @@ import { TokenizedWorkAI } from "../../ai-services/tokenizedWorkAI.js";
 
 const tokenAI = new TokenizedWorkAI();
 
-export const assignTokens = async (userId, workHours, projectComplexity, skillLevel) => {
-  return tokenAI.assign_tokens(userId, workHours, projectComplexity, skillLevel);
+export const assignTokens = async (
+  userId,
+  workHours,
+  projectComplexity,
+  skillLevel,
+) => {
+  return tokenAI.assign_tokens(
+    userId,
+    workHours,
+    projectComplexity,
+    skillLevel,
+  );
 };
 
 export const getUserBalance = async (userId) => {

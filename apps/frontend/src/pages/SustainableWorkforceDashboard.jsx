@@ -16,9 +16,13 @@ export default function SustainableWorkforceDashboard() {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold">🌱 Workforce Sustainability Dashboard</h2>
+      <h2 className="text-2xl font-bold">
+        🌱 Workforce Sustainability Dashboard
+      </h2>
       {sustainabilityData ? (
-        <pre className="mt-4 p-4 border rounded">{JSON.stringify(sustainabilityData, null, 2)}</pre>
+        <pre className="mt-4 p-4 border rounded">
+          {JSON.stringify(sustainabilityData, null, 2)}
+        </pre>
       ) : (
         <p>Loading sustainability insights...</p>
       )}

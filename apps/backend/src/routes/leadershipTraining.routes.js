@@ -12,11 +12,19 @@ const router = express.Router();
 router.post("/recommend", async (req, res) => {
   try {
     const { experience, courses, performance } = req.body;
-    if (experience === undefined || courses === undefined || performance === undefined) {
+    if (
+      experience === undefined ||
+      courses === undefined ||
+      performance === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const recommendation = await getLeadershipTraining(experience, courses, performance);
+    const recommendation = await getLeadershipTraining(
+      experience,
+      courses,
+      performance,
+    );
     res.json({ trainingRecommendation: recommendation });
   } catch (error) {
     console.error("Error in leadership training API:", error);

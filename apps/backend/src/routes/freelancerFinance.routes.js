@@ -9,9 +9,23 @@ const router = express.Router();
  */
 router.post("/income-forecast", async (req, res) => {
   try {
-    const { monthlyGigs, avgEarnings, experience, pastEarnings, jobsCompleted, avgRating } = req.body;
-    
-    if (!monthlyGigs || !avgEarnings || !experience || !pastEarnings || !jobsCompleted || !avgRating) {
+    const {
+      monthlyGigs,
+      avgEarnings,
+      experience,
+      pastEarnings,
+      jobsCompleted,
+      avgRating,
+    } = req.body;
+
+    if (
+      !monthlyGigs ||
+      !avgEarnings ||
+      !experience ||
+      !pastEarnings ||
+      !jobsCompleted ||
+      !avgRating
+    ) {
       return res.status(400).json({ error: "All input fields are required" });
     }
 
@@ -21,7 +35,7 @@ router.post("/income-forecast", async (req, res) => {
       parseFloat(experience),
       parseFloat(pastEarnings),
       parseFloat(jobsCompleted),
-      parseFloat(avgRating)
+      parseFloat(avgRating),
     );
 
     res.json({ estimatedIncome });
@@ -32,4 +46,3 @@ router.post("/income-forecast", async (req, res) => {
 });
 
 export default router;
-

@@ -4,10 +4,13 @@ import axios from "axios";
 
 export const predictIndustryDemand = async (year, growthRate) => {
   try {
-    const response = await axios.post("http://localhost:5061/predict-industry-demand", {
-      year,
-      growthRate,
-    });
+    const response = await axios.post(
+      "http://localhost:5061/predict-industry-demand",
+      {
+        year,
+        growthRate,
+      },
+    );
     return response.data.predictedSkillDemand;
   } catch (error) {
     console.error("Error fetching industry demand predictions:", error);

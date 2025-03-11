@@ -1,5 +1,9 @@
 import express from "express";
-import { generateAPIKey, revokeAPIKey, getAPIUsageStats } from "../services/apiManagementService.js";
+import {
+  generateAPIKey,
+  revokeAPIKey,
+  getAPIUsageStats,
+} from "../services/apiManagementService.js";
 
 const router = express.Router();
 

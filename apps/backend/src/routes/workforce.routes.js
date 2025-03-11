@@ -18,15 +18,16 @@ router.post("/predict", async (req, res) => {
 
 // ✅ API Route: Get Internal Employee Mobility Data
 router.get("/progression/:employeeId", async (req, res) => {
-    try {
-      const { employeeId } = req.params;
-      const progressionData = await pool.query(
-        "SELECT * FROM employee_mobility WHERE employee_id = $1", [employeeId]
-      );
-      res.json(progressionData.rows);
-    } catch (error) {
-      res.status(500).json({ error: "Failed to fetch employee progression." });
-    }
-});  
+  try {
+    const { employeeId } = req.params;
+    const progressionData = await pool.query(
+      "SELECT * FROM employee_mobility WHERE employee_id = $1",
+      [employeeId],
+    );
+    res.json(progressionData.rows);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch employee progression." });
+  }
+});
 
 export default router;

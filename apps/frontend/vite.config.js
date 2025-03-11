@@ -7,7 +7,6 @@ export default defineConfig({
     historyApiFallback: true, // ✅ Ensures React Router handles routing
   },
   build: {
-    assetsInlineLimit: 4096,  // Convert small assets to base64
-  }
+    assetsInlineLimit: 4096, // Convert small assets to base64
+  },
 });
-

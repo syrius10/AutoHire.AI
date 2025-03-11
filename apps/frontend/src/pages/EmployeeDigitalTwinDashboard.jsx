@@ -18,7 +18,9 @@ const EmployeeDigitalTwinDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">👥 Employee Digital Twin Insights</h2>
       {simulationData ? (
-        <pre className="mt-4 p-4 border rounded bg-gray-100">{JSON.stringify(simulationData, null, 2)}</pre>
+        <pre className="mt-4 p-4 border rounded bg-gray-100">
+          {JSON.stringify(simulationData, null, 2)}
+        </pre>
       ) : (
         <p>Loading simulation data...</p>
       )}

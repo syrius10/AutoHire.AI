@@ -7,7 +7,10 @@ import axios from "axios";
  */
 export const screenCandidate = async (resumeText, jobRole) => {
   try {
-    const response = await axios.post("http://localhost:5062/screen", { resumeText, jobRole });
+    const response = await axios.post("http://localhost:5062/screen", {
+      resumeText,
+      jobRole,
+    });
     return response.data;
   } catch (error) {
     console.error("Error screening candidate:", error);
@@ -20,7 +23,9 @@ export const screenCandidate = async (resumeText, jobRole) => {
  */
 export const rankCandidate = async (candidateFeatures) => {
   try {
-    const response = await axios.post("http://localhost:5030/rank", { candidateFeatures });
+    const response = await axios.post("http://localhost:5030/rank", {
+      candidateFeatures,
+    });
     return response.data;
   } catch (error) {
     console.error("Error ranking candidate:", error);

@@ -18,7 +18,9 @@ const NomadWorkVisaDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">🛂 Digital Nomad Work Visa Status</h2>
       {visaStatus ? (
-        <pre className="mt-4 border p-4 rounded bg-gray-100">{JSON.stringify(visaStatus, null, 2)}</pre>
+        <pre className="mt-4 border p-4 rounded bg-gray-100">
+          {JSON.stringify(visaStatus, null, 2)}
+        </pre>
       ) : (
         <p>Loading work visa information...</p>
       )}

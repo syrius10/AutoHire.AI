@@ -13,8 +13,12 @@ const ProactiveRetentionDashboard = () => {
       <h2 className="text-2xl font-bold">🔄 Retention Risk Analysis</h2>
       {retentionData ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Retention Risk:</strong> {retentionData.riskLevel}</p>
-          <p><strong>Key Drivers:</strong> {retentionData.drivers}</p>
+          <p>
+            <strong>Retention Risk:</strong> {retentionData.riskLevel}
+          </p>
+          <p>
+            <strong>Key Drivers:</strong> {retentionData.drivers}
+          </p>
         </div>
       ) : (
         <p>Loading retention risk data...</p>

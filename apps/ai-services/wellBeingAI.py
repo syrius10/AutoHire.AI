@@ -19,7 +19,7 @@ X = data[:, :-1]  # Work Hours, Workload, Job Satisfaction, Stress Level
 y = data[:, -1]   # Well-Being Score (0-100)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(min_samples_leaf=2, max_features="auto", random_state=42)
 model.fit(X, y)
 
 # Save trained model

@@ -17,7 +17,12 @@ router.post("/optimize", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const workloadPlan = await optimizeWorkload(employeeId, currentWorkload, efficiency, burnoutScore);
+    const workloadPlan = await optimizeWorkload(
+      employeeId,
+      currentWorkload,
+      efficiency,
+      burnoutScore,
+    );
     res.json(workloadPlan);
   } catch (error) {
     console.error("Error in workload optimization:", error);

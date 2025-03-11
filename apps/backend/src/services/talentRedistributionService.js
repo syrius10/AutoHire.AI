@@ -5,13 +5,20 @@ import axios from "axios";
 /**
  * Calls AI model to analyze talent distribution and suggest internal workforce optimizations.
  */
-export const redistributeTalent = async (currentWorkforce, departmentProductivity, employeeOverload) => {
+export const redistributeTalent = async (
+  currentWorkforce,
+  departmentProductivity,
+  employeeOverload,
+) => {
   try {
-    const response = await axios.post("http://localhost:5069/redistribute_talent", {
-      current_workforce: currentWorkforce,
-      department_productivity: departmentProductivity,
-      employee_overload: employeeOverload,
-    });
+    const response = await axios.post(
+      "http://localhost:5069/redistribute_talent",
+      {
+        current_workforce: currentWorkforce,
+        department_productivity: departmentProductivity,
+        employee_overload: employeeOverload,
+      },
+    );
     return response.data;
   } catch (error) {
     console.error("Error in talent redistribution:", error);

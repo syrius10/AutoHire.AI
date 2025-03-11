@@ -18,7 +18,7 @@ X = data[:, :-1]  # Years of Experience, Job Offer Type (1 = Skilled, 0 = Unskil
 y = data[:, -1]   # Visa Approval (1 = Yes, 0 = No)
 
 # Train AI model
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(random_state=42, learning_rate=0.1)
 model.fit(X, y)
 
 # Save trained model

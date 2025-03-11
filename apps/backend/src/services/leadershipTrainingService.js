@@ -5,13 +5,20 @@ import axios from "axios";
 /**
  * Fetch AI-powered leadership training recommendation.
  */
-export const getLeadershipTraining = async (experience, courses, performance) => {
+export const getLeadershipTraining = async (
+  experience,
+  courses,
+  performance,
+) => {
   try {
-    const response = await axios.post("http://localhost:5088/recommend-training", {
-      experience,
-      courses,
-      performance,
-    });
+    const response = await axios.post(
+      "http://localhost:5088/recommend-training",
+      {
+        experience,
+        courses,
+        performance,
+      },
+    );
     return response.data.trainingRecommendation;
   } catch (error) {
     console.error("Error fetching leadership training recommendation:", error);

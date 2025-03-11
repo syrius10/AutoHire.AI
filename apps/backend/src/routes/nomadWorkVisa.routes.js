@@ -12,12 +12,22 @@ const router = express.Router();
 router.post("/process", async (req, res) => {
   try {
     const { visaScore, skillShortage, jobMatch, experienceYears } = req.body;
-    
-    if (!visaScore || skillShortage === undefined || jobMatch === undefined || experienceYears === undefined) {
+
+    if (
+      !visaScore ||
+      skillShortage === undefined ||
+      jobMatch === undefined ||
+      experienceYears === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const visaResult = await processWorkVisa(visaScore, skillShortage, jobMatch, experienceYears);
+    const visaResult = await processWorkVisa(
+      visaScore,
+      skillShortage,
+      jobMatch,
+      experienceYears,
+    );
     res.json(visaResult);
   } catch (error) {
     console.error("Error in work visa processing:", error);

@@ -10,13 +10,13 @@ const router = express.Router();
  * @desc AI-powered labor rights monitoring & ethics enforcement
  */
 router.get("/monitor", async (req, res) => {
-    try {
-        const laborRightsStatus = await monitorLaborRights();
-        res.json({ status: "Success", laborRights: laborRightsStatus });
-    } catch (error) {
-        console.error("Error monitoring AI labor rights:", error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
+  try {
+    const laborRightsStatus = await monitorLaborRights();
+    res.json({ status: "Success", laborRights: laborRightsStatus });
+  } catch (error) {
+    console.error("Error monitoring AI labor rights:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 export default router;

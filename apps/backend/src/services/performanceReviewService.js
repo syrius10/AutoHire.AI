@@ -7,10 +7,13 @@ import axios from "axios";
  */
 export const generatePerformanceReview = async (employeeId, reviewData) => {
   try {
-    const response = await axios.post("http://localhost:5038/analyze_performance", {
-      employee_id: employeeId,
-      review_data: reviewData,
-    });
+    const response = await axios.post(
+      "http://localhost:5038/analyze_performance",
+      {
+        employee_id: employeeId,
+        review_data: reviewData,
+      },
+    );
     return response.data;
   } catch (error) {
     console.error("Error in performance review:", error);

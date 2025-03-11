@@ -17,7 +17,7 @@ export const evaluateEthicalDecision = (action, impactScore) => {
         } else {
           resolve(JSON.parse(stdout));
         }
-      }
+      },
     );
   });
 };

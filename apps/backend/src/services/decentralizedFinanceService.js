@@ -5,7 +5,12 @@ import axios from "axios";
 /**
  * Calls AI model to track financial health.
  */
-export const trackFinancialHealth = async (total_earnings, expenses, tax_rate, blockchain_tx_fees) => {
+export const trackFinancialHealth = async (
+  total_earnings,
+  expenses,
+  tax_rate,
+  blockchain_tx_fees,
+) => {
   try {
     const response = await axios.post("http://localhost:5133/track-finance", {
       total_earnings,

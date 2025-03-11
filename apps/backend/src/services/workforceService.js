@@ -21,12 +21,13 @@ export const getWorkforcePredictions = async (industry, region, skills) => {
 };
 
 export const trackEmployeeProgression = async (employeeId) => {
-    try {
-      const response = await axios.get(`/api/workforce/progression/${employeeId}`);
-      return response.data;
-    } catch (error) {
-      console.error("Error tracking workforce mobility:", error);
-      return [];
-    }
+  try {
+    const response = await axios.get(
+      `/api/workforce/progression/${employeeId}`,
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error tracking workforce mobility:", error);
+    return [];
+  }
 };
-  

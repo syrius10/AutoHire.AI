@@ -16,10 +16,14 @@ const CollaborationTrackingDashboard = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold">📊 AI-Powered Productivity Insights</h2>
+      <h2 className="text-2xl font-bold">
+        📊 AI-Powered Productivity Insights
+      </h2>
       {productivityScore !== null ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Productivity Score:</strong> {productivityScore}</p>
+          <p>
+            <strong>Productivity Score:</strong> {productivityScore}
+          </p>
         </div>
       ) : (
         <p>Loading productivity analysis...</p>

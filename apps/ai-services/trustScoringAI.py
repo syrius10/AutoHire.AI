@@ -16,7 +16,7 @@ X = data[:, :-1]  # Features: Jobs Completed, Ratings, Payment Timeliness, Dispu
 y = data[:, -1]   # Trust Score (0-100)
 
 # Train AI model
-model = RandomForestRegressor(n_estimators=100)
+model = RandomForestRegressor(n_estimators=100, random_state=42, min_samples_leaf=2, max_features="auto")
 model.fit(X, y)
 
 # Save trained model

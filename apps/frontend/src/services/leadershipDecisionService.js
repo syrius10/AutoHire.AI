@@ -7,12 +7,15 @@ import axios from "axios";
  */
 export const fetchLeadershipDecision = async (leaderId) => {
   try {
-    const response = await axios.post("http://localhost:5001/api/leadership-decision/assess", {
-      leaderId,
-      experience: 10, // Example static data
-      strategicThinking: 8,
-      teamLeadership: 9,
-    });
+    const response = await axios.post(
+      "http://localhost:5001/api/leadership-decision/assess",
+      {
+        leaderId,
+        experience: 10, // Example static data
+        strategicThinking: 8,
+        teamLeadership: 9,
+      },
+    );
 
     return response.data;
   } catch (error) {

@@ -5,13 +5,20 @@ import axios from "axios";
 /**
  * Calls AI model to optimize workflow automation.
  */
-export const automateWorkflow = async (taskComplexity, taskUrgency, availableStaff) => {
+export const automateWorkflow = async (
+  taskComplexity,
+  taskUrgency,
+  availableStaff,
+) => {
   try {
-    const response = await axios.post("http://localhost:5109/workflow-automation", {
-      taskComplexity,
-      taskUrgency,
-      availableStaff,
-    });
+    const response = await axios.post(
+      "http://localhost:5109/workflow-automation",
+      {
+        taskComplexity,
+        taskUrgency,
+        availableStaff,
+      },
+    );
     return response.data;
   } catch (error) {
     console.error("Error automating workflow:", error);

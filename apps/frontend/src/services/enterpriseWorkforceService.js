@@ -2,7 +2,11 @@ import axios from "axios";
 
 // Fetches AI-powered workforce planning insights
 
-export const fetchWorkforcePlan = async (departmentSize, revenueGrowth, attritionRate) => {
+export const fetchWorkforcePlan = async (
+  departmentSize,
+  revenueGrowth,
+  attritionRate,
+) => {
   try {
     const response = await axios.post("/api/enterprise-workforce/plan", {
       departmentSize,

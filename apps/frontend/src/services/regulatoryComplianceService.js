@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const fetchComplianceReport = async () => {
   try {
-    const response = await axios.post("/api/regulatory-compliance/check", { policy: "General HR Policy" });
+    const response = await axios.post("/api/regulatory-compliance/check", {
+      policy: "General HR Policy",
+    });
     return response.data;
   } catch (error) {
     console.error("Error fetching compliance report:", error);

@@ -5,7 +5,10 @@ import axios from "axios";
  */
 export const getWellBeingRecommendations = async (data) => {
   try {
-    const response = await axios.post("http://localhost:5037/recommend_wellbeing", data);
+    const response = await axios.post(
+      "http://localhost:5037/recommend_wellbeing",
+      data,
+    );
     return response.data;
   } catch (error) {
     console.error("Error getting well-being recommendations:", error);

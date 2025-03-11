@@ -13,7 +13,11 @@ router.post("/apply", async (req, res) => {
   try {
     const { experience, skillMatch, prevSuccess } = req.body;
 
-    if (experience === undefined || skillMatch === undefined || prevSuccess === undefined) {
+    if (
+      experience === undefined ||
+      skillMatch === undefined ||
+      prevSuccess === undefined
+    ) {
       return res.status(400).json({ error: "Missing required parameters." });
     }
 

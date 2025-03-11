@@ -10,12 +10,12 @@ const router = express.Router();
  * @desc Detects fake/manipulated reviews using AI
  */
 router.post("/analyze", async (req, res) => {
-    try {
-        const result = await validateReviews(req.body);
-        res.json(result);
-    } catch (error) {
-        res.status(500).json({ error: "Error analyzing reviews" });
-    }
+  try {
+    const result = await validateReviews(req.body);
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({ error: "Error analyzing reviews" });
+  }
 });
 
 export default router;

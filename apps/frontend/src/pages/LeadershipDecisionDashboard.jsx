@@ -16,9 +16,13 @@ const LeadershipDecisionDashboard = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold">🚀 AI Leadership Decision Simulation</h2>
+      <h2 className="text-2xl font-bold">
+        🚀 AI Leadership Decision Simulation
+      </h2>
       {decisionAnalysis ? (
-        <pre className="mt-4 p-4 border rounded bg-gray-100">{JSON.stringify(decisionAnalysis, null, 2)}</pre>
+        <pre className="mt-4 p-4 border rounded bg-gray-100">
+          {JSON.stringify(decisionAnalysis, null, 2)}
+        </pre>
       ) : (
         <p>Loading leadership decision insights...</p>
       )}

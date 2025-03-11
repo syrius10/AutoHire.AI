@@ -6,8 +6,8 @@ import { assessContractRisk } from "../services/contractRiskAssessmentService.js
 const router = express.Router();
 
 router.post("/risk", async (req, res) => {
-    const risk = await assessContractRisk(req.body);
-    res.json(risk);
+  const risk = await assessContractRisk(req.body);
+  res.json(risk);
 });
 
 export default router;

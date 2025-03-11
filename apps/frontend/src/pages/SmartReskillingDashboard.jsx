@@ -18,8 +18,8 @@ export default function SmartReskillingDashboard() {
     <div>
       <h1>Smart Reskilling Suggestions</h1>
       <ul>
-        {reskillingOptions.map((option, index) => (
-          <li key={index}>{option}</li>
+        {reskillingOptions.map((option) => (
+          <li key={option.id}>{option.name}</li>
         ))}
       </ul>
     </div>

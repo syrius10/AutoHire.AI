@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { requestAPIKey, revokeAPIKey, getAPIUsageStats } from "../services/apiManagementService";
+import {
+  requestAPIKey,
+  revokeAPIKey,
+  getAPIUsageStats,
+} from "../services/apiManagementService";
 
 const APIManagement = () => {
   const [apiKey, setApiKey] = useState("");
@@ -45,7 +49,8 @@ const APIManagement = () => {
 
       {apiKey && (
         <div className="mt-4 p-2 border rounded">
-          <strong>Your API Key:</strong> <span className="text-blue-600">{apiKey}</span>
+          <strong>Your API Key:</strong>{" "}
+          <span className="text-blue-600">{apiKey}</span>
         </div>
       )}
 
@@ -53,7 +58,7 @@ const APIManagement = () => {
       <ul>
         {usageStats.length > 0 ? (
           usageStats.map((stat, index) => (
-            <li key={index} className="border p-2 mt-2 rounded">
+            <li key={stat.endpoint} className="border p-2 mt-2 rounded">
               {stat.endpoint} - {stat.usage_count} calls
             </li>
           ))

@@ -19,8 +19,12 @@ export default function EconomicWorkforceDashboard() {
       <h2 className="text-2xl font-bold">📊 Economic Workforce Predictions</h2>
       {workforceData ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Hiring Demand:</strong> {workforceData.hiringDemand}</p>
-          <p><strong>GDP Growth Impact:</strong> {workforceData.gdpGrowthImpact}</p>
+          <p>
+            <strong>Hiring Demand:</strong> {workforceData.hiringDemand}
+          </p>
+          <p>
+            <strong>GDP Growth Impact:</strong> {workforceData.gdpGrowthImpact}
+          </p>
         </div>
       ) : (
         <p>Loading workforce predictions...</p>

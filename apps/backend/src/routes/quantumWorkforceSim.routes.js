@@ -13,7 +13,9 @@ router.post("/simulate", async (req, res) => {
   try {
     const { workforceFactors } = req.body;
     if (!workforceFactors) {
-      return res.status(400).json({ error: "Missing workforceFactors parameter" });
+      return res
+        .status(400)
+        .json({ error: "Missing workforceFactors parameter" });
     }
 
     const simulationResult = await simulateQuantumWorkforce(workforceFactors);

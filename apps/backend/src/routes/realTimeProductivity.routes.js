@@ -1,5 +1,8 @@
 import express from "express";
-import { getProductivityInsights, getProductivityTips } from "../services/realTimeProductivityService.js";
+import {
+  getProductivityInsights,
+  getProductivityTips,
+} from "../services/realTimeProductivityService.js";
 
 const router = express.Router();
 

@@ -16,7 +16,7 @@ X = data[:, :-1]  # Features: Skill Gap, Learning Speed, Market Demand
 y = data[:, -1]   # Target: 1 = Reskilling Recommended, 0 = No Immediate Need
 
 # Train AI model
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(random_state=42, learning_rate=0.1)
 model.fit(X, y)
 
 # Save trained model

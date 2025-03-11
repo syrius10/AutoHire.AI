@@ -7,7 +7,7 @@ export const predictPromotionReadiness = async (
   experience,
   courses,
   promotions,
-  performance
+  performance,
 ) => {
   try {
     const response = await axios.post("http://localhost:5027/predict", {

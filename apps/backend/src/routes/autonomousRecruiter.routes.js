@@ -1,5 +1,8 @@
 import express from "express";
-import { screenCandidate, rankCandidate } from "../services/autonomousRecruiterService.js";
+import {
+  screenCandidate,
+  rankCandidate,
+} from "../services/autonomousRecruiterService.js";
 
 // Handles AI-powered candidate screening & shortlisting.
 

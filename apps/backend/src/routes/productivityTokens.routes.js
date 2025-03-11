@@ -16,7 +16,11 @@ router.post("/assign", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const tokens = await assignProductivityTokens(work_hours, task_completion_rate, peer_review_score);
+    const tokens = await assignProductivityTokens(
+      work_hours,
+      task_completion_rate,
+      peer_review_score,
+    );
     res.json({ productivity_tokens: tokens });
   } catch (error) {
     console.error("Error assigning productivity tokens:", error);

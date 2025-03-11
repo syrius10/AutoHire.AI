@@ -1,7 +1,10 @@
 import { execSync } from "child_process";
 import path from "path";
 
-const aiScriptPath = path.join(process.cwd(), "apps/ai-services/adaptiveWorkflowAI.py");
+const aiScriptPath = path.join(
+  process.cwd(),
+  "apps/ai-services/adaptiveWorkflowAI.py",
+);
 
 export const optimizeWorkflow = async (taskType, urgencyLevel, workload) => {
   try {

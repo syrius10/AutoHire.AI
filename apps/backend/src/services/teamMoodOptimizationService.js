@@ -5,13 +5,20 @@ import axios from "axios";
 /**
  * Calls AI model for team sentiment analysis & collaboration optimization.
  */
-export const analyzeTeamMood = async (feedbackText, engagementScore, satisfactionScore) => {
+export const analyzeTeamMood = async (
+  feedbackText,
+  engagementScore,
+  satisfactionScore,
+) => {
   try {
-    const response = await axios.post("http://localhost:5113/analyze-team-mood", {
-      feedbackText,
-      engagementScore,
-      satisfactionScore,
-    });
+    const response = await axios.post(
+      "http://localhost:5113/analyze-team-mood",
+      {
+        feedbackText,
+        engagementScore,
+        satisfactionScore,
+      },
+    );
     return response.data.optimizationSuggestion;
   } catch (error) {
     console.error("Error analyzing team mood:", error);

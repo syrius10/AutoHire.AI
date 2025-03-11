@@ -1,6 +1,6 @@
 import hashlib
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 
 ##### AI-driven smart contracts & decentralized hiring agreements #####
 
@@ -11,7 +11,7 @@ class SmartContract:
             "employer": employer,
             "job_details": job_details,
             "payment": payment,
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),  # Timezone-aware datetime
             "status": "Pending"
         }
         self.contract["hash"] = self.generate_hash()
@@ -24,7 +24,7 @@ class SmartContract:
     def execute_contract(self):
         """Marks the contract as completed and finalizes payment."""
         self.contract["status"] = "Completed"
-        self.contract["completion_timestamp"] = datetime.utcnow().isoformat()
+        self.contract["completion_timestamp"] = datetime.now(timezone.utc).isoformat()  # Timezone-aware datetime
         self.contract["hash"] = self.generate_hash()
         return self.contract
 

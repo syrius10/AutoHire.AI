@@ -14,7 +14,9 @@ const AIAutomatedHiringDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">🤖 AI Automated Hiring</h2>
       {hiringData ? (
-        <pre className="mt-4 p-4 border rounded bg-gray-100">{JSON.stringify(hiringData, null, 2)}</pre>
+        <pre className="mt-4 p-4 border rounded bg-gray-100">
+          {JSON.stringify(hiringData, null, 2)}
+        </pre>
       ) : (
         <p>Loading hiring data...</p>
       )}

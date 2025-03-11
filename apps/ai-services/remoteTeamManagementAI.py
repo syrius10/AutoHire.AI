@@ -39,7 +39,8 @@ class RemoteTeamManagementAI:
 
 # ✅ Test Case
 if __name__ == "__main__":
+    TEAM_NAME = "Remote Devs"
     team_ai = RemoteTeamManagementAI()
-    print(team_ai.create_team("Remote Devs", "Bob"))
-    print(team_ai.assign_task("Remote Devs", "Complete UI Design", "high"))
-    print(team_ai.track_progress("Remote Devs"))
+    print(team_ai.create_team(TEAM_NAME, "Bob"))
+    print(team_ai.assign_task(TEAM_NAME, "Complete UI Design", "high"))
+    print(team_ai.track_progress(TEAM_NAME))

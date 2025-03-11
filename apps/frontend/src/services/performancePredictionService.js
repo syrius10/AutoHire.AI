@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const fetchPerformancePrediction = async () => {
   try {
-    const response = await axios.get("http://localhost:5001/api/performance-prediction/predict");
+    const response = await axios.get(
+      "http://localhost:5001/api/performance-prediction/predict",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching performance prediction:", error);

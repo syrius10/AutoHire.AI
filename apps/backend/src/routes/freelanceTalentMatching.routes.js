@@ -6,8 +6,8 @@ import { matchFreelancers } from "../services/freelanceTalentMatchingService.js"
 const router = express.Router();
 
 router.post("/match", async (req, res) => {
-    const match = await matchFreelancers(req.body);
-    res.json(match);
+  const match = await matchFreelancers(req.body);
+  res.json(match);
 });
 
 export default router;

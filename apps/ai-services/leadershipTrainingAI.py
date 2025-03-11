@@ -16,7 +16,7 @@ X = data[:, :-1].astype(float)  # Features: Experience, Leadership Courses, Perf
 y = data[:, -1]  # Target: Training Recommendation
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, n_estimators=100, min_samples_leaf=2, max_features="auto")
 model.fit(X, y)
 
 # Save trained model

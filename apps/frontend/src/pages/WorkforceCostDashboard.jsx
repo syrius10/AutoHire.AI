@@ -5,7 +5,9 @@ const WorkforceCostDashboard = () => {
   const [forecast, setForecast] = useState(null);
 
   useEffect(() => {
-    getWorkforceCostForecast({ year: 2025, hiring_budget: 800000 }).then(setForecast);
+    getWorkforceCostForecast({ year: 2025, hiring_budget: 800000 }).then(
+      setForecast,
+    );
   }, []);
 
   return (

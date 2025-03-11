@@ -23,7 +23,10 @@ export default function AdaptiveReskillingDashboard() {
       <h2 className="text-2xl font-bold">📚 AI-Powered Reskilling Plan</h2>
       {reskillingPlan ? (
         <div className="mt-4 border p-4 rounded bg-gray-100">
-          <p><strong>Suggested Training:</strong> {reskillingPlan.reskillingRecommendation}</p>
+          <p>
+            <strong>Suggested Training:</strong>{" "}
+            {reskillingPlan.reskillingRecommendation}
+          </p>
         </div>
       ) : (
         <p>Loading AI-powered reskilling insights...</p>

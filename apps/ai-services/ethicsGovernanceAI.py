@@ -17,7 +17,7 @@ X = data[:, :-1]  # Candidate Score, Diversity Factor, HR Bias Score
 y = data[:, -1]   # Hiring Decision (1 = Fair, 0 = Biased)
 
 # Train AI model
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(random_state=42, learning_rate=0.1)
 model.fit(X, y)
 
 # Save trained model

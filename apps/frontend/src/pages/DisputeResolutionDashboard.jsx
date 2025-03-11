@@ -19,7 +19,10 @@ export default function DisputeResolutionDashboard() {
 
   const handleAddMessage = () => {
     if (message.trim()) {
-      setFormData({ ...formData, conversation: [...formData.conversation, message] });
+      setFormData({
+        ...formData,
+        conversation: [...formData.conversation, message],
+      });
       setMessage("");
     }
   };
@@ -34,20 +37,67 @@ export default function DisputeResolutionDashboard() {
     <div className="p-6">
       <h2 className="text-2xl font-bold">⚖️ AI-Powered Dispute Resolution</h2>
       <form className="mt-4 space-y-3" onSubmit={handleSubmit}>
-        <input type="text" name="contractValue" placeholder="Contract Value" value={formData.contractValue} onChange={handleChange} className="border p-2 w-full"/>
-        <input type="number" name="delayedPayments" placeholder="Delayed Payments" value={formData.delayedPayments} onChange={handleChange} className="border p-2 w-full"/>
-        <input type="number" name="unclearTerms" placeholder="Unclear Terms" value={formData.unclearTerms} onChange={handleChange} className="border p-2 w-full"/>
-        <input type="number" name="pastDisputes" placeholder="Past Disputes" value={formData.pastDisputes} onChange={handleChange} className="border p-2 w-full"/>
+        <input
+          type="text"
+          name="contractValue"
+          placeholder="Contract Value"
+          value={formData.contractValue}
+          onChange={handleChange}
+          className="border p-2 w-full"
+        />
+        <input
+          type="number"
+          name="delayedPayments"
+          placeholder="Delayed Payments"
+          value={formData.delayedPayments}
+          onChange={handleChange}
+          className="border p-2 w-full"
+        />
+        <input
+          type="number"
+          name="unclearTerms"
+          placeholder="Unclear Terms"
+          value={formData.unclearTerms}
+          onChange={handleChange}
+          className="border p-2 w-full"
+        />
+        <input
+          type="number"
+          name="pastDisputes"
+          placeholder="Past Disputes"
+          value={formData.pastDisputes}
+          onChange={handleChange}
+          className="border p-2 w-full"
+        />
 
-        <textarea name="message" placeholder="Enter conversation message" value={message} onChange={(e) => setMessage(e.target.value)} className="border p-2 w-full"/>
-        <button type="button" onClick={handleAddMessage} className="bg-gray-500 text-white p-2 rounded">Add Message</button>
+        <textarea
+          name="message"
+          placeholder="Enter conversation message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="border p-2 w-full"
+        />
+        <button
+          type="button"
+          onClick={handleAddMessage}
+          className="bg-gray-500 text-white p-2 rounded"
+        >
+          Add Message
+        </button>
 
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded mt-3">Resolve Dispute</button>
+        <button
+          type="submit"
+          className="bg-blue-500 text-white p-2 rounded mt-3"
+        >
+          Resolve Dispute
+        </button>
       </form>
 
       {resolutionResult && (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Resolution:</strong> {resolutionResult.resolution}</p>
+          <p>
+            <strong>Resolution:</strong> {resolutionResult.resolution}
+          </p>
         </div>
       )}
     </div>

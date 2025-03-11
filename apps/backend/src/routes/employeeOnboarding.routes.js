@@ -16,7 +16,11 @@ router.post("/start", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const onboardingResult = await startOnboarding(employeeName, role, department);
+    const onboardingResult = await startOnboarding(
+      employeeName,
+      role,
+      department,
+    );
     res.json(onboardingResult);
   } catch (error) {
     console.error("Error in AI onboarding:", error);

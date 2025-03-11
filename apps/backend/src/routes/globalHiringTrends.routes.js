@@ -17,7 +17,11 @@ router.post("/analyze", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const hiringTrends = await getHiringTrends(industryGrowth, remoteWork, aiAdoption);
+    const hiringTrends = await getHiringTrends(
+      industryGrowth,
+      remoteWork,
+      aiAdoption,
+    );
     res.json({ hiringTrends });
   } catch (error) {
     console.error("Error analyzing global hiring trends:", error);

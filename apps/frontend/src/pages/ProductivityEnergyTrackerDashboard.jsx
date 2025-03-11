@@ -15,7 +15,9 @@ const ProductivityEnergyTrackerDashboard = () => {
       <h2 className="text-2xl font-bold">⚡ Productivity & Energy Tracker</h2>
       {productivityScore ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Productivity Score:</strong> {productivityScore.score}</p>
+          <p>
+            <strong>Productivity Score:</strong> {productivityScore.score}
+          </p>
         </div>
       ) : (
         <p>Loading productivity insights...</p>

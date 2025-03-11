@@ -17,7 +17,7 @@ class QuantumHiringPerformanceAI:
         X = self.data[:, :-1]  # Features: Experience, AI Skills, Soft Skills, Education Level
         y = self.data[:, -1]   # Target: Hiring Success (1 = Hired, 0 = Not Hired)
 
-        self.model = RandomForestClassifier()
+        self.model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="sqrt")
         self.model.fit(X, y)
 
         joblib.dump(self.model, "quantum_hiring_performance.pkl")

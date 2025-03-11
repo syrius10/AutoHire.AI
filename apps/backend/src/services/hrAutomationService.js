@@ -7,7 +7,10 @@ import axios from "axios";
  */
 export const processHRAutomation = async (hrData) => {
   try {
-    const response = await axios.post("http://localhost:5078/process_hr", hrData);
+    const response = await axios.post(
+      "http://localhost:5078/process_hr",
+      hrData,
+    );
     return response.data;
   } catch (error) {
     console.error("HR Automation AI Error:", error);

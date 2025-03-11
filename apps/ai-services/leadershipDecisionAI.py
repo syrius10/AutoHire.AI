@@ -16,7 +16,7 @@ X = data[:, :-1]  # Experience, Strategic Thinking, Team Leadership
 y = data[:, -1]   # Leadership Decision Confidence (1 = High, 0 = Low)
 
 # Train AI model
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(learning_rate=0.1, random_state=42)
 model.fit(X, y)
 
 # Save trained model

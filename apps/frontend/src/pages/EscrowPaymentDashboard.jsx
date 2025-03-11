@@ -22,7 +22,11 @@ const EscrowPaymentDashboard = () => {
   return (
     <div>
       <h2>Escrow Payment Dashboard</h2>
-      {loading ? <p>Checking escrow status...</p> : <p>Status: {escrowStatus}</p>}
+      {loading ? (
+        <p>Checking escrow status...</p>
+      ) : (
+        <p>Status: {escrowStatus}</p>
+      )}
     </div>
   );
 };

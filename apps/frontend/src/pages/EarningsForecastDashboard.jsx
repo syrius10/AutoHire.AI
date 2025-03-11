@@ -18,9 +18,10 @@ const EarningsForecastDashboard = () => {
     <div>
       <h2>💰 Earnings Forecast</h2>
       <ul>
-        {forecastData.map((forecast, index) => (
-          <li key={index}>
-            {forecast.role}: Projected Earnings: ${forecast.estimatedEarnings} | Demand: {forecast.demandLevel}
+        {forecastData.map((forecast) => (
+          <li key={forecast.id}>
+            {forecast.role}: Projected Earnings: ${forecast.estimatedEarnings} |
+            Demand: {forecast.demandLevel}
           </li>
         ))}
       </ul>

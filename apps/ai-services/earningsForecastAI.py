@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]  # Experience Level, Job Demand, Avg Hourly Rate
 y = data[:, -1]   # Predicted Monthly Earnings
 
-model = Ridge()
+model = Ridge(random_state=42)
 model.fit(X, y)
 
 # Save trained model

@@ -20,7 +20,7 @@ X = data[:, :-1]  # Workload Balance, Team Satisfaction, Career Growth
 y = data[:, -1]   # Engagement Level (1 = Engaged, 0 = Disengaged)
 
 # Train AI model
-ml_model = RandomForestClassifier()
+ml_model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="auto")
 ml_model.fit(X, y)
 
 # Save trained model

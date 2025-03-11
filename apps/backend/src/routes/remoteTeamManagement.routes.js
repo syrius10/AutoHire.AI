@@ -2,7 +2,7 @@ import express from "express";
 import {
   createTeam,
   assignTask,
-  trackProgress
+  trackProgress,
 } from "../services/remoteTeamManagementService.js";
 
 // AI-driven remote team tracking & task updates.
@@ -17,7 +17,9 @@ router.post("/create", async (req, res) => {
   try {
     const { teamName, manager } = req.body;
     if (!teamName || !manager) {
-      return res.status(400).json({ error: "Team name and manager are required" });
+      return res
+        .status(400)
+        .json({ error: "Team name and manager are required" });
     }
 
     const result = await createTeam(teamName, manager);

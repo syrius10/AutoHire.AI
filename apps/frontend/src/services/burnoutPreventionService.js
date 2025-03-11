@@ -2,7 +2,11 @@ import axios from "axios";
 
 // Retrieves AI-powered burnout risk tracking & stress management solutions.
 
-export const fetchBurnoutRisk = async (workHours, stressLevel, sleepQuality) => {
+export const fetchBurnoutRisk = async (
+  workHours,
+  stressLevel,
+  sleepQuality,
+) => {
   try {
     const response = await axios.post("/api/burnout-prevention/predict", {
       workHours,

@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const fetchHRPolicyRecommendations = async () => {
   try {
-    const response = await axios.get("http://localhost:5001/api/emotion-aware-hr/policy");
+    const response = await axios.get(
+      "http://localhost:5001/api/emotion-aware-hr/policy",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching HR policy recommendations:", error);

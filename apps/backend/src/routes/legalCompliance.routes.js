@@ -9,13 +9,22 @@ const router = express.Router();
  */
 router.post("/check", async (req, res) => {
   try {
-    const { country, terms, contract_length, compliance_score, past_disputes } = req.body;
+    const { country, terms, contract_length, compliance_score, past_disputes } =
+      req.body;
 
     if (!country || !terms) {
-      return res.status(400).json({ error: "Missing required fields: country and terms" });
+      return res
+        .status(400)
+        .json({ error: "Missing required fields: country and terms" });
     }
 
-    const complianceResult = await checkCompliance(country, terms, contract_length, compliance_score, past_disputes);
+    const complianceResult = await checkCompliance(
+      country,
+      terms,
+      contract_length,
+      compliance_score,
+      past_disputes,
+    );
     res.json(complianceResult);
   } catch (error) {
     console.error("Error in legal compliance check:", error);
@@ -24,4 +33,3 @@ router.post("/check", async (req, res) => {
 });
 
 export default router;
-

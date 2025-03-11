@@ -36,7 +36,8 @@ class VirtualCollaborationAI:
 
 # ✅ Test Case
 if __name__ == "__main__":
+    TEAM_NAME = "AI Devs"
     vc_ai = VirtualCollaborationAI()
-    print(vc_ai.create_workspace("AI Devs"))
-    print(vc_ai.join_workspace("AI Devs", "Alice"))
-    print(vc_ai.share_resource("AI Devs", "Project Roadmap"))
+    print(vc_ai.create_workspace(TEAM_NAME))
+    print(vc_ai.join_workspace(TEAM_NAME, "Alice"))
+    print(vc_ai.share_resource(TEAM_NAME, "Project Roadmap"))

@@ -16,7 +16,7 @@ X = data[:, :-1]  # Work Hours, Stress Level, Sleep Quality
 y = data[:, -1]   # Burnout Risk Level (1 = High Risk, 0 = Low Risk)
 
 # Train AI model
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(random_state=42, learning_rate=0.1)
 model.fit(X, y)
 
 # Save trained model

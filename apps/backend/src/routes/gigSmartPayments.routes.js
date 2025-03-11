@@ -1,5 +1,8 @@
 import express from "express";
-import { createSmartContract, releasePayment } from "../services/gigSmartPaymentsService.js";
+import {
+  createSmartContract,
+  releasePayment,
+} from "../services/gigSmartPaymentsService.js";
 
 // AI-powered smart contract-based payments.
 
@@ -16,7 +19,11 @@ router.post("/create", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const contractId = await createSmartContract(freelancerId, employerId, amount);
+    const contractId = await createSmartContract(
+      freelancerId,
+      employerId,
+      amount,
+    );
     res.json({ contractId });
   } catch (error) {
     console.error("Error creating smart contract:", error);

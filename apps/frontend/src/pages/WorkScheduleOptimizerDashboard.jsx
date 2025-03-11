@@ -15,7 +15,9 @@ const WorkScheduleOptimizerDashboard = () => {
       <h2 className="text-2xl font-bold">📅 Work Schedule Optimization</h2>
       {schedule ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Optimized Work Hours:</strong> {schedule.optimizedSchedule}</p>
+          <p>
+            <strong>Optimized Work Hours:</strong> {schedule.optimizedSchedule}
+          </p>
         </div>
       ) : (
         <p>Loading optimized work schedule...</p>

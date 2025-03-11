@@ -16,7 +16,12 @@ router.post("/predict", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const prediction = await predictRetention(workload, satisfaction, careerGrowth, workLifeBalance);
+    const prediction = await predictRetention(
+      workload,
+      satisfaction,
+      careerGrowth,
+      workLifeBalance,
+    );
     res.json({ prediction });
   } catch (error) {
     console.error("Error in talent retention prediction:", error);

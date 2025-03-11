@@ -16,7 +16,7 @@ X = data[:, :-1]  # Years at Company, Performance Score, Skills Acquired
 y = data[:, -1]   # Rotation (1 = Likely, 0 = Unlikely)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="auto")
 model.fit(X, y)
 
 # Save trained model

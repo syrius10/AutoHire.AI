@@ -9,7 +9,10 @@ const FreelancerTaxDashboard = () => {
   const [taxEstimate, setTaxEstimate] = useState(null);
 
   const handleEstimate = async () => {
-    const estimatedTax = await estimateFreelancerTaxes(annualIncome, deductions);
+    const estimatedTax = await estimateFreelancerTaxes(
+      annualIncome,
+      deductions,
+    );
     setTaxEstimate(estimatedTax);
   };
 
@@ -17,18 +20,37 @@ const FreelancerTaxDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">📊 Freelancer Tax Estimation</h2>
       <div className="mt-4">
-        <label>Annual Income:</label>
-        <input type="number" value={annualIncome} onChange={(e) => setAnnualIncome(e.target.value)} className="border p-2 w-full mb-2" />
-        
-        <label>Deductions:</label>
-        <input type="number" value={deductions} onChange={(e) => setDeductions(e.target.value)} className="border p-2 w-full mb-2" />
-        
-        <button onClick={handleEstimate} className="bg-blue-500 text-white px-4 py-2 rounded mt-2">Estimate Tax</button>
+        <label htmlFor="annualIncome">Annual Income:</label>
+        <input
+          id="annualIncome"
+          type="number"
+          value={annualIncome}
+          onChange={(e) => setAnnualIncome(e.target.value)}
+          className="border p-2 w-full mb-2"
+        />
+
+        <label htmlFor="deductions">Deductions:</label>
+        <input
+          id="deductions"
+          type="number"
+          value={deductions}
+          onChange={(e) => setDeductions(e.target.value)}
+          className="border p-2 w-full mb-2"
+        />
+
+        <button
+          onClick={handleEstimate}
+          className="bg-blue-500 text-white px-4 py-2 rounded mt-2"
+        >
+          Estimate Tax
+        </button>
       </div>
 
       {taxEstimate !== null && (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Estimated Tax:</strong> ${taxEstimate}</p>
+          <p>
+            <strong>Estimated Tax:</strong> ${taxEstimate}
+          </p>
         </div>
       )}
     </div>

@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  Calendar, 
-  Clock, 
-  Users, 
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Calendar,
+  Clock,
+  Users,
   MessageSquare,
-  CheckCircle
-} from 'lucide-react';
+  CheckCircle,
+} from "lucide-react";
 
 const ContactPage = () => {
   const [headerRef, headerInView] = useInView({
@@ -30,14 +30,14 @@ const ContactPage = () => {
   });
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    message: '',
-    demoDate: '',
-    demoTime: '',
-    teamSize: '',
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    message: "",
+    demoDate: "",
+    demoTime: "",
+    teamSize: "",
     interests: [] as string[],
   });
 
@@ -64,7 +64,11 @@ const ContactPage = () => {
     },
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -82,7 +86,7 @@ const ContactPage = () => {
     } else {
       setFormData({
         ...formData,
-        interests: formData.interests.filter(interest => interest !== value),
+        interests: formData.interests.filter((interest) => interest !== value),
       });
     }
   };
@@ -96,14 +100,14 @@ const ContactPage = () => {
       setTimeout(() => {
         setFormSubmitted(false);
         setFormData({
-          name: '',
-          email: '',
-          company: '',
-          phone: '',
-          message: '',
-          demoDate: '',
-          demoTime: '',
-          teamSize: '',
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: "",
+          demoDate: "",
+          demoTime: "",
+          teamSize: "",
           interests: [],
         });
       }, 3000);
@@ -113,48 +117,48 @@ const ContactPage = () => {
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6 text-blue-400" />,
-      title: 'Email',
-      details: 'contact@autohire.ai',
-      link: 'mailto:contact@autohire.ai',
+      title: "Email",
+      details: "contact@autohire.ai",
+      link: "mailto:contact@autohire.ai",
     },
     {
       icon: <Phone className="w-6 h-6 text-blue-400" />,
-      title: 'Phone',
-      details: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      title: "Phone",
+      details: "+1 (555) 123-4567",
+      link: "tel:+15551234567",
     },
     {
       icon: <MapPin className="w-6 h-6 text-blue-400" />,
-      title: 'Address',
-      details: '123 Innovation Drive, San Francisco, CA 94103',
-      link: 'https://maps.google.com/?q=123+Innovation+Drive,+San+Francisco,+CA+94103',
+      title: "Address",
+      details: "123 Innovation Drive, San Francisco, CA 94103",
+      link: "https://maps.google.com/?q=123+Innovation+Drive,+San+Francisco,+CA+94103",
     },
   ];
 
   const demoFeatures = [
     {
-      id: 'ai-matching',
-      label: 'AI-Driven Candidate Matching',
+      id: "ai-matching",
+      label: "AI-Driven Candidate Matching",
     },
     {
-      id: 'skill-assessment',
-      label: 'Automated Skill Assessments',
+      id: "skill-assessment",
+      label: "Automated Skill Assessments",
     },
     {
-      id: 'video-interviews',
-      label: 'Video Interview Analysis',
+      id: "video-interviews",
+      label: "Video Interview Analysis",
     },
     {
-      id: 'analytics',
-      label: 'Recruitment Analytics',
+      id: "analytics",
+      label: "Recruitment Analytics",
     },
     {
-      id: 'bias-elimination',
-      label: 'Bias Elimination Tools',
+      id: "bias-elimination",
+      label: "Bias Elimination Tools",
     },
     {
-      id: 'workflow',
-      label: 'Workflow Automation',
+      id: "workflow",
+      label: "Workflow Automation",
     },
   ];
 
@@ -170,15 +174,18 @@ const ContactPage = () => {
       >
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.h1 
+            <motion.h1
               variants={itemVariants}
               className="text-4xl md:text-5xl font-bold mb-6"
             >
-              Get in 
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"> Touch</span>
+              Get in{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                Touch
+              </span>
             </motion.h1>
             <motion.p variants={itemVariants} className="text-xl text-gray-300">
-              Schedule a demo or reach out to our team with any questions about AutoHire.AI
+              Schedule a demo or reach out to our team with any questions about
+              AutoHire.AI
             </motion.p>
           </div>
         </div>
@@ -191,7 +198,7 @@ const ContactPage = () => {
             {contactInfo.map((item, index) => (
               <motion.a
                 href={item.link}
-                key={index}
+                key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -200,7 +207,9 @@ const ContactPage = () => {
                 <div className="bg-slate-800/80 p-3 rounded-full mb-4">
                   {item.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {item.title}
+                </h3>
                 <p className="text-gray-300">{item.details}</p>
               </motion.a>
             ))}
@@ -220,7 +229,7 @@ const ContactPage = () => {
               variants={containerVariants}
               className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-lg border border-slate-700/50 shadow-xl"
             >
-              <motion.h2 
+              <motion.h2
                 variants={itemVariants}
                 className="text-2xl font-bold mb-6 text-white"
               >
@@ -234,16 +243,26 @@ const ContactPage = () => {
                   className="bg-green-500/20 border border-green-500/30 rounded-lg p-6 text-center"
                 >
                   <CheckCircle className="w-16 h-16 mx-auto text-green-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">Thank You!</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Thank You!
+                  </h3>
                   <p className="text-gray-300">
-                    Your demo request has been submitted successfully. Our team will contact you shortly to confirm your appointment.
+                    Your demo request has been submitted successfully. Our team
+                    will contact you shortly to confirm your appointment.
                   </p>
                 </motion.div>
               ) : (
-                <motion.form variants={itemVariants} onSubmit={handleSubmit} className="space-y-6">
+                <motion.form
+                  variants={itemVariants}
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-gray-300 mb-1"
+                      >
                         Full Name *
                       </label>
                       <input
@@ -258,7 +277,10 @@ const ContactPage = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-300 mb-1"
+                      >
                         Email Address *
                       </label>
                       <input
@@ -276,7 +298,10 @@ const ContactPage = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label
+                        htmlFor="company"
+                        className="block text-sm font-medium text-gray-300 mb-1"
+                      >
                         Company Name *
                       </label>
                       <input
@@ -291,7 +316,10 @@ const ContactPage = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-gray-300 mb-1"
+                      >
                         Phone Number
                       </label>
                       <input
@@ -307,7 +335,10 @@ const ContactPage = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="teamSize" className="block text-sm font-medium text-gray-300 mb-1">
+                    <label
+                      htmlFor="teamSize"
+                      className="block text-sm font-medium text-gray-300 mb-1"
+                    >
                       Team Size
                     </label>
                     <select
@@ -317,7 +348,9 @@ const ContactPage = () => {
                       onChange={handleInputChange}
                       className="w-full bg-slate-900/80 border border-slate-700 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
-                      <option value="" disabled>Select team size</option>
+                      <option value="" disabled>
+                        Select team size
+                      </option>
                       <option value="1-10">1-10 employees</option>
                       <option value="11-50">11-50 employees</option>
                       <option value="51-200">51-200 employees</option>
@@ -328,11 +361,17 @@ const ContactPage = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="demoDate" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label
+                        htmlFor="demoDate"
+                        className="block text-sm font-medium text-gray-300 mb-1"
+                      >
                         Preferred Demo Date
                       </label>
                       <div className="relative">
-                        <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
+                        <Calendar
+                          className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                          size={16}
+                        />
                         <input
                           type="date"
                           id="demoDate"
@@ -344,11 +383,17 @@ const ContactPage = () => {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="demoTime" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label
+                        htmlFor="demoTime"
+                        className="block text-sm font-medium text-gray-300 mb-1"
+                      >
                         Preferred Time
                       </label>
                       <div className="relative">
-                        <Clock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
+                        <Clock
+                          className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                          size={16}
+                        />
                         <input
                           type="time"
                           id="demoTime"
@@ -362,7 +407,7 @@ const ContactPage = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-3">
+                    <label htmlFor="interests" className="block text-sm font-medium text-gray-300 mb-3">
                       Features You're Interested In
                     </label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -377,7 +422,10 @@ const ContactPage = () => {
                             onChange={handleCheckboxChange}
                             className="h-4 w-4 text-blue-500 focus:ring-blue-500 border-gray-600 rounded bg-slate-900"
                           />
-                          <label htmlFor={feature.id} className="ml-2 text-sm text-gray-300">
+                          <label
+                            htmlFor={feature.id}
+                            className="ml-2 text-sm text-gray-300"
+                          >
                             {feature.label}
                           </label>
                         </div>
@@ -386,7 +434,10 @@ const ContactPage = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-300 mb-1"
+                    >
                       Additional Information
                     </label>
                     <textarea
@@ -419,11 +470,13 @@ const ContactPage = () => {
               variants={containerVariants}
               className="space-y-8"
             >
-              <motion.div 
+              <motion.div
                 variants={itemVariants}
                 className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-lg border border-slate-700/50 shadow-xl"
               >
-                <h2 className="text-2xl font-bold mb-6 text-white">Visit Our Office</h2>
+                <h2 className="text-2xl font-bold mb-6 text-white">
+                  Visit Our Office
+                </h2>
                 <div className="aspect-video w-full rounded-lg overflow-hidden border border-slate-700/50 mb-6">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50470.95397618613!2d-122.43913217768052!3d37.77117797908745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1652892876414!5m2!1sen!2sus"
@@ -437,49 +490,65 @@ const ContactPage = () => {
                   ></iframe>
                 </div>
                 <p className="text-gray-300">
-                  Our headquarters is located in the heart of San Francisco's tech district. We'd love to show you around and demonstrate our AI-powered recruitment platform in person.
+                  Our headquarters is located in the heart of San Francisco's
+                  tech district. We'd love to show you around and demonstrate
+                  our AI-powered recruitment platform in person.
                 </p>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 variants={itemVariants}
                 className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-lg border border-slate-700/50 shadow-xl"
               >
-                <h2 className="text-2xl font-bold mb-6 text-white">What to Expect</h2>
+                <h2 className="text-2xl font-bold mb-6 text-white">
+                  What to Expect
+                </h2>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <Users className="w-5 h-5 text-blue-400 mt-1 mr-3" />
                     <div>
-                      <h3 className="font-semibold text-white">Personalized Demo</h3>
+                      <h3 className="font-semibold text-white">
+                        Personalized Demo
+                      </h3>
                       <p className="text-gray-300 text-sm">
-                        Our team will tailor the demonstration to your specific recruitment needs and challenges.
+                        Our team will tailor the demonstration to your specific
+                        recruitment needs and challenges.
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start">
                     <Clock className="w-5 h-5 text-blue-400 mt-1 mr-3" />
                     <div>
-                      <h3 className="font-semibold text-white">30-45 Minute Session</h3>
+                      <h3 className="font-semibold text-white">
+                        30-45 Minute Session
+                      </h3>
                       <p className="text-gray-300 text-sm">
-                        We'll walk you through the platform, showcase key features, and answer all your questions.
+                        We'll walk you through the platform, showcase key
+                        features, and answer all your questions.
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start">
                     <MessageSquare className="w-5 h-5 text-blue-400 mt-1 mr-3" />
                     <div>
-                      <h3 className="font-semibold text-white">Q&A Opportunity</h3>
+                      <h3 className="font-semibold text-white">
+                        Q&A Opportunity
+                      </h3>
                       <p className="text-gray-300 text-sm">
-                        Bring your team's questions and challenges - our experts are ready to help.
+                        Bring your team's questions and challenges - our experts
+                        are ready to help.
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start">
                     <Send className="w-5 h-5 text-blue-400 mt-1 mr-3" />
                     <div>
-                      <h3 className="font-semibold text-white">Follow-up Resources</h3>
+                      <h3 className="font-semibold text-white">
+                        Follow-up Resources
+                      </h3>
                       <p className="text-gray-300 text-sm">
-                        You'll receive custom materials and pricing information based on your specific needs.
+                        You'll receive custom materials and pricing information
+                        based on your specific needs.
                       </p>
                     </div>
                   </li>
@@ -500,30 +569,49 @@ const ContactPage = () => {
 
             <div className="space-y-6">
               <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700/50">
-                <h3 className="text-lg font-semibold text-white mb-2">How long does implementation typically take?</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  How long does implementation typically take?
+                </h3>
                 <p className="text-gray-300">
-                  Most clients are up and running within 2-4 weeks, depending on the size of your organization and integration requirements. Our team provides comprehensive support throughout the implementation process.
+                  Most clients are up and running within 2-4 weeks, depending on
+                  the size of your organization and integration requirements.
+                  Our team provides comprehensive support throughout the
+                  implementation process.
                 </p>
               </div>
 
               <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700/50">
-                <h3 className="text-lg font-semibold text-white mb-2">Can AutoHire.AI integrate with our existing HR systems?</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Can AutoHire.AI integrate with our existing HR systems?
+                </h3>
                 <p className="text-gray-300">
-                  Yes, we offer seamless integration with most major HRIS, ATS, and other HR systems. Our platform uses standard APIs and custom connectors to ensure smooth data flow between systems.
+                  Yes, we offer seamless integration with most major HRIS, ATS,
+                  and other HR systems. Our platform uses standard APIs and
+                  custom connectors to ensure smooth data flow between systems.
                 </p>
               </div>
 
               <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700/50">
-                <h3 className="text-lg font-semibold text-white mb-2">How does your pricing model work?</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  How does your pricing model work?
+                </h3>
                 <p className="text-gray-300">
-                  Our pricing is based on your organization's size and specific needs. We offer flexible subscription plans that can be customized to include the features most relevant to your recruitment process. Contact us for a personalized quote.
+                  Our pricing is based on your organization's size and specific
+                  needs. We offer flexible subscription plans that can be
+                  customized to include the features most relevant to your
+                  recruitment process. Contact us for a personalized quote.
                 </p>
               </div>
 
               <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700/50">
-                <h3 className="text-lg font-semibold text-white mb-2">Is my candidate data secure with AutoHire.AI?</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Is my candidate data secure with AutoHire.AI?
+                </h3>
                 <p className="text-gray-300">
-                  Absolutely. We implement enterprise-grade security measures including end-to-end encryption, regular security audits, and compliance with GDPR, CCPA, and other relevant regulations. Your data security is our top priority.
+                  Absolutely. We implement enterprise-grade security measures
+                  including end-to-end encryption, regular security audits, and
+                  compliance with GDPR, CCPA, and other relevant regulations.
+                  Your data security is our top priority.
                 </p>
               </div>
             </div>

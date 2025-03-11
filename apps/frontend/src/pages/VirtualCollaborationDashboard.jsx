@@ -1,5 +1,9 @@
-import { useEffect, useState } from "react";
-import { createWorkspace, joinWorkspace, shareResource } from "../services/virtualCollaborationService";
+import { useState } from "react";
+import {
+  createWorkspace,
+  joinWorkspace,
+  shareResource,
+} from "../services/virtualCollaborationService";
 
 // AI-powered Metaverse-based co-working space for teams.
 
@@ -28,15 +32,27 @@ const VirtualCollaborationDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">🌐 Virtual Collaboration</h2>
       <div className="mt-4">
-        <input type="text" placeholder="Team Name" onChange={(e) => setTeamName(e.target.value)} />
+        <input
+          type="text"
+          placeholder="Team Name"
+          onChange={(e) => setTeamName(e.target.value)}
+        />
         <button onClick={handleCreateWorkspace}>Create Workspace</button>
       </div>
       <div className="mt-4">
-        <input type="text" placeholder="Your Name" onChange={(e) => setUser(e.target.value)} />
+        <input
+          type="text"
+          placeholder="Your Name"
+          onChange={(e) => setUser(e.target.value)}
+        />
         <button onClick={handleJoinWorkspace}>Join Workspace</button>
       </div>
       <div className="mt-4">
-        <input type="text" placeholder="Resource" onChange={(e) => setResource(e.target.value)} />
+        <input
+          type="text"
+          placeholder="Resource"
+          onChange={(e) => setResource(e.target.value)}
+        />
         <button onClick={handleShareResource}>Share Resource</button>
       </div>
       {message && <p className="mt-4">{message}</p>}

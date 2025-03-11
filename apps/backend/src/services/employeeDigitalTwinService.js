@@ -5,7 +5,12 @@ import axios from "axios";
 /**
  * Simulates an employee digital twin using AI models.
  */
-export const simulateEmployeeTwin = async (employeeId, experience, skillLevel, performanceScore) => {
+export const simulateEmployeeTwin = async (
+  employeeId,
+  experience,
+  skillLevel,
+  performanceScore,
+) => {
   try {
     const response = await axios.post("http://localhost:5109/simulate", {
       employeeId,

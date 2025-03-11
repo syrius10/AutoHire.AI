@@ -2,7 +2,10 @@ import axios from "axios";
 
 // Calls AI for personalized skill self-improvement recommendations.
 
-export const fetchSkillRecommendation = async (currentSkill, industryDemand) => {
+export const fetchSkillRecommendation = async (
+  currentSkill,
+  industryDemand,
+) => {
   try {
     const response = await axios.post("/api/self-upgrading-skills/recommend", {
       currentSkill,

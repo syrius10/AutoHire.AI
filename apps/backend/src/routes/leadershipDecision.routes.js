@@ -11,13 +11,19 @@ const router = express.Router();
  */
 router.post("/assess", async (req, res) => {
   try {
-    const { leaderId, experience, strategicThinking, teamLeadership } = req.body;
+    const { leaderId, experience, strategicThinking, teamLeadership } =
+      req.body;
 
     if (!leaderId || !experience || !strategicThinking || !teamLeadership) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const decisionConfidence = await assessDecisionConfidence(leaderId, experience, strategicThinking, teamLeadership);
+    const decisionConfidence = await assessDecisionConfidence(
+      leaderId,
+      experience,
+      strategicThinking,
+      teamLeadership,
+    );
     res.json(decisionConfidence);
   } catch (error) {
     console.error("Error in leadership decision assessment:", error);

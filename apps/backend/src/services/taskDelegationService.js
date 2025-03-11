@@ -10,7 +10,7 @@ export const assignTask = (skillLevel, workload, complexity) => {
       process.cwd(),
       "apps",
       "ai-services",
-      "taskDelegationAI.py"
+      "taskDelegationAI.py",
     );
 
     const pythonProcess = spawn("python3", [

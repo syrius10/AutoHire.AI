@@ -12,11 +12,19 @@ const router = express.Router();
 router.post("/predict", async (req, res) => {
   try {
     const { economicGrowth, aiAdoption, hiringRate } = req.body;
-    if (economicGrowth === undefined || aiAdoption === undefined || hiringRate === undefined) {
+    if (
+      economicGrowth === undefined ||
+      aiAdoption === undefined ||
+      hiringRate === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const workforceDemand = await forecastQuantumWorkforce(economicGrowth, aiAdoption, hiringRate);
+    const workforceDemand = await forecastQuantumWorkforce(
+      economicGrowth,
+      aiAdoption,
+      hiringRate,
+    );
     res.json({ workforceDemand });
   } catch (error) {
     console.error("Quantum Workforce Forecasting Error:", error);

@@ -19,7 +19,10 @@ export default function LeadershipTrainingDashboard() {
       <h2 className="text-2xl font-bold">📈 AI Leadership Training Insights</h2>
       {trainingData ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Recommended Training:</strong> {trainingData.trainingRecommendation}</p>
+          <p>
+            <strong>Recommended Training:</strong>{" "}
+            {trainingData.trainingRecommendation}
+          </p>
         </div>
       ) : (
         <p>Loading leadership training recommendations...</p>

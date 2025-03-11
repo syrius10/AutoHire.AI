@@ -7,11 +7,14 @@ import axios from "axios";
  */
 export const fetchGigPayments = async () => {
   try {
-    const response = await axios.post("http://localhost:5087/api/gig-payments/process", {
-      contractId: "ABC123",
-      freelancerId: "7890",
-      paymentAmount: 1500,
-    });
+    const response = await axios.post(
+      "http://localhost:5087/api/gig-payments/process",
+      {
+        contractId: "ABC123",
+        freelancerId: "7890",
+        paymentAmount: 1500,
+      },
+    );
     return response.data.paymentStatus;
   } catch (error) {
     console.error("Error processing gig payment:", error);

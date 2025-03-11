@@ -1,7 +1,7 @@
 import express from "express";
 import {
   provideTip,
-  assessPerformance
+  assessPerformance,
 } from "../services/aiWorkCoachService.js";
 
 // AI-powered real-time work coaching & training.

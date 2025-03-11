@@ -3,7 +3,12 @@ import axios from "axios";
 /**
  * Fetches AI-powered employee engagement score.
  */
-export const analyzeEngagement = async (feedback, workload, teamSatisfaction, careerGrowth) => {
+export const analyzeEngagement = async (
+  feedback,
+  workload,
+  teamSatisfaction,
+  careerGrowth,
+) => {
   try {
     const response = await axios.post("/api/employee-engagement/analyze", {
       feedback,
@@ -11,7 +16,7 @@ export const analyzeEngagement = async (feedback, workload, teamSatisfaction, ca
       teamSatisfaction,
       careerGrowth,
     });
-    
+
     return response.data;
   } catch (error) {
     console.error("Error fetching engagement analysis:", error);

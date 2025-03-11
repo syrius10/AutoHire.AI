@@ -1,5 +1,8 @@
 import express from "express";
-import { analyzeMarket, recommendPolicy } from "../services/aiGlobalEconomyService.js";
+import {
+  analyzeMarket,
+  recommendPolicy,
+} from "../services/aiGlobalEconomyService.js";
 
 const router = express.Router();
 

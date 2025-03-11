@@ -11,4 +11,3 @@ router.post("/recommend-price", async (req, res) => {
 });
 
 export default router;
-

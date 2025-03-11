@@ -10,12 +10,12 @@ const router = express.Router();
  * @desc Evaluates client trustworthiness using AI analysis
  */
 router.post("/analyze", async (req, res) => {
-    try {
-        const result = await getClientTrustScore(req.body);
-        res.json(result);
-    } catch (error) {
-        res.status(500).json({ error: "Error calculating client trust score" });
-    }
+  try {
+    const result = await getClientTrustScore(req.body);
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({ error: "Error calculating client trust score" });
+  }
 });
 
 export default router;

@@ -4,7 +4,9 @@ import axios from "axios";
 
 export const screenCandidates = async (candidates) => {
   try {
-    const response = await axios.post("/api/enterprise-recruitment/screen", { candidates });
+    const response = await axios.post("/api/enterprise-recruitment/screen", {
+      candidates,
+    });
     return response.data;
   } catch (error) {
     console.error("Error screening candidates:", error);

@@ -18,7 +18,9 @@ const PredictiveWorkforceDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">📊 Predictive Workforce Planning</h2>
       {hiringForecast ? (
-        <pre className="mt-4 bg-gray-100 p-4 rounded">{JSON.stringify(hiringForecast, null, 2)}</pre>
+        <pre className="mt-4 bg-gray-100 p-4 rounded">
+          {JSON.stringify(hiringForecast, null, 2)}
+        </pre>
       ) : (
         <p>Loading hiring forecast...</p>
       )}

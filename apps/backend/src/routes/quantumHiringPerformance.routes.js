@@ -12,11 +12,21 @@ const router = express.Router();
 router.post("/analyze", async (req, res) => {
   try {
     const { experience, aiSkills, softSkills, educationLevel } = req.body;
-    if (experience === undefined || aiSkills === undefined || softSkills === undefined || educationLevel === undefined) {
+    if (
+      experience === undefined ||
+      aiSkills === undefined ||
+      softSkills === undefined ||
+      educationLevel === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const hiringPrediction = await predictQuantumHiringPerformance(experience, aiSkills, softSkills, educationLevel);
+    const hiringPrediction = await predictQuantumHiringPerformance(
+      experience,
+      aiSkills,
+      softSkills,
+      educationLevel,
+    );
     res.json({ hiringPrediction });
   } catch (error) {
     console.error("Quantum Hiring Performance Analysis Error:", error);

@@ -10,7 +10,8 @@ const router = express.Router();
 router.post("/schedule", async (req, res) => {
   try {
     // Extract fields
-    const { candidateEmail, recruiterEmail, timeSlot, candidateName, jobRole } = req.body;
+    const { candidateEmail, recruiterEmail, timeSlot, candidateName, jobRole } =
+      req.body;
 
     // Validate input
     if (!candidateEmail || !recruiterEmail || !timeSlot) {
@@ -20,12 +21,12 @@ router.post("/schedule", async (req, res) => {
     }
 
     // Call scheduling service
-    const confirmation = await scheduleInterview({ 
-      candidateEmail, 
-      recruiterEmail, 
-      timeSlot, 
-      candidateName, 
-      jobRole 
+    const confirmation = await scheduleInterview({
+      candidateEmail,
+      recruiterEmail,
+      timeSlot,
+      candidateName,
+      jobRole,
     });
 
     res.json(confirmation);

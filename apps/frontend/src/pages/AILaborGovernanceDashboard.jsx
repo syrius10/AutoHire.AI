@@ -15,8 +15,12 @@ const AILaborGovernanceDashboard = () => {
       <h2 className="text-2xl font-bold">⚖️ AI Labor Governance Compliance</h2>
       {laborData ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Law:</strong> {laborData.law}</p>
-          <p><strong>Compliance Status:</strong> {laborData.compliance_status}</p>
+          <p>
+            <strong>Law:</strong> {laborData.law}
+          </p>
+          <p>
+            <strong>Compliance Status:</strong> {laborData.compliance_status}
+          </p>
         </div>
       ) : (
         <p>Loading AI labor governance compliance data...</p>

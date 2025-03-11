@@ -1,5 +1,8 @@
 import express from "express";
-import { assignTokens, getUserBalance } from "../services/tokenizedWorkService.js";
+import {
+  assignTokens,
+  getUserBalance,
+} from "../services/tokenizedWorkService.js";
 
 // AI-driven blockchain-based work incentives & compensation.
 
@@ -15,7 +18,12 @@ router.post("/assign", async (req, res) => {
     if (!userId || !workHours || !projectComplexity || !skillLevel) {
       return res.status(400).json({ error: "Missing required fields" });
     }
-    const reward = await assignTokens(userId, workHours, projectComplexity, skillLevel);
+    const reward = await assignTokens(
+      userId,
+      workHours,
+      projectComplexity,
+      skillLevel,
+    );
     res.json(reward);
   } catch (error) {
     console.error("Error assigning tokens:", error);

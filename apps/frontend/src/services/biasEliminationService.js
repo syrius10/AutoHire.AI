@@ -5,13 +5,16 @@ import axios from "axios";
  */
 export const fetchBiasAnalysis = async () => {
   try {
-    const response = await axios.post("http://localhost:5001/api/bias-elimination/detect", {
-      genderBias: 2,
-      ageBias: 1,
-      ethnicBias: 0,
-      skillMatch: 85,
-      hiringHistory: 5,
-    });
+    const response = await axios.post(
+      "http://localhost:5001/api/bias-elimination/detect",
+      {
+        genderBias: 2,
+        ageBias: 1,
+        ethnicBias: 0,
+        skillMatch: 85,
+        hiringHistory: 5,
+      },
+    );
 
     return response.data;
   } catch (error) {

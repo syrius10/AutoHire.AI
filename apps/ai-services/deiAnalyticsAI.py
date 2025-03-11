@@ -19,7 +19,7 @@ X = data[:, :-1]  # Features: Gender Ratio, Ethnic Diversity, Disability Inclusi
 y = data[:, -1]   # DEI Score: (1 = Strong, 0 = Needs Improvement)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(min_samples_leaf=2, max_features="auto", random_state=42)
 model.fit(X, y)
 
 # Save model

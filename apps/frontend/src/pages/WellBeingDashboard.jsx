@@ -23,9 +23,13 @@ export default function WellBeingDashboard() {
 
       {/* Well-Being Plan Section */}
       <div className="mt-6 p-4 border rounded">
-        <h3 className="text-lg font-semibold">📋 Personalized Well-Being Plan</h3>
+        <h3 className="text-lg font-semibold">
+          📋 Personalized Well-Being Plan
+        </h3>
         {wellBeingPlan ? (
-          <pre className="mt-2 bg-gray-100 p-2 rounded">{JSON.stringify(wellBeingPlan, null, 2)}</pre>
+          <pre className="mt-2 bg-gray-100 p-2 rounded">
+            {JSON.stringify(wellBeingPlan, null, 2)}
+          </pre>
         ) : (
           <p>Loading well-being plan...</p>
         )}
@@ -36,8 +40,12 @@ export default function WellBeingDashboard() {
         <h3 className="text-lg font-semibold">💡 AI Recommendations</h3>
         {recommendations ? (
           <div className="mt-2">
-            <p><strong>Suggestion:</strong> {recommendations.suggestion}</p>
-            <p><strong>Stress Level:</strong> {recommendations.stressLevel}</p>
+            <p>
+              <strong>Suggestion:</strong> {recommendations.suggestion}
+            </p>
+            <p>
+              <strong>Stress Level:</strong> {recommendations.stressLevel}
+            </p>
           </div>
         ) : (
           <p>Loading well-being recommendations...</p>

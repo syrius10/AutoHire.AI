@@ -18,8 +18,8 @@ const ExecutiveTalentDashboard = () => {
     <div>
       <h2>Executive Talent Insights</h2>
       <ul>
-        {executiveTalent.map((exec, index) => (
-          <li key={index}>
+        {executiveTalent.map((exec) => (
+          <li key={exec.id}>
             {exec.name} - {exec.suitabilityScore}% Fit
           </li>
         ))}

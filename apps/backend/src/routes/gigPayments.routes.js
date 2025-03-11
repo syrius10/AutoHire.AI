@@ -13,10 +13,16 @@ router.post("/process", async (req, res) => {
   try {
     const { contractId, freelancerId, paymentAmount } = req.body;
     if (!contractId || !freelancerId || !paymentAmount) {
-      return res.status(400).json({ error: "Missing required payment details" });
+      return res
+        .status(400)
+        .json({ error: "Missing required payment details" });
     }
 
-    const paymentStatus = await processGigPayment(contractId, freelancerId, paymentAmount);
+    const paymentStatus = await processGigPayment(
+      contractId,
+      freelancerId,
+      paymentAmount,
+    );
     res.json({ paymentStatus });
   } catch (error) {
     console.error("Error processing gig payment:", error);

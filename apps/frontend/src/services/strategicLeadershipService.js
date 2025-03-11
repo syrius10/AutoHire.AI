@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Fetch AI-powered strategic leadership potential evaluation.
  */
-export const fetchLeadershipPotential = async (experience, strategyScore, projects) => {
+export const fetchLeadershipPotential = async (
+  experience,
+  strategyScore,
+  projects,
+) => {
   try {
     const response = await axios.post("/api/strategic-leadership/evaluate", {
       experience,

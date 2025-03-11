@@ -7,7 +7,10 @@ import axios from "axios";
  */
 export const fetchReskillingRecommendation = async (reskillingData) => {
   try {
-    const response = await axios.post("/api/adaptive-reskilling/recommend", reskillingData);
+    const response = await axios.post(
+      "/api/adaptive-reskilling/recommend",
+      reskillingData,
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching reskilling recommendation:", error);

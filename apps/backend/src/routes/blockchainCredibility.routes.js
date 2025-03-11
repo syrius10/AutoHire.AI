@@ -12,11 +12,19 @@ const router = express.Router();
 router.post("/score", async (req, res) => {
   try {
     const { pastJobs, rating, paymentTimeliness } = req.body;
-    if (pastJobs === undefined || rating === undefined || paymentTimeliness === undefined) {
+    if (
+      pastJobs === undefined ||
+      rating === undefined ||
+      paymentTimeliness === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const credibilityScore = await getFreelancerCredibilityScore(pastJobs, rating, paymentTimeliness);
+    const credibilityScore = await getFreelancerCredibilityScore(
+      pastJobs,
+      rating,
+      paymentTimeliness,
+    );
     res.json({ credibilityScore });
   } catch (error) {
     console.error("Error calculating freelancer credibility score:", error);

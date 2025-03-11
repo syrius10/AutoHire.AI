@@ -17,7 +17,7 @@ X = data[:, :-1]  # Features: Experience, Strategic Thinking Score, Leadership P
 y = data[:, -1]   # Target: Leadership Potential (1 = High, 0 = Low)
 
 # Train AI model
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(random_state=42, learning_rate=0.1, n_estimators=100)
 model.fit(X, y)
 
 # Save trained model

@@ -13,10 +13,15 @@ router.post("/analyze", async (req, res) => {
   try {
     const { employeeId, reviewData } = req.body;
     if (!employeeId || !reviewData) {
-      return res.status(400).json({ error: "Employee ID and review data are required" });
+      return res
+        .status(400)
+        .json({ error: "Employee ID and review data are required" });
     }
 
-    const reviewResult = await generatePerformanceReview(employeeId, reviewData);
+    const reviewResult = await generatePerformanceReview(
+      employeeId,
+      reviewData,
+    );
     res.json(reviewResult);
   } catch (error) {
     console.error("Error generating performance review:", error);

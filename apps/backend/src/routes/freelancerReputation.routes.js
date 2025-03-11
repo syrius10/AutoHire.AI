@@ -4,8 +4,8 @@ import { analyzeFreelancerReputation } from "../services/freelancerReputationSer
 const router = express.Router();
 
 router.post("/analyze", async (req, res) => {
-    const result = await analyzeFreelancerReputation(req.body);
-    res.json(result);
+  const result = await analyzeFreelancerReputation(req.body);
+  res.json(result);
 });
 
 export default router;

@@ -4,7 +4,9 @@ const API_BASE = "/api/ai-work-assistant";
 
 export const fetchTaskAssignment = async (employeeRole) => {
   try {
-    const response = await axios.post(`${API_BASE}/assign-task`, { employeeRole });
+    const response = await axios.post(`${API_BASE}/assign-task`, {
+      employeeRole,
+    });
     return response.data.taskAssignment;
   } catch (error) {
     console.error("Error fetching task assignment:", error);

@@ -6,7 +6,7 @@ test("renders language selector and changes language", () => {
   render(
     <LanguageProvider>
       <LanguageSelector />
-    </LanguageProvider>
+    </LanguageProvider>,
   );
 
   const select = screen.getByRole("combobox");

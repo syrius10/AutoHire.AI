@@ -17,7 +17,7 @@ X = data[:, :-1]  # Input features: Experience, Leadership Courses, Promotions, 
 y = data[:, -1]   # Target: Promotion Readiness (1 = Ready, 0 = Not Ready)
 
 # ✅ Train Gradient Boosting Model (Strong Predictor)
-gb_model = GradientBoostingClassifier()
+gb_model = GradientBoostingClassifier(learning_rate=0.1, n_estimators=100, random_state=42)
 gb_model.fit(X, y)
 
 # ✅ Train KNN Model (Backup Predictor)

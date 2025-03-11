@@ -11,13 +11,19 @@ const router = express.Router();
  */
 router.post("/recommend", async (req, res) => {
   try {
-    const { demandScore, talentAvailability, costLiving, infraScore } = req.body;
-    
+    const { demandScore, talentAvailability, costLiving, infraScore } =
+      req.body;
+
     if (!demandScore || !talentAvailability || !costLiving || !infraScore) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const hiringRecommendation = await recommendHiringLocation(demandScore, talentAvailability, costLiving, infraScore);
+    const hiringRecommendation = await recommendHiringLocation(
+      demandScore,
+      talentAvailability,
+      costLiving,
+      infraScore,
+    );
     res.json(hiringRecommendation);
   } catch (error) {
     console.error("Error in location-based hiring recommendation:", error);

@@ -2,7 +2,11 @@ import axios from "axios";
 
 // Calls AI for real-time productivity & energy level tracking.
 
-export const fetchProductivityScore = async (sleepHours, workHours, breaksTaken) => {
+export const fetchProductivityScore = async (
+  sleepHours,
+  workHours,
+  breaksTaken,
+) => {
   try {
     const response = await axios.post("/api/productivity-energy/track", {
       sleepHours,

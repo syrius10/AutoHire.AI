@@ -19,7 +19,10 @@ const SelfUpgradingSkillsDashboard = () => {
       <h2 className="text-2xl font-bold">📚 AI-Driven Skill Upgrading</h2>
       {recommendation ? (
         <div className="mt-4 border p-4 rounded bg-white shadow">
-          <p><strong>Recommended Path:</strong> {recommendation.skillRecommendation}</p>
+          <p>
+            <strong>Recommended Path:</strong>{" "}
+            {recommendation.skillRecommendation}
+          </p>
         </div>
       ) : (
         <p>Loading skill recommendations...</p>

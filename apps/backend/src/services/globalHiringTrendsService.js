@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Calls AI model for hiring trend analysis.
  */
-export const getHiringTrends = async (industryGrowth, remoteWork, aiAdoption) => {
+export const getHiringTrends = async (
+  industryGrowth,
+  remoteWork,
+  aiAdoption,
+) => {
   try {
     const response = await axios.post("http://localhost:5120/hiring-trends", {
       industry_growth: industryGrowth,

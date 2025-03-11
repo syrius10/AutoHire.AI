@@ -18,7 +18,9 @@ const AILaborRightsDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">🛡️ AI Labor Rights & Ethics</h2>
       {laborRightsData ? (
-        <pre className="mt-4 border p-4 rounded">{JSON.stringify(laborRightsData, null, 2)}</pre>
+        <pre className="mt-4 border p-4 rounded">
+          {JSON.stringify(laborRightsData, null, 2)}
+        </pre>
       ) : (
         <p>Loading labor rights data...</p>
       )}

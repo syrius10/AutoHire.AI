@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const fetchTeamMoodOptimization = async () => {
   try {
-    const response = await axios.get("http://localhost:5001/api/team-mood/optimize");
+    const response = await axios.get(
+      "http://localhost:5001/api/team-mood/optimize",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching team mood insights:", error);

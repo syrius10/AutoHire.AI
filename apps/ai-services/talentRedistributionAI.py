@@ -19,7 +19,7 @@ data = np.array([
 X = data[:, :-1]  # Current Workforce, Department Productivity, Employee Overload
 y = data[:, -1]   # Suggested Talent Redistribution (+/- Employees)
 
-model = MLPRegressor(max_iter=500)
+model = MLPRegressor(max_iter=500, random_state=42, hidden_layer_sizes=(100, 50)
 model.fit(X, y)
 
 # Save trained model

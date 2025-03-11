@@ -15,10 +15,18 @@ const DecentralizedFinanceDashboard = () => {
       <h2 className="text-2xl font-bold">📊 Decentralized Finance Overview</h2>
       {financeData ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Total Earnings:</strong> ${financeData.total_earnings}</p>
-          <p><strong>Expenses:</strong> ${financeData.expenses}</p>
-          <p><strong>Blockchain Fees:</strong> ${financeData.blockchain_tx_fees}</p>
-          <p><strong>Tax Rate:</strong> {financeData.tax_rate}%</p>
+          <p>
+            <strong>Total Earnings:</strong> ${financeData.total_earnings}
+          </p>
+          <p>
+            <strong>Expenses:</strong> ${financeData.expenses}
+          </p>
+          <p>
+            <strong>Blockchain Fees:</strong> ${financeData.blockchain_tx_fees}
+          </p>
+          <p>
+            <strong>Tax Rate:</strong> {financeData.tax_rate}%
+          </p>
         </div>
       ) : (
         <p>Loading financial tracking data...</p>

@@ -1,7 +1,10 @@
 import { execSync } from "child_process";
 import path from "path";
 
-const aiScriptPath = path.join(process.cwd(), "apps/ai-services/realTimeProductivityAI.py");
+const aiScriptPath = path.join(
+  process.cwd(),
+  "apps/ai-services/realTimeProductivityAI.py",
+);
 
 export const getProductivityInsights = async () => {
   try {

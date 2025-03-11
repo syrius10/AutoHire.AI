@@ -8,7 +8,12 @@ export default function InternalJobRotationDashboard() {
   useEffect(() => {
     const loadRecommendations = async () => {
       try {
-        const data = await fetchJobRotationRecommendations("12345", "Software Engineer", ["JavaScript", "React"], 3);
+        const data = await fetchJobRotationRecommendations(
+          "12345",
+          "Software Engineer",
+          ["JavaScript", "React"],
+          3,
+        );
         setRecommendations(data);
       } catch (error) {
         console.error("Error fetching job rotation recommendations:", error);
@@ -23,17 +28,15 @@ export default function InternalJobRotationDashboard() {
   return (
     <div className="dashboard">
       <h2>Internal Job Rotation Insights</h2>
-      {loading ? (
-        <p>Loading recommendations...</p>
-      ) : recommendations.length > 0 ? (
+      {loading && <p>Loading recommendations...</p>}
+      {!loading && recommendations.length > 0 && (
         <ul>
-          {recommendations.map((rec, index) => (
-            <li key={index}>{rec}</li>
+          {recommendations.map((rec) => (
+            <li key={rec.id}>{rec}</li>
           ))}
         </ul>
-      ) : (
-        <p>No recommendations available.</p>
       )}
+      {!loading && recommendations.length === 0 && <p>No recommendations available.</p>}
     </div>
   );
 }

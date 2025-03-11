@@ -7,12 +7,15 @@ import axios from "axios";
  */
 export const fetchEmployeeDigitalTwin = async (employeeId) => {
   try {
-    const response = await axios.post("http://localhost:5001/api/employee-digital-twin/simulate", {
-      employeeId,
-      experience: 5, // Example static data
-      skillLevel: 7,
-      performanceScore: 85,
-    });
+    const response = await axios.post(
+      "http://localhost:5001/api/employee-digital-twin/simulate",
+      {
+        employeeId,
+        experience: 5, // Example static data
+        skillLevel: 7,
+        performanceScore: 85,
+      },
+    );
 
     return response.data;
   } catch (error) {

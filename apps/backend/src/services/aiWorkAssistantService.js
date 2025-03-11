@@ -1,7 +1,10 @@
 import { execSync } from "child_process";
 import path from "path";
 
-const aiScriptPath = path.join(process.cwd(), "apps/ai-services/aiWorkAssistantAI.py");
+const aiScriptPath = path.join(
+  process.cwd(),
+  "apps/ai-services/aiWorkAssistantAI.py",
+);
 
 export const getTaskAssignment = async (employeeRole) => {
   try {

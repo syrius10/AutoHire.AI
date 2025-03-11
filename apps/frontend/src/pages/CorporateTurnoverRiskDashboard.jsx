@@ -12,7 +12,9 @@ const CorporateTurnoverRiskDashboard = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold">📉 Corporate Turnover Risk Analysis</h2>
+      <h2 className="text-2xl font-bold">
+        📉 Corporate Turnover Risk Analysis
+      </h2>
       {turnoverData ? (
         <div className="mt-4">
           <p>🔍 Predicted Attrition Rate: {turnoverData.attritionRate}%</p>

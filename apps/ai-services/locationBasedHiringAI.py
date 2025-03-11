@@ -18,7 +18,7 @@ X = data[:, :-1]  # Features: Country Demand Score, Local Talent Availability, C
 y = data[:, -1]   # Target: Hiring Recommendation (1 = High, 0 = Low)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="sqrt")
 model.fit(X, y)
 
 # Save trained model

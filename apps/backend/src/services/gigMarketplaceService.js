@@ -7,11 +7,14 @@ import axios from "axios";
  */
 export const getGigMatches = async (skills, experience, preferredRate) => {
   try {
-    const response = await axios.post("http://localhost:5085/api/gig-marketplace/match", {
-      skills,
-      experience,
-      preferredRate,
-    });
+    const response = await axios.post(
+      "http://localhost:5085/api/gig-marketplace/match",
+      {
+        skills,
+        experience,
+        preferredRate,
+      },
+    );
     return response.data.matchedGigs;
   } catch (error) {
     console.error("Error fetching gig matches:", error);

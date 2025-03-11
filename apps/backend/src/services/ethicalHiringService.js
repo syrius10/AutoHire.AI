@@ -3,7 +3,7 @@ import axios from "axios";
 /**
  * Calls AI model to detect hiring bias and ensure fairness.
  */
-export const evaluateHiringDecision = async (
+export const evaluateHiringDecision = async ({
   genderBias,
   ageBias,
   ethnicBias,
@@ -11,8 +11,8 @@ export const evaluateHiringDecision = async (
   experience,
   skillMatch,
   educationLevel,
-  biasHistory
-) => {
+  biasHistory,
+}) => {
   try {
     const response = await axios.post("http://localhost:5084/detect_bias", {
       gender_bias: genderBias,

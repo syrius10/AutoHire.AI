@@ -15,9 +15,16 @@ const ProductivityTokensDashboard = () => {
       <h2 className="text-2xl font-bold">🎯 Productivity Token Rewards</h2>
       {tokens ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Earned Tokens:</strong> {tokens.total}</p>
-          <p><strong>Work Hours:</strong> {tokens.work_hours}</p>
-          <p><strong>Task Completion Rate:</strong> {tokens.task_completion_rate}%</p>
+          <p>
+            <strong>Earned Tokens:</strong> {tokens.total}
+          </p>
+          <p>
+            <strong>Work Hours:</strong> {tokens.work_hours}
+          </p>
+          <p>
+            <strong>Task Completion Rate:</strong> {tokens.task_completion_rate}
+            %
+          </p>
         </div>
       ) : (
         <p>Loading productivity tokens...</p>

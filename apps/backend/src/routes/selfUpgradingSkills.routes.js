@@ -16,7 +16,10 @@ router.post("/recommend", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const recommendation = await recommendLearningPath(currentSkill, industryDemand);
+    const recommendation = await recommendLearningPath(
+      currentSkill,
+      industryDemand,
+    );
     res.json({ skillRecommendation: recommendation });
   } catch (error) {
     console.error("Error recommending skill learning path:", error);

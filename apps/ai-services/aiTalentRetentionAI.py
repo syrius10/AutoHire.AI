@@ -16,7 +16,11 @@ X = data[:, :-1]  # Workload, Satisfaction, Career Growth, Work-Life Balance
 y = data[:, -1]   # Retention (1 = Likely to stay, 0 = High risk of leaving)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(
+    random_state=42,
+    min_samples_leaf=2,     # Prevents overfitting by requiring at least 2 samples per leaf
+    max_features="sqrt"     # Uses the square root of features to split, improving efficiency
+    )
 model.fit(X, y)
 
 # Save trained model

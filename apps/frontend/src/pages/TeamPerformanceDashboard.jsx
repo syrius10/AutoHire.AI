@@ -15,7 +15,7 @@ export default function TeamPerformanceDashboard() {
     const result = await analyzeTeamPerformance(
       scores.collaboration,
       scores.productivity,
-      scores.communication
+      scores.communication,
     );
     setAnalysis(result);
   };
@@ -23,23 +23,30 @@ export default function TeamPerformanceDashboard() {
   return (
     <div>
       <h1>Team Performance Analysis</h1>
-      <label>Collaboration Score: </label>
+      <label htmlFor="collaboration">Collaboration Score: </label>
       <input
+        id="collaboration"
         type="number"
         value={scores.collaboration}
-        onChange={(e) => setScores({ ...scores, collaboration: e.target.value })}
+        onChange={(e) =>
+          setScores({ ...scores, collaboration: e.target.value })
+        }
       />
-      <label>Productivity Score: </label>
+      <label htmlFor="productivity">Productivity Score: </label>
       <input
+        id="productivity"
         type="number"
         value={scores.productivity}
         onChange={(e) => setScores({ ...scores, productivity: e.target.value })}
       />
-      <label>Communication Score: </label>
+      <label htmlFor="communication">Communication Score: </label>
       <input
+        id="communication"
         type="number"
         value={scores.communication}
-        onChange={(e) => setScores({ ...scores, communication: e.target.value })}
+        onChange={(e) =>
+          setScores({ ...scores, communication: e.target.value })
+        }
       />
       <button onClick={handleAnalyze}>Analyze</button>
 

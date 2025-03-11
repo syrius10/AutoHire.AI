@@ -15,7 +15,11 @@ router.post("/check", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const complianceReport = await monitorAICompliance(hiringDecision, fairnessScore, legalStandards);
+    const complianceReport = await monitorAICompliance(
+      hiringDecision,
+      fairnessScore,
+      legalStandards,
+    );
     res.json({ complianceReport });
   } catch (error) {
     console.error("Error in AI compliance monitoring:", error);

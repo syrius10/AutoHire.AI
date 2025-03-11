@@ -1,5 +1,8 @@
 import express from "express";
-import { scheduleMeeting, generateFollowUpTasks } from "../services/meetingAutomationService.js";
+import {
+  scheduleMeeting,
+  generateFollowUpTasks,
+} from "../services/meetingAutomationService.js";
 
 // AI-powered meeting scheduling & automation
 
@@ -16,7 +19,11 @@ router.post("/schedule", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const meetingDetails = await scheduleMeeting(participants, agenda, dateTime);
+    const meetingDetails = await scheduleMeeting(
+      participants,
+      agenda,
+      dateTime,
+    );
     res.json(meetingDetails);
   } catch (error) {
     console.error("Error scheduling meeting:", error);

@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Calls AI model to assign productivity tokens.
  */
-export const assignProductivityTokens = async (work_hours, task_completion_rate, peer_review_score) => {
+export const assignProductivityTokens = async (
+  work_hours,
+  task_completion_rate,
+  peer_review_score,
+) => {
   try {
     const response = await axios.post("http://localhost:5131/assign-tokens", {
       work_hours,

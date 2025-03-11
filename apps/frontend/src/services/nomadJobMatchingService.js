@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const fetchNomadJobMatches = async () => {
   try {
-    const response = await axios.get("http://localhost:5125/nomad-job-matching");
+    const response = await axios.get(
+      "http://localhost:5125/nomad-job-matching",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching job matches:", error);

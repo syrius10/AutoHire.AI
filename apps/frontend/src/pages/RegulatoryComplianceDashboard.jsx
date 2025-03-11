@@ -16,9 +16,13 @@ const RegulatoryComplianceDashboard = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold">⚖️ AI-Powered Compliance Monitoring</h2>
+      <h2 className="text-2xl font-bold">
+        ⚖️ AI-Powered Compliance Monitoring
+      </h2>
       {complianceReport ? (
-        <pre className="mt-4 border p-4 rounded">{JSON.stringify(complianceReport, null, 2)}</pre>
+        <pre className="mt-4 border p-4 rounded">
+          {JSON.stringify(complianceReport, null, 2)}
+        </pre>
       ) : (
         <p>Loading compliance insights...</p>
       )}

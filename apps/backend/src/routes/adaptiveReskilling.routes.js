@@ -17,7 +17,11 @@ router.post("/recommend", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const reskillingRecommendation = await recommendReskilling(skillGap, learningSpeed, jobDemand);
+    const reskillingRecommendation = await recommendReskilling(
+      skillGap,
+      learningSpeed,
+      jobDemand,
+    );
     res.json({ reskillingRecommendation });
   } catch (error) {
     console.error("Error in reskilling recommendation:", error);

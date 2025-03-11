@@ -7,11 +7,14 @@ import axios from "axios";
  */
 export const startOnboarding = async (employeeName, role, department) => {
   try {
-    const response = await axios.post("http://localhost:5036/start_onboarding", {
-      employee_name: employeeName,
-      role,
-      department,
-    });
+    const response = await axios.post(
+      "http://localhost:5036/start_onboarding",
+      {
+        employee_name: employeeName,
+        role,
+        department,
+      },
+    );
     return response.data;
   } catch (error) {
     console.error("Error in employee onboarding:", error);

@@ -5,7 +5,10 @@ import axios from "axios";
  */
 export const optimizeJobRole = async (data) => {
   try {
-    const response = await axios.post("http://localhost:5103/role-optimization", data);
+    const response = await axios.post(
+      "http://localhost:5103/role-optimization",
+      data,
+    );
     return response.data;
   } catch (error) {
     console.error("Error optimizing job role:", error);

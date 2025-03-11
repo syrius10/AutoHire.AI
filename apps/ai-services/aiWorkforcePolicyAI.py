@@ -17,7 +17,12 @@ data = np.array([
 X = data[:, :-1]  # Features: Industry Type, Automation Level, Compliance Score
 y = data[:, -1]   # Policy Recommendation (1 = Approved, 0 = Needs Review)
 
-model = RandomForestClassifier()
+model = RandomForestClassifier(
+    random_state=42,  
+    min_samples_leaf=2,  # Ensures at least 2 samples per leaf to prevent overfitting
+    max_features="sqrt"  # Uses a subset of features to improve efficiency
+)
+
 model.fit(X, y)
 
 # Save model

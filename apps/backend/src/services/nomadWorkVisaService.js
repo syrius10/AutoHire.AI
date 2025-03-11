@@ -5,7 +5,12 @@ import axios from "axios";
 /**
  * Calls AI model for digital nomad work visa processing.
  */
-export const processWorkVisa = async (visaScore, skillShortage, jobMatch, experienceYears) => {
+export const processWorkVisa = async (
+  visaScore,
+  skillShortage,
+  jobMatch,
+  experienceYears,
+) => {
   try {
     const response = await axios.post("http://localhost:5127/process", {
       visa_score: visaScore,

@@ -13,11 +13,21 @@ router.post("/policy", async (req, res) => {
   try {
     const { stressLevel, workload, jobSatisfaction, productivity } = req.body;
 
-    if (stressLevel === undefined || workload === undefined || jobSatisfaction === undefined || productivity === undefined) {
+    if (
+      stressLevel === undefined ||
+      workload === undefined ||
+      jobSatisfaction === undefined ||
+      productivity === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const hrPolicy = await generateHRPolicy(stressLevel, workload, jobSatisfaction, productivity);
+    const hrPolicy = await generateHRPolicy(
+      stressLevel,
+      workload,
+      jobSatisfaction,
+      productivity,
+    );
     res.json({ recommendedPolicy: hrPolicy });
   } catch (error) {
     console.error("Error in HR policy recommendation:", error);

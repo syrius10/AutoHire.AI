@@ -17,7 +17,11 @@ router.post("/optimize", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const automationRecommendation = await automateWorkflow(taskComplexity, taskUrgency, availableStaff);
+    const automationRecommendation = await automateWorkflow(
+      taskComplexity,
+      taskUrgency,
+      availableStaff,
+    );
     res.json({ automationRecommendation });
   } catch (error) {
     console.error("Error optimizing workflow:", error);

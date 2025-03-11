@@ -20,11 +20,11 @@ X = data[:, :-1]  # All Features
 y = data[:, -1]   # Ethical Hiring Score (1 = Fair, 0 = Biased)
 
 # ✅ **Train Gradient Boosting Model (Strong Predictor)**
-gb_model = GradientBoostingClassifier()
+gb_model = GradientBoostingClassifier(learning_rate=0.1, n_estimators=100, random_state=42)
 gb_model.fit(X, y)
 
 # ✅ **Train Random Forest Model (Backup Predictor)**
-rf_model = RandomForestClassifier()
+rf_model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="auto")
 rf_model.fit(X, y)
 
 # ✅ **Save Both Models**

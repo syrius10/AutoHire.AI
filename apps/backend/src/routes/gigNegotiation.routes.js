@@ -27,7 +27,7 @@ router.post("/negotiate", async (req, res) => {
       freelancerId,
       employerId,
       jobDetails,
-      initialOffer
+      initialOffer,
     );
 
     res.json(negotiationResult);

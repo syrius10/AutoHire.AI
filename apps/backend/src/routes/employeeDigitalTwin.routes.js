@@ -17,7 +17,12 @@ router.post("/simulate", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const simulation = await simulateEmployeeTwin(employeeId, experience, skillLevel, performanceScore);
+    const simulation = await simulateEmployeeTwin(
+      employeeId,
+      experience,
+      skillLevel,
+      performanceScore,
+    );
     res.json(simulation);
   } catch (error) {
     console.error("Error in employee digital twin simulation:", error);

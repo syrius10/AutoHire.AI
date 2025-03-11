@@ -10,7 +10,11 @@ const GlobalWorkforceOrchestratorDashboard = () => {
   const [allocation, setAllocation] = useState(null);
 
   const handleOrchestration = async () => {
-    const result = await fetchWorkforceAllocation(region, Number(demand), Number(supply));
+    const result = await fetchWorkforceAllocation(
+      region,
+      Number(demand),
+      Number(supply),
+    );
     setAllocation(result);
   };
 
@@ -38,10 +42,17 @@ const GlobalWorkforceOrchestratorDashboard = () => {
         onChange={(e) => setSupply(e.target.value)}
         className="border p-2 mt-2 w-full"
       />
-      <button onClick={handleOrchestration} className="bg-blue-500 text-white px-4 py-2 mt-2 rounded">
+      <button
+        onClick={handleOrchestration}
+        className="bg-blue-500 text-white px-4 py-2 mt-2 rounded"
+      >
         Allocate Workforce
       </button>
-      {allocation && <pre className="mt-4 bg-gray-100 p-4 rounded">{JSON.stringify(allocation, null, 2)}</pre>}
+      {allocation && (
+        <pre className="mt-4 bg-gray-100 p-4 rounded">
+          {JSON.stringify(allocation, null, 2)}
+        </pre>
+      )}
     </div>
   );
 };

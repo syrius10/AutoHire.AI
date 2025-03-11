@@ -19,7 +19,9 @@ export default function HRProcessAutomationDashboard() {
       <h2 className="text-2xl font-bold">🤖 HR Process Automation</h2>
       {automationResults ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Automation Insights:</strong> {automationResults.result}</p>
+          <p>
+            <strong>Automation Insights:</strong> {automationResults.result}
+          </p>
         </div>
       ) : (
         <p>Loading HR automation insights...</p>

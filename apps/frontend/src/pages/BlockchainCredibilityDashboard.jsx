@@ -18,7 +18,9 @@ export default function BlockchainCredibilityDashboard() {
     <div className="p-6">
       <h2 className="text-2xl font-bold">🔗 Blockchain Credibility Score</h2>
       {credibilityScore ? (
-        <pre className="mt-4 p-4 border rounded bg-gray-100">{JSON.stringify(credibilityScore, null, 2)}</pre>
+        <pre className="mt-4 p-4 border rounded bg-gray-100">
+          {JSON.stringify(credibilityScore, null, 2)}
+        </pre>
       ) : (
         <p>Loading blockchain credibility score...</p>
       )}

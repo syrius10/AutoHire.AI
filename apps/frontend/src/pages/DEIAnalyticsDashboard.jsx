@@ -18,7 +18,9 @@ export default function DEIAnalyticsDashboard() {
     <div className="p-6">
       <h2 className="text-2xl font-bold">📊 DEI Analytics Dashboard</h2>
       {deiInsights ? (
-        <pre className="mt-4 p-4 border rounded">{JSON.stringify(deiInsights, null, 2)}</pre>
+        <pre className="mt-4 p-4 border rounded">
+          {JSON.stringify(deiInsights, null, 2)}
+        </pre>
       ) : (
         <p>Loading DEI insights...</p>
       )}

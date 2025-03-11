@@ -16,7 +16,7 @@ X = data[:, :-1]  # Experience, Skill Level, Performance Score
 y = data[:, -1]   # Predicted Productivity Score
 
 # Train AI model
-model = RandomForestRegressor(n_estimators=50)
+model = RandomForestRegressor(random_state=42, min_samples_leaf=2, max_features="sqrt", n_estimators=50)
 model.fit(X, y)
 
 # Save trained model

@@ -5,14 +5,22 @@ import axios from "axios";
 /**
  * Calls AI model for real-time mental wellness tracking & recommendations.
  */
-export const trackWellness = async (stressLevel, sleepHours, workHours, workload) => {
+export const trackWellness = async (
+  stressLevel,
+  sleepHours,
+  workHours,
+  workload,
+) => {
   try {
-    const response = await axios.post("http://localhost:5114/predict-wellness", {
-      stressLevel,
-      sleepHours,
-      workHours,
-      workload,
-    });
+    const response = await axios.post(
+      "http://localhost:5114/predict-wellness",
+      {
+        stressLevel,
+        sleepHours,
+        workHours,
+        workload,
+      },
+    );
     return response.data.wellnessScore;
   } catch (error) {
     console.error("Error tracking wellness:", error);

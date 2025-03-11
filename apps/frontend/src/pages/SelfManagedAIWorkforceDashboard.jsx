@@ -18,7 +18,9 @@ export default function SelfManagedAIWorkforceDashboard() {
     <div className="p-6">
       <h2 className="text-2xl font-bold">🤖 AI-Managed Workforce Insights</h2>
       {workforceData ? (
-        <pre className="mt-4 border p-4 rounded bg-gray-100">{JSON.stringify(workforceData, null, 2)}</pre>
+        <pre className="mt-4 border p-4 rounded bg-gray-100">
+          {JSON.stringify(workforceData, null, 2)}
+        </pre>
       ) : (
         <p>Loading AI workforce data...</p>
       )}

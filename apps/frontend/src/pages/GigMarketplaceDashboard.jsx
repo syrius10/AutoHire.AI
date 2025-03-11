@@ -19,8 +19,8 @@ export default function GigMarketplaceDashboard() {
       <h1>🔥 AI-Powered Gig Marketplace</h1>
       <ul>
         {gigs.length > 0 ? (
-          gigs.map((gig, index) => (
-            <li key={index}>
+          gigs.map((gig) => (
+            <li key={gig.id}>
               {gig.title} - {gig.rate} USD/hour
             </li>
           ))

@@ -17,7 +17,7 @@ X = data[:, :-1]  # Hiring Decision, Compliance Score, Past Violations
 y = data[:, -1]   # Compliance Status (1 = Compliant, 0 = Non-Compliant)
 
 # Train AI model
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(random_state=42, learning_rate=0.1)
 model.fit(X, y)
 
 # Save trained model

@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]  
 y = data[:, -1]  
 
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(random_state=42, learning_rate=0.1)
 model.fit(X, y)
 
 joblib.dump(model, "contract_risk_assessment.pkl")

@@ -5,7 +5,10 @@ import axios from "axios";
  */
 export const getRoleTransitionRecommendations = async (data) => {
   try {
-    const response = await axios.post("http://localhost:5104/role-transition", data);
+    const response = await axios.post(
+      "http://localhost:5104/role-transition",
+      data,
+    );
     return response.data;
   } catch (error) {
     console.error("Error getting role transition recommendations:", error);

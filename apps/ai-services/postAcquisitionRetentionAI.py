@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]
 y = data[:, -1]  # Retention Risk (1 = High, 0 = Low)
 
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="sqrt")
 model.fit(X, y)
 
 joblib.dump(model, "post_acquisition_retention_model.pkl")

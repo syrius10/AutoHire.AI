@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Calls AI-powered gig matching API for freelancers.
  */
-export const getGigRecommendation = async (skillMatch, marketDemand, rating) => {
+export const getGigRecommendation = async (
+  skillMatch,
+  marketDemand,
+  rating,
+) => {
   try {
     const response = await axios.post("http://localhost:5065/gig-matching", {
       skill_match: skillMatch,

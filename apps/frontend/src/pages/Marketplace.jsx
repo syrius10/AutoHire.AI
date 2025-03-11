@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import { fetchMarketplaceItems, purchaseMarketplaceItem } from "../services/marketplaceService";
+import {
+  fetchMarketplaceItems,
+  purchaseMarketplaceItem,
+} from "../services/marketplaceService";
 
 const Marketplace = () => {
   const [items, setItems] = useState([]);
@@ -17,7 +20,9 @@ const Marketplace = () => {
   return (
     <div className="p-6">
       <h2 className="text-2xl font-bold">🛍️ AutoHire.AI Marketplace</h2>
-      <p className="text-gray-600">Browse AI-powered hiring tools and premium features.</p>
+      <p className="text-gray-600">
+        Browse AI-powered hiring tools and premium features.
+      </p>
       <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {items.length > 0 ? (
           items.map((item) => (

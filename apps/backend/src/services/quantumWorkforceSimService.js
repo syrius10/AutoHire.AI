@@ -7,7 +7,10 @@ import { spawn } from "child_process";
  */
 export async function simulateQuantumWorkforce(workforceFactors) {
   return new Promise((resolve, reject) => {
-    const process = spawn("python3", ["../ai-services/quantumWorkforceSimAI.py", JSON.stringify(workforceFactors)]);
+    const process = spawn("python3", [
+      "../ai-services/quantumWorkforceSimAI.py",
+      JSON.stringify(workforceFactors),
+    ]);
 
     let output = "";
     process.stdout.on("data", (data) => {

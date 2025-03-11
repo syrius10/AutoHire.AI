@@ -1,5 +1,9 @@
 import express from "express";
-import { createProposal, castVote, getProposalResults } from "../services/smartVotingService.js";
+import {
+  createProposal,
+  castVote,
+  getProposalResults,
+} from "../services/smartVotingService.js";
 
 // AI-powered decentralized voting & governance.
 

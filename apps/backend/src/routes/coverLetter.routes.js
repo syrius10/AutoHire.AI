@@ -16,7 +16,12 @@ router.post("/", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const coverLetter = await generateCoverLetter(candidateName, jobTitle, companyName, skills);
+    const coverLetter = await generateCoverLetter(
+      candidateName,
+      jobTitle,
+      companyName,
+      skills,
+    );
     res.json({ coverLetter });
   } catch (error) {
     console.error("Error generating cover letter:", error);

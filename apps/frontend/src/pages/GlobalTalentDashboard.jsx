@@ -18,8 +18,8 @@ const GlobalTalentDashboard = () => {
     <div>
       <h2>Global Talent Insights</h2>
       <ul>
-        {talentData.map((candidate, index) => (
-          <li key={index}>
+        {talentData.map((candidate) => (
+          <li key={candidate.id}>
             {candidate.name} - {candidate.suitabilityScore}%
           </li>
         ))}

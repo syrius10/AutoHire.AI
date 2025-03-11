@@ -19,7 +19,9 @@ const EmotionAwareHRPolicyDashboard = () => {
       <h2 className="text-2xl font-bold">📋 Emotion-Aware HR Policies</h2>
       {policy ? (
         <div className="mt-4 border p-4 rounded bg-gray-100">
-          <p><strong>Recommendation:</strong> {policy.recommendedPolicy}</p>
+          <p>
+            <strong>Recommendation:</strong> {policy.recommendedPolicy}
+          </p>
         </div>
       ) : (
         <p>Loading HR policy recommendations...</p>

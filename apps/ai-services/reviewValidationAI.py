@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]  # Features
 y = data[:, -1]   # Labels
 
-model = IsolationForest(contamination=0.1)
+model = IsolationForest(contamination=0.1, random_state=42)
 model.fit(X)
 
 # Save trained model

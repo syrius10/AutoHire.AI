@@ -17,7 +17,7 @@ data = np.array([
 X = data[:, :-1]  # Features: Contract Type, Rights Score, Risk Factors
 y = data[:, -1]   # Compliance Level (1 = Compliant, 0 = Risk Detected)
 
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(learning_rate=0.1, random_state=42)
 model.fit(X, y)
 
 # Save model

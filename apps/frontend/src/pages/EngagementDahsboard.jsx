@@ -12,8 +12,10 @@ const EngagementDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">📊 Candidate Engagement Analytics</h2>
       <ul>
-        {stats.map((stat, index) => (
-          <li key={index}>{stat.event_type}: {stat.count}</li>
+        {stats.map((stat) => (
+          <li key={stat.event_type}>
+            {stat.event_type}: {stat.count}
+          </li>
         ))}
       </ul>
     </div>

@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Fetch AI-powered mentorship & coaching growth index.
  */
-export const fetchMentorshipInsights = async (sessions, feedback, engagement) => {
+export const fetchMentorshipInsights = async (
+  sessions,
+  feedback,
+  engagement,
+) => {
   try {
     const response = await axios.post("/api/mentorship-coach/analyze", {
       sessions,

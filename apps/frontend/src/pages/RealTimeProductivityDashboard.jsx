@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import { fetchProductivityInsights, fetchProductivityTips } from "../services/realTimeProductivityService";
+import {
+  fetchProductivityInsights,
+  fetchProductivityTips,
+} from "../services/realTimeProductivityService";
 
 const RealTimeProductivityDashboard = () => {
   const [insights, setInsights] = useState(null);
@@ -20,14 +23,18 @@ const RealTimeProductivityDashboard = () => {
       <h2 className="text-2xl font-bold">📊 Real-Time Productivity Tracking</h2>
       {insights ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Insights:</strong> {insights}</p>
+          <p>
+            <strong>Insights:</strong> {insights}
+          </p>
         </div>
       ) : (
         <p>Loading productivity insights...</p>
       )}
       {tips ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Productivity Tips:</strong> {tips}</p>
+          <p>
+            <strong>Productivity Tips:</strong> {tips}
+          </p>
         </div>
       ) : (
         <p>Loading coaching tips...</p>

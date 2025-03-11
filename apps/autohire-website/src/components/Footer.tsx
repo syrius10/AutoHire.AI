@@ -1,6 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { BrainCircuit, Linkedin, Twitter, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from "react-router-dom";
+import {
+  BrainCircuit,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -15,44 +20,79 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-sm text-gray-400 mb-4">
-              Revolutionizing recruitment with AI-powered solutions that match the right talent with the right opportunities.
+              Revolutionizing recruitment with AI-powered solutions that match
+              the right talent with the right opportunities.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Linkedin size={20} />
+              <a
+                href="https://www.linkedin.com"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Twitter size={20} />
+              <a
+                href="https://www.twitter.com"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Facebook size={20} />
+              <a
+                href="https://www.facebook.com"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a
+                href="https://www.instagram.com"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Instagram size={20} />
               </a>
             </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+                <Link
+                  to="/"
+                  className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/features" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+                <Link
+                  to="/features"
+                  className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                >
                   Features
                 </Link>
               </li>
               <li>
-                <Link to="/testimonials" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+                <Link
+                  to="/testimonials"
+                  className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                >
                   Testimonials
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+                <Link
+                  to="/contact"
+                  className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -63,34 +103,46 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+                <button
+                  className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                >
                   Blog
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+                <button
+                  className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                >
                   Case Studies
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+                <button
+                  className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                >
                   Documentation
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+                <button
+                  className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                >
                   Help Center
-                </a>
+                </button>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              Contact Us
+            </h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <Mail size={18} className="text-blue-400 mt-0.5" />
-                <span className="text-sm text-gray-400">contact@autohire.ai</span>
+                <span className="text-sm text-gray-400">
+                  contact@autohire.ai
+                </span>
               </li>
               <li className="flex items-start space-x-3">
                 <Phone size={18} className="text-blue-400 mt-0.5" />
@@ -109,18 +161,25 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500 mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} AutoHire.AI. All rights reserved.
+              &copy; {new Date().getFullYear()} AutoHire.AI. All rights
+              reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-sm text-gray-500 hover:text-blue-400 transition-colors">
+              <button
+                className="text-sm text-gray-500 hover:text-blue-400 transition-colors"
+              >
                 Privacy Policy
-              </a>
-              <a href="#" className="text-sm text-gray-500 hover:text-blue-400 transition-colors">
+              </button>
+              <button
+                className="text-sm text-gray-500 hover:text-blue-400 transition-colors"
+              >
                 Terms of Service
-              </a>
-              <a href="#" className="text-sm text-gray-500 hover:text-blue-400 transition-colors">
+              </button>
+              <button
+                className="text-sm text-gray-500 hover:text-blue-400 transition-colors"
+              >
                 Cookies
-              </a>
+              </button>
             </div>
           </div>
         </div>

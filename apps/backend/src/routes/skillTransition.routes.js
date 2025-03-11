@@ -15,7 +15,11 @@ router.post("/analyze", async (req, res) => {
       return res.status(400).json({ error: "All fields are required." });
     }
 
-    const transitionPaths = await getSkillTransitionPaths(employeeId, currentSkills, targetRole);
+    const transitionPaths = await getSkillTransitionPaths(
+      employeeId,
+      currentSkills,
+      targetRole,
+    );
     res.json({ transitionPaths });
   } catch (error) {
     console.error("Error analyzing skill transition paths:", error);

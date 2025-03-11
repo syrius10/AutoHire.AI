@@ -5,7 +5,11 @@ import path from "path";
 
 const AI_SCRIPT = path.resolve("apps/ai-services/selfAwareAutomationAI.py");
 
-export const analyzeAutomationStatus = (systemLoad, errorRate, taskCompletion) => {
+export const analyzeAutomationStatus = (
+  systemLoad,
+  errorRate,
+  taskCompletion,
+) => {
   return new Promise((resolve, reject) => {
     execFile(
       "python",
@@ -17,7 +21,7 @@ export const analyzeAutomationStatus = (systemLoad, errorRate, taskCompletion) =
         } else {
           resolve(JSON.parse(stdout));
         }
-      }
+      },
     );
   });
 };

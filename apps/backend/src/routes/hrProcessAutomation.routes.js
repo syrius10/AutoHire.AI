@@ -17,7 +17,12 @@ router.post("/automate", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const automationResult = await automateHRProcess(tenure, performanceScore, promotions, salary);
+    const automationResult = await automateHRProcess(
+      tenure,
+      performanceScore,
+      promotions,
+      salary,
+    );
     res.json({ automationResult });
   } catch (error) {
     console.error("Error automating HR process:", error);

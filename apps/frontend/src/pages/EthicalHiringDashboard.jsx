@@ -40,46 +40,119 @@ export default function EthicalHiringDashboard() {
       <h2 className="text-2xl font-bold">🧑‍⚖️ Ethical Hiring Evaluation</h2>
       <form onSubmit={handleSubmit} className="space-y-4 mt-4">
         <div>
-          <label>Gender Bias (0-3):</label>
-          <input type="number" name="genderBias" value={formData.genderBias} onChange={handleChange} min="0" max="3" className="border p-2 rounded w-full" />
+          <label htmlFor="genderBias">Gender Bias (0-3):</label>
+          <input
+            type="number"
+            id="genderBias"
+            name="genderBias"
+            value={formData.genderBias}
+            onChange={handleChange}
+            min="0"
+            max="3"
+            className="border p-2 rounded w-full"
+          />
         </div>
         <div>
-          <label>Age Bias (0-3):</label>
-          <input type="number" name="ageBias" value={formData.ageBias} onChange={handleChange} min="0" max="3" className="border p-2 rounded w-full" />
+          <label htmlFor="ageBias">Age Bias (0-3):</label>
+          <input
+            type="number"
+            name="ageBias"
+            value={formData.ageBias}
+            onChange={handleChange}
+            min="0"
+            max="3"
+            className="border p-2 rounded w-full"
+          />
         </div>
         <div>
-          <label>Ethnic Bias (0-3):</label>
-          <input type="number" name="ethnicBias" value={formData.ethnicBias} onChange={handleChange} min="0" max="3" className="border p-2 rounded w-full" />
+          <label htmlFor="ethnicBias">Ethnic Bias (0-3):</label>
+          <input
+            type="number"
+            name="ethnicBias"
+            value={formData.ethnicBias}
+            onChange={handleChange}
+            min="0"
+            max="3"
+            className="border p-2 rounded w-full"
+          />
         </div>
         <div>
-          <label>Disability Inclusion Score (1-10):</label>
-          <input type="number" name="disabilityInclusionScore" value={formData.disabilityInclusionScore} onChange={handleChange} min="1" max="10" className="border p-2 rounded w-full" />
+          <label htmlFor="disabilityInclusionScore">Disability Inclusion Score (1-10):</label>
+          <input
+            type="number"
+            name="disabilityInclusionScore"
+            value={formData.disabilityInclusionScore}
+            onChange={handleChange}
+            min="1"
+            max="10"
+            className="border p-2 rounded w-full"
+          />
         </div>
         <div>
-          <label>Experience (Years):</label>
-          <input type="number" name="experience" value={formData.experience} onChange={handleChange} min="1" max="50" className="border p-2 rounded w-full" />
+          <label htmlFor="experience">Experience (Years):</label>
+          <input
+            type="number"
+            id="experience"
+            name="experience"
+            value={formData.experience}
+            onChange={handleChange}
+            min="1"
+            max="50"
+            className="border p-2 rounded w-full"
+          />
         </div>
         <div>
-          <label>Skill Match (0-100%):</label>
-          <input type="number" name="skillMatch" value={formData.skillMatch} onChange={handleChange} min="0" max="100" className="border p-2 rounded w-full" />
+          <label htmlFor="skillMatch">Skill Match (0-100%):</label>
+          <input
+            type="number"
+            name="skillMatch"
+            value={formData.skillMatch}
+            onChange={handleChange}
+            min="0"
+            max="100"
+            className="border p-2 rounded w-full"
+          />
         </div>
         <div>
-          <label>Education Level (1-5):</label>
-          <input type="number" name="educationLevel" value={formData.educationLevel} onChange={handleChange} min="1" max="5" className="border p-2 rounded w-full" />
+          <label htmlFor="educationLevel">Education Level (1-5):</label>
+          <input
+            type="number"
+            name="educationLevel"
+            value={formData.educationLevel}
+            onChange={handleChange}
+            min="1"
+            max="5"
+            className="border p-2 rounded w-full"
+          />
         </div>
         <div>
-          <label>Past Bias Reports (0-1):</label>
-          <input type="number" name="biasHistory" value={formData.biasHistory} onChange={handleChange} min="0" max="1" className="border p-2 rounded w-full" />
+          <label htmlFor="biasHistory">Past Bias Reports (0-1):</label>
+          <input
+            type="number"
+            id="biasHistory"
+            name="biasHistory"
+            value={formData.biasHistory}
+            onChange={handleChange}
+            min="0"
+            max="1"
+            className="border p-2 rounded w-full"
+          />
         </div>
 
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded w-full" disabled={loading}>
+        <button
+          type="submit"
+          className="bg-blue-500 text-white p-2 rounded w-full"
+          disabled={loading}
+        >
           {loading ? "Evaluating..." : "Evaluate Hiring Fairness"}
         </button>
       </form>
 
       {result && (
         <div className="mt-4 border p-4 rounded bg-gray-100">
-          <p><strong>AI Decision:</strong> {result}</p>
+          <p>
+            <strong>AI Decision:</strong> {result}
+          </p>
         </div>
       )}
     </div>

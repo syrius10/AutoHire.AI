@@ -7,7 +7,7 @@ export const fetchPromotionReadiness = async (
   experience,
   courses,
   promotions,
-  performance
+  performance,
 ) => {
   try {
     const response = await axios.post("/api/succession-planning/predict", {

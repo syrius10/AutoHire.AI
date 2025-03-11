@@ -5,13 +5,20 @@ import axios from "axios";
 /**
  * Fetches AI-driven freelancer credibility score
  */
-export const getFreelancerCredibilityScore = async (pastJobs, rating, paymentTimeliness) => {
+export const getFreelancerCredibilityScore = async (
+  pastJobs,
+  rating,
+  paymentTimeliness,
+) => {
   try {
-    const response = await axios.post("http://localhost:5124/credibility-score", {
-      past_jobs: pastJobs,
-      rating,
-      payment_timeliness: paymentTimeliness,
-    });
+    const response = await axios.post(
+      "http://localhost:5124/credibility-score",
+      {
+        past_jobs: pastJobs,
+        rating,
+        payment_timeliness: paymentTimeliness,
+      },
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching credibility score:", error);

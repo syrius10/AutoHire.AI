@@ -16,7 +16,7 @@ X = data[:, :-1]  # Years of Experience, Skill Match %, Previous Job Success
 y = data[:, -1]   # Job Application Success (1 = Yes, 0 = No)
 
 # Train AI model
-model = MLPClassifier(hidden_layer_sizes=(10, 5), max_iter=500)
+model = MLPClassifier(hidden_layer_sizes=(10, 5), max_iter=500, random_state=42)
 model.fit(X, y)
 
 # Save trained model

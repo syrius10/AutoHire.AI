@@ -17,7 +17,9 @@ const AutoHireMobile = () => {
 
   return (
     <View style={{ padding: 16 }}>
-      <Text style={{ fontSize: 22, fontWeight: "bold" }}>📱 AutoHire Mobile</Text>
+      <Text style={{ fontSize: 22, fontWeight: "bold" }}>
+        📱 AutoHire Mobile
+      </Text>
       <FlatList
         data={jobs}
         keyExtractor={(job) => job.id.toString()}

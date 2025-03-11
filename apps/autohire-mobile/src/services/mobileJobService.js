@@ -18,7 +18,10 @@ export const fetchJobs = async () => {
  */
 export const applyForJob = async (userId, jobId) => {
   try {
-    const response = await axios.post("https://autohire.ai/api/mobile/apply", { userId, jobId });
+    const response = await axios.post("https://autohire.ai/api/mobile/apply", {
+      userId,
+      jobId,
+    });
     return response.data;
   } catch (error) {
     console.error("Error applying for job:", error);

@@ -13,11 +13,19 @@ router.post("/optimize", async (req, res) => {
   try {
     const { workload, preferredHours, energyLevel } = req.body;
 
-    if (workload === undefined || preferredHours === undefined || energyLevel === undefined) {
+    if (
+      workload === undefined ||
+      preferredHours === undefined ||
+      energyLevel === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const optimizedSchedule = await optimizeWorkSchedule(workload, preferredHours, energyLevel);
+    const optimizedSchedule = await optimizeWorkSchedule(
+      workload,
+      preferredHours,
+      energyLevel,
+    );
     res.json({ optimizedSchedule });
   } catch (error) {
     console.error("Error in work schedule optimization:", error);

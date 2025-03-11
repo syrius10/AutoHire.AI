@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "axios";
 
 const AI_SCORING_URL = "http://localhost:5005/analyze-interview";
 
@@ -10,16 +10,16 @@ const AI_SCORING_URL = "http://localhost:5005/analyze-interview";
  * @returns {Promise<Object>} - AI-generated scoring and feedback.
  */
 export const analyzeInterviewScore = async (candidateId, jobId, transcript) => {
-    try {
-      const response = await axios.post(AI_SCORING_URL, {
-        candidateId,
-        jobId,
-        transcript,
-      });
-  
-      return response.data; // { score: 85, feedback: "Strong response on leadership skills." }
-    } catch (error) {
-      console.error("Error analyzing interview score:", error);
-      throw new Error("Interview scoring failed");
-    }
-  };
+  try {
+    const response = await axios.post(AI_SCORING_URL, {
+      candidateId,
+      jobId,
+      transcript,
+    });
+
+    return response.data; // { score: 85, feedback: "Strong response on leadership skills." }
+  } catch (error) {
+    console.error("Error analyzing interview score:", error);
+    throw new Error("Interview scoring failed");
+  }
+};

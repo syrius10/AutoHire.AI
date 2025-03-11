@@ -13,11 +13,21 @@ router.post("/track", async (req, res) => {
   try {
     const { stressLevel, sleepHours, workHours, workload } = req.body;
 
-    if (stressLevel === undefined || sleepHours === undefined || workHours === undefined || workload === undefined) {
+    if (
+      stressLevel === undefined ||
+      sleepHours === undefined ||
+      workHours === undefined ||
+      workload === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const wellnessReport = await trackWellness(stressLevel, sleepHours, workHours, workload);
+    const wellnessReport = await trackWellness(
+      stressLevel,
+      sleepHours,
+      workHours,
+      workload,
+    );
     res.json({ wellnessReport });
   } catch (error) {
     console.error("Error in wellness tracking:", error);

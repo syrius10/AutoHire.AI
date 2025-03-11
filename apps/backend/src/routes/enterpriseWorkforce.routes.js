@@ -16,7 +16,11 @@ router.post("/plan", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const workforcePlan = await getWorkforcePlan(departmentSize, revenueGrowth, attritionRate);
+    const workforcePlan = await getWorkforcePlan(
+      departmentSize,
+      revenueGrowth,
+      attritionRate,
+    );
     res.json(workforcePlan);
   } catch (error) {
     console.error("Error in workforce planning:", error);

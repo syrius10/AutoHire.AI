@@ -7,11 +7,14 @@ import axios from "axios";
  */
 export const generatePortfolio = async (name, expertise, projects) => {
   try {
-    const response = await axios.post("http://localhost:5052/generate-portfolio", {
-      name,
-      expertise,
-      projects,
-    });
+    const response = await axios.post(
+      "http://localhost:5052/generate-portfolio",
+      {
+        name,
+        expertise,
+        projects,
+      },
+    );
     return response.data;
   } catch (error) {
     console.error("Error generating portfolio:", error);

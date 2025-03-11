@@ -22,7 +22,7 @@ X = data[:, :-1]  # Features: Stress Level, Workload, Job Satisfaction, Producti
 y = data[:, -1]   # Target: HR Policy (1 = Adaptive Policy, 0 = Standard Policy)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(min_samples_leaf=2, max_features="sqrt", random_state=42)
 model.fit(X, y)
 
 # Save trained model

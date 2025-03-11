@@ -7,4 +7,4 @@ describe("Job Application Flow", () => {
       expect(txt).to.contains("Application submitted!");
     });
   });
-}); 
+});

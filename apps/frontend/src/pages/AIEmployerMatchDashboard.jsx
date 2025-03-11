@@ -14,7 +14,9 @@ const AIEmployerMatchDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">🔗 AI Employer-Candidate Matching</h2>
       {matchData ? (
-        <pre className="mt-4 p-4 border rounded bg-gray-100">{JSON.stringify(matchData, null, 2)}</pre>
+        <pre className="mt-4 p-4 border rounded bg-gray-100">
+          {JSON.stringify(matchData, null, 2)}
+        </pre>
       ) : (
         <p>Loading employer matches...</p>
       )}

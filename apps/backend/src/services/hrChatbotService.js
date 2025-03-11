@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const handleHRChatQuery = async (message) => {
   try {
-    const response = await axios.post("http://localhost:5037/hr_chat", { message });
+    const response = await axios.post("http://localhost:5037/hr_chat", {
+      message,
+    });
     return response.data;
   } catch (error) {
     console.error("Error in HR chatbot:", error);

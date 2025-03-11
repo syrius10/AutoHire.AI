@@ -19,7 +19,10 @@ const SelfAdaptingCareerDashboard = () => {
       <h2 className="text-2xl font-bold">🚀 AI-Powered Career Progression</h2>
       {careerProgression ? (
         <div className="mt-4 border p-4 rounded bg-white shadow">
-          <p><strong>Career Prediction:</strong> {careerProgression.careerGrowthPrediction}</p>
+          <p>
+            <strong>Career Prediction:</strong>{" "}
+            {careerProgression.careerGrowthPrediction}
+          </p>
         </div>
       ) : (
         <p>Loading career predictions...</p>

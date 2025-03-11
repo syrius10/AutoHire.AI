@@ -18,7 +18,7 @@ X = data[:, :-1]  # Skills Demand, Talent Availability, Relocation Feasibility
 y = data[:, -1]   # Best Country (1 = Yes, 0 = No)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="auto")
 model.fit(X, y)
 
 # Save trained model

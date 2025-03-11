@@ -4,11 +4,14 @@ import axios from "axios";
 
 export const trackProductivity = async (sleepHours, workHours, breaksTaken) => {
   try {
-    const response = await axios.post("http://localhost:5129/track_productivity", {
-      sleep_hours: sleepHours,
-      work_hours: workHours,
-      breaks_taken: breaksTaken,
-    });
+    const response = await axios.post(
+      "http://localhost:5129/track_productivity",
+      {
+        sleep_hours: sleepHours,
+        work_hours: workHours,
+        breaks_taken: breaksTaken,
+      },
+    );
 
     return response.data;
   } catch (error) {

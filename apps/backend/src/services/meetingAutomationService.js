@@ -7,11 +7,14 @@ import axios from "axios";
  */
 export const scheduleMeeting = async (participants, agenda, dateTime) => {
   try {
-    const response = await axios.post("http://localhost:5103/schedule-meeting", {
-      participants,
-      agenda,
-      dateTime,
-    });
+    const response = await axios.post(
+      "http://localhost:5103/schedule-meeting",
+      {
+        participants,
+        agenda,
+        dateTime,
+      },
+    );
     return response.data;
   } catch (error) {
     console.error("Error scheduling meeting:", error);
@@ -24,9 +27,12 @@ export const scheduleMeeting = async (participants, agenda, dateTime) => {
  */
 export const generateFollowUpTasks = async (meetingId) => {
   try {
-    const response = await axios.post("http://localhost:5104/generate-follow-up", {
-      meetingId,
-    });
+    const response = await axios.post(
+      "http://localhost:5104/generate-follow-up",
+      {
+        meetingId,
+      },
+    );
     return response.data;
   } catch (error) {
     console.error("Error generating follow-up tasks:", error);

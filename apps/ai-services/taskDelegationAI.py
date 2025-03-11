@@ -17,7 +17,7 @@ X = data[:, :-1]  # Skill Level, Workload, Task Complexity
 y = data[:, -1]   # Task Assignment Priority (1 = High, 0 = Low)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="sqrt")
 model.fit(X, y)
 
 # Save trained model

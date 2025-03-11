@@ -12,7 +12,9 @@ router.post("/", async (req, res) => {
     const prediction = await predictIndustryDemand(year, growthRate);
     res.json({ predictedSkillDemand: prediction });
   } catch (error) {
-    res.status(500).json({ error: "Failed to predict industry demand trends." });
+    res
+      .status(500)
+      .json({ error: "Failed to predict industry demand trends." });
   }
 });
 

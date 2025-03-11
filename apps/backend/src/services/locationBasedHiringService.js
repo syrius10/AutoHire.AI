@@ -5,7 +5,12 @@ import axios from "axios";
 /**
  * Calls AI hiring model to get location-based recommendations.
  */
-export const recommendHiringLocation = async (demandScore, talentAvailability, costLiving, infraScore) => {
+export const recommendHiringLocation = async (
+  demandScore,
+  talentAvailability,
+  costLiving,
+  infraScore,
+) => {
   try {
     const response = await axios.post("http://localhost:5126/recommend", {
       demand_score: demandScore,

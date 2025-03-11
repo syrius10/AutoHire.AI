@@ -16,7 +16,11 @@ router.post("/predict", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const forecast = await forecastHiringDemand(year, industryGrowth, hiringBudget);
+    const forecast = await forecastHiringDemand(
+      year,
+      industryGrowth,
+      hiringBudget,
+    );
     res.json(forecast);
   } catch (error) {
     console.error("Error in workforce forecasting:", error);

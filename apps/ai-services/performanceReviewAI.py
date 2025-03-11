@@ -16,7 +16,7 @@ X = data[:, :-1]  # Task Completion %, Peer Feedback, Manager Rating
 y = data[:, -1]   # Performance Score (out of 100)
 
 # Train AI model
-model = GradientBoostingRegressor()
+model = GradientBoostingRegressor(random_state=42, n_estimators=100, max_depth=3, learning_rate=0.1)
 model.fit(X, y)
 
 # Save trained model

@@ -7,7 +7,10 @@ import axios from "axios";
  */
 export const analyzeSustainability = async (workforceData) => {
   try {
-    const response = await axios.post("http://localhost:5083/predict_sustainability", workforceData);
+    const response = await axios.post(
+      "http://localhost:5083/predict_sustainability",
+      workforceData,
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching workforce sustainability insights:", error);

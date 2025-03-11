@@ -2,7 +2,11 @@ import axios from "axios";
 
 // Calls AI for internal talent redistribution & optimization
 
-export const fetchTalentRedistribution = async (currentWorkforce, departmentProductivity, employeeOverload) => {
+export const fetchTalentRedistribution = async (
+  currentWorkforce,
+  departmentProductivity,
+  employeeOverload,
+) => {
   try {
     const response = await axios.post("/api/talent-redistribution/optimize", {
       currentWorkforce,

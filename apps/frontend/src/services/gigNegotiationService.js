@@ -7,7 +7,10 @@ import axios from "axios";
  */
 export const negotiateWorkTerms = async (negotiationData) => {
   try {
-    const response = await axios.post("http://localhost:5001/api/gig-negotiation/negotiate", negotiationData);
+    const response = await axios.post(
+      "http://localhost:5001/api/gig-negotiation/negotiate",
+      negotiationData,
+    );
     return response.data;
   } catch (error) {
     console.error("Error in AI negotiation:", error);

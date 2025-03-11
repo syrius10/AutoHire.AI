@@ -17,7 +17,7 @@ X = data[:, :-1]  # Features: Country Visa Score, Skill Shortage, Job Type Match
 y = data[:, -1]   # Target: Work Visa Approval (1 = High Chance, 0 = Low Chance)
 
 # Train AI model
-model = LogisticRegression()
+model = LogisticRegression(random_state=42)
 model.fit(X, y)
 
 # Save trained model

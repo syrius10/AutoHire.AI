@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Calls AI model to check work visa eligibility.
  */
-export const checkVisaEligibility = async (experience, jobOffer, countryStrictness) => {
+export const checkVisaEligibility = async (
+  experience,
+  jobOffer,
+  countryStrictness,
+) => {
   try {
     const response = await axios.post("http://localhost:5080/work-visa-check", {
       experience,

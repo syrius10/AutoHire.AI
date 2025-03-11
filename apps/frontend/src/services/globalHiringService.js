@@ -7,7 +7,10 @@ import axios from "axios";
  */
 export const fetchHiringRecommendations = async (params) => {
   try {
-    const response = await axios.post("/api/global-hiring/recommendations", params);
+    const response = await axios.post(
+      "/api/global-hiring/recommendations",
+      params,
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching hiring recommendations:", error);

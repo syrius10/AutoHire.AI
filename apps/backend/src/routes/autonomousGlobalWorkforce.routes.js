@@ -10,13 +10,13 @@ const router = express.Router();
  * @desc AI-driven workforce regulation & automation
  */
 router.get("/regulate", async (req, res) => {
-    try {
-        const regulationStatus = await regulateAIWorkforce();
-        res.json({ status: "Success", regulation: regulationStatus });
-    } catch (error) {
-        console.error("Error regulating AI workforce:", error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
+  try {
+    const regulationStatus = await regulateAIWorkforce();
+    res.json({ status: "Success", regulation: regulationStatus });
+  } catch (error) {
+    console.error("Error regulating AI workforce:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 export default router;

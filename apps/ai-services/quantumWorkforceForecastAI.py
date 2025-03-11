@@ -18,7 +18,7 @@ class QuantumWorkforceForecaster:
         X = self.data[:, :-1]  # Features: Economic Growth, AI Adoption, Hiring Rate
         y = self.data[:, -1]   # Target: Workforce Demand
 
-        self.model = GradientBoostingRegressor()
+        self.model = GradientBoostingRegressor(learning_rate=0.1, n_estimators=100, random_state=42)
         self.model.fit(X, y)
 
         joblib.dump(self.model, "quantum_workforce_forecast.pkl")

@@ -12,7 +12,7 @@ data = np.array([
     [2000, 90, 9.2], 
 ])
 
-model = KMeans(n_clusters=2)
+model = KMeans(n_clusters=2, random_state=42)
 model.fit(data)
 
 joblib.dump(model, "workforce_integration_model.pkl")

@@ -5,7 +5,8 @@ from scipy.optimize import minimize
 
 class QuantumWorkforceSimulator:
     def __init__(self):
-        self.workforce_data = np.random.rand(10, 5)  # Simulated workforce attributes
+        rng = np.random.default_rng(seed=42)
+        self.workforce_data = rng.random((10, 5))  # Simulated workforce attributes
 
     def simulate_scenario(self, workforce_factors):
         """

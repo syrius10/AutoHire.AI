@@ -16,10 +16,15 @@ export default function StrategicLeadershipDashboard() {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold">🏆 AI Strategic Leadership Analysis</h2>
+      <h2 className="text-2xl font-bold">
+        🏆 AI Strategic Leadership Analysis
+      </h2>
       {leadershipData ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Leadership Potential:</strong> {leadershipData.leadershipPotential}</p>
+          <p>
+            <strong>Leadership Potential:</strong>{" "}
+            {leadershipData.leadershipPotential}
+          </p>
         </div>
       ) : (
         <p>Loading strategic leadership insights...</p>

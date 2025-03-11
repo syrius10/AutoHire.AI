@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { fetchWorkforceInsights, fetchAttritionRisk, fetchDiversityInsights } from "../services/workforceInsightsService";
+import {
+  fetchWorkforceInsights,
+  fetchAttritionRisk,
+  fetchDiversityInsights,
+} from "../services/workforceInsightsService";
 
 const WorkforceIntelligenceDashboard = () => {
   const [insights, setInsights] = useState({});
@@ -8,8 +12,13 @@ const WorkforceIntelligenceDashboard = () => {
 
   useEffect(() => {
     fetchWorkforceInsights().then(setInsights);
-    fetchAttritionRisk({ satisfaction: 0.7, workload: "medium" }).then(setAttrition);
-    fetchDiversityInsights({ gender_ratio: { male: 50, female: 50 }, ethnic_diversity: { white: 50, black: 30, asian: 20 } }).then(setDiversity);
+    fetchAttritionRisk({ satisfaction: 0.7, workload: "medium" }).then(
+      setAttrition,
+    );
+    fetchDiversityInsights({
+      gender_ratio: { male: 50, female: 50 },
+      ethnic_diversity: { white: 50, black: 30, asian: 20 },
+    }).then(setDiversity);
   }, []);
 
   return (

@@ -16,7 +16,10 @@ router.post("/enhance", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const meetingEnhancements = await optimizeMeeting(participants, languageDiversity);
+    const meetingEnhancements = await optimizeMeeting(
+      participants,
+      languageDiversity,
+    );
     res.json({ enhancements: meetingEnhancements });
   } catch (error) {
     console.error("Error optimizing holographic meetings:", error);

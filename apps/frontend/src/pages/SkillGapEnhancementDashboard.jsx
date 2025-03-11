@@ -18,8 +18,8 @@ export default function SkillGapEnhancementDashboard() {
     <div>
       <h1>Skill Gap Enhancements</h1>
       <ul>
-        {enhancements.map((enhancement, index) => (
-          <li key={index}>{enhancement}</li>
+        {enhancements.map((enhancement) => (
+          <li key={enhancement.id}>{enhancement.name}</li>
         ))}
       </ul>
     </div>

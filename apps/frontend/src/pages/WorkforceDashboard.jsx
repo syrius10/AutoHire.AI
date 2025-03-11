@@ -5,8 +5,12 @@ const WorkforceDashboard = () => {
   const [forecast, setForecast] = useState(null);
 
   useEffect(() => {
-    getWorkforceForecast({ year: 2025, quarter: 2, industry_growth_rate: 3.5, job_postings: 5000 })
-      .then(setForecast);
+    getWorkforceForecast({
+      year: 2025,
+      quarter: 2,
+      industry_growth_rate: 3.5,
+      job_postings: 5000,
+    }).then(setForecast);
   }, []);
 
   return (
@@ -15,7 +19,9 @@ const WorkforceDashboard = () => {
       {forecast && (
         <div className="mt-4 p-4 bg-gray-100 rounded shadow-md">
           <h4 className="text-lg font-semibold">Projected Hiring Needs</h4>
-          <p>Estimated workforce demand: <strong>{forecast.forecast}</strong></p>
+          <p>
+            Estimated workforce demand: <strong>{forecast.forecast}</strong>
+          </p>
         </div>
       )}
     </div>

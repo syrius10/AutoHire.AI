@@ -16,9 +16,13 @@ const CollaborationAssistantDashboard = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold">🤝 Workforce Collaboration Insights</h2>
+      <h2 className="text-2xl font-bold">
+        🤝 Workforce Collaboration Insights
+      </h2>
       {insights ? (
-        <pre className="mt-4 border p-4 rounded">{JSON.stringify(insights, null, 2)}</pre>
+        <pre className="mt-4 border p-4 rounded">
+          {JSON.stringify(insights, null, 2)}
+        </pre>
       ) : (
         <p>Loading collaboration insights...</p>
       )}

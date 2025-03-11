@@ -1,5 +1,8 @@
 import express from "express";
-import { generateSmartContract, enforceSmartContract } from "../services/smartWorkContractsService.js";
+import {
+  generateSmartContract,
+  enforceSmartContract,
+} from "../services/smartWorkContractsService.js";
 
 // AI-powered smart contracts for automated work agreements.
 
@@ -17,7 +20,11 @@ router.post("/generate", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const contract = await generateSmartContract(employer, freelancer, contractTerms);
+    const contract = await generateSmartContract(
+      employer,
+      freelancer,
+      contractTerms,
+    );
     res.json(contract);
   } catch (error) {
     console.error("Error generating smart contract:", error);

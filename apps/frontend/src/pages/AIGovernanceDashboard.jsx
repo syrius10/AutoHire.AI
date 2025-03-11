@@ -18,7 +18,9 @@ const AIGovernanceDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">⚖️ AI Governance Monitoring</h2>
       {governanceData ? (
-        <pre className="mt-4 border p-4 rounded">{JSON.stringify(governanceData, null, 2)}</pre>
+        <pre className="mt-4 border p-4 rounded">
+          {JSON.stringify(governanceData, null, 2)}
+        </pre>
       ) : (
         <p>Loading governance data...</p>
       )}

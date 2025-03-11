@@ -6,13 +6,18 @@ import path from "path";
 /**
  * Calls AI model to negotiate freelancer work terms & payment.
  */
-export const negotiateWorkTerms = (freelancerId, employerId, jobDetails, initialOffer) => {
+export const negotiateWorkTerms = (
+  freelancerId,
+  employerId,
+  jobDetails,
+  initialOffer,
+) => {
   return new Promise((resolve, reject) => {
     const scriptPath = path.join(
       process.cwd(),
       "apps",
       "ai-services",
-      "gigNegotiationAI.py"
+      "gigNegotiationAI.py",
     );
 
     const pythonProcess = spawn("python3", [
@@ -20,7 +25,7 @@ export const negotiateWorkTerms = (freelancerId, employerId, jobDetails, initial
       freelancerId,
       employerId,
       JSON.stringify(jobDetails),
-      initialOffer
+      initialOffer,
     ]);
 
     let output = "";

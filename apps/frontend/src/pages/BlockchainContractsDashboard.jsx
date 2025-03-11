@@ -19,8 +19,8 @@ export default function BlockchainContractsDashboard() {
       <h1>📜 AI-Generated Smart Contracts</h1>
       <ul>
         {contracts.length > 0 ? (
-          contracts.map((contract, index) => (
-            <li key={index}>
+          contracts.map((contract) => (
+            <li key={contract.id}>
               Contract ID: {contract.id} - Status: {contract.status}
             </li>
           ))

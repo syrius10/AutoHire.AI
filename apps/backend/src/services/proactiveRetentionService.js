@@ -5,7 +5,10 @@ import axios from "axios";
  */
 export const predictRetentionRisk = async (data) => {
   try {
-    const response = await axios.post("http://localhost:5038/predict_retention", data);
+    const response = await axios.post(
+      "http://localhost:5038/predict_retention",
+      data,
+    );
     return response.data;
   } catch (error) {
     console.error("Error predicting retention risk:", error);

@@ -20,7 +20,9 @@ const AutonomousTeamDashboard = () => {
       {teams.length > 0 ? (
         <ul className="mt-4 border p-4 rounded">
           {teams.map((team, index) => (
-            <li key={index} className="p-2 border-b">{team.name} - {team.specialization}</li>
+            <li key={index} className="p-2 border-b">
+              {team.name} - {team.specialization}
+            </li>
           ))}
         </ul>
       ) : (

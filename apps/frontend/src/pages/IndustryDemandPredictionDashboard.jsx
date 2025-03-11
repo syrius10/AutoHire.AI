@@ -18,8 +18,8 @@ export default function IndustryDemandPredictionDashboard() {
     <div>
       <h1>Industry Demand Predictions</h1>
       <ul>
-        {predictions.map((prediction, index) => (
-          <li key={index}>
+        {predictions.map((prediction) => (
+          <li key={prediction.id}>
             {prediction.industry}: {prediction.demand_level}
           </li>
         ))}

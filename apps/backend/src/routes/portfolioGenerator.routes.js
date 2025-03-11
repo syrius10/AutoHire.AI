@@ -13,7 +13,9 @@ router.post("/", async (req, res) => {
   try {
     const { name, expertise, projects } = req.body;
     if (!name || !expertise || !projects) {
-      return res.status(400).json({ error: "Name, expertise, and projects are required" });
+      return res
+        .status(400)
+        .json({ error: "Name, expertise, and projects are required" });
     }
 
     const portfolio = await generatePortfolio(name, expertise, projects);

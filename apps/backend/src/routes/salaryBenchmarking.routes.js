@@ -9,10 +9,17 @@ const router = express.Router();
 router.post("/", async (req, res) => {
   try {
     const { role, experience, industry, location } = req.body;
-    const salary = await getSalaryBenchmark(role, experience, industry, location);
+    const salary = await getSalaryBenchmark(
+      role,
+      experience,
+      industry,
+      location,
+    );
     res.json({ salary });
   } catch (error) {
-    res.status(500).json({ error: "Failed to fetch salary benchmarking insights." });
+    res
+      .status(500)
+      .json({ error: "Failed to fetch salary benchmarking insights." });
   }
 });
 

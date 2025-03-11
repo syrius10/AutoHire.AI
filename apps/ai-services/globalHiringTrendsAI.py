@@ -26,7 +26,7 @@ X = data[:, :-1]  # Features: Industry Growth Rate, Remote Work %, AI Adoption S
 y = data[:, -1]   # Target: Hiring Demand (1 = High, 0 = Low)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, n_estimators=100, min_samples_leaf=2, max_features="auto")
 model.fit(X, y)
 
 # Save model

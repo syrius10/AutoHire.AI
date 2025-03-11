@@ -16,7 +16,12 @@ export const fetchMarketplaceItems = async () => {
 /**
  * Add a new premium feature or AI tool to the marketplace.
  */
-export const addMarketplaceItem = async (name, description, price, availability) => {
+export const addMarketplaceItem = async (
+  name,
+  description,
+  price,
+  availability,
+) => {
   try {
     const response = await axios.post("/api/marketplace/add", {
       name,

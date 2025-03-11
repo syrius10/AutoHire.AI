@@ -5,7 +5,9 @@ const EfficiencyTrackingDashboard = () => {
   const [efficiency, setEfficiency] = useState(null);
 
   useEffect(() => {
-    getEfficiencyAnalysis({ year: 2025, job_postings: 150 }).then(setEfficiency);
+    getEfficiencyAnalysis({ year: 2025, job_postings: 150 }).then(
+      setEfficiency,
+    );
   }, []);
 
   return (

@@ -22,10 +22,17 @@ const AutonomousHRAssistantDashboard = () => {
         onChange={(e) => setQuery(e.target.value)}
         className="border p-2 mt-4 w-full"
       />
-      <button onClick={handleQuery} className="bg-blue-500 text-white px-4 py-2 mt-2 rounded">
+      <button
+        onClick={handleQuery}
+        className="bg-blue-500 text-white px-4 py-2 mt-2 rounded"
+      >
         Submit
       </button>
-      {response && <pre className="mt-4 bg-gray-100 p-4 rounded">{JSON.stringify(response, null, 2)}</pre>}
+      {response && (
+        <pre className="mt-4 bg-gray-100 p-4 rounded">
+          {JSON.stringify(response, null, 2)}
+        </pre>
+      )}
     </div>
   );
 };

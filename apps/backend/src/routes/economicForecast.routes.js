@@ -17,7 +17,11 @@ router.post("/predict", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const economicForecast = await getEconomicForecast(avgSalary, costOfLiving, inflationRate);
+    const economicForecast = await getEconomicForecast(
+      avgSalary,
+      costOfLiving,
+      inflationRate,
+    );
     res.json({ economicForecast });
   } catch (error) {
     console.error("Error predicting economic trends:", error);

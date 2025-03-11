@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { fetchTaskAssignment, fetchTaskSuggestion, fetchMeetingReminder } from "../services/aiWorkAssistantService";
+import {
+  fetchTaskAssignment,
+  fetchTaskSuggestion,
+  fetchMeetingReminder,
+} from "../services/aiWorkAssistantService";
 
 export default function AIWorkAssistantDashboard() {
   const [taskAssignment, setTaskAssignment] = useState("");
@@ -23,9 +27,15 @@ export default function AIWorkAssistantDashboard() {
     <div className="p-6">
       <h2 className="text-2xl font-bold">🤖 AI Work Assistant</h2>
       <div className="mt-4 border p-4 rounded bg-gray-100">
-        <p><strong>Task Assignment:</strong> {taskAssignment}</p>
-        <p><strong>Task Suggestion:</strong> {taskSuggestion}</p>
-        <p><strong>Meeting Reminder:</strong> {meetingReminder}</p>
+        <p>
+          <strong>Task Assignment:</strong> {taskAssignment}
+        </p>
+        <p>
+          <strong>Task Suggestion:</strong> {taskSuggestion}
+        </p>
+        <p>
+          <strong>Meeting Reminder:</strong> {meetingReminder}
+        </p>
       </div>
     </div>
   );

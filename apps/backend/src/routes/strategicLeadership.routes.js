@@ -12,11 +12,19 @@ const router = express.Router();
 router.post("/evaluate", async (req, res) => {
   try {
     const { experience, strategyScore, projects } = req.body;
-    if (experience === undefined || strategyScore === undefined || projects === undefined) {
+    if (
+      experience === undefined ||
+      strategyScore === undefined ||
+      projects === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const potential = await evaluateLeadershipPotential(experience, strategyScore, projects);
+    const potential = await evaluateLeadershipPotential(
+      experience,
+      strategyScore,
+      projects,
+    );
     res.json({ leadershipPotential: potential });
   } catch (error) {
     console.error("Error in strategic leadership API:", error);

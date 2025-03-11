@@ -17,7 +17,11 @@ export default function WorkforcePolicyDashboard() {
   return (
     <div>
       <h1>Global Workforce Policy Recommendations</h1>
-      {policy ? <pre>{JSON.stringify(policy, null, 2)}</pre> : <p>Loading...</p>}
+      {policy ? (
+        <pre>{JSON.stringify(policy, null, 2)}</pre>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 }

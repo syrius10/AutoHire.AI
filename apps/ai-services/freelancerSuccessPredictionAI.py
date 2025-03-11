@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]  
 y = data[:, -1]  
 
-model = RandomForestClassifier(n_estimators=100)
+model = RandomForestClassifier(n_estimators=100, random_state=42, min_samples_leaf=2, max_features="auto")
 model.fit(X, y)
 
 joblib.dump(model, "freelancer_success_prediction.pkl")

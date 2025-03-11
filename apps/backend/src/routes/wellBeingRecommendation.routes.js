@@ -13,7 +13,9 @@ router.post("/recommend", async (req, res) => {
     const recommendations = await getWellBeingRecommendations(req.body);
     res.json(recommendations);
   } catch (error) {
-    res.status(500).json({ error: "Failed to provide well-being recommendations." });
+    res
+      .status(500)
+      .json({ error: "Failed to provide well-being recommendations." });
   }
 });
 

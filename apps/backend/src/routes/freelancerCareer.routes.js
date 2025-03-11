@@ -16,7 +16,11 @@ router.post("/recommendation", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const recommendation = await getCareerRecommendation(experience, completedGigs, rating);
+    const recommendation = await getCareerRecommendation(
+      experience,
+      completedGigs,
+      rating,
+    );
     res.json(recommendation);
   } catch (error) {
     console.error("Error in career planning:", error);

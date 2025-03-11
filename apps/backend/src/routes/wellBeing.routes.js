@@ -16,7 +16,12 @@ router.post("/", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const recommendations = await getWellBeingPlan(workHours, workload, jobSatisfaction, stressLevel);
+    const recommendations = await getWellBeingPlan(
+      workHours,
+      workload,
+      jobSatisfaction,
+      stressLevel,
+    );
     res.json(recommendations);
   } catch (error) {
     console.error("Error fetching well-being plan:", error);

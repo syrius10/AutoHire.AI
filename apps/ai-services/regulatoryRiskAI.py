@@ -18,7 +18,7 @@ data = np.array([
 X = data[:, :-1]  # Features: Region, Industry Compliance Score, Past Violations
 y = data[:, -1]   # Risk Level (1 = Low Risk, 0 = High Risk)
 
-model = RandomForestClassifier()
+model = RandomForestClassifier(min_samples_leaf=2, max_features="auto", random_state=42, n_estimators=100)
 model.fit(X, y)
 
 # Save model

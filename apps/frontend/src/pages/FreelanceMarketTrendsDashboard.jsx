@@ -18,9 +18,10 @@ const FreelanceMarketTrendsDashboard = () => {
     <div>
       <h2>📈 Freelance Market Trends</h2>
       <ul>
-        {marketTrends.map((trend, index) => (
-          <li key={index}>
-            {trend.industry}: Demand {trend.demandLevel} | Avg Price: ${trend.avgPrice}
+        {marketTrends.map((trend) => (
+          <li key={trend.id}>
+            {trend.industry}: Demand {trend.demandLevel} | Avg Price: $
+            {trend.avgPrice}
           </li>
         ))}
       </ul>

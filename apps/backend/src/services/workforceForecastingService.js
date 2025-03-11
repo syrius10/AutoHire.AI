@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Calls AI model to predict workforce hiring demand based on market trends.
  */
-export const forecastHiringDemand = async (year, industryGrowth, hiringBudget) => {
+export const forecastHiringDemand = async (
+  year,
+  industryGrowth,
+  hiringBudget,
+) => {
   try {
     const response = await axios.post("http://localhost:5068/forecast_hiring", {
       year,

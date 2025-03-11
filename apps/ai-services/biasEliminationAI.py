@@ -17,7 +17,7 @@ X = data[:, :-1]  # Candidate Gender, Ethnicity Score, Skill Score, Past Bias Re
 y = data[:, -1]   # Target: Bias Detected (1 = Yes, 0 = No)
 
 # Train AI model
-model = LogisticRegression()
+model = LogisticRegression(random_state=42)
 model.fit(X, y)
 
 # Save trained model

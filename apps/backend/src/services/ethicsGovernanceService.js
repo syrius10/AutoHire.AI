@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Calls AI ethics model to ensure fair hiring practices.
  */
-export const evaluateHiringEthics = async (candidateScore, diversityFactor, hrBiasScore) => {
+export const evaluateHiringEthics = async (
+  candidateScore,
+  diversityFactor,
+  hrBiasScore,
+) => {
   try {
     const response = await axios.post("http://localhost:5079/evaluate_hiring", {
       candidateScore,

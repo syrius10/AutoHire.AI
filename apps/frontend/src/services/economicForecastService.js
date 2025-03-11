@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const fetchEconomicForecast = async () => {
   try {
-    const response = await axios.get("http://localhost:5001/api/economic-forecast/predict");
+    const response = await axios.get(
+      "http://localhost:5001/api/economic-forecast/predict",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching economic forecast:", error);

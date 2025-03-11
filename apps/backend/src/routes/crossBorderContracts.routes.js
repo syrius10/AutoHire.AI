@@ -16,7 +16,11 @@ router.post("/generate", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const contract = await generateContract(employeeCountry, employerCountry, jobRole);
+    const contract = await generateContract(
+      employeeCountry,
+      employerCountry,
+      jobRole,
+    );
     res.json(contract);
   } catch (error) {
     console.error("Error in generating cross-border contract:", error);

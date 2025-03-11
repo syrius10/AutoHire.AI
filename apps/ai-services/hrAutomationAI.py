@@ -17,7 +17,7 @@ X = data[:, :-1]  # Hiring Demand, Payroll Budget, Employee Growth
 y = data[:, -1]   # HR Action (1 = Hire, 0 = No Action)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="auto")
 model.fit(X, y)
 
 # Save trained model

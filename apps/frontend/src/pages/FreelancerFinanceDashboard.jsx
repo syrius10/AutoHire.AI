@@ -28,7 +28,7 @@ const FreelancerFinanceDashboard = () => {
         parseFloat(formData.experience),
         parseFloat(formData.pastEarnings),
         parseFloat(formData.jobsCompleted),
-        parseFloat(formData.avgRating)
+        parseFloat(formData.avgRating),
       );
       setPrediction(data.estimatedIncome);
     } catch (error) {
@@ -42,15 +42,65 @@ const FreelancerFinanceDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">💰 Freelancer Income Forecast</h2>
       <form onSubmit={handleSubmit} className="mt-4">
-        <input type="number" name="monthlyGigs" placeholder="Monthly Gigs" onChange={handleChange} required />
-        <input type="number" name="avgEarnings" placeholder="Avg Earnings Per Gig" onChange={handleChange} required />
-        <input type="number" name="experience" placeholder="Years of Experience" onChange={handleChange} required />
-        <input type="number" name="pastEarnings" placeholder="Past Earnings" onChange={handleChange} required />
-        <input type="number" name="jobsCompleted" placeholder="Jobs Completed" onChange={handleChange} required />
-        <input type="number" name="avgRating" placeholder="Average Rating (1-5)" step="0.1" onChange={handleChange} required />
-        <button type="submit" className="mt-3 bg-blue-500 text-white px-4 py-2 rounded">Predict Income</button>
+        <input
+          type="number"
+          name="monthlyGigs"
+          placeholder="Monthly Gigs"
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="number"
+          name="avgEarnings"
+          placeholder="Avg Earnings Per Gig"
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="number"
+          name="experience"
+          placeholder="Years of Experience"
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="number"
+          name="pastEarnings"
+          placeholder="Past Earnings"
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="number"
+          name="jobsCompleted"
+          placeholder="Jobs Completed"
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="number"
+          name="avgRating"
+          placeholder="Average Rating (1-5)"
+          step="0.1"
+          onChange={handleChange}
+          required
+        />
+        <button
+          type="submit"
+          className="mt-3 bg-blue-500 text-white px-4 py-2 rounded"
+        >
+          Predict Income
+        </button>
       </form>
-      {loading ? <p>Loading...</p> : prediction !== null && <p className="mt-4">📊 Estimated Future Income: <strong>${prediction}</strong></p>}
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        prediction !== null && (
+          <p className="mt-4">
+            📊 Estimated Future Income: <strong>${prediction}</strong>
+          </p>
+        )
+      )}
     </div>
   );
 };

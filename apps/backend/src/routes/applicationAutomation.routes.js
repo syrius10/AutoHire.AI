@@ -11,12 +11,25 @@ const router = express.Router();
  */
 router.post("/", async (req, res) => {
   try {
-    const { candidateName, jobTitle, companyName, resume, coverLetter } = req.body;
-    if (!candidateName || !jobTitle || !companyName || !resume || !coverLetter) {
+    const { candidateName, jobTitle, companyName, resume, coverLetter } =
+      req.body;
+    if (
+      !candidateName ||
+      !jobTitle ||
+      !companyName ||
+      !resume ||
+      !coverLetter
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const applicationResult = await autoApplyForJobs(candidateName, jobTitle, companyName, resume, coverLetter);
+    const applicationResult = await autoApplyForJobs(
+      candidateName,
+      jobTitle,
+      companyName,
+      resume,
+      coverLetter,
+    );
     res.json(applicationResult);
   } catch (error) {
     console.error("Error automating job application:", error);

@@ -18,9 +18,10 @@ const CompetitionAnalysisDashboard = () => {
     <div>
       <h2>🏆 Competition Analysis</h2>
       <ul>
-        {competitorData.map((competitor, index) => (
-          <li key={index}>
-            {competitor.companyName}: Avg Rate: ${competitor.avgRate} | Market Share: {competitor.marketShare}%
+        {competitorData.map((competitor) => (
+          <li key={competitor.id}>
+            {competitor.companyName}: Avg Rate: ${competitor.avgRate} | Market
+            Share: {competitor.marketShare}%
           </li>
         ))}
       </ul>

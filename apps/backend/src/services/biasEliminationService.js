@@ -8,7 +8,7 @@ export const detectAndEliminateBias = async (
   ageBias,
   ethnicBias,
   skillMatch,
-  hiringHistory
+  hiringHistory,
 ) => {
   try {
     const response = await axios.post("http://localhost:5115/detect_bias", {

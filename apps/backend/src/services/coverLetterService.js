@@ -5,14 +5,22 @@ import axios from "axios";
 /**
  * Calls AI model to generate a personalized cover letter
  */
-export const generateCoverLetter = async (candidateName, jobTitle, companyName, skills) => {
+export const generateCoverLetter = async (
+  candidateName,
+  jobTitle,
+  companyName,
+  skills,
+) => {
   try {
-    const response = await axios.post("http://localhost:5053/generate-cover-letter", {
-      candidateName,
-      jobTitle,
-      companyName,
-      skills,
-    });
+    const response = await axios.post(
+      "http://localhost:5053/generate-cover-letter",
+      {
+        candidateName,
+        jobTitle,
+        companyName,
+        skills,
+      },
+    );
     return response.data;
   } catch (error) {
     console.error("Error generating cover letter:", error);

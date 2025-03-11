@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Calls AI model to recommend adaptive reskilling.
  */
-export const recommendReskilling = async (skillGap, learningSpeed, jobDemand) => {
+export const recommendReskilling = async (
+  skillGap,
+  learningSpeed,
+  jobDemand,
+) => {
   try {
     const response = await axios.post("http://localhost:5101/reskilling", {
       skillGap,
@@ -23,14 +27,14 @@ export const recommendReskilling = async (skillGap, learningSpeed, jobDemand) =>
  * Fetches AI-driven reskilling paths & upskilling recommendations.
  */
 export const getReskillingPaths = async (employeeId, skillGaps) => {
-    try {
-      const response = await axios.post("http://localhost:5074/reskilling", {
-        employeeId,
-        skillGaps,
-      });
-      return response.data;
-    } catch (error) {
-      console.error("Error fetching reskilling paths:", error);
-      throw new Error("Reskilling recommendations failed.");
-    }
-  };
+  try {
+    const response = await axios.post("http://localhost:5074/reskilling", {
+      employeeId,
+      skillGaps,
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching reskilling paths:", error);
+    throw new Error("Reskilling recommendations failed.");
+  }
+};

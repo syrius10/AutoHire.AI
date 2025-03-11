@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const fetchEconomicWorkforceData = async () => {
   try {
-    const response = await axios.get("http://localhost:5001/api/economic-workforce/forecast");
+    const response = await axios.get(
+      "http://localhost:5001/api/economic-workforce/forecast",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching workforce economic data:", error);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { fetchWorkforceForecast } from "../services/workforceForecastingService";
 
 // Predicts hiring needs & workforce trends
@@ -19,7 +19,11 @@ const WorkforceForecastingDashboard = () => {
   const getForecast = async () => {
     setLoading(true);
     try {
-      const data = await fetchWorkforceForecast(inputs.year, inputs.industryGrowth, inputs.hiringBudget);
+      const data = await fetchWorkforceForecast(
+        inputs.year,
+        inputs.industryGrowth,
+        inputs.hiringBudget,
+      );
       setForecast(data);
     } catch (error) {
       console.error("Error fetching workforce forecast:", error);
@@ -32,9 +36,24 @@ const WorkforceForecastingDashboard = () => {
     <div>
       <h2>Workforce Forecasting</h2>
       <div>
-        <input type="number" name="year" placeholder="Year" onChange={handleChange} />
-        <input type="number" name="industryGrowth" placeholder="Industry Growth %" onChange={handleChange} />
-        <input type="number" name="hiringBudget" placeholder="Hiring Budget ($)" onChange={handleChange} />
+        <input
+          type="number"
+          name="year"
+          placeholder="Year"
+          onChange={handleChange}
+        />
+        <input
+          type="number"
+          name="industryGrowth"
+          placeholder="Industry Growth %"
+          onChange={handleChange}
+        />
+        <input
+          type="number"
+          name="hiringBudget"
+          placeholder="Hiring Budget ($)"
+          onChange={handleChange}
+        />
         <button onClick={getForecast} disabled={loading}>
           {loading ? "Fetching..." : "Get Forecast"}
         </button>

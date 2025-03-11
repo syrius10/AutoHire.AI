@@ -13,8 +13,12 @@ const BurnoutRiskDashboard = () => {
       <h2 className="text-2xl font-bold">🔥 Burnout Risk</h2>
       {burnoutData ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Burnout Risk Level:</strong> {burnoutData.riskLevel}</p>
-          <p><strong>Workload Impact:</strong> {burnoutData.workloadImpact}</p>
+          <p>
+            <strong>Burnout Risk Level:</strong> {burnoutData.riskLevel}
+          </p>
+          <p>
+            <strong>Workload Impact:</strong> {burnoutData.workloadImpact}
+          </p>
         </div>
       ) : (
         <p>Loading burnout risk data...</p>

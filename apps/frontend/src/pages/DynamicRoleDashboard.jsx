@@ -21,10 +21,14 @@ export default function DynamicRoleDashboard() {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold">🔄 AI-Powered Job Role Optimization</h2>
+      <h2 className="text-2xl font-bold">
+        🔄 AI-Powered Job Role Optimization
+      </h2>
       {optimizedRole ? (
         <div className="mt-4 border p-4 rounded bg-gray-100">
-          <p><strong>Suggested Role:</strong> {optimizedRole.optimizedRole}</p>
+          <p>
+            <strong>Suggested Role:</strong> {optimizedRole.optimizedRole}
+          </p>
         </div>
       ) : (
         <p>Loading AI-driven role optimization...</p>

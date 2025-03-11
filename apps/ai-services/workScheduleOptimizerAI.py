@@ -16,7 +16,7 @@ X = data[:, :-1]  # Workload, Preferred Hours, Energy Level
 y = data[:, -1]   # Optimized Work Schedule (1 = Morning, 0 = Evening)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="sqrt")
 model.fit(X, y)
 
 # Save trained model

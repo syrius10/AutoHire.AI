@@ -18,8 +18,8 @@ const DynamicPricingDashboard = () => {
     <div>
       <h2>📊 AI-Driven Dynamic Pricing</h2>
       <ul>
-        {pricingData.map((item, index) => (
-          <li key={index}>
+        {pricingData.map((item) => (
+          <li key={item.id}>
             {item.jobTitle}: ${item.price} (Updated: {item.lastUpdated})
           </li>
         ))}

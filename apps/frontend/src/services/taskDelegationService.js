@@ -7,7 +7,7 @@ export const assignTask = async (skillLevel, workload, complexity) => {
   try {
     const response = await axios.post(
       "http://localhost:5001/api/task-delegation/assign",
-      { skillLevel, workload, complexity }
+      { skillLevel, workload, complexity },
     );
     return response.data;
   } catch (error) {

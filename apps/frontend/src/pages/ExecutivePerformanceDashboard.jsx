@@ -18,8 +18,8 @@ const ExecutivePerformanceDashboard = () => {
     <div>
       <h2>Executive Performance Insights</h2>
       <ul>
-        {performanceData.map((exec, index) => (
-          <li key={index}>
+        {performanceData.map((exec) => (
+          <li key={exec.id}>
             {exec.name} - Success Score: {exec.performanceScore}/100
           </li>
         ))}

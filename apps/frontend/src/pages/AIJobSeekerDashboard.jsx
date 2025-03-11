@@ -10,7 +10,11 @@ const AIJobSeekerDashboard = () => {
   const [applicationStatus, setApplicationStatus] = useState(null);
 
   const handleApplication = async () => {
-    const result = await applyForAIJob(Number(experience), Number(skillMatch), Number(prevSuccess));
+    const result = await applyForAIJob(
+      Number(experience),
+      Number(skillMatch),
+      Number(prevSuccess),
+    );
     setApplicationStatus(result);
   };
 
@@ -38,10 +42,17 @@ const AIJobSeekerDashboard = () => {
         onChange={(e) => setPrevSuccess(e.target.value)}
         className="border p-2 mt-2 w-full"
       />
-      <button onClick={handleApplication} className="bg-blue-500 text-white px-4 py-2 mt-2 rounded">
+      <button
+        onClick={handleApplication}
+        className="bg-blue-500 text-white px-4 py-2 mt-2 rounded"
+      >
         Apply
       </button>
-      {applicationStatus && <pre className="mt-4 bg-gray-100 p-4 rounded">{JSON.stringify(applicationStatus, null, 2)}</pre>}
+      {applicationStatus && (
+        <pre className="mt-4 bg-gray-100 p-4 rounded">
+          {JSON.stringify(applicationStatus, null, 2)}
+        </pre>
+      )}
     </div>
   );
 };

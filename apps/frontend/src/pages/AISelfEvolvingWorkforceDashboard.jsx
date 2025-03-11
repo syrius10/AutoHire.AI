@@ -12,7 +12,9 @@ const AISelfEvolvingWorkforceDashboard = () => {
     <div>
       <h2>🛠️ AI-Powered Self-Evolving Workforce</h2>
       {workforceData ? (
-        <p>{workforceData.role} - Optimization: {workforceData.optimization}</p>
+        <p>
+          {workforceData.role} - Optimization: {workforceData.optimization}
+        </p>
       ) : (
         <p>Loading...</p>
       )}

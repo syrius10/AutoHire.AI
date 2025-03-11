@@ -18,7 +18,7 @@ X = data[:, :-1]  # Features: Contract Value, Delayed Payments, Unclear Terms, P
 y = data[:, -1]   # Target: Dispute Resolution Score (1 = Resolved Easily, 0 = Complex Dispute)
 
 # Train AI model
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(random_state=42, learning_rate=0.1)
 model.fit(X, y)
 
 # Save model

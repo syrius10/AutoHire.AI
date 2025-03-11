@@ -19,7 +19,7 @@ def train_model():
     X = data[:, :-1]  
     y = data[:, -1]  
 
-    model = RandomForestClassifier()
+    model = RandomForestClassifier(min_samples_leaf=2, n_estimators=100, random_state=42, max_features="auto")
     model.fit(X, y)
 
     joblib.dump(model, "talent_mobility_model.pkl")

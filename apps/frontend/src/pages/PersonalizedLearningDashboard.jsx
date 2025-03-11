@@ -18,8 +18,8 @@ export default function PersonalizedLearningDashboard() {
     <div>
       <h1>Personalized Learning Paths</h1>
       <ul>
-        {learningPaths.map((path, index) => (
-          <li key={index}>{path}</li>
+        {learningPaths.map((path) => (
+          <li key={path.id}>{path.name}</li>
         ))}
       </ul>
     </div>

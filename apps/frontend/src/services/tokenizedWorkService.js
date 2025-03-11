@@ -8,6 +8,9 @@ export const fetchUserBalance = async (userId) => {
 };
 
 export const assignTokens = async (userId, workData) => {
-  const response = await axios.post("/api/tokenized-work/assign", { userId, ...workData });
+  const response = await axios.post("/api/tokenized-work/assign", {
+    userId,
+    ...workData,
+  });
   return response.data;
 };

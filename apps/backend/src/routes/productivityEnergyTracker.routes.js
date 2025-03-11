@@ -13,11 +13,19 @@ router.post("/track", async (req, res) => {
   try {
     const { sleepHours, workHours, breaksTaken } = req.body;
 
-    if (sleepHours === undefined || workHours === undefined || breaksTaken === undefined) {
+    if (
+      sleepHours === undefined ||
+      workHours === undefined ||
+      breaksTaken === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const productivityScore = await trackProductivity(sleepHours, workHours, breaksTaken);
+    const productivityScore = await trackProductivity(
+      sleepHours,
+      workHours,
+      breaksTaken,
+    );
     res.json({ productivityScore });
   } catch (error) {
     console.error("Error in productivity tracking:", error);

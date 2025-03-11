@@ -13,11 +13,19 @@ router.post("/optimize", async (req, res) => {
   try {
     const { feedbackText, engagementScore, satisfactionScore } = req.body;
 
-    if (!feedbackText || engagementScore === undefined || satisfactionScore === undefined) {
+    if (
+      !feedbackText ||
+      engagementScore === undefined ||
+      satisfactionScore === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const moodAnalysis = await analyzeTeamMood(feedbackText, engagementScore, satisfactionScore);
+    const moodAnalysis = await analyzeTeamMood(
+      feedbackText,
+      engagementScore,
+      satisfactionScore,
+    );
     res.json({ teamMoodOptimization: moodAnalysis });
   } catch (error) {
     console.error("Error in team mood optimization:", error);

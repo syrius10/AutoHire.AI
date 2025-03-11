@@ -7,11 +7,14 @@ import axios from "axios";
  * @returns {Promise<object>} - Match score and candidate details
  */
 export const autoScreenCandidate = async (candidateId, jobId) => {
-    try {
-        const response = await axios.post("/api/auto-screening/screen", { candidateId, jobId });
-        return response.data;
-    } catch (error) {
-        console.error("Error auto-screening candidate: ", error);
-        return { error: "Failed to auto-screen candidate "};
-    }
+  try {
+    const response = await axios.post("/api/auto-screening/screen", {
+      candidateId,
+      jobId,
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error auto-screening candidate: ", error);
+    return { error: "Failed to auto-screen candidate " };
+  }
 };

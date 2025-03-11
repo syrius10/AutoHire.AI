@@ -17,7 +17,11 @@ export default function CrossBorderContractsDashboard() {
   return (
     <div>
       <h1>Cross-Border Job Contracts</h1>
-      {contracts ? <pre>{JSON.stringify(contracts, null, 2)}</pre> : <p>Loading...</p>}
+      {contracts ? (
+        <pre>{JSON.stringify(contracts, null, 2)}</pre>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 }

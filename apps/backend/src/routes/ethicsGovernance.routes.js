@@ -12,11 +12,19 @@ const router = express.Router();
 router.post("/evaluate", async (req, res) => {
   try {
     const { candidateScore, diversityFactor, hrBiasScore } = req.body;
-    if (candidateScore === undefined || diversityFactor === undefined || hrBiasScore === undefined) {
+    if (
+      candidateScore === undefined ||
+      diversityFactor === undefined ||
+      hrBiasScore === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const ethicsResult = await evaluateHiringEthics(candidateScore, diversityFactor, hrBiasScore);
+    const ethicsResult = await evaluateHiringEthics(
+      candidateScore,
+      diversityFactor,
+      hrBiasScore,
+    );
     res.json(ethicsResult);
   } catch (error) {
     console.error("Ethics Governance Error:", error);

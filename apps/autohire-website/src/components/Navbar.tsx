@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, BrainCircuit } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, BrainCircuit } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,8 +17,8 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => {
@@ -26,16 +26,18 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Features', path: '/features' },
-    { name: 'Testimonials', path: '/testimonials' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "Features", path: "/features" },
+    { name: "Testimonials", path: "/testimonials" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-slate-900/95 backdrop-blur-md py-2 shadow-lg' : 'bg-transparent py-4'
+        scrolled
+          ? "bg-slate-900/95 backdrop-blur-md py-2 shadow-lg"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -54,7 +56,9 @@ const Navbar = () => {
                 key={link.name}
                 to={link.path}
                 className={`text-sm font-medium transition-colors hover:text-blue-400 ${
-                  location.pathname === link.path ? 'text-blue-400' : 'text-gray-200'
+                  location.pathname === link.path
+                    ? "text-blue-400"
+                    : "text-gray-200"
                 }`}
               >
                 {link.name}
@@ -89,7 +93,9 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   className={`text-sm font-medium transition-colors hover:text-blue-400 ${
-                    location.pathname === link.path ? 'text-blue-400' : 'text-gray-200'
+                    location.pathname === link.path
+                      ? "text-blue-400"
+                      : "text-gray-200"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

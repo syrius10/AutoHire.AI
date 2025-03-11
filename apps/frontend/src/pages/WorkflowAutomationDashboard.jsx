@@ -19,7 +19,10 @@ export default function WorkflowAutomationDashboard() {
       <h2 className="text-2xl font-bold">⚙️ Workflow Automation</h2>
       {workflowOptimization ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Optimization Suggestion:</strong> {workflowOptimization.suggestion}</p>
+          <p>
+            <strong>Optimization Suggestion:</strong>{" "}
+            {workflowOptimization.suggestion}
+          </p>
         </div>
       ) : (
         <p>Loading workflow automation insights...</p>

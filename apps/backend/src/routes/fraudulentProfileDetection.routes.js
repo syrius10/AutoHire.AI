@@ -10,12 +10,12 @@ const router = express.Router();
  * @desc Identifies fraudulent freelancer profiles using AI
  */
 router.post("/analyze", async (req, res) => {
-    try {
-        const result = await detectFraudulentProfile(req.body);
-        res.json(result);
-    } catch (error) {
-        res.status(500).json({ error: "Error detecting fraudulent profiles" });
-    }
+  try {
+    const result = await detectFraudulentProfile(req.body);
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({ error: "Error detecting fraudulent profiles" });
+  }
 });
 
 export default router;

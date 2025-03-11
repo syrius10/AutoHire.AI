@@ -14,7 +14,9 @@ const AIJobMarketAnalysisDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">📊 AI Job Market Insights</h2>
       {marketTrends ? (
-        <pre className="mt-4 p-4 border rounded bg-gray-100">{JSON.stringify(marketTrends, null, 2)}</pre>
+        <pre className="mt-4 p-4 border rounded bg-gray-100">
+          {JSON.stringify(marketTrends, null, 2)}
+        </pre>
       ) : (
         <p>Loading job market trends...</p>
       )}

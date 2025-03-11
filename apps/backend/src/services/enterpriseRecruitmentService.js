@@ -8,9 +8,12 @@ import axios from "axios";
  */
 export const screenCandidates = async (candidates) => {
   try {
-    const response = await axios.post("http://localhost:5033/enterprise-recruitment-screen", {
-      candidates,
-    });
+    const response = await axios.post(
+      "http://localhost:5033/enterprise-recruitment-screen",
+      {
+        candidates,
+      },
+    );
     return response.data;
   } catch (error) {
     console.error("Error in enterprise candidate screening:", error);

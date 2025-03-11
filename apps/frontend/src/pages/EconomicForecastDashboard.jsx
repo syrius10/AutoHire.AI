@@ -19,8 +19,14 @@ export default function EconomicForecastDashboard() {
       <h2 className="text-2xl font-bold">📈 Economic Forecast</h2>
       {economicForecast ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Average Salary Projection:</strong> {economicForecast.avgSalaryProjection}</p>
-          <p><strong>Inflation Impact:</strong> {economicForecast.inflationEffect}</p>
+          <p>
+            <strong>Average Salary Projection:</strong>{" "}
+            {economicForecast.avgSalaryProjection}
+          </p>
+          <p>
+            <strong>Inflation Impact:</strong>{" "}
+            {economicForecast.inflationEffect}
+          </p>
         </div>
       ) : (
         <p>Loading economic forecast...</p>

@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const chatWithAI = async (message) => {
   try {
-    const response = await axios.post("http://localhost:5063/chat", { message });
+    const response = await axios.post("http://localhost:5063/chat", {
+      message,
+    });
     return response.data.response;
   } catch (error) {
     console.error("Error in AI chat:", error);

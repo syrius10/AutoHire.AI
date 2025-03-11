@@ -13,11 +13,19 @@ router.post("/eligibility", async (req, res) => {
   try {
     const { experience, jobOffer, countryStrictness } = req.body;
 
-    if (experience === undefined || jobOffer === undefined || countryStrictness === undefined) {
+    if (
+      experience === undefined ||
+      jobOffer === undefined ||
+      countryStrictness === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const result = await checkVisaEligibility(experience, jobOffer, countryStrictness);
+    const result = await checkVisaEligibility(
+      experience,
+      jobOffer,
+      countryStrictness,
+    );
     res.json(result);
   } catch (error) {
     console.error("Error checking visa eligibility:", error);

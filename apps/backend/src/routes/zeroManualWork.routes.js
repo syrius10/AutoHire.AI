@@ -10,13 +10,13 @@ const router = express.Router();
  * @desc AI-powered full automation of workforce operations
  */
 router.get("/automate", async (req, res) => {
-    try {
-        const automationTask = await automateWorkforceOperations();
-        res.json({ automationTask });
-    } catch (error) {
-        console.error("Error automating workforce:", error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
+  try {
+    const automationTask = await automateWorkforceOperations();
+    res.json({ automationTask });
+  } catch (error) {
+    console.error("Error automating workforce:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 export default router;

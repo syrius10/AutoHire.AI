@@ -17,7 +17,11 @@ export default function GlobalVisaAutomationDashboard() {
   return (
     <div>
       <h1>Global Work Visa Automation</h1>
-      {visaStatus ? <pre>{JSON.stringify(visaStatus, null, 2)}</pre> : <p>Loading...</p>}
+      {visaStatus ? (
+        <pre>{JSON.stringify(visaStatus, null, 2)}</pre>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 }

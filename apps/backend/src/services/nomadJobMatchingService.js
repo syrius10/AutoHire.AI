@@ -5,7 +5,12 @@ import axios from "axios";
 /**
  * Calls AI job matching model for digital nomads.
  */
-export const matchNomadJob = async (remoteFriendly, skillMatch, timezoneCompatible, remoteExperience) => {
+export const matchNomadJob = async (
+  remoteFriendly,
+  skillMatch,
+  timezoneCompatible,
+  remoteExperience,
+) => {
   try {
     const response = await axios.post("http://localhost:5125/match", {
       remote_friendly: remoteFriendly,

@@ -1,7 +1,6 @@
 import express from "express";
 import { detectAndEliminateBias } from "../services/biasEliminationService.js";
 
-
 const router = express.Router();
 
 /**
@@ -10,7 +9,8 @@ const router = express.Router();
  */
 router.post("/detect", async (req, res) => {
   try {
-    const { genderBias, ageBias, ethnicBias, skillMatch, hiringHistory } = req.body;
+    const { genderBias, ageBias, ethnicBias, skillMatch, hiringHistory } =
+      req.body;
 
     if (
       genderBias === undefined ||
@@ -27,7 +27,7 @@ router.post("/detect", async (req, res) => {
       ageBias,
       ethnicBias,
       skillMatch,
-      hiringHistory
+      hiringHistory,
     );
 
     res.json({ biasAnalysis });

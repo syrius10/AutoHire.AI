@@ -18,7 +18,9 @@ const AutonomousGlobalWorkforceDashboard = () => {
     <div className="p-6">
       <h2 className="text-2xl font-bold">🚀 Autonomous Global Workforce</h2>
       {workforceData ? (
-        <pre className="mt-4 border p-4 rounded">{JSON.stringify(workforceData, null, 2)}</pre>
+        <pre className="mt-4 border p-4 rounded">
+          {JSON.stringify(workforceData, null, 2)}
+        </pre>
       ) : (
         <p>Loading workforce data...</p>
       )}

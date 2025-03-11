@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]  # Features: Successful Projects, Avg Rating, Client Feedback Score
 y = data[:, -1]   # Reputation Score
 
-model = RandomForestRegressor()
+model = RandomForestRegressor(random_state=42, min_samples_leaf=2, max_features='auto')
 model.fit(X, y)
 
 # Save trained model

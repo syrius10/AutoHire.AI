@@ -5,7 +5,10 @@ import axios from "axios";
  */
 export const evaluateHiring = async (hiringData) => {
   try {
-    const response = await axios.post("/api/ethical-hiring/evaluate", hiringData);
+    const response = await axios.post(
+      "/api/ethical-hiring/evaluate",
+      hiringData,
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching ethical hiring evaluation:", error);

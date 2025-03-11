@@ -24,7 +24,7 @@ router.post("/predict", async (req, res) => {
       experience,
       courses,
       promotions,
-      performance
+      performance,
     );
 
     res.json({ promotionReadiness: prediction });

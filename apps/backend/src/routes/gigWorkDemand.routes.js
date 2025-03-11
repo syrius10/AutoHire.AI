@@ -6,8 +6,8 @@ import { getGigDemand } from "../services/gigWorkDemandService.js";
 const router = express.Router();
 
 router.get("/demand", async (req, res) => {
-    const demand = await getGigDemand();
-    res.json(demand);
+  const demand = await getGigDemand();
+  res.json(demand);
 });
 
 export default router;

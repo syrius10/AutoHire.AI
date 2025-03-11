@@ -5,7 +5,13 @@ import axios from "axios";
 /**
  * Calls AI to automate job applications
  */
-export const autoApplyForJobs = async (candidateName, jobTitle, companyName, resume, coverLetter) => {
+export const autoApplyForJobs = async (
+  candidateName,
+  jobTitle,
+  companyName,
+  resume,
+  coverLetter,
+) => {
   try {
     const response = await axios.post("http://localhost:5054/apply-job", {
       candidateName,

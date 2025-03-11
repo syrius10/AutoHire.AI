@@ -10,13 +10,13 @@ const router = express.Router();
  * @desc AI-driven governance framework enforcement
  */
 router.get("/enforce", async (req, res) => {
-    try {
-        const governanceStatus = await enforceAIGovernance();
-        res.json({ status: "Success", governance: governanceStatus });
-    } catch (error) {
-        console.error("Error enforcing AI governance:", error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
+  try {
+    const governanceStatus = await enforceAIGovernance();
+    res.json({ status: "Success", governance: governanceStatus });
+  } catch (error) {
+    console.error("Error enforcing AI governance:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 export default router;

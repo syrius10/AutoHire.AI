@@ -16,9 +16,13 @@ const WorkloadBalancingDashboard = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold">📊 Workload Balancing & Burnout Prevention</h2>
+      <h2 className="text-2xl font-bold">
+        📊 Workload Balancing & Burnout Prevention
+      </h2>
       {workloadPlan ? (
-        <pre className="mt-4 p-4 border rounded bg-gray-100">{JSON.stringify(workloadPlan, null, 2)}</pre>
+        <pre className="mt-4 p-4 border rounded bg-gray-100">
+          {JSON.stringify(workloadPlan, null, 2)}
+        </pre>
       ) : (
         <p>Loading workload optimization data...</p>
       )}

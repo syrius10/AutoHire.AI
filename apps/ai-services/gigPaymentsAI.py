@@ -1,6 +1,6 @@
 import hashlib
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 
 ##### Blockchain-powered freelancer payment automation #####
 
@@ -10,7 +10,7 @@ class BlockchainPayment:
             "sender": sender,
             "recipient": recipient,
             "amount": amount,
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),  # Timezone-aware datetime
             "status": "Pending"
         }
         self.transaction["hash"] = self.generate_hash()
@@ -23,7 +23,7 @@ class BlockchainPayment:
     def confirm_payment(self):
         """Finalizes the payment transaction."""
         self.transaction["status"] = "Completed"
-        self.transaction["confirmation_timestamp"] = datetime.utcnow().isoformat()
+        self.contract["completion_timestamp"] = datetime.now(timezone.utc).isoformat()  # Timezone-aware datetime
         self.transaction["hash"] = self.generate_hash()
         return self.transaction
 

@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Fetches AI-generated smart contracts.
  */
-export const generateSmartContract = async (employer, freelancer, contractTerms) => {
+export const generateSmartContract = async (
+  employer,
+  freelancer,
+  contractTerms,
+) => {
   try {
     const response = await axios.post("/api/smart-contracts/generate", {
       employer,

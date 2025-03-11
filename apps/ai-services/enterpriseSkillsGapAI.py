@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]
 y = data[:, -1]  # Skills Gap Score
 
-model = SVR()
+model = SVR(C=1.0, kernel='rbf', gamma='scale')  # Default C=1.0, 'rbf' kernel, 'scale' for gamma
 model.fit(X, y)
 
 joblib.dump(model, "enterprise_skills_gap_model.pkl")

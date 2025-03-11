@@ -15,7 +15,9 @@ const BurnoutPreventionDashboard = () => {
       <h2 className="text-2xl font-bold">🔥 Burnout Prevention Insights</h2>
       {burnoutRisk ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Burnout Risk Level:</strong> {burnoutRisk.risk}</p>
+          <p>
+            <strong>Burnout Risk Level:</strong> {burnoutRisk.risk}
+          </p>
         </div>
       ) : (
         <p>Loading burnout risk insights...</p>

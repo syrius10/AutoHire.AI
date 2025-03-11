@@ -11,7 +11,12 @@ export default function EmployeeEngagementDashboard() {
 
   const handleAnalyzeEngagement = async () => {
     try {
-      const result = await analyzeEngagement(feedback, workload, teamSatisfaction, careerGrowth);
+      const result = await analyzeEngagement(
+        feedback,
+        workload,
+        teamSatisfaction,
+        careerGrowth,
+      );
       setEngagementScore(result.engagementScore);
       setSentiment(result.sentimentAnalysis);
     } catch (error) {
@@ -31,17 +36,35 @@ export default function EmployeeEngagementDashboard() {
 
       <div className="slider-container">
         <label>Workload Balance: {workload}</label>
-        <input type="range" min="1" max="5" value={workload} onChange={(e) => setWorkload(Number(e.target.value))} />
+        <input
+          type="range"
+          min="1"
+          max="5"
+          value={workload}
+          onChange={(e) => setWorkload(Number(e.target.value))}
+        />
       </div>
 
       <div className="slider-container">
         <label>Team Satisfaction: {teamSatisfaction}</label>
-        <input type="range" min="1" max="5" value={teamSatisfaction} onChange={(e) => setTeamSatisfaction(Number(e.target.value))} />
+        <input
+          type="range"
+          min="1"
+          max="5"
+          value={teamSatisfaction}
+          onChange={(e) => setTeamSatisfaction(Number(e.target.value))}
+        />
       </div>
 
       <div className="slider-container">
         <label>Career Growth: {careerGrowth}</label>
-        <input type="range" min="1" max="5" value={careerGrowth} onChange={(e) => setCareerGrowth(Number(e.target.value))} />
+        <input
+          type="range"
+          min="1"
+          max="5"
+          value={careerGrowth}
+          onChange={(e) => setCareerGrowth(Number(e.target.value))}
+        />
       </div>
 
       <button onClick={handleAnalyzeEngagement}>Analyze Engagement</button>

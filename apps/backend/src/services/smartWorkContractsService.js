@@ -5,13 +5,20 @@ import axios from "axios";
 /**
  * Calls AI model to generate smart contracts for work agreements.
  */
-export const generateSmartContract = async (employer, freelancer, contractTerms) => {
+export const generateSmartContract = async (
+  employer,
+  freelancer,
+  contractTerms,
+) => {
   try {
-    const response = await axios.post("http://localhost:5115/generate-smart-contract", {
-      employer,
-      freelancer,
-      contractTerms,
-    });
+    const response = await axios.post(
+      "http://localhost:5115/generate-smart-contract",
+      {
+        employer,
+        freelancer,
+        contractTerms,
+      },
+    );
 
     return response.data;
   } catch (error) {
@@ -25,9 +32,12 @@ export const generateSmartContract = async (employer, freelancer, contractTerms)
  */
 export const enforceSmartContract = async (contractId) => {
   try {
-    const response = await axios.post("http://localhost:5090/enforce-contract", {
-      contractId,
-    });
+    const response = await axios.post(
+      "http://localhost:5090/enforce-contract",
+      {
+        contractId,
+      },
+    );
 
     return response.data;
   } catch (error) {

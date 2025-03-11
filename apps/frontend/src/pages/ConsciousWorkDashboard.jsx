@@ -23,12 +23,17 @@ const ConsciousWorkDashboard = () => {
         value={scenario}
         onChange={(e) => setScenario(e.target.value)}
       />
-      <button onClick={handleFetchDecision} className="mt-4 px-4 py-2 bg-blue-600 text-white rounded">
+      <button
+        onClick={handleFetchDecision}
+        className="mt-4 px-4 py-2 bg-blue-600 text-white rounded"
+      >
         Get AI Decision
       </button>
       {decision && (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>AI Decision:</strong> {decision}</p>
+          <p>
+            <strong>AI Decision:</strong> {decision}
+          </p>
         </div>
       )}
     </div>

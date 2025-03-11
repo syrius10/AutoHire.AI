@@ -7,12 +7,15 @@ import axios from "axios";
  */
 export const fetchWorkloadOptimization = async (employeeId) => {
   try {
-    const response = await axios.post("http://localhost:5001/api/workload-balancing/optimize", {
-      employeeId,
-      currentWorkload: 8, // Example workload
-      efficiency: 75,
-      burnoutScore: 60,
-    });
+    const response = await axios.post(
+      "http://localhost:5001/api/workload-balancing/optimize",
+      {
+        employeeId,
+        currentWorkload: 8, // Example workload
+        efficiency: 75,
+        burnoutScore: 60,
+      },
+    );
 
     return response.data;
   } catch (error) {

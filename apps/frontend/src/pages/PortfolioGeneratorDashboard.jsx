@@ -17,9 +17,21 @@ export default function PortfolioGeneratorDashboard() {
   return (
     <div>
       <h2>AI-Generated Portfolio</h2>
-      <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your Name" />
-      <input value={expertise} onChange={(e) => setExpertise(e.target.value)} placeholder="Your Expertise" />
-      <textarea value={projects} onChange={(e) => setProjects(e.target.value)} placeholder="List your projects (comma-separated)" />
+      <input
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Your Name"
+      />
+      <input
+        value={expertise}
+        onChange={(e) => setExpertise(e.target.value)}
+        placeholder="Your Expertise"
+      />
+      <textarea
+        value={projects}
+        onChange={(e) => setProjects(e.target.value)}
+        placeholder="List your projects (comma-separated)"
+      />
       <button onClick={handleGeneratePortfolio}>Generate Portfolio</button>
       {portfolio && (
         <div>

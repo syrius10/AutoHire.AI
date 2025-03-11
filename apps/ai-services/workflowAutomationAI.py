@@ -16,7 +16,7 @@ X = data[:, :-1]  # Input: Task Complexity, Task Urgency, Available Workforce
 y = data[:, -1]   # Output: Workflow automation feasibility (1 = Yes, 0 = No)
 
 # Train AI model
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(learning_rate=0.1, random_state=42)
 model.fit(X, y)
 
 # Save trained model

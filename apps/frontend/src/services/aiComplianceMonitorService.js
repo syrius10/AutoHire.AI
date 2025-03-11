@@ -5,11 +5,14 @@ import axios from "axios";
  */
 export const fetchComplianceReport = async () => {
   try {
-    const response = await axios.post("http://localhost:5001/api/ai-compliance-monitor/check", {
-      hiringDecision: "Approved",
-      fairnessScore: 92,
-      legalStandards: ["EEOC", "GDPR", "ADA"],
-    });
+    const response = await axios.post(
+      "http://localhost:5001/api/ai-compliance-monitor/check",
+      {
+        hiringDecision: "Approved",
+        fairnessScore: 92,
+        legalStandards: ["EEOC", "GDPR", "ADA"],
+      },
+    );
 
     return response.data;
   } catch (error) {

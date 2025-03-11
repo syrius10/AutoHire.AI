@@ -19,9 +19,15 @@ export default function GlobalHiringTrendsDashboard() {
       <h2 className="text-2xl font-bold">🌎 Global Hiring Trends</h2>
       {hiringTrends ? (
         <div className="mt-4 border p-4 rounded">
-          <p><strong>Industry Growth:</strong> {hiringTrends.industryGrowth}</p>
-          <p><strong>Remote Work Trends:</strong> {hiringTrends.remoteWorkImpact}</p>
-          <p><strong>AI Adoption:</strong> {hiringTrends.aiImpact}</p>
+          <p>
+            <strong>Industry Growth:</strong> {hiringTrends.industryGrowth}
+          </p>
+          <p>
+            <strong>Remote Work Trends:</strong> {hiringTrends.remoteWorkImpact}
+          </p>
+          <p>
+            <strong>AI Adoption:</strong> {hiringTrends.aiImpact}
+          </p>
         </div>
       ) : (
         <p>Loading hiring trends...</p>

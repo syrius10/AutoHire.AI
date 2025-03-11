@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]
 y = data[:, -1]
 
-model = KNeighborsClassifier()
+model = KNeighborsClassifier(n_neighbors=3)
 model.fit(X, y)
 
 # Save trained model

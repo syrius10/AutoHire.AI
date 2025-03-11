@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { fetchTalentRedistribution } from "../services/talentRedistributionService";
 
 // AI-based internal mobility & talent balancing
@@ -19,7 +19,11 @@ const TalentRedistributionDashboard = () => {
   const optimizeTalent = async () => {
     setLoading(true);
     try {
-      const data = await fetchTalentRedistribution(inputs.currentWorkforce, inputs.departmentProductivity, inputs.employeeOverload);
+      const data = await fetchTalentRedistribution(
+        inputs.currentWorkforce,
+        inputs.departmentProductivity,
+        inputs.employeeOverload,
+      );
       setRedistributionPlan(data);
     } catch (error) {
       console.error("Error optimizing talent redistribution:", error);
@@ -32,14 +36,31 @@ const TalentRedistributionDashboard = () => {
     <div>
       <h2>Talent Redistribution</h2>
       <div>
-        <input type="number" name="currentWorkforce" placeholder="Current Workforce" onChange={handleChange} />
-        <input type="number" name="departmentProductivity" placeholder="Department Productivity %" onChange={handleChange} />
-        <input type="number" name="employeeOverload" placeholder="Employee Overload %" onChange={handleChange} />
+        <input
+          type="number"
+          name="currentWorkforce"
+          placeholder="Current Workforce"
+          onChange={handleChange}
+        />
+        <input
+          type="number"
+          name="departmentProductivity"
+          placeholder="Department Productivity %"
+          onChange={handleChange}
+        />
+        <input
+          type="number"
+          name="employeeOverload"
+          placeholder="Employee Overload %"
+          onChange={handleChange}
+        />
         <button onClick={optimizeTalent} disabled={loading}>
           {loading ? "Optimizing..." : "Optimize Talent"}
         </button>
       </div>
-      {redistributionPlan && <pre>{JSON.stringify(redistributionPlan, null, 2)}</pre>}
+      {redistributionPlan && (
+        <pre>{JSON.stringify(redistributionPlan, null, 2)}</pre>
+      )}
     </div>
   );
 };

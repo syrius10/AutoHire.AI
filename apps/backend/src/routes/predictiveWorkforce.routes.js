@@ -17,7 +17,11 @@ router.post("/hiring-demand", async (req, res) => {
       return res.status(400).json({ error: "Missing required parameters." });
     }
 
-    const prediction = await predictHiringDemand(industryGrowth, budget, companySize);
+    const prediction = await predictHiringDemand(
+      industryGrowth,
+      budget,
+      companySize,
+    );
     res.json({ predictedHiringNeeds: prediction });
   } catch (error) {
     console.error("Error in workforce demand prediction:", error);

@@ -15,7 +15,12 @@ router.post("/recommend", async (req, res) => {
       return res.status(400).json({ error: "All fields are required." });
     }
 
-    const recommendations = await getJobRotationRecommendations(employeeId, currentRole, skills, experience);
+    const recommendations = await getJobRotationRecommendations(
+      employeeId,
+      currentRole,
+      skills,
+      experience,
+    );
     res.json({ recommendations });
   } catch (error) {
     console.error("Error fetching job rotation recommendations:", error);

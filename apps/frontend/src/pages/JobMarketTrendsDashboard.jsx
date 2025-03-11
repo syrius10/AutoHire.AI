@@ -18,8 +18,10 @@ export default function JobMarketTrendsDashboard() {
     <div>
       <h1>Job Market Trends</h1>
       <ul>
-        {marketTrends.map((trend, index) => (
-          <li key={index}>{trend.description} - {trend.demand_level}</li>
+        {marketTrends.map((trend) => (
+          <li key={trend.id}>
+            {trend.description} - {trend.demand_level}
+          </li>
         ))}
       </ul>
     </div>

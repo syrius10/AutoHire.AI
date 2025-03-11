@@ -16,7 +16,11 @@ router.post("/process", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const visaProcessing = await processVisa(applicantCountry, jobCountry, jobRole);
+    const visaProcessing = await processVisa(
+      applicantCountry,
+      jobCountry,
+      jobRole,
+    );
     res.json(visaProcessing);
   } catch (error) {
     console.error("Error in work visa processing:", error);

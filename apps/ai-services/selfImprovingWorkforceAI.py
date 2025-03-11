@@ -16,7 +16,7 @@ X = data[:, :-1]  # Experience, Industry Demand, AI Adoption Level
 y = data[:, -1]   # Workforce Prediction Score
 
 # Train AI model
-model = GradientBoostingRegressor()
+model = GradientBoostingRegressor(random_state=42, learning_rate=0.1, n_estimators=100)
 model.fit(X, y)
 
 # Save trained model

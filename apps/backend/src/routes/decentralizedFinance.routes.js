@@ -16,7 +16,12 @@ router.post("/track", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const financeData = await trackFinancialHealth(total_earnings, expenses, tax_rate, blockchain_tx_fees);
+    const financeData = await trackFinancialHealth(
+      total_earnings,
+      expenses,
+      tax_rate,
+      blockchain_tx_fees,
+    );
     res.json(financeData);
   } catch (error) {
     console.error("Error tracking workforce financial health:", error);

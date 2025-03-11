@@ -3,7 +3,11 @@ import axios from "axios";
 /**
  * Calls AI model for skill transition analysis.
  */
-export const getSkillTransitionPaths = async (employeeId, currentSkills, targetRole) => {
+export const getSkillTransitionPaths = async (
+  employeeId,
+  currentSkills,
+  targetRole,
+) => {
   try {
     const response = await axios.post("http://localhost:5071/analyze", {
       employeeId,

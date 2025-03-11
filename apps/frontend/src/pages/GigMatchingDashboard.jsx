@@ -24,7 +24,11 @@ export default function GigMatchingDashboard() {
   return (
     <div>
       <h1>Gig Opportunity Recommendations</h1>
-      {loading ? <p>Loading gigs...</p> : <pre>{JSON.stringify(gigData, null, 2)}</pre>}
+      {loading ? (
+        <p>Loading gigs...</p>
+      ) : (
+        <pre>{JSON.stringify(gigData, null, 2)}</pre>
+      )}
     </div>
   );
 }

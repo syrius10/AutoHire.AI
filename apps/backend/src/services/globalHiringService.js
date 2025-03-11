@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Calls AI model to get international hiring recommendations.
  */
-export const getHiringRecommendations = async (skillsDemand, talentAvailability, relocationFeasibility) => {
+export const getHiringRecommendations = async (
+  skillsDemand,
+  talentAvailability,
+  relocationFeasibility,
+) => {
   try {
     const response = await axios.post("http://localhost:5079/global-hiring", {
       skillsDemand,

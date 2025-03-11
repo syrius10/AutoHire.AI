@@ -2,7 +2,17 @@ import { callAIModel } from "../utils/aiServiceCaller.js"; // AI model integrati
 
 // Matches employers & candidates using AI
 
-export const matchCandidateWithEmployer = async (candidateSkills, companyRequirements, salaryExpectation, workFlexibility) => {
-  const payload = { candidateSkills, companyRequirements, salaryExpectation, workFlexibility };
+export const matchCandidateWithEmployer = async (
+  candidateSkills,
+  companyRequirements,
+  salaryExpectation,
+  workFlexibility,
+) => {
+  const payload = {
+    candidateSkills,
+    companyRequirements,
+    salaryExpectation,
+    workFlexibility,
+  };
   return await callAIModel("aiEmployerMatchAI", payload);
 };

@@ -8,6 +8,9 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 app = Flask(__name__)
 
+# Define constant for the model filename
+MODEL_FILENAME = "corporate_turnover_model.pkl"
+
 # ✅ Train Model
 def train_model():
     data = np.array([
@@ -19,17 +22,17 @@ def train_model():
     X = data[:, :-1]  
     y = data[:, -1]  
 
-    model = GradientBoostingClassifier()
+    model = GradientBoostingClassifier(learning_rate=0.1, random_state=42)
     model.fit(X, y)
 
-    joblib.dump(model, "corporate_turnover_model.pkl")
+    joblib.dump(model, MODEL_FILENAME)
 
 # ✅ Load Model
 try:
-    model = joblib.load("corporate_turnover_model.pkl")
+    model = joblib.load(MODEL_FILENAME)
 except FileNotFoundError:
     train_model()
-    model = joblib.load("corporate_turnover_model.pkl")
+    model = joblib.load(MODEL_FILENAME)
 
 # ✅ API for Turnover Risk Prediction
 @app.route("/predict_turnover", methods=["POST"])

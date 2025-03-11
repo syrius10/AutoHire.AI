@@ -11,12 +11,17 @@ const router = express.Router();
  */
 router.post("/optimize", async (req, res) => {
   try {
-    const { currentWorkforce, departmentProductivity, employeeOverload } = req.body;
+    const { currentWorkforce, departmentProductivity, employeeOverload } =
+      req.body;
     if (!currentWorkforce || !departmentProductivity || !employeeOverload) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const redistributionPlan = await redistributeTalent(currentWorkforce, departmentProductivity, employeeOverload);
+    const redistributionPlan = await redistributeTalent(
+      currentWorkforce,
+      departmentProductivity,
+      employeeOverload,
+    );
     res.json(redistributionPlan);
   } catch (error) {
     console.error("Error in talent redistribution:", error);

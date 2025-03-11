@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const getCostForecast = async () => {
   try {
-    const response = await axios.get("http://localhost:5031/workforce-cost-forecast");
+    const response = await axios.get(
+      "http://localhost:5031/workforce-cost-forecast",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching workforce cost forecast:", error);

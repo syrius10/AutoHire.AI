@@ -2,7 +2,11 @@ import axios from "axios";
 
 // Fetches AI-driven self-learning workforce predictions.
 
-export const fetchWorkforcePrediction = async (experience, industryDemand, aiAdoption) => {
+export const fetchWorkforcePrediction = async (
+  experience,
+  industryDemand,
+  aiAdoption,
+) => {
   try {
     const response = await axios.post("/api/self-improving-workforce/predict", {
       experience,

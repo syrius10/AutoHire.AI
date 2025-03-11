@@ -5,7 +5,12 @@ import axios from "axios";
 /**
  * Optimizes workload distribution to prevent burnout.
  */
-export const optimizeWorkload = async (employeeId, currentWorkload, efficiency, burnoutScore) => {
+export const optimizeWorkload = async (
+  employeeId,
+  currentWorkload,
+  efficiency,
+  burnoutScore,
+) => {
   try {
     const response = await axios.post("http://localhost:5110/optimize", {
       employeeId,

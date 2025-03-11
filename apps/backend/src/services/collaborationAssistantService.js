@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const getCollaborationInsights = async () => {
   try {
-    const response = await axios.get("http://localhost:5105/collaboration-insights");
+    const response = await axios.get(
+      "http://localhost:5105/collaboration-insights",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching collaboration insights:", error);

@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Minimize2, Maximize2 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useRef, useEffect } from "react";
+import { MessageCircle, X, Send, Minimize2, Maximize2 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Message {
   id: number;
   text: string;
-  sender: 'user' | 'bot';
+  sender: "user" | "bot";
   timestamp: Date;
 }
 
@@ -16,11 +16,11 @@ const Chatbot = () => {
     {
       id: 1,
       text: "Hi there! I'm AutoHire's AI assistant. How can I help you today?",
-      sender: 'bot',
+      sender: "bot",
       timestamp: new Date(),
     },
   ]);
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const toggleChat = () => {
@@ -38,43 +38,54 @@ const Chatbot = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (inputValue.trim() === '') return;
+    if (inputValue.trim() === "") return;
 
     // Add user message
     const userMessage: Message = {
       id: messages.length + 1,
       text: inputValue,
-      sender: 'user',
+      sender: "user",
       timestamp: new Date(),
     };
 
     setMessages((prev) => [...prev, userMessage]);
-    setInputValue('');
+    setInputValue("");
 
     // Simulate bot response
     setTimeout(() => {
       const botResponses: { [key: string]: string } = {
         demo: "I'd be happy to help you schedule a demo! Please visit our contact page or click the 'Request Demo' button in the navigation.",
-        features: "AutoHire.AI offers AI-driven candidate matching, automated skill assessments, video interview analysis, and comprehensive analytics. Would you like to know more about any specific feature?",
-        pricing: "Our pricing is customized based on your organization's size and needs. I can connect you with our sales team who can provide a detailed quote.",
-        default: "Thank you for your message. How else can I assist you with AutoHire.AI's recruitment platform?",
+        features:
+          "AutoHire.AI offers AI-driven candidate matching, automated skill assessments, video interview analysis, and comprehensive analytics. Would you like to know more about any specific feature?",
+        pricing:
+          "Our pricing is customized based on your organization's size and needs. I can connect you with our sales team who can provide a detailed quote.",
+        default:
+          "Thank you for your message. How else can I assist you with AutoHire.AI's recruitment platform?",
       };
 
       const lowerInput = inputValue.toLowerCase();
       let responseText = botResponses.default;
 
-      if (lowerInput.includes('demo') || lowerInput.includes('schedule')) {
+      if (lowerInput.includes("demo") || lowerInput.includes("schedule")) {
         responseText = botResponses.demo;
-      } else if (lowerInput.includes('feature') || lowerInput.includes('what') || lowerInput.includes('how')) {
+      } else if (
+        lowerInput.includes("feature") ||
+        lowerInput.includes("what") ||
+        lowerInput.includes("how")
+      ) {
         responseText = botResponses.features;
-      } else if (lowerInput.includes('price') || lowerInput.includes('cost') || lowerInput.includes('pricing')) {
+      } else if (
+        lowerInput.includes("price") ||
+        lowerInput.includes("cost") ||
+        lowerInput.includes("pricing")
+      ) {
         responseText = botResponses.pricing;
       }
 
       const botMessage: Message = {
         id: messages.length + 2,
         text: responseText,
-        sender: 'bot',
+        sender: "bot",
         timestamp: new Date(),
       };
 
@@ -84,7 +95,7 @@ const Chatbot = () => {
 
   useEffect(() => {
     if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [messages]);
 
@@ -106,8 +117,8 @@ const Chatbot = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={
               isMinimized
-                ? { opacity: 1, y: 0, scale: 0.95, height: '60px' }
-                : { opacity: 1, y: 0, scale: 1, height: 'auto' }
+                ? { opacity: 1, y: 0, scale: 0.95, height: "60px" }
+                : { opacity: 1, y: 0, scale: 1, height: "auto" }
             }
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
@@ -119,8 +130,15 @@ const Chatbot = () => {
                 <MessageCircle size={20} className="text-white" />
                 <h3 className="text-white font-medium">AutoHire Assistant</h3>
               </div>
-              <button onClick={toggleMinimize} className="text-white hover:text-gray-200 transition-colors">
-                {isMinimized ? <Maximize2 size={18} /> : <Minimize2 size={18} />}
+              <button
+                onClick={toggleMinimize}
+                className="text-white hover:text-gray-200 transition-colors"
+              >
+                {isMinimized ? (
+                  <Maximize2 size={18} />
+                ) : (
+                  <Minimize2 size={18} />
+                )}
               </button>
             </div>
 
@@ -130,18 +148,21 @@ const Chatbot = () => {
                 {messages.map((message) => (
                   <div
                     key={message.id}
-                    className={`mb-4 flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                    className={`mb-4 flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
                   >
                     <div
                       className={`max-w-[80%] p-3 rounded-lg ${
-                        message.sender === 'user'
-                          ? 'bg-blue-600 text-white rounded-tr-none'
-                          : 'bg-gray-200 text-gray-800 rounded-tl-none'
+                        message.sender === "user"
+                          ? "bg-blue-600 text-white rounded-tr-none"
+                          : "bg-gray-200 text-gray-800 rounded-tl-none"
                       }`}
                     >
                       <p className="text-sm">{message.text}</p>
                       <p className="text-xs mt-1 opacity-70">
-                        {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                        {message.timestamp.toLocaleTimeString([], {
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })}
                       </p>
                     </div>
                   </div>
@@ -152,7 +173,10 @@ const Chatbot = () => {
 
             {/* Chat Input */}
             {!isMinimized && (
-              <form onSubmit={handleSubmit} className="border-t border-gray-200 p-3 flex items-center">
+              <form
+                onSubmit={handleSubmit}
+                className="border-t border-gray-200 p-3 flex items-center"
+              >
                 <input
                   type="text"
                   value={inputValue}

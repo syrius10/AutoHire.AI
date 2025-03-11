@@ -7,7 +7,9 @@ import axios from "axios";
  */
 export const getTalentMobilityInsights = async () => {
   try {
-    const response = await axios.get("http://localhost:5032/talent-mobility-insights");
+    const response = await axios.get(
+      "http://localhost:5032/talent-mobility-insights",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching talent mobility insights:", error);

@@ -15,7 +15,11 @@ router.post("/optimize", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const optimizedWorkflow = await optimizeWorkflow(taskType, urgencyLevel, workload);
+    const optimizedWorkflow = await optimizeWorkflow(
+      taskType,
+      urgencyLevel,
+      workload,
+    );
     res.json({ optimizedWorkflow });
   } catch (error) {
     console.error("Error optimizing workflow:", error);

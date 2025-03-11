@@ -16,7 +16,7 @@ X = data[:, :-1]  # Experience, Job Role, Skill Level
 y = data[:, -1]   # Onboarding Track (0=Beginner, 1=Standard, 2=Advanced)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="sqrt")
 model.fit(X, y)
 
 # Save the trained model

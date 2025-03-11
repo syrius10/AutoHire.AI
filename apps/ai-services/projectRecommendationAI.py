@@ -15,7 +15,7 @@ data = np.array([
 X = data[:, :-1]
 y = data[:, -1]
 
-model = RandomForestClassifier()
+model = RandomForestClassifier(min_samples_leaf=2, max_features="auto", random_state=42, n_estimators=100)
 model.fit(X, y)
 
 joblib.dump(model, "project_recommendation_ai.pkl")

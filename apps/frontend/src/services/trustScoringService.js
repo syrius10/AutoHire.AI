@@ -7,7 +7,10 @@ import axios from "axios";
  */
 export const fetchTrustScore = async (userId) => {
   try {
-    const response = await axios.post("http://localhost:5001/api/trust-scoring/calculate", { userId });
+    const response = await axios.post(
+      "http://localhost:5001/api/trust-scoring/calculate",
+      { userId },
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching trust score:", error);

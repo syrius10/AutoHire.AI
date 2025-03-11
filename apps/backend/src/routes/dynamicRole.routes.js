@@ -16,7 +16,7 @@ router.post("/optimize", async (req, res) => {
       performance,
       experience,
       skillLevel,
-      adaptability
+      adaptability,
     } = req.body;
 
     // Ensure at least one set of parameters is provided
@@ -24,7 +24,9 @@ router.post("/optimize", async (req, res) => {
       !(employeeId && skills && performanceData) &&
       !(performance && experience && skillLevel && adaptability)
     ) {
-      return res.status(400).json({ error: "Missing required fields for role optimization" });
+      return res
+        .status(400)
+        .json({ error: "Missing required fields for role optimization" });
     }
 
     const roleSuggestion = await optimizeJobRole({
@@ -34,7 +36,7 @@ router.post("/optimize", async (req, res) => {
       performance,
       experience,
       skillLevel,
-      adaptability
+      adaptability,
     });
 
     res.json(roleSuggestion);

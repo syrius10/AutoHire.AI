@@ -15,13 +15,26 @@ const RealTimeFeedbackDashboard = () => {
   return (
     <div className="p-6">
       <h2 className="text-2xl font-bold">🔍 AI-Powered Real-Time Feedback</h2>
-      
+
       <div className="mt-4">
-        <textarea placeholder="Enter employee feedback" onChange={(e) => setFeedbackText(e.target.value)} className="w-full p-2 border rounded"></textarea>
-        <button onClick={handleAnalyzeFeedback} className="mt-2 bg-blue-500 text-white p-2 rounded">Analyze Feedback</button>
+        <textarea
+          placeholder="Enter employee feedback"
+          onChange={(e) => setFeedbackText(e.target.value)}
+          className="w-full p-2 border rounded"
+        ></textarea>
+        <button
+          onClick={handleAnalyzeFeedback}
+          className="mt-2 bg-blue-500 text-white p-2 rounded"
+        >
+          Analyze Feedback
+        </button>
       </div>
 
-      {feedbackResponse && <pre className="mt-4 border p-4 rounded">{JSON.stringify(feedbackResponse, null, 2)}</pre>}
+      {feedbackResponse && (
+        <pre className="mt-4 border p-4 rounded">
+          {JSON.stringify(feedbackResponse, null, 2)}
+        </pre>
+      )}
     </div>
   );
 };

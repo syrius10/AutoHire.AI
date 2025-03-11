@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { autoScreenCandidate } from "../services/autoScreeningService";
 
 const AutoScreeningDashboard = ({ candidateId, jobId }) => {
@@ -20,13 +21,21 @@ const AutoScreeningDashboard = ({ candidateId, jobId }) => {
       <h2 className="text-2xl font-bold">AI-Powered Screening</h2>
       {error ? (
         <p className="text-red-500">{error}</p>
-      ) : matchScore !== null ? (
-        <p className="text-lg">Match Score: {matchScore.toFixed(2)}%</p>
       ) : (
-        <p>Loading...</p>
+        <>
+          {matchScore !== null ? (
+            <p className="text-lg">Match Score: {matchScore.toFixed(2)}%</p>
+          ) : (
+            <p>Loading...</p>
+          )}
+        </>
       )}
     </div>
   );
+};
+AutoScreeningDashboard.propTypes = {
+  candidateId: PropTypes.string.isRequired,
+  jobId: PropTypes.string.isRequired,
 };
 
 export default AutoScreeningDashboard;

@@ -19,9 +19,10 @@ export default function GigPaymentsDashboard() {
       <h1>💰 Blockchain-Powered Gig Payments</h1>
       <ul>
         {payments.length > 0 ? (
-          payments.map((payment, index) => (
-            <li key={index}>
-              Payment ID: {payment.id} - Amount: {payment.amount} USD - Status: {payment.status}
+          payments.map((payment) => (
+            <li key={payment.id}>
+              Payment ID: {payment.id} - Amount: {payment.amount} USD - Status:{" "}
+              {payment.status}
             </li>
           ))
         ) : (

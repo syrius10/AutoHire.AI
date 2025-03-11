@@ -16,7 +16,7 @@ X = data[:, :-1]  # Experience, Skills Level
 y = data[:, -1]   # Career Advancement Probability (1 = Likely, 0 = Unlikely)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(min_samples_leaf=2, max_features="sqrt", random_state=42)
 model.fit(X, y)
 
 # Save trained model

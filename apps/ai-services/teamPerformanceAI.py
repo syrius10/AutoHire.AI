@@ -19,7 +19,7 @@ X = data[:, :-1]  # Collaboration Score, Productivity Score, Communication Score
 y = data[:, -1]   # Performance Category (1 = Strong Team, 0 = Needs Improvement)
 
 # Train AI model
-model = GradientBoostingClassifier()
+model = GradientBoostingClassifier(random_state=42, learning_rate=0.1)
 model.fit(X, y)
 
 # Save trained model

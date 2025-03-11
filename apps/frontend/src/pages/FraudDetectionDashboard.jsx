@@ -22,7 +22,11 @@ const FraudDetectionDashboard = () => {
   return (
     <div>
       <h2>Fraud Detection Dashboard</h2>
-      {loading ? <p>Analyzing transactions...</p> : <p>Fraud Risk: {fraudRisk}</p>}
+      {loading ? (
+        <p>Analyzing transactions...</p>
+      ) : (
+        <p>Fraud Risk: {fraudRisk}</p>
+      )}
     </div>
   );
 };

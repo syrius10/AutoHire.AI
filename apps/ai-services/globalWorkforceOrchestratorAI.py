@@ -16,7 +16,7 @@ X = data[:, :-1]  # Region, Workforce Demand, Talent Supply
 y = data[:, -1]   # Optimal Workforce Allocation
 
 # Train AI model
-model = GradientBoostingRegressor()
+model = GradientBoostingRegressor(random_state=42, learning_rate=0.1)
 model.fit(X, y)
 
 # Save trained model

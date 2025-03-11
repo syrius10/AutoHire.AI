@@ -19,7 +19,9 @@ const SelfImprovingWorkforceDashboard = () => {
       <h2 className="text-2xl font-bold">🔮 Workforce Evolution Predictions</h2>
       {prediction ? (
         <div className="mt-4 border p-4 rounded bg-white shadow">
-          <p><strong>Prediction:</strong> {prediction.workforcePrediction}</p>
+          <p>
+            <strong>Prediction:</strong> {prediction.workforcePrediction}
+          </p>
         </div>
       ) : (
         <p>Loading workforce predictions...</p>

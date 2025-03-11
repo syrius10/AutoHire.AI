@@ -5,7 +5,10 @@ import axios from "axios";
  */
 export const requestAPIKey = async (userId, plan = "free") => {
   try {
-    const response = await axios.post("/api/api-management/generate", { userId, plan });
+    const response = await axios.post("/api/api-management/generate", {
+      userId,
+      plan,
+    });
     return response.data;
   } catch (error) {
     console.error("Error generating API key:", error);

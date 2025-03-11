@@ -11,7 +11,11 @@ router.post("/assign", async (req, res) => {
   try {
     const { skillLevel, workload, complexity } = req.body;
 
-    if (skillLevel === undefined || workload === undefined || complexity === undefined) {
+    if (
+      skillLevel === undefined ||
+      workload === undefined ||
+      complexity === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 

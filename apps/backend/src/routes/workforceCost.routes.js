@@ -10,7 +10,9 @@ router.post("/forecast", async (req, res) => {
     const response = await axios.post(AI_COST_SERVICE, req.body);
     res.json(response.data);
   } catch (error) {
-    res.status(500).json({ error: "Failed to retrieve workforce cost forecast." });
+    res
+      .status(500)
+      .json({ error: "Failed to retrieve workforce cost forecast." });
   }
 });
 

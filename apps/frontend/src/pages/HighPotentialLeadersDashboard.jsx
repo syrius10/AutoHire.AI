@@ -18,8 +18,8 @@ const HighPotentialLeadersDashboard = () => {
     <div>
       <h2>High-Potential Leaders</h2>
       <ul>
-        {leaders.map((leader, index) => (
-          <li key={index}>
+        {leaders.map((leader) => (
+          <li key={leader.id}>
             {leader.name} - Leadership Potential: {leader.potentialScore}/100
           </li>
         ))}

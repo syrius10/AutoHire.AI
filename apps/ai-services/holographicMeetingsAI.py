@@ -6,7 +6,7 @@ class HolographicMeetingAI:
     def __init__(self):
         self.optimized_features = ["Real-time Translation", "Gesture Recognition", "AI Note-Taking"]
 
-    def enhance_meeting(self, participants, language_diversity):
+    def enhance_meeting(self, language_diversity):
         """Enhances holographic meetings with AI-driven features based on participants."""
         features = self.optimized_features.copy()
         if language_diversity:
@@ -16,4 +16,4 @@ class HolographicMeetingAI:
 # Test Case
 if __name__ == "__main__":
     ai = HolographicMeetingAI()
-    print(ai.enhance_meeting(12, True))  # Example: ["Real-time Translation", "Gesture Recognition", ...]
+    print(ai.enhance_meeting(True))  # Example: ["Real-time Translation", "Gesture Recognition", ...]

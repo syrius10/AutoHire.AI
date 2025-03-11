@@ -16,9 +16,10 @@ export default function EmployerCandidateDashboard() {
     <div>
       <h1>Employer-Candidate AI Communication</h1>
       <ul>
-        {interactions.map((interaction, index) => (
-          <li key={index}>
-            {interaction.employer}: {interaction.message} (Candidate: {interaction.candidate})
+        {interactions.map((interaction) => (
+          <li key={interaction.id}>
+            {interaction.employer}: {interaction.message} (Candidate:{" "}
+            {interaction.candidate})
           </li>
         ))}
       </ul>

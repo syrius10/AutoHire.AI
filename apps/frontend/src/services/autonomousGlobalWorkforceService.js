@@ -4,7 +4,9 @@ import axios from "axios";
 
 export async function fetchAutonomousWorkforceData() {
   try {
-    const response = await axios.get("/api/autonomous-global-workforce/regulate");
+    const response = await axios.get(
+      "/api/autonomous-global-workforce/regulate",
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching AI workforce data:", error);

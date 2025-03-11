@@ -18,7 +18,7 @@ export default function TaskDelegationDashboard() {
     const response = await assignTask(
       parseFloat(taskInput.skillLevel),
       parseFloat(taskInput.workload),
-      parseFloat(taskInput.complexity)
+      parseFloat(taskInput.complexity),
     );
     setResult(response);
   };

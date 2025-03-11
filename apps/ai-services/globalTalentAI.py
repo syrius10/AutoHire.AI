@@ -18,7 +18,7 @@ data = np.array([
 X = data[:, :-1]  # Candidate Features
 y = data[:, -1]   # Suitability Score
 
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, min_samples_leaf=2, max_features="sqrt")
 model.fit(X, y)
 
 # Save the trained model

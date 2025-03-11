@@ -2,7 +2,11 @@ import axios from "axios";
 
 // Fetches AI-driven work schedule optimization insights.
 
-export const fetchOptimizedSchedule = async (workload, preferredHours, energyLevel) => {
+export const fetchOptimizedSchedule = async (
+  workload,
+  preferredHours,
+  energyLevel,
+) => {
   try {
     const response = await axios.post("/api/work-schedule/optimize", {
       workload,

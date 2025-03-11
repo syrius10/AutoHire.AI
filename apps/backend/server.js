@@ -12,7 +12,7 @@ import recommendationRoutes from "./src/routes/recommendation.routes.js";
 import integrationsRoutes from "./src/routes/integrations.routes.js";
 import engagementRoutes from "./src/routes/engagement.routes.js";
 import { cacheMiddleware } from "./src/middleware/cache.js";
-import apiAuthRoutes from "./src/routes/apiAuthAuth.routes.js"; 
+import apiAuthRoutes from "./src/routes/apiAuthAuth.routes.js";
 import autoScreeningRoutes from "./src/routes/autoScreening.routes.js";
 import backgroundCheckRoutes from "./src/routes/backgroundCheck.routes.js";
 import apiRoutes from "./src/routes/api.routes.js";
@@ -22,7 +22,7 @@ import videoInterviewAnalysisRoutes from "./src/routes/videoInterviewAnalysis.ro
 import AIJobDescriptionRoutes from "./src/routes/aiJobDescription.routes.js";
 import autoHireMobileRoutes from "./src/routes/autoHireMobile.routes.js";
 import marketplaceRoutes from "./src//routes/marketplace.routes.js";
-import workforceRoutes from "./src/routes/workforce.routes.js";  // ✅ Added Workforce Routes
+import workforceRoutes from "./src/routes/workforce.routes.js"; // ✅ Added Workforce Routes
 import workforceInsightsRoutes from "./src/routes/workforceInsights.routes.js";
 import workforceCostRoutes from "./src/routes/workforceCost.routes.js";
 import efficiencyAnalysisRoutes from "./src/routes/efficiencyAnalysis.routes.js";
@@ -254,16 +254,14 @@ import aiSelfEvolvingWorkforceRoutes from "./routes/aiSelfEvolvingWorkforce.rout
 import aiGlobalEconomyRoutes from "./routes/aiGlobalEconomy.routes.js";
 import quantumAIDecisionMakingRoutes from "./routes/quantumAIDecisionMaking.routes.js";
 
-
 const app = express();
 const PORT = 5001; // Change to match your backend port
 
 app.use(cors());
 app.use(express.json());
 
-
 // ✅ Register API routes BEFORE starting the server
-app.use('/auth', userAuthRoutes);
+app.use("/auth", userAuthRoutes);
 
 app.use("/api/jobs", jobRoutes);
 
@@ -305,7 +303,7 @@ app.use("/api/marketplace", marketplaceRoutes);
 
 app.use("/api/mobile", autoHireMobileRoutes);
 
-app.use("/api/workforce", workforceRoutes);  // ✅ New Workforce Planning API
+app.use("/api/workforce", workforceRoutes); // ✅ New Workforce Planning API
 
 app.use("/api/workforce-insights", workforceInsightsRoutes);
 
@@ -428,7 +426,7 @@ app.use("/api/autonomous-recruiter", autonomousRecruiterRoutes);
 
 app.use("/api/employer-candidate", employerCandidateRoutes);
 
-app.use("/api/interview-scheduler", interviewSchedulerRoutes);  // Unified interview scheduling
+app.use("/api/interview-scheduler", interviewSchedulerRoutes); // Unified interview scheduling
 
 // // Sprint 49 AI-powered Resume & Application Automation
 app.use("/api/resume-enhancement", resumeEnhancementRoutes);
@@ -443,7 +441,6 @@ app.use("/api/application-automation", applicationAutomationRoutes);
 app.use("/api/freelancer-career", freelancerCareerRoutes);
 
 app.use("/api/gig-matching", gigMatchingRoutes);
-
 
 // // Sprint 51 Workforce Planning APIs
 app.use("/api/enterprise-workforce", enterpriseWorkforceRoutes);
@@ -727,26 +724,24 @@ app.use("/api/ai-economy", aiGlobalEconomyRoutes);
 
 app.use("/api/quantum-ai", quantumAIDecisionMakingRoutes);
 
-
 // ✅ Create HTTP server & WebSocket server
 const server = http.createServer(app);
 const io = new Server(server, {
-    cors: { origin: "*" },
+  cors: { origin: "*" },
 });
-
 
 // ✅ WebSocket event listeners
 io.on("connection", (socket) => {
-    console.log("User connected:", socket.id);
+  console.log("User connected:", socket.id);
 
-    socket.on("sendMessage", (message) => {
-        io.emit("receiveMessage", message);
-    });
+  socket.on("sendMessage", (message) => {
+    io.emit("receiveMessage", message);
+  });
 
-    socket.on("disconnect", () => console.log("User disconnected"));
+  socket.on("disconnect", () => console.log("User disconnected"));
 });
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`✅ Backend is running on port ${PORT}`);
+  console.log(`✅ Backend is running on port ${PORT}`);
 });

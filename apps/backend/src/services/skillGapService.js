@@ -1,13 +1,28 @@
 import { pipeline } from "@huggingface/transformers";
-import natural from "natural";
+
 
 // Load NLP model for skill extraction
-const resumeParser = pipeline("ner", "dbmdz/bert-large-cased-finetuned-conll03-english");
+const resumeParser = pipeline(
+  "ner",
+  "dbmdz/bert-large-cased-finetuned-conll03-english",
+);
 
 // List of common job skills for validation
 const jobSkills = [
-  "Python", "JavaScript", "React", "Node.js", "Machine Learning", "Data Science", "SQL",
-  "Java", "AWS", "Docker", "Kubernetes", "Communication", "Leadership", "Problem-Solving"
+  "Python",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "Machine Learning",
+  "Data Science",
+  "SQL",
+  "Java",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+  "Communication",
+  "Leadership",
+  "Problem-Solving",
 ];
 
 /**
@@ -19,8 +34,9 @@ export const analyzeResumeSkills = async (resumeText) => {
     const entities = await resumeParser(resumeText);
 
     // Extract skills from detected entities
-    const extractedSkills = entities.map(ent => ent.word)
-      .filter(skill => jobSkills.includes(skill));
+    const extractedSkills = entities
+      .map((ent) => ent.word)
+      .filter((skill) => jobSkills.includes(skill));
 
     // Deduplicate skills list
     const uniqueSkills = [...new Set(extractedSkills)];
@@ -36,7 +52,9 @@ export const analyzeResumeSkills = async (resumeText) => {
  * Calculates the skill gap between job requirements and a candidate's extracted skills.
  */
 export const calculateSkillGap = (requiredSkills, candidateSkills) => {
-  const missingSkills = requiredSkills.filter(skill => !candidateSkills.includes(skill));
+  const missingSkills = requiredSkills.filter(
+    (skill) => !candidateSkills.includes(skill),
+  );
   const gapScore = (missingSkills.length / requiredSkills.length) * 100;
 
   return { missingSkills, gapScore: Math.round(gapScore) };

@@ -30,7 +30,11 @@ const AIWorkCoachDashboard = () => {
         <p className="mt-2">📢 Tip: {tip}</p>
       </div>
       <div className="mt-4">
-        <input type="number" value={productivityScore} onChange={(e) => setProductivityScore(e.target.value)} />
+        <input
+          type="number"
+          value={productivityScore}
+          onChange={(e) => setProductivityScore(e.target.value)}
+        />
         <button onClick={handleAssessPerformance}>Assess Performance</button>
       </div>
       {feedback && <p className="mt-4">{feedback}</p>}

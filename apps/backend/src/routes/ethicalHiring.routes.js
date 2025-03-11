@@ -41,7 +41,7 @@ router.post("/evaluate", async (req, res) => {
       experience,
       skillMatch,
       educationLevel,
-      biasHistory
+      biasHistory,
     );
 
     res.json({ hiringEvaluation });

@@ -18,9 +18,10 @@ const LeadershipSuccessionDashboard = () => {
     <div>
       <h2>Leadership Succession Planning</h2>
       <ul>
-        {successionPlan.map((leader, index) => (
-          <li key={index}>
-            {leader.candidate} → {leader.targetRole} (Readiness: {leader.readiness}%)
+        {successionPlan.map((leader) => (
+          <li key={leader.id}>
+            {leader.candidate} → {leader.targetRole} (Readiness:{" "}
+            {leader.readiness}%)
           </li>
         ))}
       </ul>

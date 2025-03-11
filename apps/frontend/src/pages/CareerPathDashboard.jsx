@@ -18,8 +18,8 @@ export default function CareerPathDashboard() {
     <div>
       <h1>Career Path Insights</h1>
       <ul>
-        {careerPath.map((step, index) => (
-          <li key={index}>{step}</li>
+        {careerPath.map((step) => (
+          <li key={step.id}>{step.name}</li>
         ))}
       </ul>
     </div>

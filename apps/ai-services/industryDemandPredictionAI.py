@@ -22,7 +22,7 @@ X = df[["year", "growth_rate"]]
 y = df["skills_demand_index"]
 
 # Train prediction model
-model = RandomForestRegressor(n_estimators=50, random_state=42)
+model = RandomForestRegressor(n_estimators=50, random_state=42, min_samples_leaf=2, max_features="auto")
 model.fit(X, y)
 joblib.dump(model, "industry_demand_prediction.pkl")
 

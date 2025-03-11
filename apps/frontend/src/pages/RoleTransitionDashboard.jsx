@@ -21,10 +21,15 @@ export default function RoleTransitionDashboard() {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold">🔄 AI-Powered Career Path Evolution</h2>
+      <h2 className="text-2xl font-bold">
+        🔄 AI-Powered Career Path Evolution
+      </h2>
       {transition ? (
         <div className="mt-4 border p-4 rounded bg-gray-100">
-          <p><strong>Recommended Next Role:</strong> {transition.transitionSuggestion}</p>
+          <p>
+            <strong>Recommended Next Role:</strong>{" "}
+            {transition.transitionSuggestion}
+          </p>
         </div>
       ) : (
         <p>Loading AI-driven role transition insights...</p>

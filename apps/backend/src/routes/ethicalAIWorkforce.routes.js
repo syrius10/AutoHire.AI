@@ -16,7 +16,10 @@ router.post("/evaluate", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const ethicalAssessment = await evaluateEthicalDecision(action, impactScore);
+    const ethicalAssessment = await evaluateEthicalDecision(
+      action,
+      impactScore,
+    );
     res.json(ethicalAssessment);
   } catch (error) {
     console.error("Error in ethical AI workforce evaluation:", error);

@@ -12,11 +12,19 @@ const router = express.Router();
 router.post("/analyze", async (req, res) => {
   try {
     const { systemLoad, errorRate, taskCompletion } = req.body;
-    if (systemLoad === undefined || errorRate === undefined || taskCompletion === undefined) {
+    if (
+      systemLoad === undefined ||
+      errorRate === undefined ||
+      taskCompletion === undefined
+    ) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const statusReport = await analyzeAutomationStatus(systemLoad, errorRate, taskCompletion);
+    const statusReport = await analyzeAutomationStatus(
+      systemLoad,
+      errorRate,
+      taskCompletion,
+    );
     res.json(statusReport);
   } catch (error) {
     console.error("Error in self-aware automation analysis:", error);

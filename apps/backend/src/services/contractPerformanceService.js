@@ -7,9 +7,12 @@ import axios from "axios";
  */
 export const monitorContractPerformance = async (contractId) => {
   try {
-    const response = await axios.post("http://localhost:5116/monitor-contract-performance", {
-      contractId,
-    });
+    const response = await axios.post(
+      "http://localhost:5116/monitor-contract-performance",
+      {
+        contractId,
+      },
+    );
 
     return response.data;
   } catch (error) {

@@ -16,7 +16,7 @@ X = data[:, :-1]  # Input: Tenure, Performance Score, Promotion History, Salary 
 y = data[:, -1]   # Output: HR process automation eligibility (1 = Yes, 0 = No)
 
 # Train AI model
-model = RandomForestClassifier()
+model = RandomForestClassifier(random_state=42, n_estimators=100, min_samples_leaf=2, max_features="auto")
 model.fit(X, y)
 
 # Save trained model

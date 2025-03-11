@@ -4,8 +4,8 @@ import { encryptData, decryptData } from "../utils/encryption";
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
-        set: (value) => encryptData(value).encryptedData;   // Encrypt before saving
-        get: (encrypted) => decryptData(encrypted, this.iv);    // Decrypt when retrieving
+        set: (value) => encryptData(value).encryptedData,   // Encrypt before saving
+        get: (encrypted) => decryptData(encrypted, this.iv),    // Decrypt when retrieving
     },
     iv: String, // Store IV for decryption
     email: {

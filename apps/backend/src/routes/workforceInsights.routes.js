@@ -1,5 +1,9 @@
 import express from "express";
-import { fetchWorkforceInsights, fetchAttritionRisk, fetchDiversityInsights } from "../services/workforceInsightsService";
+import {
+  fetchWorkforceInsights,
+  fetchAttritionRisk,
+  fetchDiversityInsights,
+} from "../services/workforceInsightsService";
 
 const router = express.Router();
 

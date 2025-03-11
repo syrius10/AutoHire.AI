@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Calls AI model for team performance and collaboration analysis.
  */
-export const analyzeTeamPerformance = async (collaboration, productivity, communication) => {
+export const analyzeTeamPerformance = async (
+  collaboration,
+  productivity,
+  communication,
+) => {
   try {
     const response = await axios.post("/api/team-performance", {
       collaboration_score: collaboration,

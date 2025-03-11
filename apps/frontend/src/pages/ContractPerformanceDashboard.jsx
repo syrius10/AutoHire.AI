@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { monitorContractPerformance } from "../services/contractPerformanceService";
 
 // AI-powered contract performance monitoring dashboard.
@@ -32,11 +32,18 @@ export default function ContractPerformanceDashboard() {
         onChange={(e) => setContractId(e.target.value)}
         className="border px-4 py-2 rounded w-full mt-2"
       />
-      <button className="bg-blue-500 text-white px-4 py-2 rounded mt-4" onClick={handleMonitorPerformance}>
+      <button
+        className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
+        onClick={handleMonitorPerformance}
+      >
         Monitor Contract Performance
       </button>
 
-      {performanceData && <pre className="mt-4 bg-gray-100 p-4 rounded">{JSON.stringify(performanceData, null, 2)}</pre>}
+      {performanceData && (
+        <pre className="mt-4 bg-gray-100 p-4 rounded">
+          {JSON.stringify(performanceData, null, 2)}
+        </pre>
+      )}
       {error && <p className="text-red-500 mt-4">{error}</p>}
     </div>
   );

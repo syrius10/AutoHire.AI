@@ -1,5 +1,9 @@
 import express from "express";
-import { proposeProject, allocateBudget, getCompanyStatus } from "../services/decentralizedCompanyService.js";
+import {
+  proposeProject,
+  allocateBudget,
+  getCompanyStatus,
+} from "../services/decentralizedCompanyService.js";
 
 // AI-powered self-managed decentralized company automation.
 

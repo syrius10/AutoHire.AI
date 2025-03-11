@@ -7,7 +7,10 @@ import axios from "axios";
  */
 export const fetchSalaryBenchmark = async (params) => {
   try {
-    const response = await axios.post("/api/multi-country-salary/benchmark", params);
+    const response = await axios.post(
+      "/api/multi-country-salary/benchmark",
+      params,
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching salary benchmarking:", error);

@@ -3,15 +3,24 @@ import axios from "axios";
 /**
  * Calls AI-powered compliance check API.
  */
-export const checkCompliance = async (country, terms, contractLength = 12, complianceScore = 80, pastDisputes = 0) => {
+export const checkCompliance = async (
+  country,
+  terms,
+  contractLength = 12,
+  complianceScore = 80,
+  pastDisputes = 0,
+) => {
   try {
-    const response = await axios.post("http://localhost:5045/check-compliance", {
-      country,
-      terms,
-      contract_length: contractLength,
-      compliance_score: complianceScore,
-      past_disputes: pastDisputes,
-    });
+    const response = await axios.post(
+      "http://localhost:5045/check-compliance",
+      {
+        country,
+        terms,
+        contract_length: contractLength,
+        compliance_score: complianceScore,
+        past_disputes: pastDisputes,
+      },
+    );
 
     return response.data;
   } catch (error) {

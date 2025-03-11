@@ -3,7 +3,12 @@ import axios from "axios";
 /**
  * Fetches AI-powered internal job movement insights.
  */
-export const fetchJobRotationRecommendations = async (employeeId, currentRole, skills, experience) => {
+export const fetchJobRotationRecommendations = async (
+  employeeId,
+  currentRole,
+  skills,
+  experience,
+) => {
   try {
     const response = await axios.post("/api/internal-job-rotation/recommend", {
       employeeId,

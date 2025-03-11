@@ -2,7 +2,7 @@ import express from "express";
 import {
   createWorkspace,
   joinWorkspace,
-  shareResource
+  shareResource,
 } from "../services/virtualCollaborationService.js";
 
 // AI-powered virtual collaboration space & co-working management.
@@ -55,7 +55,9 @@ router.post("/share", async (req, res) => {
   try {
     const { teamName, resource } = req.body;
     if (!teamName || !resource) {
-      return res.status(400).json({ error: "Team name and resource are required" });
+      return res
+        .status(400)
+        .json({ error: "Team name and resource are required" });
     }
 
     const result = await shareResource(teamName, resource);

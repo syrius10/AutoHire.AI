@@ -5,7 +5,11 @@ import axios from "axios";
 /**
  * Calls AI model for generating cross-border job contracts.
  */
-export const generateContract = async (employeeCountry, employerCountry, jobRole) => {
+export const generateContract = async (
+  employeeCountry,
+  employerCountry,
+  jobRole,
+) => {
   try {
     const response = await axios.post("http://localhost:5135/generate", {
       employee_country: employeeCountry,
